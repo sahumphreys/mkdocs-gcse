@@ -1,0 +1,259 @@
+{
+    "Variables": [
+        {
+            "title": "Simple Calculator",
+            "outline": "Create a program that takes two numbers as input from the user and performs basic arithmetic operations like addition, subtraction, multiplication, and division. Save the file as `simple-calculator.py`"
+        },
+        {
+            "title": "Total Marks",
+            "outline": "A student has taken three tests as part of his final year exam. He scored 65/100, 45/100 and 57/100 respectively. Write a Python program that asks the user to enter the marks, calculate the total and display the total and the average of the marks to the screen. Save the file as `marks.py`.",
+            "link": "tasks/total_marks"
+        },
+        {
+            "title": "Currency Converter",
+            "outline": "Write a Python program that converts an amount in Pound Sterling (GBP) to Euros (EUR).  The program should prompt the user for an amount in pounds sterling (£) and convert the entered amount to Euros using a suitable exchange rate e.g. 1GBP = 1.17EUR.  The program should print the result to the screen. Save the program as `currency.py`.  The following shows example output: ", 
+            "code_block": "Welcome to the Pound Sterling to Euro Currency Converter\n\nPlease enter the amount in Pounds Sterling (GBP): 100\n100 GBP is equivalent to 117.0 EUR",
+            "link": "tasks/petrol_sales"
+        }
+    ],
+    "Operators": [
+        {
+            "title": "Exponentiation",
+            "outline": "Write Python code to calculate the result of 2^5 (2 raised to the power of 5) using the exponentiation operator.",
+            "link": "#"
+        },
+        {
+            "title": "Odd or Even",
+            "outline": "Create a Python program that asks the user to input a number and then checks whether the number is odd or even. The program should display a message indicating whether the number is odd or even.  The expected output is: ",
+            "code_block": "Please enter a number: 42\nThe number is even",
+            "link": "#"
+        },
+        {
+            "title": "Integer division",
+            "outline": "Implement a Python program that calculates the quotient and remainder when dividing 23 by 5 without using the `/` operator. Use the integer division operator `//` and the modulo operator `%`",
+            "link": "#"
+        },
+        {
+            "title": "BMI Calculator",
+            "outline": "Develop a Python program that calculates the Body Mass Index (BMI) of a person based on their weight and height. The program should prompt the user to input their weight (in kilograms) and height (in meters), calculate their BMI using the BMI formula `bmi = weight_kg / (height_m ** 2)`, and then display the result.",
+            "code_block": "Please enter your weight (in kg): 70\nPlease enter your height (in meters): 1.75\nYour BMI is: 22.857142857142858\nYour weight is normal.",
+            "extension": "Based on the calculated BMI value display one of the following to the user: BMI less than 18.5: Underweight; BMI between 18.5 and 24.9: Normal weight; BMI between 25 and 29.9: Overweight; BMI over 30: Obese"
+        }
+    ],
+    "Strings": [
+        {
+            "title": "Greeting a friend",
+            "outline": "Write a Python program that asks the user to enter their first name and last name separately. Then, print a formatted message such as 'Hello, [First Name] [Last Name]!', replacing `[First Name]` and `[Last Name]` with the data entered by the user.",
+            "link": "#"
+        },
+        {
+            "title": "Programming is fun",
+            "outline": "Given the string 'Python programming is fun' write a program that converts and displays to screen the string in (a) upper case, (b) lower case and (c) splits the string into individual words",
+            "code_block": "Original string: 'Python programming is fun'\nUppercase: 'PYTHON PROGRAMMING IS FUN'\nLowercase: 'python programming is fun'\nIndividual words: ['Python', 'programming', 'is', 'fun']",
+            "link": "#"
+        },
+        {
+            "title": "Splitting strings",
+            "outline": "Given the string 'Python programming is fun' use string slicing to extract the following words from the string: (a) 'gram' (b) 'Python' (c) 'program'",
+            "extension": "Using the same string, and using string slicing : (d) the whole string using string slicing (e) the whole string backwards (f) extract every other character from the string"
+        },
+        {
+            "title": "Word Count",
+            "outline": "Write a Python program that takes a user's input as a sentence and counts the number of words in that sentence. Words are separated by spaces. Print the word count. (For this exercise look up the `split()` method.)",
+            "link": "#"
+        }
+    ],
+    "Functions": [
+        {
+            "title": "Area of a triangle",
+            "outline": "Write a Python function called calculate_triangle_area(base, height) that calculates and returns the area of a triangle using the `formula area = 0.5 * base * height`. Then, call this function from your main program and print the result.",
+            "link": "#"
+        },
+        {
+            "title": "BMI Calculator Function",
+            "outline": "A previous task was to write a program to calculate the BMI of an individual from their height and weight.  Use the program structure from this chapter to amend that program so the height and weight are entered via a function, so too the BMI calculation and the display of the result"
+        },
+        {
+            "title": "String Reversal Function",
+            "outline": "Write a function that takes a string as a parameter and returns the reverse of that string.  Use string slicing to help",
+            "link": "#"
+        }
+    ],
+    "Built in functions": [
+        {
+            "title": "Area of a circle",
+            "outline": "Create a Python program that calculates the area of a circle. Prompt the user to enter the radius using the `input()` function, convert it to a float, and then calculate the area using the appropriate mathematical formula.",
+            "link": "#"
+        },
+        {
+            "title": "Sum and product",
+            "outline": "Write a Python program that takes two numbers as input from the user and calculates their sum and product. Use the `input()` function to receive user input, convert it to integers using `int()`.",
+            "link": "#"
+        },
+        {
+            "title": "String repeater",
+            "outline": "Write a program that takes a string and a number as input from the user, then prints out the string repeated that number of times using the * operator."
+        },
+        {
+            "title": "Character shift",
+            "outline": "Write a program that prompts the user to enter a single character. Then, the program should convert that character to its ASCII value using the `ord()` function, add 3 to the ASCII value, and finally convert the new ASCII value back to a character using the `chr()` function. The program should print out the original character, its ASCII value, the shifted character, and its ASCII value.",
+            "code_block": "Enter a single character: A\nOriginal character: A\nASCII value: 65\nShifted character: D\nShifted ASCII value: 68"
+        }
+    ],
+    "Selection": [
+        {
+            "title": "Grade Calculator",
+            "outline": "Write a Python program that takes a test score as input and prints the corresponding letter grade ('A', 'B', 'C', 'D', or 'F') based on the following grading scale A:  90 or above, B:  80-89, C: 70-79, D: 60-69, F: Below 60",
+            "link": "#"
+        },
+        {
+            "title": "Leap Year Checker",
+            "outline": "Write a Python program that checks if a given year is a leap year. A leap year is divisible by 4 but not divisible by 100 unless it is divisible by 400. Print 'Leap year' or 'Not a leap year' accordingly.   Use the following pseudocode to help with the logic:",
+            "link": "#",
+            "code_block": "START\n// Step 1: Get the year from the user\nOUTPUT 'Enter a year:'\nINPUT year\n// Step 2: Check if the year is divisible by 4\nIF (year MOD 4 = 0) THEN\n\t// Step 3: Check if the year is not divisible by 100 or is divisible by 400\n\tIF (year MOD 100 ≠ 0) OR (year MOD 400 = 0) THEN\n\t\t// Step 4: Print 'Leap year'\n\t\tOUTPUT 'Leap year'\n\tELSE\n\t\t// Step 5: Print 'Not a leap year'\n\t\tOUTPUT 'Not a leap year'\n\tENDIF\nELSE\n\t// Step 5: Print 'Not a leap year' if not divisible by 4\n\tOUTPUT 'Not a leap year'\nENDIF\nEND"
+        },
+        {
+            "title": "Rock, Paper, Scissors",
+            "outline": "Write a Python program that lets a user play the game of Rock, Paper, Scissors against the computer. Implement the game logic and provide instructions for the user to input their choice.",
+            "link": "#"
+        }
+    ],
+    "Iteration": [
+        {
+            "title": "Multiplication Table",
+            "outline": "The text demonstrated how to program a multiplication table using two `for` loops.  Rewrite that program, replacing the `for` loops with `while` loops",
+            "link": "#"
+        },
+        {
+            "title": "Factorial Calculator",
+            "outline": "Write a Python program that uses a for loop to calculate and print the factorial of a given number.  Remember, 5! = 5 x 4 x 3 x 2 x 1",
+            "link": "#"
+        },
+        {
+            "title": "Number Guessing Game",
+            "outline": "Write a Python program that generates a random number between 1 and 100 and asks the user to guess it using a `while` loop. Provide hints (higher or lower) and count the number of guesses until the user guesses correctly.  Your output should be:",
+            "code_block": "Welcome to the Number Guessing Game!\nI have selected a random number between 1 and 100.\nCan you guess what it is?\n\nGuess #1: 50\nToo low! Try guessing a higher number.\nGuess #2: 75\nToo high! Try guessing a lower number.\nGuess #3: 62\nToo high! Try guessing a lower number.\nGuess #4: 56\nToo low! Try guessing a higher number.\nGuess #5: 59\n\nCongratulations! You guessed the correct number!",            
+            "link": "#"
+        }
+    ],
+    "Turtle Programming": [
+        {
+            "title": "Basic shapes",
+            "outline": "Create a program that uses the turtle library to draw basic shapes such as squares, triangles, and circles. Use loops for repetitive actions and functions to modularize code.",
+            "link": "#"
+        },
+        {
+            "title": "Combining shapes",
+            "outline": "Combine those shapes to draw a picture of say a house with a door, windows, roof, walls etc.",
+            "link": "#"
+        },
+        {
+            "title": "Spiral",
+            "outline": "Create a colorful spiral pattern using the turtle library. Experiment with changing colors, angles, and distances to create an interesting visual effect. ",
+            "link": "#"
+        },
+        {
+            "title": "Race Game",
+            "outline": "Create a race program.  Two turtles move across the screen to an end point.  Each moves a random distance   each time so either one could be the winner of the race.",
+            "link": "#"
+        }
+    ],
+    "Lists": [
+        {
+            "title": "Shopping List",
+            "outline": "Write a Python program that allows a user to create and manage a shopping list. Implement features to add, remove, and display items in the list.",
+            "link": "#"
+        },
+        {
+            "title": "Gradebook",
+            "outline": "Write a Python program that keeps track of student grades. Implement a list to store student names and another list to store their corresponding grades. Allow the user to add and remove students and their grades, and calculate the average grade.",
+            "link": "#"
+        },
+        {
+            "title": "To-Do List*",
+            "outline": "Write a Python program that simulates a to-do list. Allow the user to add, remove, and display tasks in the list. Include an option to mark tasks as completed.  The list will be a list of lists where each item in the list will contain a string for the to-do item and a boolean variable for whether the task has been completed or not e.g. `to-do = [['Finish questions for homework', False],['Make the supper', True']]`.  \nUse the following code as your starting point:",
+            "code_block": "# Initialize an empty to-do list\ntodo_list = []\n\n# Function to display the menu\ndef display_menu():\n\tprint('To-Do List Menu:')\n\tprint('1. Add a task')\n\tprint('2. Remove a task')\n\tprint('3. Mark a task as completed')\n\tprint('4. Display tasks')\n\tprint('5. Exit')\n\n# Function to add a task to the list\ndef add_task():\n\t# add code here\n\n# Function to remove a task from the list\ndef remove_task():\n\t# add code here\n\n# Function to mark a task as completed\ndef mark_completed():\n\t# add code here\n\n# Function to display all tasks\ndef display_tasks():\n\t# add code here\n\n# Main program loop\nwhile True:\n\tdisplay_menu()\n\tchoice = input('Enter your choice [1-5]: ')\n\tif choice == '1':\n\t\tadd_task()\n\telif choice == '2':\n\t\tremove_task()\n\telif choice == '3':\n\t\tmark_completed()\n\telif choice == '4':\n\t\tdisplay_tasks()\n\telif choice == '5':\n\t\tprint('Exiting program. Goodbye!')\n\t\tbreak\n\telse:\n\t\tprint('Invalid choice. Please enter a number from 1 to 5.')",
+            "link": "#"
+        }
+    ],
+    "2D Lists": [
+        {
+            "title": "Matrix Addition",
+            "outline": "Write a Python program that adds two 2D matrices. Allow the user to input the dimensions and elements of the matrices and display the result.",
+            "link": "#"
+        },
+        {
+            "title": "Transpose a Matrix",
+            "outline": "Write a Python program that calculates and displays the transpose of a given 2D matrix. The transpose of a matrix swaps its rows and columns.",
+            "link": "#"
+        },
+        {
+            "title": "Matrix Multiplication",
+            "outline": "Write a Python program that multiplies two matrices and displays the result. Allow the user to input the dimensions and elements of the matrices.",
+            "link": "#"
+        }
+    ],
+    "Dictionaries": [
+        {
+            "title": "Names and grades",
+            "outline": "Write a Python function that takes a dictionary of student names and their corresponding grades and returns the names of all students who received an 'A' grade.",
+            "link": "#"
+        },
+        {
+            "title": "English to French",
+            "outline": "Create a Python program that simulates a simple English-to-French dictionary. Allow the user to input an English word, and your program should return the French translation if it exists in the dictionary.",
+            "link": "#"
+        },
+        {
+            "title": "Book titles",
+            "outline": "Write a Python function that takes a list of dictionaries, where each dictionary represents a book with attributes like title, author, pages, and year. The function should return a list of book titles published in a specific year provided as an argument to the function.",
+            "link": "#"
+        }
+    ],
+    "Tuples": [
+        {
+            "title": "Tuple Slicing",
+            "outline": "Write a Python program that takes a string as input and converts it into a tuple of individual characters. Then, display a slice of the tuple containing the characters from the 2nd to the 5th position.",
+            "link": "#"
+        },
+        {
+            "title": "Email Splitter",
+            "outline": "Write a Python program that prompts the user to enter an email address and then splits it into a tuple containing the username and domain. Display both parts separately.",
+            "link": "#"
+        },
+        {
+            "title": "Temperature Records",
+            "outline": "Create a program that stores daily temperature records as tuples. Allow the user to input the temperature for each day of a week (e.g., Monday to Sunday). Then, find and display the maximum and minimum temperatures for the week using tuple operations.",
+            "link": "#"
+        }
+    ],
+    "Exceptions": [
+        {
+            "title": "Calculator with Error Handling",
+            "outline": "Create a simple calculator program that takes two numbers and an operation (addition, subtraction, multiplication, division) from the user. Handle both ValueError and ZeroDivisionError exceptions",
+            "link": "#"
+        },
+        {
+            "title": "Data Validation",
+            "outline": "Write a program that prompts the user to enter their age. Handle both ValueError and AgeError exceptions.  For the second of these create a custom exception 'AgeError' and raise it if the age is less than 0 or greater than 150. Handle this exception and display an appropriate message.",
+            "link": "#"
+        }
+    ],
+    "Working with files": [
+        {
+            "title": "Word Counter",
+            "outline": "Write a Python program that reads a text file and counts the number of words in it. Display the word count as output.",
+            "link": "#"
+        },
+        {
+            "title": "Binary Data Manipulation",
+            "outline": "Write a Python program that reads a binary file containing integers and finds the sum of all the integers in the file.",
+            "link": "#"
+        },
+        {
+            "title": "File Copy",
+            "outline": "Write a Python program that copies the contents of one text file to another. The program should take two filenames as input and create a copy of the first file into the second file.",
+            "link": "#"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "Getting Started" : 
+    {
+        "description": "Installing and working with the interactive environment",
+        "image": null,
+        "imageAlt": null,
+        "url": "topics/python/02_getting_started_with_python.md"
+    },
+    "Variables": 
+    {
+        "description": "Declaring and using variables",
+        "image": null,
+        "imageAlt": null,
+        "url": "topics/python/03_variables.md"
+    },
+    "Operators":
+    {
+        "description": "Maths, logic and other operators",
+        "image": null,
+        "imageAlt": null,
+        "url": "topics/python/04_operators.md"
+    },
+    "Strings":
+    {
+        "description": "Strings and things",
+        "image": null,
+        "imageAlt": null,
+        "url": "topics/python/05_strings.md"
+    }
+    ,
+    "Functions":
+    {
+        "description": "Always makes sense to use a function!",
+        "image": null,
+        "imageAlt": null,
+        "url": "topics/python/06_functions.md"
+    }
+}

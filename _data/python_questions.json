@@ -1,0 +1,940 @@
+{
+    "Getting Started with Python": [
+        {
+            "question": "What are the general steps to install Python on your home computer?",
+            "code": null,
+            "options": [
+                "Download the installer and click 'Next' repeatedly",
+                "Visit a random website and download Python",
+                "Download Python from the official Python website and follow the installation instructions",
+                "Python cannot be installed on home computers"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which version of Python should you choose for most users?",
+            "code": null,
+            "options": [
+                "Python 2.x",
+                "Python 3.x",
+                "Python 4.x",
+                "Python 1.x"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What does the 'Add Python x.x to PATH' option during installation do?",
+            "code": null,
+            "options": [
+                "It adds Python to the Windows Registry",
+                "It creates a shortcut on the desktop",
+                "It adds Python to the system's PATH environment variable",
+                "It installs additional Python libraries"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "How can you check if Python is installed correctly on your computer?",
+            "code": null,
+            "options": [
+                "By opening Microsoft Word",
+                "By typing `python --version` in the command prompt or terminal",
+                "By creating a new Python file",
+                "By checking your email"
+            ],
+            "answer": 2
+        },
+        {
+            "question": " What command can you use to start the Python interactive environment in your terminal or command prompt?",
+            "code": null,
+            "options": [
+                "`start python`",
+                "`run python`",
+                "`python`",
+                "`start`"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the result of the expression `10 / 3` in Python?",
+            "code": null,
+            "options": [
+                "3.3333333333333335",
+                "3.0",
+                "4",
+                "10"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What does the `len()` function do in Python?",
+            "code": null,
+            "options": [
+                "Returns the length of a string or list",
+                "Converts a string to uppercase",
+                "Performs basic arithmetic operations",
+                "Creates a new list"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How do you access elements in a list in Python?",
+            "code": null,
+            "options": [
+                "Using square brackets and the element's value",
+                "Using the `get()` function",
+                "Using parentheses and an index",
+                "Lists cannot be accessed in Python"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which Python function is used to join two or more strings together?",
+            "code": null,
+            "options": [
+                "`add()`",
+                "`concatenate()`",
+                "`merge()`",
+                "`+` operator"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "What is the purpose of an Integrated Development Environment (IDE) when working with Python?",
+            "code": null,
+            "options": [
+                "To download Python packages",
+                "To create Python programs",
+                "To run Python scripts in a web browser",
+                "To play Python games"
+            ],
+            "answer": 2
+        }
+    ],
+    "Variables": [
+        {
+            "question": "What is a variable in programming?",
+            "code": null,
+            "options": [
+                "A container used to store data that can change during program execution.",
+                "A function used to control program flow.",
+                "A mathematical expression used to perform calculations.",
+                "A keyword used to organize and manage data effectively."
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which of the following best describes the concept of a constant?",
+            "code": null,
+            "options": [
+                "A container used to store data that can change during program execution.",
+                "A mathematical expression used to perform calculations.",
+                "A value that remains fixed throughout the program.",
+                "A keyword used to control program flow."
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Python is a dynamically typed language. What does this mean in terms of variable declaration and data types?",
+            "code": null,
+            "options": [
+                "The ability to change a variable's value during program execution.",
+                "The requirement to declare variable types before using them.",
+                "The process of converting one data type to another.",
+                "The determination of a variable's data type based on the value it holds."
+            ],
+            "answer": 4
+        },
+        {
+            "question": "What is the purpose of the `print()` function in Python?",
+            "code": null,
+            "options": [
+                "To perform mathematical calculations.",
+                "To obtain user input.",
+                "To display output on the screen.",
+                "To define constants."
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which of the following is not a legal name for a variable?",
+            "code": null,
+            "options": [
+                "`_my_name`",
+                "`my name`",
+                "`my_name`",
+                "`myName`"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How can you obtain user input in Python?",
+            "code": null,
+            "options": [
+                "Using the `input()` function.",
+                "Using the `print()` function.",
+                "Using the cast() function.",
+                "Using the get_input() function."
+            ],
+            "answer": 1
+        },
+        {
+            "question": "How can you convert a string to an integer in Python?",
+            "code": null,
+            "options": [
+                "Using the `convert_to_int()` function.",
+                "Using the `str_to_int()` function.",
+                "Using the `int()` function.",
+                "Using the `parse_int()` function."
+            ],
+            "answer": 3
+        },
+        {
+            "question": "How can you check the data type of a variable in Python?",
+            "code": null,
+            "options": [
+                "Use the `type()` function to determine the data type of a variable in Python.",
+                "Convert the variable to a string and then check its length to identify its data type.",
+                "Use the `typeof()` function to inspect the data type of a variable.",
+                "Create a new variable and assign it the value of the original variable, then check its data type using the `type()` function."
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which naming style is recommended for variables in Python?",
+            "code": null,
+            "options": [
+                "camelCase",
+                "PascalCase",
+                "snake_case",
+                "kebab-case"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is PEP8, and why is it important in Python programming?",
+            "code": null,
+            "options": [
+                "PEP8 is a programming language, essential for writing Python code efficiently.",
+                "PEP8 is a set of guidelines for writing clean, readable Python code, important for maintaining code quality and consistency.",
+                "PEP8 is a Python package used for handling web development tasks, crucial for building web applications.",
+                "PEP8 is a Python Enhancement Proposal that provides coding conventions for Python code, ensuring consistency and readability across projects."
+            ],
+            "answer": 2
+        }
+    ],
+    "Operators": [
+        {
+            "question": "What is the purpose of an operator in computer science?",
+            "code": null,
+            "options": [
+                "To represent a specific operation to be performed on one or more operands.",
+                "To assign values to variables.",
+                "To control the flow of a program.",
+                "To filter data based on specific conditions."
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which of the following operators is used to assign values to variables in Python?",
+            "code": null,
+            "options": [
+                "`==`",
+                "`=`",
+                "`+`",
+                "`/`"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the result of the expression ` 7 // 2` in Python?",
+            "code": null,
+            "options": [
+                "3.5",
+                "3",
+                "4",
+                "3.0"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which operator is used for exponentiation in Python?",
+            "code": null,
+            "options": [
+                "`^`",
+                "`%`",
+                "`//`",
+                "`**`"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "What does the `+=` operator do in Python?",
+            "code": null,
+            "options": [
+                "Subtracts a value from a variable.",
+                "Multiplies a variable by a value.",
+                "Adds a value to a variable.",
+                "Divides a variable by a value."
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which comparison operator checks if two values are not equal in Python?",
+            "code": null,
+            "options": [
+                "`==`",
+                "`>=`",
+                "`<`",
+                "`!=`"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "What is the order of precedence for mathematical operations in Python?",
+            "code": null,
+            "options": [
+                "Exponentiation, Addition/Subtraction, Multiplication/Division",
+                "Multiplication/Division, Addition/Subtraction, Exponentiation",
+                "Addition/Subtraction, Exponentiation, Multiplication/Division",
+                "Exponentiation, Multiplication/Division, Addition/Subtraction"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "Which logical operator returns `True` only if both conditions are `True`?",
+            "code": null,
+            "options": [
+                "`and`",
+                "`or`",
+                "`not`",
+                "`==`"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the purpose of using parentheses, (brackets), in logical expressions?",
+            "code": null,
+            "options": [
+                "To change the order of evaluation.",
+                "To combine multiple expressions.",
+                "To separate operands.",
+                "To indicate comments."
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the result of the expression not True?",
+            "code": null,
+            "options": [
+                "`False`",
+                "`True`",
+                "null",
+                "Error"
+            ],
+            "answer": 1
+        }
+    ],
+    "Strings": [
+        {
+            "question": "What is the primary purpose of strings in Python?",
+            "code": null,
+            "options": [
+                "To represent mathematical calculations",
+                "To store and manipulate textual data",
+                "To create graphical user interfaces",
+                "To perform logical operations"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How do you create a string in Python?",
+            "code": null,
+            "options": [
+                "By enclosing text in single quotes",
+                "By enclosing the string in backticks",
+                "By using the `str()` function",
+                "By using square brackets"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Which of the following string operations is used to combine two or more strings?",
+            "code": null,
+            "options": [
+                "Division",
+                "Subtraction",
+                "Concatenation",
+                "Multiplication"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the result of `Python * 3`?",
+            "code": null,
+            "options": [
+                "`PythonPython`",
+                "`PythonPythonPython`",
+                "`Python3`",
+                "`9`"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which Python method is used to convert a string to uppercase?",
+            "code": null,
+            "options": [
+                "`upper()`",
+                "`lower()`",
+                "`length()`",
+                "`find()`"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What does the `find()` method return if the specified character or substring is not found in the string?",
+            "code": null,
+            "options": [
+                "`True`  ",
+                "`False`",
+                "`-1`",
+                "`0`"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "How do you access the first character of a string named `text`?",
+            "code": null,
+            "options": [
+                "`text[0]`",
+                "`text[1]`",
+                "`text[-1]`",
+                "`text(0)`"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What does string slicing allow you to do?",
+            "code": null,
+            "options": [
+                "Combine two strings",
+                "Repeat a string",
+                "Extract a portion of a string",
+                "Convert a string to uppercase"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What is the length of the string `'Hello, World!'`?",
+            "code": null,
+            "options": [
+                "11",
+                "12",
+                "13",
+                "14"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "How do you include a newline character in a string?",
+            "code": null,
+            "options": [
+                "Using `\\n`",
+                "Using `\\t`",
+                "Using `\\`",
+                "Using `#`"
+            ],
+            "answer": 1
+        }
+    ],
+    "Functions": [
+        {
+            "question": "What is the main purpose of using functions in programming?",
+            "code": null,
+            "options": [
+                "To make the code longer and more complex",
+                "To reduce duplication of code and make the program easier to maintain",
+                "To confuse other programmers",
+                "To slow down program execution"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "In Python, how do you define a function?",
+            "code": null,
+            "options": [
+                "Using the `def` keyword followed by the function name, parentheses, and a colon",
+                "Using the `function` keyword followed by the function name and parentheses",
+                "Using the `define` keyword followed by the function name and parentheses",
+                "Using the `func` keyword followed by the function name and a semicolon"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What is the difference between a function and a procedure in Python?",
+            "code": null,
+            "options": [
+                "Functions return values, procedures do not",
+                "Functions do not use parameters, while procedures do",
+                "Functions are called with `call()`, and procedures are called with `execute()`",
+                "There is no difference; the terms are interchangeable."
+            ],
+            "answer": 1
+        },
+        {
+            "question": "When defining a function, what are the components included in the function header?",
+            "code": null,
+            "options": [
+                "Function name and indentation",
+                "Function name, parentheses for parameters, and a colon",
+                "Function name, parentheses for arguments, and a semicolon",
+                "Function name, parentheses for return values, and a comma"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the purpose of function parameters in Python?",
+            "code": null,
+            "options": [
+                "They are used to specify the return value of a function",
+                "They allow you to pass data into a function for processing",
+                "They determine the indentation level of a function",
+                "They are optional and not required for defining functions"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which keyword is used to return a value from a function in Python?",
+            "code": null,
+            "options": [
+                "`result`",
+                "`output`",
+                "`return`",
+                "`response`"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What does it mean to have a 'default parameter' in a function?",
+            "code": null,
+            "options": [
+                "It means the parameter cannot be changed",
+                "It means the parameter is mandatory",
+                "It means the parameter has a predefined value",
+                "It means the parameter is hidden from the function"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "When calling a function with keyword parameters, what advantage does it offer?",
+            "code": null,
+            "options": [
+                "It allows you to call the function without any parameters",
+                "It specifies which argument corresponds to which parameter, making the code more readable",
+                "It allows you to call the function with a variable number of arguments",
+                "It prevents the function from being called"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the purpose of using functions in a program\u2019s structure?",
+            "code": null,
+            "options": [
+                "To make the program run faster",
+                "To make the program more complex",
+                "To organize and modularize the code",
+                "To eliminate the need for variables"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "In Python, where should the function call be placed if you want it to be the entry point for your program?",
+            "code": null,
+            "options": [
+                "Before defining the function",
+                "After defining the function",
+                "Inside the function definition",
+                "It doesn't matter where the function call is placed"
+            ],
+            "answer": 2
+        }
+    ],
+    "Built in functions": [
+        {
+            "question": "What is the primary purpose of the `print()` function in Python?",
+            "code": null,
+            "options": [
+                "To perform mathematical calculations",
+                "To find the maximum value in a list",
+                "To display information on the screen",
+                "To convert data types"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "Which built-in function returns the length of a string?",
+            "code": null,
+            "options": [
+                "`size()`",
+                "`length()`",
+                "`count()`",
+                "`len()`"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "What does the input() function do in Python?",
+            "code": null,
+            "options": [
+                "It performs rounding operations",
+                "It allows user input and returns it as a string",
+                "It calculates the absolute value of a number",
+                "It converts a value to uppercase"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "How can you convert a string containing a number, like 42, to an actual integer in Python?",
+            "code": null,
+            "options": [
+                "Use the `int()` function",
+                "Use the `str()` function",
+                "Use the float() function",
+                "Use the `round()` function"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What does the `max()` function do in Python?",
+            "code": null,
+            "options": [
+                "Returns the length of a string",
+                "Returns the maximum value among a set of values",
+                "Converts all characters to uppercase",
+                "Calculates the sum of all elements in a list"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which built-in function is used to find the absolute value of a number?",
+            "code": null,
+            "options": [
+                "`abs()`",
+                "`max()`",
+                "`round()`",
+                "`len()`"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "What does the `round()` function do to a floating-point number?",
+            "code": null,
+            "options": [
+                "Converts it to an integer",
+                "Rounds it to the nearest integer",
+                "Converts it to a string",
+                "Finds its square root"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "Which function is used to change all characters in a string to uppercase?",
+            "code": null,
+            "options": [
+                "`str.capitalize()`",
+                "`str.upper()`",
+                "`str.lower()`",
+                "`str.title()`"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What is the purpose of the chr() function in Python?",
+            "code": null,
+            "options": [
+                "To find the length of a string",
+                "To calculate mathematical expressions",
+                "To convert a character to its integer representation",
+                "To perform character encoding"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "Which function is used to convert an integer to its corresponding character?",
+            "code": null,
+            "options": [
+                "`int.char()`",
+                "`chr()`",
+                "`char()`",
+                "`int.to_char()`"
+            ],
+            "answer": 3
+        }
+    ],
+    "Selection": [
+        {
+            "question": "What is the purpose of selection (conditional statements) in programming?",
+            "code": null,
+            "options": [
+                "To execute statements in sequence",
+                "To repeat a block of code",
+                "To make decisions and execute different statements based on conditions",
+                "To define functions and classes"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "What symbol indicates the start of an indented block of code in Python?",
+            "code": null,
+            "options": [
+                "Semi-colon (`;`)",
+                "Curly braces (`{}`)",
+                "Underscore (`_`)",
+                "Colon (`:`)"
+            ],
+            "answer": 4
+        },
+        {
+            "question": "Which statement provides an alternative block of code for when the conditional expression is false?",
+            "code": null,
+            "options": [
+                "`if`",
+                "`elif`",
+                "`else`",
+                "`then`"
+            ],
+            "answer": 3
+        },
+        {
+            "question": "When is the `elif` statement executed?",
+            "code": null,
+            "options": [
+                "When the preceding `if` condition is true",
+                "When the preceding `if` condition is `false` and its own condition is `true`",
+                "When both the preceding `if` and `elif` conditions are `false`",
+                "When any condition is `true`"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What conditional expression should replace the blank to correctly determine if the variable `num` is negative?",
+            "code": "# Determine if a number is positive, negative, or zero\nnum = 5\n# Write the conditional expression to check if 'num' is negative\nif _____:\n\tprint('Number is negative')\nelse:\n\tprint('Number is either zero or positive')",
+            "options": [
+                "`num < 0`",
+                "`num == 0`",
+                "`num > 0`",
+                "`num != 0`"
+            ],
+            "answer": 1
+        },
+        {
+            "question": "Write an `if-elif` statement that assigns a letter grade 'A', 'B', or 'C' based on a student's test score.",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "What will be the output from the following program?",
+            "code": "x = 10\ny = 5\nif x > y:\n\tprint('x is greater than y')\nelif x < y:\n\tprint('x is less than y')\nelse:\n\tprint('x is equal to y')",
+            "options": [
+                "x is equal to y",
+                "x is greater than y",
+                "x is less than y",
+                "None of the above"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What will be the output from the following program?",
+            "code": "num = 15\nif num % 2 == 0:\n\tprint('Even')\nelif num % 3 == 0:\n\tprint('Divisible by 3')\nelif num % 5 == 0:\n\tprint('Divisible by 5')\nelse:\n\tprint('Odd')",
+            "options": [
+                "Even",
+                "Divisible by 3",
+                "Divisible by 5",
+                "Odd"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "What will be the output from the following program?",
+            "code": "age = 20\nif age < 18:\n\tprint('You are a minor)\nelif age >= 18 and age < 65:\n\tprint('You are an adult')\nelse:\n\tprint('You are a senior citizen')",
+            "options": [
+                "You are a minor",
+                "Your are an adult",
+                "Your are a senior citizen",
+                "None of the above"
+            ],
+            "answer": 2
+        },
+        {
+            "question": "XXWhat additional comment might you make about the program in question 9?",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ],
+    "Iteration": [
+        {
+            "question": "What is iteration, and why is it important in programming?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How does a `for` loop differ from a `while` loop in Python?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "What is the purpose of the `range()` function in `for` loops?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How can you exit a `while` loop in Python?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "Write a `for` loop that iterates over a list of numbers and prints each number.",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "Write a `while` loop that counts down from 10 to 1 and then prints 'Blast-off!'",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "When might you use a `for` loop instead of a `while` loop, and vice versa?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "What is an infinite loop, and how can you prevent it?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "Write a `for` loop that calculates the sum of all even numbers from 1 to 20.",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "Write a `while` loop that asks the user to enter a password until they enter the correct password 'python123.'",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ],
+    "Lists": [
+        {
+            "question": "What is a list in Python, and why is it useful?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How do you create an empty list in Python?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "What is the first index of a list in Python?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How do you add an element to the end of a list?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How do you change the value of a specific element in a list?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "What is the difference between `append()` and `extend()` when working with lists?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How do you remove an element from a list?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "What is the purpose of the `len()` function when working with lists?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How do you find the maximum value in a list?",
+            "code": null,
+            "options": null,
+            "answer": null
+        },
+        {
+            "question": "How can you check if an element exists in a list?",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ],
+    "2D Lists": [
+        {
+            "question": "",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ],
+    "Dictionaries": [
+        {
+            "question": "",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ],
+    "Tuples": [
+        {
+            "question": "",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ],
+    "Exceptions": [
+        {
+            "question": "",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ],
+    "Working with files": [
+        {
+            "question": "",
+            "code": null,
+            "options": null,
+            "answer": null
+        }
+    ]
+}

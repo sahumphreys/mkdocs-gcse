@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Programming with Python",
+        "url": "/topics/python/index.html",
+        "description": "Learn how to program with Python",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/python.png"
+    },
+    {
+        "title": "Systems Architecture",
+        "url": "/topics/system/",
+        "description": "CPU, memory and the internal workings of a computer",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/cpu_1.png"
+    },
+    {
+        "title": "Data Representation",
+        "url": "/topics/data/index.html",
+        "description": "Bits, bytes and  binary",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/binary.jpg"
+    },
+    {
+        "title": "Computer Networks",
+        "url": "/topics/networks",
+        "description": "How the Internet works and fundamental aspects of networked systems",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/networks.webp"
+    },
+    {
+        "title": "Network Security",
+        "url": "/topics/security/",
+        "description": "Features of making the network system safe and secure",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/security.jpg"
+    },
+    {
+        "title": "Relational Databases",
+        "url": "/topics/databases",
+        "description": "Introduction to processing and managing data in a database",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/databases.png"
+    },
+    {
+        "title": "Algorithms",
+        "url": "/topics/algorithms/",
+        "description": "Some of the key searching and sorting algorithms",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/algorithms.jpg"
+    },
+    {
+        "title": "Programming",
+        "url": "/topics/programming",
+        "description": "Principles of programming languages and programming in general",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/programming.jpg"
+    },
+    {
+        "title": "Logic and Languages",
+        "url": "/topics/logic",
+        "description": "Boolean algebra",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/logic.png"
+    },
+    {
+        "title": "Impact of Technology",
+        "url": "/topics/impact",
+        "description": "Legal, ethical and societal impact of the use of computers in today's world",
+        "linkText": "Read On",
+        "image": "/assets/images/topics/impact.jpg"
+    }
+]
