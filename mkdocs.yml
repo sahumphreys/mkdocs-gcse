@@ -139,6 +139,9 @@ nav:
       - Variables: 'topics/programming/01_variables_types_and_strings.md'
       - Selection: 'topics/programming/02_selection_boolean_and_random.md'
       - Iteration: 'topics/programming/03_iteration.md'
+      - Arrays: 'topics/programming/04_arrays.md'
+      - 'Functions and Procedures': 'topics/programming/05_functions_and_procedures.md'
+      - 'File Handling': 'topics/programming/06_file_handling.md'
     - 'Impact of Technology':
       - Overview: 'topics/impact/index.md'
       - Slides: 'topics/impact/slides/impact-slides.pdf'

@@ -20,6 +20,23 @@ Examples of variables might include:
 
 A variable consists of an **identifier**, it's name and can be **assigned** a value.  This value might change during the course of the program.
 
+**AQA Pseudocode**
+
+```
+a <- 3
+b <- 'Hello'
+```
+
+!!! note
+    For assignment AQA uses the backward pointing arrow - it's a sensible choice
+
+**OCR Pseudocode**
+
+```
+a = '3'
+b = 'Hello'
+```
+
 ## Data Types
 
 All programming languages need to handle data, and that data can take different forms.  Consider the examples above.  What **type** of data is being assigned to each of these variables?  Is it numeric?  Is it text?  If it's a number, is it a whole number of a number with a fractional part?
@@ -33,13 +50,13 @@ The answers here may depend on whether we are programming using a **statically-t
 
 For statically typed languages the amount of memory is effectively built-in and we, the programmer, cannot change it.  A typical summary is shown in the following table:
 
-| Data Type | Expected Type of Data | Typical amount of memory | Example |
-|-----------|-----------------------|--------------------------|---------|
-| integer   | Whole number, positive or negative | 4 bytes | 42, -89, 0 |
-| float/real |  Number with a fractional part | 8 bytes | 3.142, -89.7 |
-| char | Individual character | 1 byte | 'a', '9', 'Z', ';' |
-| string | Zero or more characters | 1 byte per character in the string | 'John', '1234' |
-| boolean | True or False | 1 byte |True, False |
+| Data Type  | Expected Type of Data              | Typical amount of memory           | Example            |
+| ---------- | ---------------------------------- | ---------------------------------- | ------------------ |
+| integer    | Whole number, positive or negative | 4 bytes                            | 42, -89, 0         |
+| float/real | Number with a fractional part      | 8 bytes                            | 3.142, -89.7       |
+| char       | Individual character               | 1 byte                             | 'a', '9', 'Z', ';' |
+| string     | Zero or more characters            | 1 byte per character in the string | 'John', '1234'     |
+| boolean    | True or False                      | 1 byte                             | True, False        |
 
 !!! note
 
@@ -82,6 +99,20 @@ The benefits of a constant are:
 - The value cannot be changed accidentally during the course of a program
 - Defining the constant once, usually at the start of a program, means any subsequent updates e.g. the chancellor changes the rate of VAT, are only done in one place
 
+**AQA Pseudocode**
+
+```
+CONSTANT PI <- 3.142 
+CONSTANT CLASS_SIZE <- 30
+```
+
+**OCR Pseudocode**
+
+OCR make no distinction in their pseudocode between variables and constants
+
+!!! tip
+    For OCR always upper case the identifier to make it clear it is a constant
+
 ## Input/Output
 
 All languages need some way of communication with their user, either by getting the user to enter data at the keyboard or to display results to the screen or to a file or to a printer etc..
@@ -100,14 +131,34 @@ print(name)
 
     If the brackets are empty, as in `print()`, a new line character is sent and the cursor will move down by one line on the screen
 
+
+**AQA Pseudocode**
+
+```
+a <- USERINPUT  // get a value from the user and assign it to `a`
+OUTPUT a        // output value of `a` to the screen
+```
+
+Somewhat unusual perhaps ...
+
+**OCR Pseudocode**
+
+```
+name = input("Enter your name: ")       // get value from user, assign it to `name`
+print(name)                             // display `name` to the screen
+```
+
+Nothing to surprise us here.
+
 ## Operators
 
-| Operator | Description | Example | Result |
-|:---------:|-------------|:-------:|:------:|
-| + | Addition | `7 + 3`  | 10 |
-| - | Subtraction | `7 - 3` | 4 |
-| - | Multiplication | `7 * 3` | 21 |
-| / | Division | `7 / 3` | 2.33333.. |
+| Operator | Description    | Example |  Result   |
+| :------: | -------------- | :-----: | :-------: |
+|    +     | Addition       | `7 + 3` |    10     |
+|    -     | Subtraction    | `7 - 3` |     4     |
+|    -     | Multiplication | `7 * 3` |    21     |
+|    /     | Division       | `7 / 3` | 2.33333.. |
+|    ^     | Exponentiation | `7 ^ 3` |    343    |
 
 !!! note 
 
@@ -115,11 +166,14 @@ print(name)
 
 There is also a pair of integer division operators: 
 
-| Operator | Description | Example | Result |
-|:---------:|-------------|:-------:|:------:|
-| // | Floor division | `7 // 3`  | 2 |
-| % | Modulo (Remainder) | `7 % 3` | 1 |
+| Operator | Description        | Example  | Result |
+| :------: | ------------------ | :------: | :----: |
+|   DIV    | Floor division     | `7 // 3` |   2    |
+|   MOD    | Modulo (Remainder) | `7 % 3`  |   1    |
 
+!!! note
+    Both AQA and OCR pseudocode uses the mnemonic `MOD` and `DIV` for integer division operations, equivalent to `//` and `%` in Python
+    
 ## Strings
 
 A string is different to an integer.  Perhaps obvious, but consider: 
@@ -131,13 +185,25 @@ Everything the user enters at the keyboard will be received by the computer as a
 
 To convert string data into numeric data, and vice versa, we use one of several built-in functions:
 
-| Function | Description |
-|----------|-------------|
-| int(str) | converts the string, `str` to an integer |
-| float(str) | converts the string, `str` to a float/real |
-| str(num) | converts the numeric value, 'num' to a string |
-| ASC(ch)  | converts the character, `ch` to its ASCII value |
-| ORD(num) | converts the integer, `num`, to its associated ASCII character |
+**AQA Pseudocode**
+
+| Function            | Description                                                    |
+| ------------------- | -------------------------------------------------------------- |
+| STRING_TO_INT(str)  | converts the string, `str` to an integer                       |
+| STRING_TO_REAL(str) | converts the string, `str` to a float/real                     |
+| INT_TO_STRING(num)  | converts the numeric value, 'num' to a string                  |
+| REAL_TO_STRING(num) | converts the numeric value, 'num' to a string                  |
+| CHAR_TO_CODE(ch)    | converts the character, `ch` to its ASCII value                |
+| CODE_TO_CHAR(num)   | converts the integer, `num`, to its associated ASCII character |
+
+**OCR Pseudocode**
+
+| Function   | Description                                   |
+| ---------- | --------------------------------------------- |
+| int(str)   | converts the string, `str` to an integer      |
+| float(str) | converts the string, `str` to a float/real    |
+| str(num)   | converts the numeric value, 'num' to a string |
+
 
 ### String concatenation
 
@@ -150,14 +216,34 @@ Two strings can be joined together using the concatenation operator, `+`:
 
 There are a number of standard functions  for working with strings.  These functions will be made available in most programming languages.  If you know you want to find the length of a string using, say, C# or Java then a quick search on the Internet will yield the answer (yes, we all do that!)
 
-| Function | Description | Example | Output |
-|----------|-------------|---------|:-------:|
-| `str.length` | returns the length of the string, `str` | `name = 'john'.length` | 4 |
-| `str.substring(start, end)` | returns a slice of the string, `str`, | `print('john',substring(0,2))` | 'jo' |
-| `str.left(3)` | returns the first 3 characters of the string, `str`| `print('john'.left(1))` | 'j' |
-| `str.right(3)` | returns the last 3 characters of the string, `str`| `print('john'.left(1))` | 'ohn' |
-| `str.upper()` | Convert the string, `str` to upper case | `print('john'.upper())` | 'JOHN' |
-| `str.lower()` | Convert the string, `str` to lower cacse | `print('John.lower())` | 'john' |
+| Function                    | Description                                         | Example                        | Output |
+| --------------------------- | --------------------------------------------------- | ------------------------------ | :----: |
+| `str.length`                | returns the length of the string, `str`             | `n = 'john'.length`            |   4    |
+| `str.substring(start, end)` | returns a slice of the string, `str`,               | `print('john',substring(0,2))` |  'jo'  |
+| `str.left(3)`               | returns the first 3 characters of the string, `str` | `print('john'.left(1))`        |  'j'   |
+| `str.right(3)`              | returns the last 3 characters of the string, `str`  | `print('john'.left(1))`        | 'ohn'  |
+| `str.upper()`               | Convert the string, `str` to upper case             | `print('john'.upper())`        | 'JOHN' |
+| `str.lower()`               | Convert the string, `str` to lower cacse            | `print('John.lower())`         | 'john' |
+
+**AQA Pseudocode**
+
+AQA alters the syntax of some of these string handling functions:
+
+| Function                      | Description                             | Example                        | Output |
+| ----------------------------- | --------------------------------------- | ------------------------------ | :----: |
+| `LEN(str)`                    | returns the length of the string, `str` | `n = LEN('john')`              |   4    |
+| `SUBSTRING(start, stop, str)` | returns a slice of the string, `str`,   | `print(SUBSTRING(0,2,'john'))` |  'jo'  |
+
+You should not expect to see any of the others in the AQA pseudocode.
+
+**OCR Pseudocode**
+
+Both `length` and `substring` are used in OCR and the syntax is:
+
+| Function                    | Description                                                               | Example                        | Output |
+| --------------------------- | ------------------------------------------------------------------------- | ------------------------------ | :----: |
+| `str.length`                | returns the length of the string, `str`                                   | `n = 'john'.length`            |   4    |
+| `str.substring(start, num)` | returns a slice of the string, `str`, `num` indicates how many characters | `print('john',substring(0,2))` |  'jo'  |
 
 ## Comments
 
@@ -169,9 +255,11 @@ Get into the habit of including comments in your code, they are really useful.  
 - include your name and date of the author and when the program was written
 - include a revision history, what changes were made and when
 
-In pseudocode all comments begin with `//`.
+**AQA Pseudocode**
 
-Python comments begin with a '#'; comments in Visual Basic begin with a `'`.
+Adopts the Python comment: `#`
 
-Again, if you're not sure of the syntax of a comment in your chosen language - look it up!
+**OCR Pseudocode**
+
+Uses `//` as in languages such as Javascript etc..
 
