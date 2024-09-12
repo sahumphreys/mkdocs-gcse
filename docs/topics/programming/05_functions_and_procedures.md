@@ -133,6 +133,48 @@ total = sum(first, second)
 
 The variables `first` and `second` are the arguments.
 
+**AQA Pseudocode**
+
+A function using AQA pseudocode.  It is a function because it includes the `RETURN` statement.
+
+```
+SUBROUTINE sum(a,b)
+    result <- a + b
+    RETURN result
+END SUBROUTINE
+
+c <- sum(10,12)
+```
+
+A procedure using AQA pseudocode.  There is no `RETURN` statement.
+
+```
+SUBROUTINE print_sum(a, b)
+    OUTPUT a + b
+ENDSUBROUTINE
+
+DISPLAY print_sum(10, 12)
+```
+
+**OCR Pseudocode**
+
+```
+function sum(a,b)
+    result = a + b
+    return result
+endfunction
+
+c = sum(10,12)
+```
+
+```
+procedure show_sum(sum(a, b))
+    print(a + b)
+endprocedure
+
+show_sum(10,12)
+```
+
 ## Benefits of subroutines?
 
 **1. Code Reusability**
@@ -185,12 +227,11 @@ Here are the scope rules to keep in mind:
 **For example:**
 
 ```
-DECLARE x : INTEGER         // global variable
-x = 10
+x = 10                      // `x` is a global variable
+
 
 procedure  myProcedure()
-    DECLARE y : INTEGER     // local variable
-    y = x + 20
+    y = x + 20              // `y` is a local variable
     print(y)                // output: 30
 endprocedure
 

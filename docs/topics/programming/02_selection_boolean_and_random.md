@@ -44,6 +44,42 @@ else
 endif
 ```
 
+**AQA pseudocode**
+
+Similar to previous example, do not forget the `ENDIF`:
+
+```
+IF age > 18 THEN
+    OUTPUT "You may be at university"
+ELSE IF age > 16 THEN
+    OUTPUT "You may be doing your A Levels"
+ELSE IF age > 14 THEN
+    OUTPUT "You will be doing your GCSEs"
+ELSE IF age > 11 THEN
+    OUTPUT "You will be at secondary school"
+ELSE
+    OUTPUT "You will be at primary school"
+ENDIF
+```
+
+**OCR Pseudocode**
+
+Similar to previous example, except uses `elseif` instead of `endif`.  Again, do not forget the `endif`:
+
+```
+if age > 18 then
+    print("You may be at university")
+elseif age > 16 then
+    print("You may be doing your A Levels")
+elseif age > 14 then
+    print("You will be doing your GCSEs")
+elseif age > 11 then
+    print("You will be at secondary school")
+else
+    print("You will be at primary school")
+endif
+```
+
 ### Nested if statements
 
 Another `if` statement can appear inside another one:
@@ -82,6 +118,9 @@ endswitch
 
 Depending on the value entered by the user, the code will either take the first, second or third option.  If none of these is recognised, it will `default` to the final alternative.
 
+!!! note
+    AQA does not use switch/case in its pseudocode
+
 ## Boolean Expressions
 
 A number of operators are available for boolean expressions:
@@ -111,3 +150,18 @@ if age > 16 AND age < 18 then
 endif
 ```
 
+## Random Number generation
+
+Python has a built in library of functions for dealing with random numbers, and by using `import random` at the top of the program code makes the library available for use.
+
+In the pseudocode, there is not need to add an import statement, it is assumed to be available.
+
+**AQA Pseudocode**
+
+```
+value = RANDOM_INT(first, second)  // returns a random integer between `first` and `second` inclusive
+```
+
+**OCR Pseudocode**
+
+Random number generation is not included in the OCR pseudocode

@@ -20,7 +20,7 @@ There are three types of iteration statements:
 
 - the `for ... next` loop
 - the `while ... endwhile` loop, and
-- the `do ... until` loop
+- the `do ... until` loop, or `repeat ... until` loop
 
 !!! note
     Python only has the first two, there is no `do ... while` loop in Python
@@ -28,6 +28,17 @@ There are three types of iteration statements:
 ## `for` loop
 
 The `for ... next' loop will repeat a set number of times.  It is sometimes known as the **counted loop**.  The code sets up a counter and it will count up from a start value to a stop value.  When that stop value has been reached the loop will end.
+
+**AQA Pseudocode**
+
+```
+sum <- 0
+FOR count <- 1 to 10
+    sum <- sum + count
+ENDFOR
+```
+
+**OCR Pseudocode**
 
 ```
 sum = 0
@@ -43,6 +54,19 @@ On each iteration of the loop the value if `count` is incremented, and the value
 
 This loop is used `while` a given condition is `True`.  The same loop can be expressed in this was:
 
+**AQA Pseudocode**
+
+```
+sum <- 0
+count <- 1
+WHILE  count <= 10
+    sum <- sum + count
+    count <- count + 1
+ENDWHILE
+```
+
+**OCR Pseudocode**
+
 ```
 sum = 0
 count = 1
@@ -53,6 +77,7 @@ endwhile
 print(sum)
 ```
 
+
 The functionality is identical to the `for` loop, though the syntax used is different.
 
 The `while` loop is also known as a **top-tested loop**.  The condition for entering the loop is placed at the top, all the while this condition remains `True` the loop will run.
@@ -61,11 +86,25 @@ Unlike the `for` loop, we have to manage the `count` variable, firstly by giving
 
 If we did not change the value of `count` inside the loop it would just keep on running - an **inifinite loop**.
 
-## `do ... until` loop
+## `do ... until` or `repeat ... until` loop
 
-The `do ... until` loop is also known as a **bottom-tested loop**, the condition is placed at the bottom.
+This loop construct is also known as a **bottom-tested loop**, the condition is placed at the bottom.
 
 The same algorithm can be expressed using this form:
+
+**AQA Pseudocode**
+
+```
+sum <- 0
+count <- 1
+REPEAT
+    sum <- sum + count
+    count <- count + 1
+UNTIL count == 10
+OUTPUT sum
+```
+
+**OCR Pseudocode**
 
 ```
 sum = 0

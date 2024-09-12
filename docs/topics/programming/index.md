@@ -12,6 +12,8 @@ In this section we'll be looking at the principles and concepts of programming *
 
 All examples and code snippets will be expressed using **pseudocode** rather than Python and most of these fundamental concepts will be covered here by was of revision except where Python may do things a little differently, but there will, inevitably be some repetition.  Studying this material in association with that of the Python topic is advised.
 
+Each of the exam boards express their algorithm using their own version of pseudocode, and this topic explores the difference between them.
+
 In addition to the syntax and concepts we will also consider some good habits to develop when programming, including:
 
 - Designing robust programs
