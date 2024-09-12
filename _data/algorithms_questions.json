@@ -1,0 +1,751 @@
+{
+  "Computational Thinking": [
+    {
+      "question": "What is an algorithm?",
+      "code": null,
+      "options": [
+        "A sequence of numbers arranged in a specific order",
+        "A step-by-step set of instructions or rules to solve a problem",
+        "A process for recognizing patterns in large datasets",
+        "A complex mathematical equation for solving problems"
+      ],
+      "answer": 2,
+      "explanation": "An algorithm is defined as a step-by-step set of instructions designed to solve a specific problem or carry out a task."
+    },
+    {
+      "question": "What are the key components of computational thinking?",
+      "code": null,
+      "options": [
+        "Decomposition, Pattern Recognition, Abstraction, Algorithmic Thinking",
+        "Decomposition, Sorting, Searching, Pattern Matching",
+        "Decomposition, Input-Output, Data Analysis, Debugging",
+        "Problem Solving, Programming, Pseudocode, Flowcharts"
+      ],
+      "answer": 1,
+      "explanation": "The four components of computational thinking are Decomposition, Pattern Recognition, Abstraction, and Algorithmic Thinking."
+    },
+    {
+      "question": "Which of the following best illustrates decomposition?",
+      "code": null,
+      "options": [
+        "Breaking a large problem into smaller, manageable parts",
+        "Identifying trends in a dataset over time",
+        "Creating a general solution for multiple problems",
+        "Writing code to solve a complex issue"
+      ],
+      "answer": 1,
+      "explanation": "Decomposition involves breaking down complex problems into smaller sub-problems to solve each part individually."
+    },
+    {
+      "question": "In the 'Find the Max' example, what is the input?",
+      "code": null,
+      "options": [
+        "The largest number",
+        "The process to find the maximum number",
+        "The list of numbers",
+        "The output of the algorithm"
+      ],
+      "answer": 3,
+      "explanation": "In the 'Find the Max' example, the input is the list of numbers on which the algorithm operates to find the maximum value."
+    },
+    {
+      "question": "Which step in the algorithm for 'Finding the Max' involves selection?",
+      "code": null,
+      "options": [
+        "Initializing the current maximum to the first number in the list",
+        "Iterating through each number in the list",
+        "Comparing the current number to the current maximum and updating if necessary",
+        "Returning the final maximum value"
+      ],
+      "answer": 3,
+      "explanation": "Selection occurs when the algorithm checks whether the current number is greater than the current maximum and updates accordingly."
+    },
+    {
+      "question": "What is the main benefit of using abstraction in computational thinking?",
+      "code": null,
+      "options": [
+        "To create complex models with detailed information",
+        "To simplify complex systems by focusing on essential details",
+        "To break down problems into smaller components",
+        "To recognize similarities in multiple problems"
+      ],
+      "answer": 2,
+      "explanation": "Abstraction simplifies complex systems by ignoring unnecessary details and focusing only on the essential features."
+    },
+    {
+      "question": "What is an example of pattern recognition from the material?",
+      "code": null,
+      "options": [
+        "Breaking a problem into sub-problems to solve it",
+        "Recognizing that finding the longest word is similar to finding the largest number",
+        "Using pseudocode to communicate an algorithm",
+        "Sorting a list of numbers in ascending order"
+      ],
+      "answer": 2,
+      "explanation": "Pattern recognition involves identifying similar patterns, such as recognizing that finding the longest word and finding the largest number follow similar processes."
+    },
+    {
+      "question": "How does algorithmic thinking differ from programming?",
+      "code": null,
+      "options": [
+        "Algorithmic thinking focuses on writing the actual code, while programming does not",
+        "Algorithmic thinking involves creating step-by-step instructions, while programming implements those instructions in code",
+        "Algorithmic thinking deals with hardware, and programming deals with software",
+        "Algorithmic thinking is used only in mathematics, while programming is used in computer science"
+      ],
+      "answer": 2,
+      "explanation": "Algorithmic thinking involves developing a logical set of steps to solve a problem, while programming is the process of writing code to implement that logic."
+    },
+    {
+      "question": "Why is efficiency important in algorithmic thinking?",
+      "code": null,
+      "options": [
+        "It ensures that the algorithm produces the correct result",
+        "It helps minimize the number of steps and resource usage",
+        "It makes the code easier to write",
+        "It ensures the problem is decomposed properly"
+      ],
+      "answer": 2,
+      "explanation": "Efficiency in algorithmic thinking is important because it minimizes the number of steps and optimizes the use of resources like time and memory."
+    },
+    {
+      "question": "How do pseudocode and flowcharts help in computational thinking?",
+      "code": null,
+      "options": [
+        "They help decompose problems into smaller parts",
+        "They provide a clear visual or textual representation of algorithms",
+        "They ensure the algorithm is efficient",
+        "They focus on the input and output of the algorithm"
+      ],
+      "answer": 2,
+      "explanation": "Pseudocode and flowcharts help communicate algorithms clearly by providing a high-level representation of the steps involved."
+    }
+],
+    "Describing an Algorithm": [
+      {
+        "question": "What is the key difference between Structured English and Pseudocode?",
+        "code": null,
+        "options": [
+          "Pseudocode is less formal and more human-readable.",
+          "Structured English resembles everyday language, while Pseudocode resembles programming syntax.",
+          "Structured English is for programmers only.",
+          "Pseudocode can be understood by anyone without programming experience."
+        ],
+        "answer": 2,
+        "explanation": "Structured English uses more natural language, while Pseudocode is closer to programming syntax."
+      },
+      {
+        "question": "What does the following pseudocode do?",
+        "code": "values <- [23, 8, -76, 49, 65, -2]\ncurrent_maximum <- first value in the list\nFOR each value in the list\n    IF value > current_maximum THEN\n        current_maximum <- value\nENDFOR\nOUTPUT current_maximum\n",
+        "options": [
+          "Finds the sum of all the values in the list.",
+          "Finds the minimum value in the list.",
+          "Finds the maximum value in the list.",
+          "Calculates the average of the list values."
+        ],
+        "answer": 3,
+        "explanation": "The pseudocode iterates through the list and updates the current maximum if a larger value is found."
+      },
+      {
+        "question": "Which of the following best describes a flowchart?",
+        "code": null,
+        "options": [
+          "A visual representation of an algorithm using shapes and arrows.",
+          "A way to write code in a simpler language.",
+          "A table showing possible values of variables.",
+          "A method for writing pseudocode in a more complex form."
+        ],
+        "answer": 1,
+        "explanation": "Flowcharts use shapes and arrows to diagrammatically represent the steps of an algorithm."
+      },
+      {
+        "question": "Why might Structured English be used instead of pseudocode?",
+        "code": null,
+        "options": [
+          "It is faster to write.",
+          "It is more formal and precise.",
+          "It is intended for broader audiences, including non-programmers.",
+          "It looks more like actual programming code."
+        ],
+        "answer": 3,
+        "explanation": "Structured English is designed to be more readable and accessible to non-programmers."
+      },
+      {
+        "question": "Which pseudocode statement correctly initializes a list in AQA format?",
+        "code": null,
+        "options": [
+          "list <- [1, 2, 3]",
+          "list = {1, 2, 3}",
+          "list = [1, 2, 3]",
+          "list := [1, 2, 3]"
+        ],
+        "answer": 1,
+        "explanation": "The AQA pseudocode format uses '<-' for assignment."
+      },
+      {
+        "question": "Which flowchart symbol represents a decision point (e.g., IF-THEN statement)?",
+        "code": null,
+        "options": [
+          "A rectangle",
+          "A diamond",
+          "A circle",
+          "An arrow"
+        ],
+        "answer": 2,
+        "explanation": "The diamond shape is used to represent decisions in a flowchart."
+      },
+      {
+        "question": "In the following pseudocode, what will be the output if the list contains [5, 12, 7]?",
+        "code": "values <- [5, 12, 7]\ncurrent_maximum <- first value in the list\nFOR i <- 1 TO LEN(values)\n    current_value <- values[i]\n    IF current_value > current_maximum THEN\n        current_maximum <- current_value\nENDFOR\nOUTPUT current_maximum",
+        "options": [
+          "5",
+          "7",
+          "12",
+          "The code will not run."
+        ],
+        "answer": 3,
+        "explanation": "The pseudocode finds the maximum value in the list, which is 12."
+      },
+      {
+        "question": "Why are flowcharts considered easier for non-programmers to follow?",
+        "code": null,
+        "options": [
+          "They use shapes instead of programming constructs.",
+          "They are written in plain English.",
+          "They include detailed code explanations.",
+          "They are only used for simple algorithms."
+        ],
+        "answer": 1,
+        "explanation": "Flowcharts represent logical steps visually, making them easier for non-programmers to understand."
+      },
+      {
+        "question": "Which of the following is a characteristic of pseudocode?",
+        "code": null,
+        "options": [
+          "It is written in the syntax of a specific programming language.",
+          "It is human-readable but close to actual code syntax.",
+          "It includes detailed comments explaining each step.",
+          "It is only used in Python programming."
+        ],
+        "answer": 2,
+        "explanation": "Pseudocode is designed to be human-readable while resembling programming constructs."
+      },
+      {
+        "question": "What is the purpose of the LEN() function in the pseudocode?",
+        "code": "values <- [23, 8, -76, 49, 65, -2]\nnumber_of_values <- LEN(values)",
+        "options": [
+          "It returns the total number of values in the list.",
+          "It returns the maximum value in the list.",
+          "It returns the sum of all the values in the list.",
+          "It sorts the values in the list."
+        ],
+        "answer": 1,
+        "explanation": "The LEN() function returns the length of the list, i.e., the number of elements in it."
+      }
+    ],
+        "Searching Algorithms": [
+          {
+            "question": "Why is a linear search also known as a 'sequential search,' and how does it operate on a list?",
+            "code": null,
+            "options": [
+              "It compares elements in random order to find the target.",
+              "It starts at the end of the list and works backwards.",
+              "It checks each element in the list one by one until it finds the target or reaches the end.",
+              "It skips every second element to make the search faster."
+            ],
+            "answer": 3,
+            "explanation": "A linear search works sequentially by comparing each element in the list until the target is found or the entire list is traversed."
+          },
+          {
+            "question": "Which of the following is a correct pseudocode for a linear search?",
+            "code": null,
+            "options": [
+              "FOR each item in list IF item == search_key THEN RETURN index",
+              "IF search_key == first_item THEN RETURN 0 ELSE RETURN -1",
+              "FOR item in list COMPARE search_key TO item UNTIL FOUND",
+              "WHILE search_key NOT FOUND CONTINUE THROUGH LIST"
+            ],
+            "answer": 1,
+            "explanation": "The correct pseudocode iterates through each item in the list and compares it to the search key, returning the index when a match is found."
+          },
+          {
+            "question": "Convert the following pseudocode into Python code:",
+            "code": "FOR each item in list\n\tIF item == search_key THEN\n\t\tRETURN index",
+            "options": [
+              "for item in list: if item == search_key: return index",
+              "for i in range(len(list)): if list[i] == search_key: return i",
+              "while list not empty: compare search_key to item and return index",
+              "for item in list: if item == search_key: break"
+            ],
+            "answer": 2,
+            "explanation": "The correct Python code uses `for i in range(len(list))` to loop through the list and check each item against the search key."
+          },
+          {
+            "question": "What is the worst-case behavior of a linear search algorithm?",
+            "code": null,
+            "options": [
+              "The search key is found at the beginning of the list.",
+              "The search key is found in the middle of the list.",
+              "The search key is the last item in the list or not present at all.",
+              "The search key appears multiple times in the list."
+            ],
+            "answer": 3,
+            "explanation": "In the worst case, a linear search has to check every item in the list, either finding the target at the end or not finding it at all."
+          },
+          {
+            "question": "Which of the following describes the main principle of a binary search?",
+            "code": null,
+            "options": [
+              "It compares each element in the list one by one.",
+              "It sorts the list first before searching.",
+              "It divides the list in half, comparing the middle element to the target and repeating the process on the relevant half.",
+              "It starts from the last element and works backwards."
+            ],
+            "answer": 3,
+            "explanation": "Binary search divides the list in half, compares the target with the middle element, and repeats the search on the left or right half depending on the result."
+          },
+          {
+            "question": "Why does a binary search require the list to be sorted?",
+            "code": null,
+            "options": [
+              "Because it compares adjacent elements.",
+              "Because it divides the list and compares the middle element, which only works correctly in a sorted list.",
+              "Because it must check each item sequentially.",
+              "Because sorting makes the search faster."
+            ],
+            "answer": 2,
+            "explanation": "Binary search works by comparing the middle element and eliminating half of the list at each step, which only works if the list is sorted."
+          },
+          {
+            "question": "Which of the following pseudocode correctly implements a binary search?",
+            "code": null,
+            "options": [
+              "Set low to 0, high to length of list, check middle, adjust low or high and repeat until found.",
+              "Start at the first element, move forward by halves, check middle, repeat until found.",
+              "Divide list into thirds, check middle element, repeat on one-third until found.",
+              "Compare first and last elements, eliminate all but the middle element."
+            ],
+            "answer": 1,
+            "explanation": "The binary search pseudocode sets initial low and high values, checks the middle element, and narrows the search range by adjusting either low or high."
+          },
+          {
+            "question": "In Python, which of the following implementations correctly performs a binary search?",
+            "code": null,
+            "options": [
+              "while low < high: compare middle element, return if found, else adjust range",
+              "while low <= high: calculate mid, compare target with items[mid], adjust low or high accordingly",
+              "if target in list: return list.index(target), else return -1",
+              "for item in list: if item == target: return item"
+            ],
+            "answer": 2,
+            "explanation": "The correct Python implementation repeatedly calculates the middle index and adjusts the search range based on the comparison with the target."
+          },
+          {
+            "question": "Which of the following statements correctly compares the efficiency of linear and binary search algorithms?",
+            "code": null,
+            "options": [
+              "Linear search is faster than binary search when the list is large.",
+              "Binary search is more efficient for large datasets if the list is sorted, while linear search is preferred for smaller or unsorted lists.",
+              "Binary search works better for unsorted lists.",
+              "Linear search is more efficient than binary search in all cases."
+            ],
+            "answer": 2,
+            "explanation": "Binary search is more efficient when the list is large and sorted, while linear search is used for unsorted lists or smaller datasets."
+          },
+          {
+            "question": "Which real-world scenario would be most suitable for a linear search?",
+            "code": null,
+            "options": [
+              "Searching for a word in a large dictionary where the words are in alphabetical order.",
+              "Finding a person's name in an unordered guest list.",
+              "Looking up a phone number in a sorted phone book.",
+              "Checking whether a number is present in a list of sorted lottery numbers."
+            ],
+            "answer": 2,
+            "explanation": "Linear search is suitable for unsorted lists, such as an unordered guest list, where binary search wouldn't be efficient."
+          }
+        ],
+    "Sorting Algorithms":
+        [
+            {
+              "question": "What is the primary action performed during each step of the Bubble Sort algorithm?",
+              "code": null,
+              "options": [
+                "Compare adjacent elements and swap them if necessary.",
+                "Insert each element into its correct position.",
+                "Divide the list into smaller parts and sort them individually.",
+                "Find the smallest element and place it at the beginning."
+              ],
+              "answer": 1,
+              "explanation": "Bubble sort works by comparing adjacent elements and swapping them if they are in the wrong order."
+            },
+            {
+              "question": "Which of the following sorting algorithms has an average-case time complexity of $O(n log_n)$?",
+              "code": null,
+              "options": [
+                "Bubble Sort",
+                "Merge Sort",
+                "Insertion Sort",
+                "Selection Sort"
+              ],
+              "answer": 2,
+              "explanation": "Merge Sort has an average and worst-case time complexity of O(n log n), making it efficient for larger datasets."
+            },
+            {
+              "question": "In Merge Sort, what is the key operation performed to merge two sorted arrays?",
+              "code": null,
+              "options": [
+                "Compare the first elements of both arrays and add the smaller one to the result.",
+                "Swap the elements between the arrays.",
+                "Move the smallest element to the front of both arrays.",
+                "Insert elements in a pre-sorted list."
+              ],
+              "answer": 1,
+              "explanation": "In Merge Sort, two sorted arrays are merged by repeatedly comparing the first elements of both arrays and appending the smaller one to the result."
+            },
+            {
+              "question": "Which sorting algorithm works by repeatedly finding the minimum element from the unsorted part and putting it at the beginning?",
+              "code": null,
+              "options": [
+                "Insertion Sort",
+                "Bubble Sort",
+                "Selection Sort",
+                "Heap Sort"
+              ],
+              "answer": 3,
+              "explanation": "Selection Sort works by repeatedly selecting the minimum element from the unsorted portion of the list and placing it at the front."
+            },
+            {
+              "question": "In the worst-case scenario, what is the time complexity of Bubble Sort?",
+              "code": null,
+              "options": [
+                "$O(n)$",
+                "$O(log_n)$",
+                "$O(n log_n)$",
+                "$O(n^2)$"
+              ],
+              "answer": 4,
+              "explanation": "The worst-case time complexity of Bubble Sort is O(n^2) due to the nested loops used for comparisons and swaps."
+            },
+            {
+              "question": "Which of the following algorithms is an example of a divide-and-conquer algorithm?",
+              "code": null,
+              "options": [
+                "Bubble Sort",
+                "Selection Sort",
+                "Merge Sort",
+                "Insertion Sort"
+              ],
+              "answer": 3,
+              "explanation": "Merge Sort is a classic example of the divide-and-conquer strategy, where the array is divided into halves, sorted, and then merged."
+            },
+            {
+              "question": "What is the key advantage of Merge Sort over Bubble Sort?",
+              "code": null,
+              "options": [
+                "Merge Sort requires less memory.",
+                "Merge Sort has a guaranteed time complexity of O(n log n), while Bubble Sort is O(n^2).",
+                "Merge Sort is easier to implement.",
+                "Merge Sort works in-place, while Bubble Sort does not."
+              ],
+              "answer": 2,
+              "explanation": "Merge Sort has a guaranteed time complexity of O(n log n), making it more efficient for large datasets compared to Bubble Sort's O(n^2)."
+            },
+            {
+              "question": "Which sorting algorithm performs the best on nearly sorted data?",
+              "code": null,
+              "options": [
+                "Merge Sort",
+                "Selection Sort",
+                "Insertion Sort",
+                "Bubble Sort"
+              ],
+              "answer": 3,
+              "explanation": "Insertion Sort performs very efficiently on nearly sorted data, achieving O(n) time complexity in such cases."
+            },
+            {
+              "question": "Which of the following algorithms is stable, meaning it preserves the relative order of equal elements?",
+              "code": null,
+              "options": [
+                "Selection Sort",
+                "Merge Sort",
+                "Heap Sort",
+                "Bubble Sort"
+              ],
+              "answer": 2,
+              "explanation": "Merge Sort is a stable sorting algorithm, meaning it preserves the relative order of equal elements."
+            },
+            {
+              "question": "What is the best-case time complexity of Insertion Sort?",
+              "code": null,
+              "options": [
+                "$O(n log_n)$",
+                "$O(n^2)$",
+                "$O(n)$",
+                "$O(log n)$"
+              ],
+              "answer": 3,
+              "explanation": "The best-case time complexity of Insertion Sort is O(n), which occurs when the array is already nearly sorted."
+            }
+          ],
+    "Tracing": 
+    [
+        {
+          "question": "What will be the value of 'x' after executing the following pseudocode?",
+          "code": "x = 5\ny = 3\nwhile y > 0:\n    x = x + y\n    y = y - 1",
+          "options": [
+            "8",
+            "9",
+            "10",
+            "11"
+          ],
+          "answer": 3,
+          "explanation": "Initially, x is 5 and y is 3. The loop adds y to x and decreases y. The final values are x = 5 + 3 + 2 + 1 = 11 and y = 0."
+        },
+        {
+          "question": "What will be the output of the following pseudocode?",
+          "code": "for i = 1 to 3:\n    for j = 1 to i:\n        print(i, j)",
+          "options": [
+            "1 1\n2 1\n2 2\n3 1\n3 2\n3 3",
+            "1 1\n2 1 2\n3 1 2 3",
+            "1 2 3\n2 1 3\n3 1 2",
+            "1 1 2 2 3 3"
+          ],
+          "answer": 1,
+          "explanation": "The outer loop runs from 1 to 3. For each iteration of i, the inner loop prints pairs of (i, j) where j ranges from 1 to i."
+        },
+        {
+          "question": "Which of the following algorithms is used to find the shortest path in a weighted graph with positive weights?",
+          "code": null,
+          "options": [
+            "Bubble Sort",
+            "Selection Sort",
+            "Dijkstra's Algorithm",
+            "Merge Sort"
+          ],
+          "answer": 3,
+          "explanation": "Dijkstra's Algorithm is designed to find the shortest paths from a source vertex to all other vertices in a weighted graph with positive weights."
+        },
+        {
+          "question": "What is the time complexity of the binary search algorithm in the worst case?",
+          "code": null,
+          "options": [
+            "$O(n)$",
+            "$O(n log n)$",
+            "$O(log n)$",
+            "$O(1)$"
+          ],
+          "answer": 3,
+          "explanation": "Binary search has a time complexity of $O(log n)$ in the worst case, as it repeatedly divides the search interval in half."
+        },
+        {
+          "question": "What will the value of the variable 'sum' be after executing the following pseudocode?",
+          "code": "sum = 0\ni = 1\nwhile i <= 4:\n    sum = sum + i\n    i = i + 1",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "answer": 2,
+          "explanation": "The loop adds values 1 through 4 to sum, resulting in sum = 1 + 2 + 3 + 4 = 10."
+        },
+        {
+          "question": "Which sorting algorithm is best suited for small datasets due to its simplicity and low overhead?",
+          "code": null,
+          "options": [
+            "Quick Sort",
+            "Merge Sort",
+            "Insertion Sort",
+            "Heap Sort"
+          ],
+          "answer": 3,
+          "explanation": "Insertion Sort is often preferred for small datasets due to its simplicity and efficiency with a small number of elements."
+        },
+        {
+          "question": "What is the key feature of a stable sorting algorithm?",
+          "code": null,
+          "options": [
+            "It sorts elements in place.",
+            "It guarantees the order of equal elements remains unchanged.",
+            "It has the best possible time complexity.",
+            "It requires additional memory for sorting."
+          ],
+          "answer": 2,
+          "explanation": "A stable sorting algorithm preserves the relative order of elements with equal keys."
+        },
+        {
+          "question": "In a trace table for a sorting algorithm, what information is typically recorded?",
+          "code": null,
+          "options": [
+            "Values of variables at each step and changes made during the algorithm's execution.",
+            "The final sorted list only.",
+            "The time complexity of the algorithm.",
+            "The original unsorted list."
+          ],
+          "answer": 1,
+          "explanation": "A trace table records the values of variables and changes made during each step of the algorithm's execution to understand its behavior."
+        },
+        {
+          "question": "What is the best-case time complexity of the Bubble Sort algorithm?",
+          "code": null,
+          "options": [
+            "O(n^2)",
+            "O(n log n)",
+            "O(n)",
+            "O(log n)"
+          ],
+          "answer": 3,
+          "explanation": "Bubble Sort has a best-case time complexity of O(n) when the array is already sorted and no swaps are needed."
+        },
+        {
+          "question": "Which algorithm is characterized by dividing the list into two halves, recursively sorting each half, and then merging them back together?",
+          "code": null,
+          "options": [
+            "Insertion Sort",
+            "Merge Sort",
+            "Selection Sort",
+            "Heap Sort"
+          ],
+          "answer": 2,
+          "explanation": "Merge Sort divides the list into halves, recursively sorts each half, and merges them to produce a sorted list."
+        },
+        {
+          "question": "What will be the output of the following pseudocode?",
+          "code": "n = 5\nfor i = 1 to n:\n    for j = 1 to i:\n        print(i, j)",
+          "options": [
+            "1 1\n2 1 2\n3 1 2 3\n4 1 2 3 4\n5 1 2 3 4 5",
+            "1 1 2 1 2 3 3 1 2 3 4 4 5 5",
+            "1 1 1 2 2 2 3 3 3 4 4 5",
+            "1 2 3 4 5"
+          ],
+          "answer": 1,
+          "explanation": "The nested loop prints pairs of (i, j) where i ranges from 1 to n and j ranges from 1 to i, resulting in increasing sequences of printed pairs."
+        }
+      ],
+    "Structure Diagrams":
+    [
+        {
+          "question": "What is the primary purpose of a structure diagram?",
+          "code": null,
+          "options": [
+            "To visualize and organize the steps involved in solving a problem",
+            "To detail the exact code implementation of an algorithm",
+            "To show the time complexity of an algorithm",
+            "To compare different sorting algorithms"
+          ],
+          "answer": 1,
+          "explanation": "A structure diagram helps visualize and organize the steps involved in solving a problem, offering a high-level view of the algorithm."
+        },
+        {
+          "question": "In a structure diagram, what does each rectangle represent?",
+          "code": null,
+          "options": [
+            "A specific function or process",
+            "A loop in the algorithm",
+            "A decision point",
+            "An input or output operation"
+          ],
+          "answer": 1,
+          "explanation": "In a structure diagram, each rectangle represents a specific function or process in the algorithm."
+        },
+        {
+          "question": "What does the following structure diagram represent?\n\nA[FINDING THE MAX] --> B[Get List of Integers]\nA --> J[Find Maximum Value]\nA --> D[Output Maximum]",
+          "code": "graph TD\n    A[FINDING THE MAX] --> B[Get List of Integers]\n    A --> J[Find Maximum Value]\n    A --> D[Output Maximum]",
+          "options": [
+            "A high-level overview of the process to find the maximum value in a list",
+            "Detailed steps for reading input from a file",
+            "Algorithm for sorting a list of integers",
+            "Pseudocode for validating user input"
+          ],
+          "answer": 1,
+          "explanation": "This diagram provides a high-level overview of the process for finding the maximum value in a list, breaking it into input, processing, and output steps."
+        },
+        {
+          "question": "In the structure diagram for finding a maximum value, what does the 'Find Maximum Value' step involve?",
+          "code": null,
+          "options": [
+            "Identifying and updating the maximum value in a list",
+            "Reading integers from user input",
+            "Displaying the maximum value on the screen",
+            "Validating input values"
+          ],
+          "answer": 1,
+          "explanation": "The 'Find Maximum Value' step involves identifying and updating the maximum value in a list of integers."
+        },
+        {
+          "question": "Which of the following is NOT typically included in a structure diagram?",
+          "code": null,
+          "options": [
+            "Detailed implementation of loops and conditionals",
+            "High-level steps of the algorithm",
+            "The sequence of processes",
+            "The flow of control between steps"
+          ],
+          "answer": 1,
+          "explanation": "A structure diagram does not typically include detailed implementations of loops and conditionals; it focuses on high-level steps and flow of control."
+        },
+        {
+          "question": "How does the structure diagram help in implementing an algorithm?",
+          "code": null,
+          "options": [
+            "By breaking down the problem into manageable steps and clarifying the sequence of operations",
+            "By providing exact code for each step",
+            "By specifying the time complexity of the algorithm",
+            "By comparing different data structures"
+          ],
+          "answer": 1,
+          "explanation": "The structure diagram helps by breaking down the problem into manageable steps and clarifying the sequence of operations, making the implementation process more organized."
+        },
+        {
+          "question": "What additional step is added to the structure diagram if user input is required for the list of integers?",
+          "code": null,
+          "options": [
+            "Get Value",
+            "Validate Value",
+            "Output Maximum",
+            "Read Input"
+          ],
+          "answer": 1,
+          "explanation": "If user input is required, steps like 'Get Value' and 'Validate Value' are added to ensure that the input is obtained and validated before processing."
+        },
+        {
+          "question": "In the provided Python code, what does the 'display_output' function do?",
+          "code": "def display_output(max_value):\n    print(\"Maximum value:\", max_value)",
+          "options": [
+            "Prints the maximum value to the screen",
+            "Reads input from the user",
+            "Finds the maximum value in the list",
+            "Validates user input"
+          ],
+          "answer": 1,
+          "explanation": "The 'display_output' function prints the maximum value to the screen."
+        },
+        {
+          "question": "Which part of the structure diagram corresponds to the 'FindMax()' pseudocode?",
+          "code": null,
+          "options": [
+            "Find Maximum Value",
+            "Get List of Integers",
+            "Output Maximum",
+            "Main Function"
+          ],
+          "answer": 1,
+          "explanation": "'FindMax()' corresponds to the 'Find Maximum Value' step in the structure diagram, which involves the logic to determine the maximum value in the list."
+        },
+        {
+          "question": "What is a benefit of using a structure diagram in algorithm development?",
+          "code": null,
+          "options": [
+            "It simplifies the implementation by breaking down the problem into steps",
+            "It provides a detailed code implementation",
+            "It measures the performance of the algorithm",
+            "It helps in debugging code"
+          ],
+          "answer": 1,
+          "explanation": "A structure diagram simplifies the implementation process by breaking down the problem into steps, making it easier to manage and understand."
+        }
+      ]
+      
+      
+      }

@@ -1,0 +1,1113 @@
+{
+    "Number Systems": [
+        {
+            "question": "Convert the binary number $1101_2$ to decimal.",
+            "code": null,
+            "options": [
+                "11",
+                "13",
+                "14",
+                "15"
+            ],
+            "answer": 2,
+            "explanation": "The binary number $1101_2$ equals $1*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $8 + 4 + 0 + 1 = 13$ in decimal."
+        },
+        {
+            "question": "Convert the decimal number $25_{10}$ to binary.",
+            "code": null,
+            "options": [
+                "11000",
+                "11001",
+                "11010",
+                "11011"
+            ],
+            "answer": 2,
+            "explanation": "The decimal number $25_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number $11001_2$."
+        },
+        {
+            "question": "Convert the binary number $10101_2$ to decimal.",
+            "code": null,
+            "options": [
+                "19",
+                "21",
+                "22",
+                "23"
+            ],
+            "answer": 2,
+            "explanation": "The binary number $10101_2$ equals $1*2^4 + 0*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $16 + 0 + 4 + 0 + 1 = 21$ in decimal."
+        },
+        {
+            "question": "Convert the decimal number $42_{10}$ to binary.",
+            "code": null,
+            "options": [
+                "101010",
+                "101011",
+                "110101",
+                "100110"
+            ],
+            "answer": 1,
+            "explanation": "The decimal number $42_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number 101010_2."
+        },
+        {
+            "question": "Convert the binary number $1111101_2$ to decimal.",
+            "code": null,
+            "options": [
+                "123",
+                "125",
+                "127",
+                "129"
+            ],
+            "answer": 3,
+            "explanation": "The binary number $1111101_2$ equals $1*2^6 + 1*2^5 + 1*2^4 + 1*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $64 + 32 + 16 + 8 + 4 + 0 + 1 = 125$ in decimal."
+        },
+        {
+            "question": "Convert the decimal number $18_{10}$ to binary.",
+            "code": null,
+            "options": [
+                "10010",
+                "10100",
+                "10110",
+                "10011"
+            ],
+            "answer": 1,
+            "explanation": "The decimal number $18_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number 10010_2."
+        },
+        {
+            "question": "Convert the binary number $1001101_2$ to decimal.",
+            "code": null,
+            "options": [
+                "75",
+                "77",
+                "79",
+                "81"
+            ],
+            "answer": 2,
+            "explanation": "The binary number $1001101_2$ equals $1*2^6 + 0*2^5 + 0*2^4 + 1*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $64 + 0 + 0 + 8 + 4 + 0 + 1 = 77$ in decimal."
+        },
+        {
+            "question": "Convert the decimal number $63_{10}$ to binary.",
+            "code": null,
+            "options": [
+                "111111",
+                "111110",
+                "111101",
+                "111100"
+            ],
+            "answer": 1,
+            "explanation": "The decimal number $63_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number 111111_2."
+        },
+        {
+            "question": "Convert the binary number $110110_2$ to decimal.",
+            "code": null,
+            "options": [
+                "52",
+                "54",
+                "56",
+                "58"
+            ],
+            "answer": 2,
+            "explanation": "The binary number $110110_2$ equals $1*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 1*2^1 + 0*2^0$, which is $32 + 16 + 0 + 4 + 2 + 0 = 54$ in decimal."
+        },
+        {
+            "question": "Convert the decimal number $55_{10}$ to binary.",
+            "code": null,
+            "options": [
+                "110111",
+                "110110",
+                "111011",
+                "111000"
+            ],
+            "answer": 1,
+            "explanation": "The decimal number $55_10$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number $110111_2$."
+        }
+    ],
+    "Units": [
+    {
+      "question": "Define a bit and explain its fundamental role in digital systems.",
+      "options": [
+        "A bit is a binary digit that can be either 0 or 1. It is the smallest unit of data in digital systems, representing a binary choice.",
+        "A bit is a unit of measurement for data transfer speed. It is used to calculate network bandwidth.",
+        "A bit is a memory storage unit that can hold multiple types of data. It is used to represent complex data structures.",
+        "A bit is a type of storage medium used in hard drives. It is fundamental to data retrieval processes."
+      ],
+      "answer": 1,
+      "explanation": "A bit is the smallest unit of data in digital systems, representing a binary choice of 0 or 1.",
+      "code": null
+    },
+    {
+      "question": "Describe the composition of a byte and explain why it is a fundamental unit in digital systems.",
+      "options": [
+        "A byte is composed of 4 bits. It is fundamental because it represents a single character in most encoding systems.",
+        "A byte is composed of 8 bits. It is fundamental because it can represent 256 different values, which is suitable for encoding characters.",
+        "A byte is composed of 16 bits. It is fundamental because it is the basic unit for data transfer in memory.",
+        "A byte is composed of 2 bits. It is fundamental because it is used to store floating-point numbers in calculations."
+      ],
+      "answer": 2,
+      "explanation": "A byte is composed of 8 bits and is fundamental because it can represent 256 different values, making it suitable for encoding characters.",
+      "code": null
+    },
+    {
+      "question": "Given a binary number (e.g., $11011010_2$), identify the Most Significant Bit (MSB) and the Least Significant Bit (LSB).",
+      "options": [
+        "In $11011010_2$, the MSB is 1 and the LSB is 0.",
+        "In $11011010_2$, the MSB is 0 and the LSB is 1.",
+        "In $11011010_2$, the MSB is 1 and the LSB is 1.",
+        "In $11011010_2$, the MSB is 0 and the LSB is 0."
+      ],
+      "answer": 1,
+      "explanation": "In the binary number $11011010_2$, the MSB is the leftmost bit (1) and the LSB is the rightmost bit (0).",
+      "code": null
+    },
+    {
+      "question": "Explain how to determine whether a binary number is odd or even based on the value of its Least Significant Bit (LSB).",
+      "options": [
+        "If the LSB is 1, the binary number is even. If the LSB is 0, the binary number is odd.",
+        "If the LSB is 0, the binary number is even. If the LSB is 1, the binary number is odd.",
+        "If the LSB is 1, the binary number is neither odd nor even. If the LSB is 0, the number is even.",
+        "If the LSB is 0, the binary number is neither odd nor even. If the LSB is 1, the number is odd."
+      ],
+      "answer": 2,
+      "explanation": "A binary number is even if the LSB is 0 and odd if the LSB is 1.",
+      "code": null
+    },
+    {
+      "question": "Convert the binary number $10101001_2$ to decimal.",
+      "options": [
+        "$10101001_2$ is 169 in decimal.",
+        "$10101001_2$ is 85 in decimal.",
+        "$10101001_2$ is 133 in decimal.",
+        "$10101001_2$ is 255 in decimal."
+      ],
+      "answer": 1,
+      "explanation": "The binary number $10101001_2$ converts to 169 in decimal.",
+      "code": null
+    },
+    {
+      "question": "Convert the decimal number $37_{10}$ to binary.",
+      "options": [
+        "$37_{10}$ is $100101_2$.",
+        "$37_{10}$ is $100111_2$.",
+        "$37_{10}$ is $110010_2$.",
+        "$37_{10}$ is $101010_2$."
+      ],
+      "answer": 1,
+      "explanation": "The decimal number $37_{10}$ converts to $100101_2$ in binary.",
+      "code": null
+    },
+    {
+      "question": "Given a certain number of bits, calculate the maximum value that can be represented. For example, if given 5 bits, what is the maximum value?",
+      "options": [
+        "The maximum value with 5 bits is 31.",
+        "The maximum value with 5 bits is 32.",
+        "The maximum value with 5 bits is 25.",
+        "The maximum value with 5 bits is 15."
+      ],
+      "answer": 1,
+      "explanation": "With 5 bits, the maximum value that can be represented is $2^5 - 1 = 31$.",
+      "code": null
+    },
+    {
+      "question": "Explain the difference between the maximum value ($2^{n-1}$) and the number of values ($2^n$) that can be represented for a given number of bits.",
+      "options": [
+        "The maximum value ($2^{n-1}$) is half of the total number of values ($2^n$).",
+        "The maximum value ($2^{n-1}$) is the same as the number of values ($2^n$).",
+        "The maximum value ($2^{n-1}$) is double the number of values ($2^n$).",
+        "The maximum value ($2^{n-1}$) is the square root of the number of values ($2^n$)."
+      ],
+      "answer": 1,
+      "explanation": "The maximum value that can be represented ($2^{n-1}$) is half of the total number of values ($2^n$) that can be represented.",
+      "code": null
+    },
+    {
+      "question": "Provide the equivalent number of bytes for 1 kilobyte (KB), 1 megabyte (MB), and 1 gigabyte (GB).",
+      "options": [
+        "1 KB = 1024 bytes, 1 MB = 1024 KB, 1 GB = 1024 MB.",
+        "1 KB = 1000 bytes, 1 MB = 1000 KB, 1 GB = 1000 MB.",
+        "1 KB = 1024 bytes, 1 MB = 1000 KB, 1 GB = 1000 MB.",
+        "1 KB = 1000 bytes, 1 MB = 1024 KB, 1 GB = 1024 MB."
+      ],
+      "answer": 1,
+      "explanation": "1 kilobyte (KB) equals 1024 bytes, 1 megabyte (MB) equals 1024 KB, and 1 gigabyte (GB) equals 1024 MB.",
+      "code": null
+    },
+    {
+      "question": "Differentiate between a kibibyte (KiB) and a kilobyte (KB), considering their magnitudes and usage in the binary and decimal systems.",
+      "options": [
+        "1 KiB = 1024 bytes, 1 KB = 1000 bytes. KiB is used in binary systems, KB in decimal systems.",
+        "1 KiB = 1000 bytes, 1 KB = 1024 bytes. KiB is used in decimal systems, KB in binary systems.",
+        "1 KiB = 1024 bytes, 1 KB = 1024 bytes. Both are used interchangeably in binary and decimal systems.",
+        "1 KiB = 1000 bytes, 1 KB = 1000 bytes. Both represent the same amount of data in binary and decimal systems."
+      ],
+      "answer": 1,
+      "explanation": "1 kibibyte (KiB) is 1024 bytes and is used in binary systems, while 1 kilobyte (KB) is 1000 bytes and is used in decimal systems.",
+      "code": null
+    }
+  ],
+  "Binary Arithmetic": [
+    {
+      "question": "What is the result of adding the binary numbers $01101110_2$ and $00011100_2$?",
+      "options": [
+        "The result is $10101010_2$.",
+        "The result is $10001010_2$.",
+        "The result is $11001010_2$.",
+        "The result is $11110010_2$."
+      ],
+      "answer": 2,
+      "explanation": "Adding $01101110_2$ and $00011100_2$ results in $10001010_2$.",
+      "code": null
+    },
+    {
+      "question": "What happens when an overflow error occurs in binary arithmetic?",
+      "options": [
+        "The result is rounded up to the nearest power of 2.",
+        "The result is truncated to fit within the available bits.",
+        "The calculation is extended to more bits automatically.",
+        "The result is converted to hexadecimal for accuracy."
+      ],
+      "answer": 2,
+      "explanation": "An overflow error results in the result being truncated to fit within the available bits.",
+      "code": null
+    },
+    {
+      "question": "How can binary numbers be multiplied using binary shift operations?",
+      "options": [
+        "By shifting the bits to the right and adding zeros on the left.",
+        "By shifting the bits to the left and filling the gaps with zeros.",
+        "By rotating the bits to the right and adding a carry bit.",
+        "By shifting the bits to the right and adding a carry bit."
+      ],
+      "answer": 2,
+      "explanation": "To multiply binary numbers, shift the bits to the left and fill the gaps with zeros.",
+      "code": null
+    },
+    {
+      "question": "What is the result of shifting the binary number $00001011_2$ one place to the right?",
+      "options": [
+        "$00000101_2$",
+        "$00001101_2$",
+        "$00001001_2$",
+        "$00000110_2$"
+      ],
+      "answer": 1,
+      "explanation": "Shifting $00001011_2$ one place to the right results in $00000101_2$.",
+      "code": null
+    },
+    {
+      "question": "What is the maximum value that can be represented with 8 bits?",
+      "options": [
+        "255",
+        "256",
+        "127",
+        "128"
+      ],
+      "answer": 1,
+      "explanation": "With 8 bits, the maximum value that can be represented is $2^8 - 1 = 255$.",
+      "code": null
+    },
+    {
+      "question": "What is the result of the following binary addition: $1010_2 + 1100_2$?",
+      "options": [
+        "$10110_2$",
+        "$10000_2$",
+        "$10010_2$",
+        "$11100_2$"
+      ],
+      "answer": 3,
+      "explanation": "Adding $1010_2$ and $1100_2$ results in $10010_2$.",
+      "code": null
+    },
+    {
+      "question": "How is a binary number divided by a power of 2 using binary shift operations?",
+      "options": [
+        "By shifting the bits to the left and filling the gaps with zeros.",
+        "By shifting the bits to the right and filling the gaps with zeros.",
+        "By rotating the bits to the left and discarding the overflow.",
+        "By rotating the bits to the right and adding carry bits."
+      ],
+      "answer": 2,
+      "explanation": "To divide a binary number by a power of 2, shift the bits to the right and fill the gaps with zeros.",
+      "code": null
+    },
+    {
+      "question": "Which bit is considered the Most Significant Bit (MSB) in a binary number?",
+      "options": [
+        "The rightmost bit",
+        "The leftmost bit",
+        "The bit in the middle",
+        "The second bit from the right"
+      ],
+      "answer": 2,
+      "explanation": "The Most Significant Bit (MSB) is the leftmost bit in a binary number.",
+      "code": null
+    },
+    {
+      "question": "What is the decimal equivalent of the binary number $10110101_2$?",
+      "options": [
+        "181",
+        "177",
+        "165",
+        "185"
+      ],
+      "answer": 1,
+      "explanation": "The binary number $10110101_2$ converts to 181 in decimal.",
+      "code": null
+    },
+    {
+      "question": "What is the result of shifting the binary number $10100000_2$ three places to the left?",
+      "options": [
+        "$10100000_2$",
+        "$01000000_2$",
+        "$10000000_2$",
+        "$00000000_2$"
+      ],
+      "answer": 3,
+      "explanation": "Shifting $10100000_2$ three places to the left results in $10000000_2$.",
+      "code": null
+    },
+    {
+      "question": "What is the result of shifting the binary number $00011100_2$ two places to the right?",
+      "options": [
+        "$00000111_2$",
+        "$00011100_2$",
+        "$00001110_2$",
+        "$00000011_2$"
+      ],
+      "answer": 3,
+      "explanation": "Shifting $00011100_2$ two places to the right results in $00000111_2$.",
+      "code": null
+    }
+  ],
+  "Hexadecimal": [
+    {
+      "question": "Why is hexadecimal often used in computer science?",
+      "options": [
+        "It is easier for humans to read compared to binary.",
+        "It is the native number system of computers.",
+        "It is more compact than decimal for representing large binary numbers.",
+        "It is the default number system used in arithmetic operations."
+      ],
+      "answer": 3,
+      "explanation": "Hexadecimal is often used because it provides a more compact representation of binary-coded values.",
+      "code": null
+    },
+    {
+      "question": "How can hexadecimal be used to represent whole numbers?",
+      "options": [
+        "By using binary-coded decimal.",
+        "By grouping binary digits into sets of four and converting to hexadecimal.",
+        "By using a direct conversion from decimal to binary.",
+        "By performing arithmetic operations in base-10."
+      ],
+      "answer": 2,
+      "explanation": "Hexadecimal can represent whole numbers by grouping binary digits into sets of four and converting each group to a hexadecimal digit.",
+      "code": null
+    },
+    {
+      "question": "What is the hexadecimal representation of the decimal number $156_{10}$?",
+      "options": [
+        "9C_{16}",
+        "A6_{16}",
+        "B4_{16}",
+        "C2_{16}"
+      ],
+      "answer": 1,
+      "explanation": "The decimal number $156_{10}$ converts to $9C_{16}$ in hexadecimal.",
+      "code": null
+    },
+    {
+      "question": "Convert the hexadecimal number $2A7_{16}$ to decimal.",
+      "options": [
+        "639",
+        "679",
+        "723",
+        "745"
+      ],
+      "answer": 1,
+      "explanation": "The hexadecimal number $2A7_{16}$ converts to $639$ in decimal.",
+      "code": null
+    },
+    {
+      "question": "Why is hexadecimal commonly used in memory addresses in computer systems?",
+      "options": [
+        "It matches the binary structure of memory directly.",
+        "It reduces the number of digits compared to binary and is easier to read.",
+        "It is simpler to convert from decimal addresses.",
+        "It automatically adjusts for different address sizes."
+      ],
+      "answer": 2,
+      "explanation": "Hexadecimal is used in memory addresses because it reduces the number of digits compared to binary and is easier for humans to read.",
+      "code": null
+    },
+    {
+      "question": "What is the hexadecimal representation of the binary number $110110101011_{2}$?",
+      "options": [
+        "1B5_{16}",
+        "1D6_{16}",
+        "1E5_{16}",
+        "1E6_{16}"
+      ],
+      "answer": 1,
+      "explanation": "The binary number $110110101011_{2}$ converts to $1B5_{16}$ in hexadecimal.",
+      "code": null
+    },
+    {
+      "question": "How does hexadecimal provide a more compact representation for binary-coded values?",
+      "options": [
+        "By reducing the number of digits needed to represent the same value.",
+        "By using fewer bits per digit.",
+        "By allowing for direct conversion from decimal.",
+        "By simplifying arithmetic operations."
+      ],
+      "answer": 1,
+      "explanation": "Hexadecimal provides a more compact representation by reducing the number of digits needed to represent the same binary value.",
+      "code": null
+    },
+    {
+      "question": "Convert the hexadecimal number $4F_{16}$ to binary.",
+      "options": [
+        "01001111_{2}",
+        "00101111_{2}",
+        "10011111_{2}",
+        "11001111_{2}"
+      ],
+      "answer": 1,
+      "explanation": "The hexadecimal number $4F_{16}$ converts to $01001111_{2}$ in binary.",
+      "code": null
+    },
+    {
+      "question": "If a memory address is expressed as $1A3F_{16}$ in hexadecimal, what is the equivalent decimal value?",
+      "options": [
+        "6719",
+        "6928",
+        "6767",
+        "6912"
+      ],
+      "answer": 1,
+      "explanation": "The hexadecimal address $1A3F_{16}$ converts to $6719$ in decimal.",
+      "code": null
+    },
+    {
+      "question": "Describe the relationship between hexadecimal and binary, and how each hexadecimal digit corresponds to a set of binary digits.",
+      "options": [
+        "Each hexadecimal digit corresponds to a 3-bit binary group.",
+        "Each hexadecimal digit corresponds to a 2-bit binary group.",
+        "Each hexadecimal digit corresponds to a 4-bit binary group.",
+        "Each hexadecimal digit corresponds to an 8-bit binary group."
+      ],
+      "answer": 3,
+      "explanation": "Each hexadecimal digit corresponds to a 4-bit binary group, making it a compact representation of binary numbers.",
+      "code": null
+    }
+  ],
+  "Negative Numbers": [
+    {
+      "question": "Convert the denary value -26 into 8-bit binary using two's complement.",
+      "options": [
+          "11100110",
+          "11101010",
+          "11000110",
+          "10011010"
+      ],
+      "answer": 2,
+      "explanation": "The correct 8-bit two's complement representation of -26 is 11100110.",
+      "code": null
+  },
+  {
+      "question": "Convert the denary value -85 into 8-bit binary using two's complement.",
+      "options": [
+          "10101011",
+          "10111101",
+          "11010111",
+          "10101101"
+      ],
+      "answer": 1,
+      "explanation": "The correct 8-bit two's complement representation of -85 is 10101011.",
+      "code": null
+  },
+  {
+      "question": "Convert the 8-bit two's complement binary number 11100001 into denary.",
+      "options": [
+          "-31",
+          "-15",
+          "-33",
+          "-127"
+      ],
+      "answer": 3,
+      "explanation": "The binary number 11100001 in 8-bit two's complement represents -31 in denary.",
+      "code": null
+  },
+  {
+      "question": "Convert the 8-bit two's complement binary number 10001101 into denary.",
+      "options": [
+          "-115",
+          "-101",
+          "-119",
+          "-123"
+      ],
+      "answer": 2,
+      "explanation": "The binary number 10001101 in 8-bit two's complement represents -115 in denary.",
+      "code": null
+  },
+  {
+      "question": "Convert the 8-bit two's complement binary number 11110111 into denary.",
+      "options": [
+          "-9",
+          "-25",
+          "-7",
+          "-17"
+      ],
+      "answer": 4,
+      "explanation": "The binary number 11110111 in 8-bit two's complement represents -9 in denary.",
+      "code": null
+  },
+  {
+      "question": "How would a computer carry out the binary calculation for 18 - 9?",
+      "options": [
+          "Convert 9 to its two's complement and add to 18",
+          "Direct subtraction in binary",
+          "Shift left 18 and subtract 9",
+          "Shift right 9 and add to 18"
+      ],
+      "answer": 1,
+      "explanation": "To perform 18 - 9 in binary, the computer converts 9 to its two's complement (inverse binary plus 1) and then adds it to 18.",
+      "code": null
+  },
+  {
+      "question": "How would a computer carry out the binary calculation for 26 - 15?",
+      "options": [
+          "Convert 15 to its two's complement and add to 26",
+          "Direct subtraction in binary",
+          "Shift left 26 and subtract 15",
+          "Convert 26 to two's complement and subtract 15"
+      ],
+      "answer": 1,
+      "explanation": "To perform 26 - 15 in binary, the computer converts 15 to its two's complement and then adds it to 26.",
+      "code": null
+  },
+  {
+      "question": "How would a computer carry out the binary calculation for 17 - 34?",
+      "options": [
+          "Convert 34 to its two's complement and add to 17",
+          "Direct subtraction in binary",
+          "Convert 17 to its two's complement and subtract 34",
+          "Shift right 34 and add to 17"
+      ],
+      "answer": 1,
+      "explanation": "To perform 17 - 34 in binary, the computer converts 34 to its two's complement and then adds it to 17.",
+      "code": null
+  },
+  {
+      "question": "Convert the 8-bit two's complement binary number 10101110 into denary.",
+      "options": [
+          "-82",
+          "-42",
+          "-78",
+          "-18"
+      ],
+      "answer": 1,
+      "explanation": "The binary number 10101110 in 8-bit two's complement represents -82 in denary.",
+      "code": null
+  },
+  {
+      "question": "Convert the denary value -120 into 8-bit binary using two's complement.",
+      "options": [
+          "10001100",
+          "10001000",
+          "10000000",
+          "10011000"
+      ],
+      "answer": 3,
+      "explanation": "The correct 8-bit two's complement representation of -120 is 10001000.",
+      "code": null
+  }
+  ],
+  "Character Encoding": [
+    {
+        "question": "What is a character set in the context of computer science? Provide an example of a commonly used character set.",
+        "options": [
+            "A collection of binary codes used to represent computer instructions. Example: UTF-8",
+            "A collection of characters that a computer can recognize and process. Example: ASCII",
+            "A collection of programming languages. Example: Python",
+            "A collection of file formats used to encode images. Example: JPEG"
+        ],
+        "answer": 2,
+        "explanation": "A character set is a collection of characters that a computer can recognize and process. ASCII is an example of a commonly used character set.",
+        "code": null
+    },
+    {
+        "question": "How many unique characters can be represented in 7-bit ASCII?",
+        "options": [
+            "64",
+            "128",
+            "256",
+            "512"
+        ],
+        "answer": 2,
+        "explanation": "7-bit ASCII can represent 128 unique characters, as it uses 7 bits for each character, allowing for 2^7 possible combinations.",
+        "code": null
+    },
+    {
+        "question": "Compare and contrast 7-bit ASCII with Unicode. Which of the following best highlights a key difference?",
+        "options": [
+            "ASCII can encode more characters than Unicode.",
+            "Unicode is limited to English characters, while ASCII supports multiple languages.",
+            "ASCII supports fewer characters, while Unicode can represent characters from many different languages and scripts.",
+            "Both ASCII and Unicode support the same number of characters, but Unicode uses fewer bits."
+        ],
+        "answer": 3,
+        "explanation": "ASCII supports only 128 characters, while Unicode can represent characters from many different languages and scripts, making it much more versatile.",
+        "code": null
+    },
+    {
+        "question": "Why is the organization of character codes within encoding tables important?",
+        "options": [
+            "To ensure faster processing of images and videos.",
+            "To allow for efficient representation and retrieval of characters.",
+            "To reduce the complexity of algorithms in machine learning.",
+            "To optimize the storage of large data sets."
+        ],
+        "answer": 2,
+        "explanation": "The organization of character codes in encoding tables is important for efficient representation and retrieval, which is crucial for text processing and data storage.",
+        "code": null
+    },
+    {
+        "question": "How does Unicode address the limitations of ASCII?",
+        "options": [
+            "By using fewer bits to represent each character.",
+            "By supporting only the English language.",
+            "By allowing for the representation of a much larger range of characters from various languages and scripts.",
+            "By improving the speed of data transmission over networks."
+        ],
+        "answer": 3,
+        "explanation": "Unicode addresses the limitations of ASCII by allowing for the representation of a much larger range of characters from various languages and scripts, which ASCII cannot handle.",
+        "code": null
+    },
+    {
+        "question": "Which of the following is NOT an advantage of Unicode over ASCII?",
+        "options": [
+            "Unicode can represent characters from multiple languages.",
+            "Unicode is compatible with ASCII.",
+            "Unicode is limited to 256 characters.",
+            "Unicode supports a much wider range of symbols and emojis."
+        ],
+        "answer": 3,
+        "explanation": "Unicode is not limited to 256 characters; this is a limitation of ASCII. Unicode can represent over a million characters.",
+        "code": null
+    },
+    {
+        "question": "What is the significance of the first 127 codes in Unicode being the same as ASCII?",
+        "options": [
+            "It ensures compatibility between ASCII and Unicode.",
+            "It limits Unicode to only English characters.",
+            "It allows Unicode to use fewer bits than ASCII.",
+            "It makes ASCII obsolete."
+        ],
+        "answer": 1,
+        "explanation": "The first 127 codes in Unicode being the same as ASCII ensures compatibility, allowing systems to easily transition between the two character sets.",
+        "code": null
+    },
+    {
+        "question": "Convert the number '34' to its ASCII character.",
+        "options": [
+            "'4'",
+            "'3'",
+            "'\"'",
+            "'@'"
+        ],
+        "answer": 3,
+        "explanation": "In ASCII, the number '34' corresponds to the double quote character '\"'.",
+        "code": null
+    },
+    {
+        "question": "How many bits are needed to store the phrase 'Hello, World!' using ASCII?",
+        "options": [
+            "96",
+            "104",
+            "112",
+            "128"
+        ],
+        "answer": 2,
+        "explanation": "The phrase 'Hello, World!' consists of 13 characters. Each character in ASCII is represented using 8 bits, so the total number of bits required is 13 * 8 = 104 bits.",
+        "code": null
+    },
+    {
+        "question": "What does a program that prints the ASCII table from character code 32 to 127 typically display?",
+        "options": [
+            "Control characters and symbols.",
+            "Uppercase and lowercase letters, digits, punctuation marks, and some control characters.",
+            "Only digits and lowercase letters.",
+            "Hexadecimal representations of binary codes."
+        ],
+        "answer": 2,
+        "explanation": "Printing the ASCII table from character code 32 to 127 typically displays uppercase and lowercase letters, digits, punctuation marks, and some control characters.",
+        "code": null
+    }
+],
+"Images": [
+  {
+      "question": "What is a pixel, and how does it relate to the display of images?",
+      "options": [
+          "A pixel is a unit of sound that creates audio output.",
+          "A pixel is a small unit of an image that, when combined with others, forms a complete picture.",
+          "A pixel is a type of file format used to store images.",
+          "A pixel is a mathematical formula used to create colors in digital images."
+      ],
+      "answer": 2,
+      "explanation": "A pixel is the smallest unit of a digital image, and when many pixels are combined, they form a complete image.",
+      "code": null
+  },
+  {
+      "question": "How does a bitmap represent an image using pixels and color depth?",
+      "options": [
+          "By storing only the outline of the image.",
+          "By assigning a specific color to each pixel based on its color depth.",
+          "By converting the image into a text format.",
+          "By using mathematical equations to represent the image."
+      ],
+      "answer": 2,
+      "explanation": "A bitmap represents an image by assigning a specific color to each pixel based on the image's color depth, which defines how many colors can be displayed.",
+      "code": null
+  },
+  {
+      "question": "What is meant by 'color depth' in the context of bitmap images?",
+      "options": [
+          "The number of colors that can be displayed by a pixel.",
+          "The physical depth of the screen displaying the image.",
+          "The amount of storage required to save an image.",
+          "The resolution of the image."
+      ],
+      "answer": 1,
+      "explanation": "Color depth refers to the number of bits used to represent the color of a single pixel, affecting the range of colors that can be displayed.",
+      "code": null
+  },
+  {
+      "question": "How does the number of pixels in an image affect its file size?",
+      "options": [
+          "The more pixels, the larger the file size, and the higher the level of detail.",
+          "The fewer pixels, the larger the file size.",
+          "File size is not related to the number of pixels.",
+          "The number of pixels only affects the image quality, not the file size."
+      ],
+      "answer": 1,
+      "explanation": "An image with more pixels will have a larger file size and a higher level of detail, as each pixel requires storage space.",
+      "code": null
+  },
+  {
+      "question": "If an image has a resolution of 800x600 pixels and a color depth of 24 bits, how many bits are used to represent the image?",
+      "options": [
+          "480,000 bits",
+          "14,400,000 bits",
+          "11,520,000 bits",
+          "4,800,000 bits"
+      ],
+      "answer": 3,
+      "explanation": "The total number of bits is calculated by multiplying the resolution (800x600 pixels = 480,000 pixels) by the color depth (24 bits per pixel), resulting in 11,520,000 bits.",
+      "code": null
+  },
+  {
+      "question": "What is the significance of 'storage requirement' in relation to bitmapped images?",
+      "options": [
+          "It refers to the amount of space needed to store the image file.",
+          "It defines the color of each pixel in the image.",
+          "It describes the method used to compress the image.",
+          "It determines the physical size of the display screen."
+      ],
+      "answer": 1,
+      "explanation": "The storage requirement is the amount of space needed to store a bitmap image file, which depends on the image's resolution and color depth.",
+      "code": null
+  },
+  {
+      "question": "Why is it important to be aware that bitmap image files may contain metadata?",
+      "options": [
+          "Metadata can reveal the image's color depth.",
+          "Metadata may include information such as the image's creation date, author, or location, which can be sensitive.",
+          "Metadata determines the image's file format.",
+          "Metadata can reduce the file size of the image."
+      ],
+      "answer": 2,
+      "explanation": "Metadata may contain additional information about the image, such as the creation date or location, which could be sensitive and should be handled carefully.",
+      "code": null
+  },
+  {
+      "question": "Which of the following best explains how the color depth of a bitmap image influences its file size?",
+      "options": [
+          "Higher color depth decreases the file size.",
+          "Higher color depth increases the file size, as more bits are needed per pixel.",
+          "Color depth has no impact on file size.",
+          "Lower color depth always results in better image quality."
+      ],
+      "answer": 2,
+      "explanation": "Higher color depth increases the file size because more bits are required to represent each pixel's color.",
+      "code": null
+  },
+  {
+      "question": "What is the relationship between the resolution of a bitmap image and its level of detail?",
+      "options": [
+          "Higher resolution means fewer details can be captured.",
+          "Lower resolution improves image quality.",
+          "Higher resolution means more details can be captured, as there are more pixels per image.",
+          "Resolution does not affect the level of detail."
+      ],
+      "answer": 3,
+      "explanation": "Higher resolution allows for more details to be captured in an image because there are more pixels available to represent the visual information.",
+      "code": null
+  },
+  {
+      "question": "What is a simple example of how bitmap images are represented using pixels and color depth?",
+      "options": [
+          "A 1x1 pixel image with a color depth of 1 bit can be either black or white.",
+          "A 10x10 pixel image with a color depth of 8 bits per pixel can only be monochrome.",
+          "An image with no pixels cannot display any colors.",
+          "Color depth only affects the number of pixels in an image."
+      ],
+      "answer": 1,
+      "explanation": "In a bitmap image, a simple example would be a 1x1 pixel image with a 1-bit color depth, meaning the image can only be black or white.",
+      "code": null
+  }
+],
+"Sound": [
+  {
+      "question": "Why must sound be converted from analog to digital for storage and processing in a computer?",
+      "options": [
+          "Analog sound is too loud for computers to process.",
+          "Digital sound is easier to compress and manipulate by computers.",
+          "Computers can only process sound in analog form.",
+          "Analog sound does not require conversion for storage."
+      ],
+      "answer": 2,
+      "explanation": "Computers process data in digital form, so analog sound must be converted to digital to allow for storage, manipulation, and playback.",
+      "code": null
+  },
+  {
+      "question": "What does 'sampling' refer to in the context of converting analog sound to digital?",
+      "options": [
+          "It is the process of adding sound effects to digital audio.",
+          "Sampling refers to the measurement of sound amplitude at regular intervals to create a digital representation.",
+          "Sampling is the method of compressing digital sound files.",
+          "Sampling is only necessary when recording video."
+      ],
+      "answer": 2,
+      "explanation": "Sampling involves measuring the amplitude of the analog sound wave at regular intervals (samples) to convert it into a digital form.",
+      "code": null
+  },
+  {
+      "question": "How does the sampling rate impact the quality of digital audio?",
+      "options": [
+          "A higher sampling rate reduces audio quality.",
+          "The sampling rate does not affect audio quality.",
+          "A higher sampling rate increases audio quality by capturing more details of the sound wave.",
+          "The sampling rate only affects the file size, not the quality."
+      ],
+      "answer": 3,
+      "explanation": "A higher sampling rate captures more data points per second, providing a more accurate and detailed representation of the original analog sound, which improves audio quality.",
+      "code": null
+  },
+  {
+      "question": "If a sound file has a sampling rate of 44.1 kHz, what does this mean?",
+      "options": [
+          "The sound is sampled 44,100 times per second.",
+          "The sound has a frequency of 44,100 Hz.",
+          "The sound file can be played at a maximum of 44,100 Hz.",
+          "The sound file's resolution is 44.1 kHz."
+      ],
+      "answer": 1,
+      "explanation": "A sampling rate of 44.1 kHz means that the sound wave is sampled 44,100 times per second, capturing the amplitude at those intervals.",
+      "code": null
+  },
+  {
+      "question": "What does a sample resolution of 16 bits mean in digital sound?",
+      "options": [
+          "The sound can represent 65,536 different amplitude levels.",
+          "The sound has a frequency of 16 Hz.",
+          "The sound is sampled 16 times per second.",
+          "The sound file has a maximum length of 16 minutes."
+      ],
+      "answer": 1,
+      "explanation": "A sample resolution of 16 bits means that each sample can represent one of 65,536 (2^16) different amplitude levels, affecting the dynamic range and accuracy of the digital sound.",
+      "code": null
+  },
+  {
+      "question": "How does increasing the sampling rate affect the file size of a digital sound file?",
+      "options": [
+          "Increasing the sampling rate decreases the file size.",
+          "Increasing the sampling rate increases the file size because more samples are taken per second.",
+          "The sampling rate has no effect on file size.",
+          "The file size remains constant regardless of the sampling rate."
+      ],
+      "answer": 2,
+      "explanation": "Higher sampling rates increase the file size because more data points (samples) are recorded per second, requiring more storage space.",
+      "code": null
+  },
+  {
+      "question": "What does bit depth refer to in the context of sample resolution?",
+      "options": [
+          "The number of channels in an audio file.",
+          "The number of bits used to represent each sample's amplitude.",
+          "The duration of the audio file.",
+          "The frequency range of the audio."
+      ],
+      "answer": 2,
+      "explanation": "Bit depth refers to the number of bits used to represent the amplitude of each sample in a digital audio file, affecting the audio's dynamic range.",
+      "code": null
+  },
+  {
+      "question": "If a sound file has a sampling rate of 22 kHz and a sample resolution of 8 bits, calculate the file size for a 1-minute audio clip.",
+      "options": [
+          "1.32 MB",
+          "1.056 MB",
+          "660 KB",
+          "528 KB"
+      ],
+      "answer": 4,
+      "explanation": "File size = Sampling Rate x Sample Resolution x Number of Channels x Duration. For a 1-minute audio clip, the calculation is 22,000 samples/sec x 8 bits/sample x 60 sec = 10,560,000 bits or 1,320,000 bytes (1.32 MB). Since the answer depends on the channel (assume mono), correct size here is 660 KB.",
+      "code": null
+  },
+  {
+      "question": "How does a higher bit depth impact the quality of digital audio?",
+      "options": [
+          "It reduces the quality by introducing more noise.",
+          "It allows for a greater range of sound levels, improving the audio's dynamic range.",
+          "It decreases the file size.",
+          "It has no effect on the quality of the audio."
+      ],
+      "answer": 2,
+      "explanation": "Higher bit depth provides more precision in representing the amplitude of each sample, resulting in a greater dynamic range and improved audio quality.",
+      "code": null
+  },
+  {
+      "question": "If you have two sound files with the same duration but different sampling rates, how would their file sizes compare?",
+      "options": [
+          "The file with the lower sampling rate would be larger.",
+          "The file with the higher sampling rate would be larger because more data is captured per second.",
+          "Both files would be the same size.",
+          "Sampling rate does not affect the file size."
+      ],
+      "answer": 2,
+      "explanation": "The file with the higher sampling rate would be larger because it captures more samples per second, increasing the amount of data and therefore the file size.",
+      "code": null
+  }
+],
+"Compression": [
+  {
+      "question": "What is data compression, and why is it important in computer science?",
+      "options": [
+          "Data compression increases the size of files for easier storage.",
+          "Data compression reduces the size of files to save storage space and improve transmission speed.",
+          "Data compression removes unnecessary data permanently.",
+          "Data compression duplicates files to ensure data integrity."
+      ],
+      "answer": 2,
+      "explanation": "Data compression reduces the size of files, which saves storage space and improves the efficiency of data transmission over networks.",
+      "code": null
+  },
+  {
+      "question": "Which of the following is NOT a reason why data compression is used in computing?",
+      "options": [
+          "To save storage space on devices.",
+          "To increase the speed of data transmission.",
+          "To improve the accuracy of data processing.",
+          "To reduce the cost of data storage and transmission."
+      ],
+      "answer": 3,
+      "explanation": "Data compression does not improve the accuracy of data processing; it primarily reduces file size for storage and transmission efficiency.",
+      "code": null
+  },
+  {
+      "question": "How does Huffman coding compress data?",
+      "options": [
+          "By assigning fixed-length codes to symbols based on their frequency.",
+          "By assigning variable-length codes to symbols, with shorter codes for more frequent symbols.",
+          "By replacing repeated sequences with shorter codes.",
+          "By adding redundant data to increase compression."
+      ],
+      "answer": 2,
+      "explanation": "Huffman coding assigns variable-length codes to symbols, with more frequent symbols receiving shorter codes, which reduces the overall size of the data.",
+      "code": null
+  },
+  {
+      "question": "Given a simple Huffman tree, how can you interpret it to obtain the binary codes for each symbol?",
+      "options": [
+          "By counting the number of leaves in the tree.",
+          "By tracing the path from the root to each symbol, assigning '0' for left branches and '1' for right branches.",
+          "By summing the frequencies of all symbols.",
+          "By finding the height of the tree."
+      ],
+      "answer": 2,
+      "explanation": "To obtain the binary codes, trace the path from the root to each symbol in the Huffman tree, assigning '0' for left branches and '1' for right branches.",
+      "code": null
+  },
+  {
+      "question": "If the symbol 'A' has a frequency of 5 and its Huffman code has a length of 3 bits, how many total bits are required to store 'A' in compressed form?",
+      "options": [
+          "3 bits",
+          "5 bits",
+          "8 bits",
+          "15 bits"
+      ],
+      "answer": 4,
+      "explanation": "If 'A' appears 5 times and each occurrence requires 3 bits, the total number of bits needed is 5 * 3 = 15 bits.",
+      "code": null
+  },
+  {
+      "question": "How does Huffman coding compare to ASCII encoding in terms of the number of bits required to store a character like 'X'?",
+      "options": [
+          "Huffman coding always requires more bits than ASCII.",
+          "ASCII encoding requires fewer bits because it uses a fixed 7 or 8-bit length.",
+          "Huffman coding typically requires fewer bits because it uses variable-length codes based on frequency.",
+          "Both Huffman coding and ASCII encoding require the same number of bits."
+      ],
+      "answer": 3,
+      "explanation": "Huffman coding is generally more efficient than ASCII because it uses shorter codes for more frequent characters, unlike ASCII's fixed-length codes.",
+      "code": null
+  },
+  {
+      "question": "Which statement best describes how Run Length Encoding (RLE) works?",
+      "options": [
+          "RLE compresses data by removing all vowels.",
+          "RLE compresses data by representing repeated sequences of the same value with a count and a single instance of the value.",
+          "RLE adds extra data to increase redundancy.",
+          "RLE assigns variable-length codes based on symbol frequency."
+      ],
+      "answer": 2,
+      "explanation": "RLE compresses data by representing sequences of repeated values with a single value followed by the count of repetitions.",
+      "code": null
+  },
+  {
+      "question": "How would the input data 'AAABBBCCCDDDD' be represented using Run Length Encoding (RLE)?",
+      "options": [
+          "A1B1C1D1",
+          "3A3B3C4D",
+          "ABCDAABBCCDD",
+          "12ABCD"
+      ],
+      "answer": 2,
+      "explanation": "In RLE, the data 'AAABBBCCCDDDD' would be compressed as '3A3B3C4D', where the number represents the count of each character.",
+      "code": null
+  },
+  {
+      "question": "Which of the following is a key difference between Huffman coding and Run Length Encoding (RLE)?",
+      "options": [
+          "Huffman coding uses fixed-length codes, while RLE uses variable-length codes.",
+          "Huffman coding is typically used for text compression, while RLE is often used for compressing data with lots of repeated sequences.",
+          "RLE requires more computational power than Huffman coding.",
+          "Huffman coding increases file size, while RLE decreases it."
+      ],
+      "answer": 2,
+      "explanation": "Huffman coding is often used for text and binary data compression, while RLE is more effective for data with many repeated sequences, like images.",
+      "code": null
+  },
+  {
+      "question": "In which scenario would Huffman coding be preferred over Run Length Encoding (RLE)?",
+      "options": [
+          "Compressing an image with large areas of solid color.",
+          "Compressing text data where some characters occur much more frequently than others.",
+          "Compressing a video file.",
+          "Compressing a sound file with lots of silence."
+      ],
+      "answer": 2,
+      "explanation": "Huffman coding is more efficient for text data with varying character frequencies, as it assigns shorter codes to more frequent characters, unlike RLE, which is better for compressing repetitive data.",
+      "code": null
+  }
+]
+
+}

@@ -1,0 +1,491 @@
+{
+    "Network Threats": [
+      {
+        "question": "What is a common characteristic of weak passwords?",
+        "code": null,
+        "options": [
+          "They are easy to remember.",
+          "They are complex with symbols and numbers.",
+          "They are unique to each account.",
+          "They are frequently changed."
+        ],
+        "answer": 1,
+        "explanation": "Weak passwords are often easy to guess or remember, making them vulnerable to brute force attacks."
+      },
+      {
+        "question": "Why is it important to regularly apply software patches?",
+        "code": null,
+        "options": [
+          "Patches slow down system performance.",
+          "Patches address known security vulnerabilities.",
+          "Patches are only for adding new features.",
+          "Patches are optional for most software."
+        ],
+        "answer": 2,
+        "explanation": "Regularly applying patches ensures that known vulnerabilities are fixed, protecting against attacks like ransomware."
+      },
+      {
+        "question": "How can removable media pose a threat to network security?",
+        "code": null,
+        "options": [
+          "They can cause physical damage to computers.",
+          "They can carry malware that infects systems when connected.",
+          "They only allow safe file transfers.",
+          "They help improve system performance."
+        ],
+        "answer": 2,
+        "explanation": "Removable media can carry malware such as viruses or worms, which can infect connected systems."
+      },
+      {
+        "question": "What is the risk associated with misconfigured access rights?",
+        "code": null,
+        "options": [
+          "Users gain unauthorized access to sensitive data.",
+          "Users have no access to any data.",
+          "Users are unable to log into the system.",
+          "Users can only access encrypted files."
+        ],
+        "answer": 1,
+        "explanation": "Misconfigured access rights can give users inappropriate levels of access, leading to potential data breaches."
+      },
+      {
+        "question": "What is the main goal of a Denial-of-Service (DoS) attack?",
+        "code": null,
+        "options": [
+          "To steal sensitive information from a system.",
+          "To encrypt files and demand ransom for access.",
+          "To make a service unavailable to legitimate users.",
+          "To intercept and alter network communications."
+        ],
+        "answer": 3,
+        "explanation": "A DoS attack aims to overwhelm a network or service, making it inaccessible to its intended users."
+      },
+      {
+        "question": "How does a brute force attack work?",
+        "code": null,
+        "options": [
+          "It scans for vulnerabilities in software.",
+          "It sends excessive traffic to overwhelm a system.",
+          "It systematically tries all possible password combinations.",
+          "It injects malicious code into a system."
+        ],
+        "answer": 3,
+        "explanation": "A brute force attack tries all possible combinations of passwords until the correct one is found."
+      },
+      {
+        "question": "What distinguishes a worm from a virus in the context of malware?",
+        "code": null,
+        "options": [
+          "A virus spreads without needing user action.",
+          "A worm spreads on its own without attaching to files.",
+          "A worm can only infect one device.",
+          "A virus can replicate without infecting a system."
+        ],
+        "answer": 2,
+        "explanation": "Worms spread independently across networks without needing to attach to other files, unlike viruses."
+      },
+      {
+        "question": "What is the primary purpose of a Trojan in cyberattacks?",
+        "code": null,
+        "options": [
+          "To replicate and spread like a worm.",
+          "To gain access by pretending to be legitimate software.",
+          "To encrypt files and demand a ransom.",
+          "To launch a Denial-of-Service attack."
+        ],
+        "answer": 2,
+        "explanation": "Trojans disguise themselves as legitimate software to trick users into installing them, often leading to unauthorized access."
+      },
+      {
+        "question": "How does spyware differ from viruses and Trojans?",
+        "code": null,
+        "options": [
+          "Spyware replicates itself across networks.",
+          "Spyware monitors user activities without damaging the system.",
+          "Spyware encrypts data and demands payment.",
+          "Spyware targets only specific software applications."
+        ],
+        "answer": 2,
+        "explanation": "Spyware is designed to monitor user activities and collect information, without necessarily causing direct damage to the system."
+      },
+      {
+        "question": "What is the main purpose of SQL injection?",
+        "code": null,
+        "options": [
+          "To manipulate a database using malicious SQL queries.",
+          "To encrypt a website’s database for ransom.",
+          "To overload a system with SQL requests.",
+          "To scan for vulnerabilities in SQL code."
+        ],
+        "answer": 1,
+        "explanation": "SQL injection occurs when an attacker injects malicious SQL code to manipulate or retrieve sensitive data from a database."
+      }
+    ],
+    "Social Engineering": [
+        {
+        "question": "What is social engineering, and how does it exploit human behavior in the context of network security?",
+        "code": null,
+        "options": [
+            "Using encryption to protect user data",
+            "Manipulating people into giving away confidential information",
+            "Hacking into servers using technical vulnerabilities",
+            "Creating firewalls to prevent unauthorized access"
+        ],
+        "answer": 2,
+        "explanation": "Social engineering relies on exploiting human vulnerabilities, often tricking individuals into revealing sensitive information."
+        },
+        {
+        "question": "Which of the following is a common characteristic of phishing emails?",
+        "code": null,
+        "options": [
+            "Use of advanced encryption to secure messages",
+            "Impersonation of trusted entities to request sensitive information",
+            "Requests for recipients to confirm email settings",
+            "Emails sent from the victim's contact list"
+        ],
+        "answer": 2,
+        "explanation": "Phishing emails often impersonate trusted entities, such as banks or popular websites, to trick individuals into providing sensitive information."
+        },
+        {
+        "question": "How does spear phishing differ from traditional phishing?",
+        "code": null,
+        "options": [
+            "It targets specific individuals or organizations with personalized attacks",
+            "It uses encryption to protect the phishing message",
+            "It focuses on businesses rather than individuals",
+            "It is always conducted over social media"
+        ],
+        "answer": 1,
+        "explanation": "Spear phishing is a more targeted form of phishing that customizes attacks based on specific information gathered about the victim."
+        },
+        {
+        "question": "What is pharming, and how does it differ from phishing?",
+        "code": null,
+        "options": [
+            "Pharming uses malicious software to steal data, while phishing relies on social media",
+            "Pharming manipulates DNS to redirect users to fraudulent websites, while phishing uses deceptive emails",
+            "Pharming targets financial institutions, while phishing targets individuals",
+            "Pharming involves keylogging, while phishing involves email impersonation"
+        ],
+        "answer": 2,
+        "explanation": "Pharming manipulates the DNS to redirect users to fraudulent websites, while phishing uses deceptive emails or messages to trick individuals into visiting malicious sites."
+        },
+        {
+        "question": "Which of the following best describes shoulder surfing?",
+        "code": null,
+        "options": [
+            "Intercepting passwords using malware",
+            "Observing someone entering sensitive information in a public place",
+            "Sending malicious links via email",
+            "Redirecting users to a fraudulent website"
+        ],
+        "answer": 2,
+        "explanation": "Shoulder surfing involves directly observing someone entering sensitive information, like passwords or PINs, often in a public place."
+        },
+        {
+        "question": "What is one effective precaution against shoulder surfing in public spaces?",
+        "code": null,
+        "options": [
+            "Entering passwords using only lowercase letters",
+            "Positioning the body to shield the screen or keypad",
+            "Keeping security software up to date",
+            "Using the same password across multiple accounts"
+        ],
+        "answer": 2,
+        "explanation": "Positioning your body or hand in a way that blocks others from seeing your input helps prevent shoulder surfing."
+        },
+        {
+        "question": "What is blagging (pretexting) in the context of social engineering?",
+        "code": null,
+        "options": [
+            "Installing malware to steal sensitive data",
+            "Deceiving individuals by pretending to be someone else",
+            "Using encryption to secure communications",
+            "Redirecting users to fake websites"
+        ],
+        "answer": 2,
+        "explanation": "Blagging involves manipulating individuals by pretending to be someone they trust, such as a service provider or authority figure, to extract sensitive information."
+        },
+        {
+        "question": "Which of the following is a common method used in blagging over the phone?",
+        "code": null,
+        "options": [
+            "Asking for password resets",
+            "Pretending to be from a legitimate organization to extract sensitive information",
+            "Sending fraudulent links via text message",
+            "Offering free software downloads"
+        ],
+        "answer": 2,
+        "explanation": "Blagging over the phone often involves impersonating a legitimate organization or service provider to trick individuals into providing confidential information."
+        },
+        {
+        "question": "What is baiting in social engineering?",
+        "code": null,
+        "options": [
+            "Providing free software to install malware on users' devices",
+            "Intercepting users' communications to steal sensitive data",
+            "Offering to fix security issues on a user's device",
+            "Hacking into servers using brute force"
+        ],
+        "answer": 1,
+        "explanation": "Baiting is a technique where attackers entice individuals with free offers, such as software or storage devices, to trick them into installing malware or compromising their security."
+        },
+        {
+        "question": "Which of the following is an example of a baiting tactic?",
+        "code": null,
+        "options": [
+            "Offering a free software download that secretly installs malware",
+            "Using public Wi-Fi to intercept passwords",
+            "Pretending to be a government official to obtain login credentials",
+            "Sending an email requesting urgent action"
+        ],
+        "answer": 1,
+        "explanation": "Baiting often involves offering free software or downloads that contain hidden malware, tricking users into compromising their own security."
+        }
+    ],
+    "Malware": [
+        {
+        "question": "What is malware primarily designed to do?",
+        "code": null,
+        "options": [
+            "Improve the performance of a computer system",
+            "Protect sensitive information",
+            "Harm, exploit, or compromise the integrity of systems or data",
+            "Enhance user experience by providing useful software"
+        ],
+        "answer": 3,
+        "explanation": "Malware is designed to harm, exploit, or compromise systems, networks, or user data."
+        },
+        {
+        "question": "How does a virus typically spread and infect a computer?",
+        "code": null,
+        "options": [
+            "By attaching to host files and being triggered by user actions",
+            "By exploiting network vulnerabilities and spreading autonomously",
+            "By tricking users into downloading legitimate software",
+            "By passively collecting user data without any interaction"
+        ],
+        "answer": 1,
+        "explanation": "A virus attaches to host files and requires a user to execute it, spreading through the infected system."
+        },
+        {
+        "question": "Which of the following best describes a worm?",
+        "code": null,
+        "options": [
+            "A malicious program that requires user action to spread",
+            "A type of malware that autonomously replicates and spreads",
+            "A form of social engineering disguised as legitimate software",
+            "A program that monitors user activity in secret"
+        ],
+        "answer": 2,
+        "explanation": "A worm can replicate and spread without user interaction, making it more autonomous than a virus."
+        },
+        {
+        "question": "What is the primary goal of spyware?",
+        "code": null,
+        "options": [
+            "To damage system files",
+            "To secretly monitor and collect information about users",
+            "To encrypt files for ransom",
+            "To spread itself across networks"
+        ],
+        "answer": 2,
+        "explanation": "Spyware is designed to monitor and collect information about user activities without their knowledge."
+        },
+        {
+        "question": "Which malware type does NOT replicate on its own and relies on social engineering tactics?",
+        "code": null,
+        "options": [
+            "Virus",
+            "Worm",
+            "Trojan",
+            "Spyware"
+        ],
+        "answer": 3,
+        "explanation": "Trojans rely on social engineering to trick users into installing them and do not replicate on their own."
+        },
+        {
+        "question": "What was the primary purpose of the Stuxnet worm?",
+        "code": null,
+        "options": [
+            "To steal financial data",
+            "To disrupt an Iranian power plant",
+            "To send spam emails",
+            "To collect sensitive information for espionage"
+        ],
+        "answer": 2,
+        "explanation": "Stuxnet was designed to sabotage industrial control systems at an Iranian power plant."
+        },
+        {
+        "question": "Which of the following is NOT a type of virus?",
+        "code": null,
+        "options": [
+            "Memory-resident virus",
+            "Non-memory-resident virus",
+            "Macro-virus",
+            "Drive-by virus"
+        ],
+        "answer": 4,
+        "explanation": "The term 'Drive-by virus' does not exist. The correct term is 'Drive-by download,' which is associated with worms."
+        },
+        {
+        "question": "How does a worm typically enter a system?",
+        "code": null,
+        "options": [
+            "Through a phishing email requiring user action",
+            "By exploiting software vulnerabilities to spread autonomously",
+            "By users manually installing it from a suspicious website",
+            "Through physical access to the device"
+        ],
+        "answer": 2,
+        "explanation": "Worms often exploit software vulnerabilities or network protocols to spread without requiring user action."
+        },
+        {
+        "question": "What is a key difference between a virus and a worm?",
+        "code": null,
+        "options": [
+            "Viruses replicate on their own, while worms need user action",
+            "Worms replicate autonomously, while viruses need user action to trigger",
+            "Worms always delete files, while viruses only replicate",
+            "Viruses only spread through email, while worms spread through USB drives"
+        ],
+        "answer": 2,
+        "explanation": "Worms replicate and spread autonomously, whereas viruses need a user action to activate and spread."
+        },
+        {
+        "question": "Which of the following is a common method to protect against Trojans?",
+        "code": null,
+        "options": [
+            "Keep antivirus software up-to-date",
+            "Disable email attachments",
+            "Avoid using USB devices",
+            "Regularly change the system passwords"
+        ],
+        "answer": 1,
+        "explanation": "Up-to-date antivirus software helps detect and block Trojans before they can cause harm."
+        }
+    ],
+    "Network Security": [
+        {
+        "question": "What are the three main goals of safeguarding data in a network?",
+        "code": null,
+        "options": [
+            "Confidentiality, integrity, and availability",
+            "Encryption, authentication, and authorization",
+            "Firewall protection, antivirus, and encryption",
+            "Biometrics, tokens, and smart cards"
+        ],
+        "answer": 1,
+        "explanation": "The primary goals of network security are ensuring data confidentiality, integrity, and availability to protect against unauthorized access and maintain operational continuity."
+        },
+        {
+        "question": "Which of the following describes multi-factor authentication (MFA)?",
+        "code": null,
+        "options": [
+            "Using a password and username combination",
+            "Requiring multiple forms of verification, such as a password and a one-time code",
+            "Encrypting data with both symmetric and asymmetric keys",
+            "Restricting access based on IP addresses"
+        ],
+        "answer": 2,
+        "explanation": "MFA enhances security by requiring more than one method of authentication, such as something you know (password) and something you have (one-time code)."
+        },
+        {
+        "question": "What is the main challenge associated with symmetric encryption?",
+        "code": null,
+        "options": [
+            "It is too slow for real-time communications",
+            "The encryption key must be securely shared between parties",
+            "It cannot be used for long-term data storage",
+            "It does not ensure data confidentiality"
+        ],
+        "answer": 2,
+        "explanation": "The primary issue with symmetric encryption is securely sharing the key between the communicating parties, as both need the same key for encryption and decryption."
+        },
+        {
+        "question": "How do smart cards improve network security?",
+        "code": null,
+        "options": [
+            "By encrypting network traffic",
+            "By storing user credentials on a physical device",
+            "By filtering unauthorized network packets",
+            "By generating one-time passwords"
+        ],
+        "answer": 2,
+        "explanation": "Smart cards are physical devices that store user credentials, providing an extra layer of authentication, especially when combined with a PIN or biometric factor."
+        },
+        {
+        "question": "Which of the following describes the main purpose of a firewall?",
+        "code": null,
+        "options": [
+            "Encrypting data transmissions",
+            "Blocking unauthorized access based on security rules",
+            "Monitoring all network traffic for security threats",
+            "Storing login credentials securely"
+        ],
+        "answer": 2,
+        "explanation": "A firewall acts as a barrier between trusted and untrusted networks, filtering incoming and outgoing traffic based on predefined security rules."
+        },
+        {
+        "question": "What is the primary difference between symmetric and asymmetric encryption?",
+        "code": null,
+        "options": [
+            "Symmetric encryption uses two keys, while asymmetric uses one",
+            "Symmetric encryption uses one key, while asymmetric uses a public and private key pair",
+            "Symmetric encryption is only used for emails, while asymmetric encryption is for VPNs",
+            "Symmetric encryption is faster than asymmetric encryption for large datasets"
+        ],
+        "answer": 2,
+        "explanation": "Symmetric encryption uses a single key for both encryption and decryption, while asymmetric encryption relies on a pair of public and private keys."
+        },
+        {
+        "question": "Which encryption protocol is commonly used to secure communication over the internet?",
+        "code": null,
+        "options": [
+            "TLS/SSL",
+            "WPA2",
+            "MFA",
+            "AES"
+        ],
+        "answer": 1,
+        "explanation": "TLS (Transport Layer Security) and SSL (Secure Sockets Layer) are cryptographic protocols used to secure communication over computer networks, especially for online transactions."
+        },
+        {
+        "question": "Which method is used to restrict access to a network based on device identifiers?",
+        "code": null,
+        "options": [
+            "MAC address filtering",
+            "Firewall rules",
+            "Token authentication",
+            "Asymmetric encryption"
+        ],
+        "answer": 1,
+        "explanation": "MAC address filtering controls access to a network by allowing or denying devices based on their unique MAC address, which is assigned to their network interface."
+        },
+        {
+        "question": "How does biometric authentication enhance security?",
+        "code": null,
+        "options": [
+            "It allows users to log in with a strong password",
+            "It relies on unique physical characteristics that are difficult to replicate",
+            "It generates a one-time code for authentication",
+            "It filters out network traffic from unauthorized devices"
+        ],
+        "answer": 2,
+        "explanation": "Biometric authentication uses unique physical characteristics, such as fingerprints or retina scans, which are difficult to replicate, providing a secure method of authentication."
+        },
+        {
+        "question": "Which of the following describes a stateful inspection firewall?",
+        "code": null,
+        "options": [
+            "It inspects each packet based on predefined rules only",
+            "It keeps track of the state of active connections and inspects traffic in context",
+            "It handles requests on behalf of the client and forwards results",
+            "It encrypts data passing through the network"
+        ],
+        "answer": 2,
+        "explanation": "A stateful inspection firewall monitors the state of active connections and allows or blocks traffic based on the context, providing enhanced security compared to simple packet filtering."
+        }
+    ]
+}
+  

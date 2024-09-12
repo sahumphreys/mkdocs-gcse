@@ -116,6 +116,11 @@
             "title": "Rock, Paper, Scissors",
             "outline": "Write a Python program that lets a user play the game of Rock, Paper, Scissors against the computer. Implement the game logic and provide instructions for the user to input their choice.",
             "link": "#"
+        },
+        {
+            "title": "BMI Calculator",
+            "outline": "Write a Python program to calculate the Body Mass Index BMI or a user given a height and a weight.  The formula to use: bmi = weight / (height ** 2). Output the result 'Underweight' if the BMI < 18.5; 'Obese' if the BMI is > 30.5; 'Normal Weight' if the BMI is between 18.5 and < 25; 'Overweight' if the BMI is between 25 and 30.",
+            "link": "#"
         }
     ],
     "Iteration": [
@@ -178,6 +183,11 @@
     ],
     "2D Lists": [
         {
+            "title": "Seating Plan",
+            "outline": "Write a Python program to manage a simple seating plan.  Initialise the seating plan as a 2D list with the first name of the student.  Write code (using functions where necessary) to: print the initial seating plan, swap 2 students from one place to another and add a new row of students.",
+            "link": "#"
+        },
+        {
             "title": "Matrix Addition",
             "outline": "Write a Python program that adds two 2D matrices. Allow the user to input the dimensions and elements of the matrices and display the result.",
             "link": "#"
@@ -239,7 +249,7 @@
             "link": "#"
         }
     ],
-    "Working with files": [
+    "Working with Files": [
         {
             "title": "Word Counter",
             "outline": "Write a Python program that reads a text file and counts the number of words in it. Display the word count as output.",

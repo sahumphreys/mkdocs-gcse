@@ -52,6 +52,7 @@ nav:
   - Topics:
     - Python:
       - 'Overview': topics/python/index.md
+      - 'Slides': 'topics/python/slides/python-slides.pdf'
       - 'Getting Started': 'topics/python/02_getting_started.md'
       - 'Variables': 'topics/python/03_variables.md'
       - 'Operators': 'topics/python/04_operators.md'
@@ -67,20 +68,85 @@ nav:
       - 'Tuples': 'topics/python/14_tuples.md'
       - 'Exceptions': 'topics/python/15_exceptions.md'
       - 'Working with Files': 'topics/python/16_files.md'
+      - PROJECT:
+        - 'Climate Quest': 'topics/python/climate_quest/introduction.md'
+        - 'Outline': 'topics/python/climate_quest/example.md'
+        - 'Task 1': 'topics/python/climate_quest/task_1.md'
+        - 'Task 2': 'topics/python/climate_quest/task_2.md'
+        - 'Task 3': 'topics/python/climate_quest/task_3.md'
+        - 'Task 4': 'topics/python/climate_quest/task_4.md'
+        - 'Task 5': 'topics/python/climate_quest/task_5.md'
+        - 'Task 6': 'topics/python/climate_quest/task_6.md'
+        - 'Task 7': 'topics/python/climate_quest/task_7.md'
+        - 'Task 8': 'topics/python/climate_quest/task_8.md'
+        - 'Task 9': 'topics/python/climate_quest/task_9.md'
+        - 'Task 10': 'topics/python/climate_quest/task_10.md'
+        - 'Task 11': 'topics/python/climate_quest/task_11.md'
     - 'Data Representation':
       - Overview: 'topics/data/index.md'
-      - Sets: 'topics/data/sets.md'
-      - Binary: 'topics/data/binary.md'
-      - 'Character Encoding': 'topics/data/ascii.md'
-      - 'Binary Arithmetic': 'topics/data/arithmetic.md'
-      - 'Negative Numbers': 'topics/data/negative.md'
-      - 'Real Numbers': 'topics/data/real.md'
-      - 'Units': 'topics/data/units.md'
-      - 'Errors': 'topics/data/errors.md'
-      - 'Images': 'topics/data/graphics.md'
-      - Sound: 'topics/data/sound.md'
-      - Compression: 'topics/data/compression.md'
-      - Encryption: 'topics/data/encryption.md'
+      - Slides: 'topics/data/slides/data-slides.pdf'
+      - 'Number Systems': 'topics/data/01_number_systems.md'
+      - Units: 'topics/data/02_units.md'
+      - 'Binary Arithmetic': 'topics/data/03_binary_arithmetic.md'
+      - Hexadecimal: 'topics/data/04_hexadecimal.md'
+      - 'Negative Numbers': 'topics/data/05_negative_numbers.md'
+      - 'Character Encoding': 'topics/data/06_character_encoding.md'
+      - Images: 'topics/data/07_images.md'
+      - Sound: 'topics/data/08_sound.md'
+      - Compression: 'topics/data/09_compression.md'
+    - 'System Architecture':
+      - Overview: 'topics/system/index.md'
+      - Slides: 'topics/system/slides/system-slides.pdf'
+      - Software: 'topics/system/01_software.md'
+      - 'Programming Languages': 'topics/system/02_programming_languages.md'
+      - 'Inside the Machine': 'topics/system/03_inside_the_machine.md'
+      - Memory: 'topics/system/04_memory.md'
+      - 'Secondary Storage': 'topics/system/05_secondary_storage.md'
+      - 'Systems Architecture': 'topics/system/06_systems_architecture.md'
+    - 'Computer Networks':
+      - Overview: 'topics/networking/index.md'
+      - Slides: 'topics/networking/slides/networking-slides.pdf'
+      - Networking: 'topics/networking/01_networking.md'
+      - 'Wired and Wireless Networks': 'topics/networking/02_wired_wireless.md'
+      - Topologies: 'topics/networking/03_topologies.md'
+      - 'The Internet': 'topics/networking/04_internet.md'
+      - Protocols: 'topics/networking/05_protocols.md'
+    - Algorithms:
+      - 'Overview': 'topics/algorithms/index.md'
+      - 'Slides': 'topics/algorithms/slides/algorithms_slides.pdf'
+      - 'Computational Thinking': 'topics/algorithms/01_computational_thinking.md'
+      - 'Describing an Algorithm': 'topics/algorithms/02_describing_an_algorithm.md'
+      - 'Searching Algorithms': 'topics/algorithms/03_searching.md'
+      - 'Sorting Algorithms': 'topics/algorithms/04_sorting.md'
+      - 'Tracing': 'topics/algorithms/05_tracing.md'
+      - 'Structure Diagrams': 'topics/algorithms/06_structure_diagrams.md'
+      - 'Just testing': 'topics/algorithms/testing.md'
+    - Security:
+      - 'Overview': 'topics/security/index.md'
+      - 'Slides': 'topics/security/slides/security-slides.pdf'
+      - 'Network Threats': 'topics/security/01_threats.md'
+      - 'Social Engineering': 'topics/security/02_social_engineering.md'
+      - 'Malware': 'topics/security/03_malware.md'
+      - 'Network Security': 'topics/security/04_network_security.md'
+    - 'Databases':
+      - 'Overview': 'topics/databases/index.md'
+      - 'Relational Databases': 'topics/databases/01_relational_databases.md'
+      - 'Worked Example': 'topics/databases/02_worked_example.md'
+      - SQL: 'topics/databases/03_sql.md'
+      - 'Python and SQL': 'topics/databases/04_python_sql.md'
+    - 'Programming':
+      - Overview: 'topics/programming/index.md'
+      - Variables: 'topics/programming/01_variables_types_and_strings.md'
+      - Selection: 'topics/programming/02_selection_boolean_and_random.md'
+      - Iteration: 'topics/programming/03_iteration.md'
+    - 'Impact of Technology':
+      - Overview: 'topics/impact/index.md'
+      - Slides: 'topics/impact/slides/impact-slides.pdf'
+      - Legislation: 'topics/impact/01_legislation.md'
+      - 'Ethical Issues': 'topics/impact/02_ethical_issues.md'
+      - 'Environment': 'topics/impact/03_environmental_issues.md'
+      - 'Rise of AI': 'topics/impact/04_rise_of_ai.md'
+      - 'Long Form Questions': 'topics/impact/05_tackling_long_form_questions.md'
   # - Documents: documents.md
   - "Exam Boards":
     - Summary: 'boards/index.md'
@@ -116,12 +182,21 @@ extra:
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
 
-# extra_css:
-#   - assets/css/custom.css
-
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
-  - assets/css/custom.css
+  - assets/css/custom.css  
+
+extra_javascript:
+  - assets/js/katex.js
+  - assets/js/custom.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - assets/js/quiz.js  
+  # - assets/js/bubble_sort.js
+  # - assets/js/linearSearch.js
+  # - assets/js/binarySearch.js
+  - assets/js/algorithms.js
+  # - assets/js/testing.js
 
 # PLUGINS
 # ----------------------------------------------------------------
@@ -131,6 +206,9 @@ plugins:
   - macros
   - search
   - mkdocs-pdf
+  - markdown-exec
+  - mkdocs_quiz
+
 
 # MARKDOWN EXTENSIONS
 # ----------------------------------------------------------------
@@ -139,6 +217,8 @@ markdown_extensions:
   - md_in_html
   - footnotes
   - attr_list
+  - pymdownx.critic
+  - pymdownx.keys
   - tables
   - toc:
       baselevel: 1
@@ -146,11 +226,14 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.highlight:
@@ -162,7 +245,6 @@ markdown_extensions:
       auto_title: false
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
   
 
 # COPYRIGHT NOTICE
@@ -170,9 +252,3 @@ markdown_extensions:
 copyright: |
   &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
 
-
-extra_javascript:
-  - assets/js/katex.js
-  - assets/js/custom.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js

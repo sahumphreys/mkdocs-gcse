@@ -1,6 +1,7 @@
 ---
 title: Dictionaries
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -16,15 +17,51 @@ image: python.png
     - Access values in a dictionary by specifying the key in square brackets.
     - Use built-in methods such as keys(), values(), and items() to retrieve information from dictionaries.
 
-A dictionary is similar to a list but rather than using integers to index the elements in the list the indices can be of any type.  In other programming languages the dictionary might be known as a **map** or an **associative array**.  Think od a conventional English to French dictionary, if your want to know the French word for say 'house', your would look up in the dictionary for the item (key) 'house', the read back the French equivalent (value) as 'la maison'.  The notion of the key being associated with, or mapped to, a value is the essence of how the dictionary operates.
+A dictionary is similar to a list but rather than using integers to index the elements in the list the indices can be of any type.  In other programming languages the dictionary might be known as a **map** or an **associative array**.  Think od a conventional English to French dictionary, if you want to know the French word for say 'house', your would look up in the dictionary for the item (key) 'house', the read back the French equivalent (value) as 'la maison'.  The notion of the key being associated with, or mapped to, a value is the essence of how the dictionary operates.
+
+
+## Example 11
+
+```python hl_lines="7 10 13 19-21"
+# Example program with a dictionary
+climate_data = {
+    "temperature": 22,
+    "humidity": 45,
+    "wind_speed": 15
+}
+print("Original climate data:", climate_data)
+
+temp = climate_data["temperature"]
+print("Temperature:", temp)
+
+climate_data["temperature"] = 25
+print("Updated climate data:", climate_data)
+
+keys = climate_data.keys()
+values = climate_data.values()
+items = climate_data.items()
+
+print("Keys:", keys)
+print("Values:", values)
+print("Items:", items)
+```
+
+Predict the output of the program for the highlighted lines in the example program:
+
+- What will be printed for the original climate data?
+- What will the temperature variable contain?
+- How will the climate data look after updating the temperature?
+- What will be printed for keys, values, and items?
+
+Run the program in a Python environment to confirm or correct your predictions
 
 ## Dictionary Basics
 
 * A dictionary is defined using curly braces `{}` or the `dict()` constructor.
-* Each item in a dictionary consists of a key and its corresponding value, separated by a colon `:`.
+* Each item in a dictionary consists of a **key** and its corresponding **value**, separated by a colon `:`.
 * Keys are unique within a dictionary, and they must be immutable objects (e.g., strings, numbers, or tuples).
 * Values can be of any data type, including numbers, strings, lists, other dictionaries, and more.
-* Some similarity to an array, but the index used will be the **key** rather than a numerical position
+* Some similarity to a list, but the index used will be the **key** rather than a numerical position
 
 ## Creating a Dictionary
 
@@ -33,14 +70,18 @@ A dictionary is similar to a list but rather than using integers to index the el
 empty_dict = {}
 
 # Creating a dictionary with key-value pairs
-student = {"name": "John", "age": 25, "grade": "A"}
+climate_data = {
+    "temperature": 22,
+    "humidity": 45,
+    "wind_speed": 15
+}
 ```
 
 We can also use the function `dict()`, which creates an empty dictionary:
 
 ```py
-french_english_dictionary = dict()
-print(french_english_dictionary)         # => {}
+climate_data = dict()
+print(climate_data)         # => {}
 ```
 
 Note the output from the `print()` statement: `{}`.  The curly braces signify the data type as being a dictionary.
@@ -52,10 +93,10 @@ Note the output from the `print()` statement: `{}`.  The curly braces signify th
 
 ```python
 # Accessing values
-print(student["name"])  # Output: "John"
+print(climate_data["temperature"])  # Output: 22
 ```
 
-Recall the similarity with an array, we might have an array of students but these are 'keyed' by their position e.g.`student[0]`.  For the dictionary we use the identifier for the key, here being "name" in the square brackets.
+Recall the similarity with a list, we could have used a list to hold the climate data but this data would be 'keyed' by their position in the list e.g.`climate_data[0]`.  For the dictionary we use the identifier for the key, here being "temperature" in the square brackets.  Using the identifier makes the code easier to read.
 
 ## Modifying and Adding Entries
 
@@ -63,13 +104,15 @@ Recall the similarity with an array, we might have an array of students but thes
 
 ```python
 # Modifying values
-student["age"] = 26
+climate_data["humidity"] = 41
 
 # Adding a new key-value pair
-student["city"] = "New York"
+climate_data["rainfall"] = 37
 ```
 
-When adding elements to a dictionary the order is not known, the dictionary is not automatically sorted.  However, this is not that significant as we use the key to access the associated element and the key must be unique.  If the key does not exist in the dictionary we get a `KeyValueError` returned as an exception.
+!!! note
+
+    When adding elements to a dictionary the order is not known, the dictionary is not automatically sorted.  However, this is not that significant as we use the key to access the associated element and the key must be unique.  If the key does not exist in the dictionary we get a `KeyValueError` returned as an exception.
 
 ## Dictionary Methods and Functions
 
@@ -78,23 +121,27 @@ When adding elements to a dictionary the order is not known, the dictionary is n
 
 ```python
 # Getting keys and values
-keys = student.keys()
-values = student.values()
+keys = climate_data.keys()
+values = climate_data.values()
 
 # Getting key-value pairs
-items = student.items()
+items = climate_data.items()
 ```
 
 The return type from the `keys()` and `values()` functions are of type `dict_keys()` and `dict_values` respectively.  To make them a little easier to handle it is recommended to convert them to a list first:
 
 ```py
-keys = list(student.keys())
-values = list(student.values())
-print(keys)                     # -> ['name', 'age', 'grade']
-print(values)                   # -> ['John', 25, 'A']
+keys = list(climate_data.keys())
+values = list(climate_data.values())
+print(keys)                     # -> ['temperature', 'humidity', 'wind-_speed']
+print(values)                   # -> [22, 45, 15]
 ```
 
 In addition functions such as `len()` can be used to return the number of items in the dictionary.
+
+```py
+print(len(climate_data))        # -> 3
+```
 
 ## Iterating Through a Dictionary
 
@@ -102,9 +149,9 @@ In addition functions such as `len()` can be used to return the number of items 
 * The `in` operator can be applied which works on the keys in the dictionary
 
 ```python
-# Iterating through keys
-for key in student:
-    print(key, student[key])
+# Iterating through a dictionary using the key
+for key in climate_data:
+    print(key, climate_data[key])
 
 # Iterating through key-value pairs
 for key, value in student.items():
@@ -113,45 +160,84 @@ for key, value in student.items():
 
 !!! note 
 
-    The algorithm used by the `in` operator if different for lists and dictionaries.  For a list it uses a linear search and thus the search time is dependent on the length of the list.  For the dictionary it uses a hash table which means it takes the same amount of time for any item irrespective of the number of items in the dictionary.
+    The algorithm used by the `in` operator is different for lists and dictionaries.  For a list it uses a linear search and thus the search time is dependent on the length of the list.  For the dictionary it uses a hash table which means it takes the same amount of time for any item irrespective of the number of items in the dictionary.
 
 You might also try:
 
 ```py
-for n in student.items():
+for n in climate_data.items():
     print(n)            
 ```
 
 The output is:
 
 ```terminal
-('name', 'John')
-('age', 25)
-('grade', 'A')
+('temperature', 22)
+('humidity', 45)
+('wind-_speed', 15)
 ```
 
 These are **tuples** and will be looked at in a later section.
 
 ## Checking for Key Existence
 
-* You can use the `in` keyword or the `get()` method to check if a key exists in a dictionary.
+You can use the `in` keyword or the `get()` method to check if a key exists in a dictionary.
 
-```python
+```python hl_lines="6"
 # Checking for key existence
-if "name" in student:
-    print("Name exists:", student["name"])
+if "humidity" in climate_data:
+    print("Humidity:", climate_data["humidity"])
 
 # Using get() to check for key existence
-grade = student.get("grade", "Not found")
+rainfall = climate_data.get("rainfall", "Not found")
 ```
+
+For line 6, there is no key for "rainfall" in the original dictionary therefore the variable `rainfall` will be assigned "Not found".  If it was present in the dictionary the variable would contain the key's value.
 
 !!! note 
 
     - Dictionaries are unordered collections, which means the order of key-value pairs may not be preserved in older versions of Python (prior to 3.7).  
     - Starting from Python 3.7+, dictionaries maintain the insertion order of items.
 
+## Activity
 
-### Example
+Using the example code, make the following changes:
+
+1. Add a new key-value pair for precipitation
+2. Remove a key-value pair
+3. Update an existing value
+4. Iterate through the dictionary and print each key-value pair
+
+Copy the following into your Python environment and modify the code as indicated by the comments.
+
+```py
+# Modified example with dictionary manipulations
+climate_data = {
+    "temperature": 22,
+    "humidity": 45,
+    "wind_speed": 15
+}
+
+# Q1: Add a new key-value pair for precipitation
+# Answer: 
+
+print("Climate data after adding precipitation:", climate_data)
+
+# Q2: Remove a key-value pair
+# Answer: 
+
+print("Climate data after removing humidity:", climate_data)
+
+# Q3: Update an existing value
+# Answer:
+
+print("Climate data after updating wind_speed:", climate_data)
+
+# Q4: Iterate through the dictionary and print each key-value pair
+# Answer:
+```
+
+## Further Example
 
 ```python
 # Creating a dictionary to store information about a book
@@ -169,21 +255,23 @@ print("Pages:", book["pages"])
 print("Year:", book["year"])
 ```
 
+## Climate Quest Project
+
+![](../../assets/images/climate-quest.png){align=left width="200"}
+
+Throughout this topic we'll be working on a large scale project: **Climate Quest**.  In this project a player embarks on a journey to combat the effects of climate change by making decisions that impact the environment. Each choice affects the outcome of the game, emphasizing the importance of individual actions in addressing climate change.
+
+[Go to task 10 - Dictionaries](./climate_quest/task_10.md){:class=md-button}
+
+## Summary
+
+[Cheat sheet for dictionaries](../../files/beginners_python_cheat_sheet_pcc_dictionaries.pdf){:class=md-button} [^source]
+
+[^source]: [https://ehmatthes.github.io/pcc_3e/cheat_sheets/](https://ehmatthes.github.io/pcc_3e/cheat_sheets/)
+
 ## Questions
 
-{{ get_questions(page.title)}}
-
-1. What is the fundamental difference between a list and a dictionary in Python?
-2. Explain the purpose of keys in a dictionary and why they must be unique.
-3. How do you create an empty dictionary in Python using both curly braces and the `dict()` constructor?
-4. Can you have a dictionary with keys of different data types? Explain with an example.
-5. What happens if you try to access a key that does not exist in a dictionary?
-6. How can you modify the value associated with a specific key in a dictionary?
-7. Describe how you can add a new key-value pair to an existing dictionary.
-8. What is the purpose of the `keys()`, `values()`, and `items()` methods in Python dictionaries?
-9. Explain how the `in` operator works when checking for key existence in a dictionary.
-10. How does Python handle the order of key-value pairs in dictionaries starting from Python 3.7?
-
+{{ show_questions(page.title, page.meta.filename) }}
 
 ## Programming Tasks
 

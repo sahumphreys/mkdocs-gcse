@@ -1,6 +1,7 @@
 ---
 title: Exceptions
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -21,29 +22,92 @@ image: python.png
 * Exceptions are events that occur during the execution of a program, which disrupt the normal flow of the program.  
 * They can be caused by various reasons such as invalid input, file not found, division by zero, etc.
 
-Consider the following example of calculating the area of a circle.  
+## Example 13
 
-```py
-radius = int(input("Enter circle radius: ))
-area = 3.14 * radius**2
-print(area)
+```python hl_lines="10-12"
+def divide_numbers(a, b):
+    return a / b
+
+def get_element(lst, index):
+    return lst[index]
+
+def convert_to_int(value):
+    return int(value)
+
+print(divide_numbers(10, 0))
+print(get_element([1, 2, 3], 5))
+print(convert_to_int("abc"))
 ```
 
-In a sample run of the program the user enters a `float`, which would seem to be a reasonable value from the user's perspective (the prompt does not specify an `integer` or a `float`).
+Using the example code above, predict the output for the following:
 
-```py
-Enter circle radius: 2.4
-Traceback (most recent call last):
-  File "c:\Users\dell touch\Documents\GitHub\pythonprogramming\docs\test.py", line 1, in <module>
-    radius = int(input("Enter circle radius: "))
-ValueError: invalid literal for int() with base 10: '2.4'
+- What will happen when dividing 10 by 0, line 10?
+- What do you think will occur when trying to access an index that doesn’t exist, line 11?
+- What will happen when trying to convert the given string to an integer, line 12?
+
+Copy and paste the code into a Python environment, run the code and check your predictions against the actual results.
+
+In each case an error occurred, these errors are so extreme the program cannot continue and it crashes out with an error message:
+
+- In the first instance we're trying to divide by zero, which triggers the **ZeroDivisionError** exception
+- Then we try to access an item in a list using an index value that does nor exist, triggering an **IndexError** exception
+- Finally, `abc` cannot be converted into an integer thus triggering a **ValueError**
+
+There are other types of exceptions that can occur including **NameError** and **TypeError**.  You can find others [here](https://docs.python.org/3/library/exceptions.html#concrete-exceptions)
+
+These errors are known as **exceptions** and to avoid the error, and program crashing out, we need to insert code that handles these exceptions.
+
+## Handling exceptions
+
+In Python, `the try...except...finally` block is a powerful construct used for exception handling, allowing a program to handle errors gracefully and ensure that important cleanup actions are always executed. 
+
+- The `try` block contains the code that may trigger, or **raise** an exception
+- The `except` block allows you to catch and manage specific or general exceptions that occur. 
+- The `finally` block, which is optional, runs regardless of whether an exception was raised or not, making it ideal for tasks like closing files or releasing resources. This ensures that necessary final actions, such as closing a file or cleaning up resources, are always performed, even if an error occurs during the execution of the try block.
+  
+For example, in the `divide_numbers()` function, we can check for the divisor being passed in.  Should it be a $0$ the error can be handled:
+
+```python
+def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
+        return None
+    finally:
+        print("Execution of divide_numbers() completed.")
 ```
 
-The program has crashed with an exception error: `ValueError: : invalid literal for int() with base 10: '2.4'`.  Exceptions are bad and we should want to avoid them.
+- Line 3: the function will attempt to return the result of dividing `a` by `b`.  If this raises an exception control is then passed to ...
+- ... Line 4: which prints a helpful message and returns from the function
+- Line 7: this is optional and here just provides a message acknowledging safe completion of the function
 
-Good programming practice is to consider such situations and provide a strategy for handling such data.  Here, it would be trivial to use the `float()` function rather than `int()`, but what if the user entered a `string`?  We would still get the `ValueError` exception.
+## Activity
 
-Python provides  way of dealing with these exception errors so the program can continue or exit gracefully known as a `try .. except` block.
+Following this pattern, modify the following code to capture an exceptions that might be raised in our example program:
+
+```python
+def divide_numbers(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
+        return None
+
+def get_element(lst, index):
+    # insert a try..except block to catch and handle an out-of-range index.
+    return lst[index]
+
+def convert_to_int(value):
+    # insert a try..except block to manage invalid string-to-integer conversions.
+    return int(value)
+
+print(divide_numbers(10, 2))
+print(divide_numbers(10, 0))
+print(get_element([1, 2, 3], 5))
+print(convert_to_int("abc"))
+print(convert_to_int("123"))
+```
 
 ## Types of Exception
 
@@ -101,36 +165,24 @@ print(non_existent_module.some_function())  # Raises a NameError if 'non_existen
 
 As the name implies, when we try to divide by $0$ this exception will be raised.
 
-## Handling Exceptions
+## Generic Exceptions
 
-To handle these exceptions we use `try .. except`.  For example, using the area of a circle problem from earlier:
+The following is valid:
 
 ```python
-try:
-    radius = float(input("Enter circle radius: "))
-    area = 3.14 * radius**2
-    print(area)
-except:
-    print("Please enter a valid number: ")
+def divide_numbers(a, b):
+    try:
+        return a / b
+    except:
+        print("Error: Division by zero is not allowed.")
+        return None
 
 ```
 
 * The `try` block contains the code that might raise an exception.
 * The `except` block contains the code to handle the exception when it occurs.
 
-Catching the exception in this way gives us a chance to fix the problem with the input, try again or exit gracefully.
- 
-In the example the `except` block was generic, i.e. it would catch anything.  It is usually better to specify the type of exception we're trying to catch as it helps with debugging.  For example, to catch an `IndexError`:
-
-```python
-try:
-    students = ["Alice", "Bob", "Carol"]
-    print(students[3])
-except IndexError:
-    print("There is no index with that value")
-```
-
-Here the type of error we want to catch is specified.
+In the example the `except` block was generic, i.e. it would catch anything.  It is usually better to specify the type of exception we're trying to catch as it helps with debugging.  
 
 The types of error can be provided as a tuple:
 
@@ -158,7 +210,7 @@ The `try ... except` block can also take a `finally` section.  This is used to e
 
 ## Raising an exception
 
-Sometimes we need to raise an exception when there is a potential issue that needs to be handled, perhaps not covered by any of the exceptions seen thus far.  For example, the age of a student will be within a certain range (depending on their phase of study).  e.e. a secondary school student would normally be between 11 and 18 years old.  Should the user provide an age outside of that range we can raise an exception to handle that data.
+Sometimes we need to raise an exception when there is a potential issue that needs to be handled, perhaps not covered by any of the exceptions seen thus far.  For example, the age of a student will be within a certain range (depending on their phase of study).  e.g. a secondary school student would normally be between 11 and 18 years old.  Should the user provide an age outside of that range we can raise an exception to handle that data.
 
 The syntax to use is:
 
@@ -166,7 +218,7 @@ The syntax to use is:
 raise ExceptionType("Error message")
 ```
 
-We can create our own `ExceptionType`.  This involves creating a class in Python.  Classes are covered in a later section (and are beyond the requirements for GCSE) but the following illustrates the principle:
+We can create our own `ExceptionType`.  This involves creating a class in Python.  Classes are beyond the requirements for GCSE, but the following illustrates the principle:
 
 ```python
 class AgeError(Exception):
@@ -196,20 +248,23 @@ else:
     raise ValueError(f"Invalid unit '{unit}' entered.")
 ```
 
+## Climate Quest Project
+
+![](../../assets/images/climate-quest.png){align=left width="200"}
+
+Throughout this topic we'll be working on a large scale project: **Climate Quest**.  In this project a player embarks on a journey to combat the effects of climate change by making decisions that impact the environment. Each choice affects the outcome of the game, emphasizing the importance of individual actions in addressing climate change.
+
+**There is no additional task for the Climate Quest project.  Use the time to continue working on your game**
+
+## Summary
+
+[Cheat sheet for exceptions (and files)](../../files/beginners_python_cheat_sheet_pcc_files_exceptions.pdf){:class=md-button}[^source]
+
+[^source]: [https://ehmatthes.github.io/pcc_3e/cheat_sheets/(https://ehmatthes.github.io/pcc_3e/cheat_sheets/)]
+
 ## Questions
 
-{{ get_questions(page.title)}}
-
-1. What are exceptions in Python?
-2. What is the purpose of the `try...except` block?
-3. What is the purpose of the `finally` block?
-4. How do you handle multiple exceptions in Python?
-5. Which exception is raised when dividing by zero?
-6. Why is the `finally` block useful in file operations?
-7. When do you use the `try...except` block in your code?
-8. What is the difference between `except ExceptionType` and `except` without specifying an exception type?
-9. What happens if an exception is not handled in Python?
-10. Explain with an example how you would handle an `IndexError` using `try...except`.
+{{ show_questions(page.title, page.meta.filename) }}
 
 ## Programming Tasks
 

@@ -1,0 +1,16 @@
+{
+    "forest": {
+        "description": "You encounter loggers in a forest. What will you do?",
+        "options": [
+            "Confront the loggers",
+            "Start a tree-planting initiative",
+            "Ignore the situation"
+        ],
+        "outcomes": [
+            "The loggers refuse to stop, but your protest raises awareness.",
+            "Your tree-planting initiative is a success!",
+            "The deforestation continues."
+        ],
+        "scores": [1, 2, -1]
+    }
+}

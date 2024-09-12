@@ -1,5 +1,5 @@
 {
-    "Getting Started with Python": [
+    "Getting Started": [
         {
             "question": "What are the general steps to install Python on your home computer?",
             "code": null,
@@ -9,7 +9,8 @@
                 "Download Python from the official Python website and follow the installation instructions",
                 "Python cannot be installed on home computers"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "It's important to download Python from the official Python website (https://www.python.org) to ensure you are getting a legitimate, up-to-date version of the software. The installation instructions provided are straightforward and guide you through the process to ensure Python is installed correctly."
         },
         {
             "question": "Which version of Python should you choose for most users?",
@@ -20,7 +21,8 @@
                 "Python 4.x",
                 "Python 1.x"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "Python 3.x is the recommended version for most users because it is the current and actively maintained version. Python 2.x has reached the end of its life and is no longer supported, so using Python 3 ensures compatibility with modern libraries and tools."
         },
         {
             "question": "What does the 'Add Python x.x to PATH' option during installation do?",
@@ -31,7 +33,8 @@
                 "It adds Python to the system's PATH environment variable",
                 "It installs additional Python libraries"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "Adding Python to the PATH environment variable allows you to run Python from the command prompt or terminal without having to specify the full path to the Python executable. This makes it easier to use Python from any directory."
         },
         {
             "question": "How can you check if Python is installed correctly on your computer?",
@@ -42,7 +45,8 @@
                 "By creating a new Python file",
                 "By checking your email"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "Typing python --version in the command prompt or terminal will display the installed version of Python, confirming that Python is installed and correctly configured."
         },
         {
             "question": " What command can you use to start the Python interactive environment in your terminal or command prompt?",
@@ -53,7 +57,8 @@
                 "`python`",
                 "`start`"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "Simply typing python (or python3 on some systems) in the terminal or command prompt starts the Python interactive environment, also known as the REPL (Read-Eval-Print Loop), where you can enter and execute Python code interactively."
         },
         {
             "question": "What is the result of the expression `10 / 3` in Python?",
@@ -64,7 +69,8 @@
                 "4",
                 "10"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "In Python, the / operator performs floating-point division, which means the result is a decimal (float) value. The division of 10 by 3 results in a float with many decimal places: 3.3333333333333335."
         },
         {
             "question": "What does the `len()` function do in Python?",
@@ -75,7 +81,8 @@
                 "Performs basic arithmetic operations",
                 "Creates a new list"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The len() function in Python is used to determine the number of elements in a list or the number of characters in a string. It returns an integer representing this count."
         },
         {
             "question": "How do you access elements in a list in Python?",
@@ -86,7 +93,8 @@
                 "Using parentheses and an index",
                 "Lists cannot be accessed in Python"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "In Python, elements in a list are accessed using square brackets ([]) and an index (an integer representing the position of the element). For example, my_list[0] would access the first element in the list."
         },
         {
             "question": "Which Python function is used to join two or more strings together?",
@@ -97,7 +105,8 @@
                 "`merge()`",
                 "`+` operator"
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "In Python, the + operator is used to concatenate (join) two or more strings together. For example, 'Hello' + ' ' + 'World' results in 'Hello World'."
         },
         {
             "question": "What is the purpose of an Integrated Development Environment (IDE) when working with Python?",
@@ -108,7 +117,8 @@
                 "To run Python scripts in a web browser",
                 "To play Python games"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "An Integrated Development Environment (IDE) provides tools to write, debug, and test Python programs more efficiently. It typically includes features like code editors, debuggers, and automation tools that streamline the development process."
         }
     ],
     "Variables": [
@@ -121,7 +131,8 @@
                 "A mathematical expression used to perform calculations.",
                 "A keyword used to organize and manage data effectively."
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "In programming, a variable acts as a container that stores data, such as numbers or strings, which can be modified as the program runs. This allows the program to work with and manipulate different data values."
         },
         {
             "question": "Which of the following best describes the concept of a constant?",
@@ -132,7 +143,8 @@
                 "A value that remains fixed throughout the program.",
                 "A keyword used to control program flow."
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "A constant is a type of variable that is assigned a value once and does not change during the execution of the program. Constants are used to represent fixed values that should not be altered."
         },
         {
             "question": "Python is a dynamically typed language. What does this mean in terms of variable declaration and data types?",
@@ -143,7 +155,8 @@
                 "The process of converting one data type to another.",
                 "The determination of a variable's data type based on the value it holds."
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "In Python, you do not need to explicitly declare the data type of a variable. The type is determined automatically based on the value assigned to it. This feature makes Python a dynamically typed language, allowing for more flexibility."
         },
         {
             "question": "What is the purpose of the `print()` function in Python?",
@@ -154,7 +167,8 @@
                 "To display output on the screen.",
                 "To define constants."
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The print() function is used in Python to display output, such as text or the value of variables, on the screen. This is a basic way to show results and debug programs."
         },
         {
             "question": "Which of the following is not a legal name for a variable?",
@@ -165,7 +179,8 @@
                 "`my_name`",
                 "`myName`"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "In Python, variable names cannot contain spaces. The name my name is illegal because it contains a space, which would cause a syntax error. Instead, use underscores (_) or other styles like `my_name` or `myName`."
         },
         {
             "question": "How can you obtain user input in Python?",
@@ -176,7 +191,8 @@
                 "Using the cast() function.",
                 "Using the get_input() function."
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `input()` function is used to capture input from the user in Python. It pauses program execution until the user provides input, which can then be stored in a variable for further processing."
         },
         {
             "question": "How can you convert a string to an integer in Python?",
@@ -187,7 +203,8 @@
                 "Using the `int()` function.",
                 "Using the `parse_int()` function."
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The `int()` function in Python is used to convert a string that represents a number (e.g., 123) into an integer. This is useful when you need to perform arithmetic operations on values received as strings."
         },
         {
             "question": "How can you check the data type of a variable in Python?",
@@ -198,7 +215,8 @@
                 "Use the `typeof()` function to inspect the data type of a variable.",
                 "Create a new variable and assign it the value of the original variable, then check its data type using the `type()` function."
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `type()` function returns the data type of a variable, such as `int`, `str`, or `list`. This function is essential for debugging and understanding how different variables are being used in a program."
         },
         {
             "question": "Which naming style is recommended for variables in Python?",
@@ -209,7 +227,8 @@
                 "snake_case",
                 "kebab-case"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The snake_case naming style, where words are separated by underscores (e.g., `my_variable`), is the preferred convention for naming variables in Python. This style improves readability and consistency in your code."
         },
         {
             "question": "What is PEP8, and why is it important in Python programming?",
@@ -220,7 +239,8 @@
                 "PEP8 is a Python package used for handling web development tasks, crucial for building web applications.",
                 "PEP8 is a Python Enhancement Proposal that provides coding conventions for Python code, ensuring consistency and readability across projects."
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "PEP8 is a widely accepted style guide that outlines best practices for writing Python code. Following PEP8 ensures that your code is clean, readable, and consistent, which is especially important when working on larger projects or collaborating with others."
         }
     ],
     "Operators": [
@@ -233,7 +253,8 @@
                 "To control the flow of a program.",
                 "To filter data based on specific conditions."
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "An operator in computer science is a symbol or keyword that specifies an operation to be performed on one or more operands (e.g., variables or values). For example, the + operator is used to add two numbers."
         },
         {
             "question": "Which of the following operators is used to assign values to variables in Python?",
@@ -244,7 +265,8 @@
                 "`+`",
                 "`/`"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The `=` operator in Python is used to assign a value to a variable. For instance, `x = 5` assigns the value 5 to the variable x. It is important to note that `=` is not the same as `==`, which is used for comparison."
         },
         {
             "question": "What is the result of the expression ` 7 // 2` in Python?",
@@ -255,7 +277,8 @@
                 "4",
                 "3.0"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The `//` operator in Python performs integer (or floor) division, which returns the largest integer less than or equal to the result of the division. Therefore, `7 // 2` results in 3, discarding the fractional part."
         },
         {
             "question": "Which operator is used for exponentiation in Python?",
@@ -266,7 +289,8 @@
                 "`//`",
                 "`**`"
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "The `**` operator is used in Python to perform exponentiation, which raises a number to the power of another number. For example, `2 ** 3` results in 8 (2 raised to the power of 3)."
         },
         {
             "question": "What does the `+=` operator do in Python?",
@@ -277,7 +301,8 @@
                 "Adds a value to a variable.",
                 "Divides a variable by a value."
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The `+=` operator in Python is an example of an augmented assignment operator. It adds the value on the right to the variable on the left and then assigns the result back to that variable. For instance, `x += 3` is equivalent to `x = x + 3`."
         },
         {
             "question": "Which comparison operator checks if two values are not equal in Python?",
@@ -288,7 +313,8 @@
                 "`<`",
                 "`!=`"
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "The `!=` operator in Python checks whether two values are not equal. If the values are not equal, it returns True; otherwise, it returns False. For example, `5 != 3` returns `True`."
         },
         {
             "question": "What is the order of precedence for mathematical operations in Python?",
@@ -299,7 +325,8 @@
                 "Addition/Subtraction, Exponentiation, Multiplication/Division",
                 "Exponentiation, Multiplication/Division, Addition/Subtraction"
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "In Python, the order of precedence for mathematical operations follows standard mathematical rules: exponentiation (`**`) is performed first, followed by multiplication and division (`*`, `/`, `//`, `%`), and finally addition and subtraction (`+`, `-`)."
         },
         {
             "question": "Which logical operator returns `True` only if both conditions are `True`?",
@@ -310,7 +337,8 @@
                 "`not`",
                 "`==`"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `and` operator in Python returns `True` only if both conditions it is evaluating are `True`. If either condition is `False`, the result is `False`. For example, `True and False` returns `False`."
         },
         {
             "question": "What is the purpose of using parentheses, (brackets), in logical expressions?",
@@ -321,10 +349,11 @@
                 "To separate operands.",
                 "To indicate comments."
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "Parentheses in logical expressions are used to alter the natural order of evaluation, ensuring that the expressions inside the parentheses are evaluated first. This is similar to their use in mathematical expressions."
         },
         {
-            "question": "What is the result of the expression not True?",
+            "question": "What is the result of the expression `not True`?",
             "code": null,
             "options": [
                 "`False`",
@@ -332,7 +361,8 @@
                 "null",
                 "Error"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `not` operator in Python negates a boolean value. If applied to `True`, it returns `False`, and if applied to `False`, it returns `True`. Therefore, `not True` results in `False`."
         }
     ],
     "Strings": [
@@ -345,7 +375,8 @@
                 "To create graphical user interfaces",
                 "To perform logical operations"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "Strings in Python are used to store and manipulate sequences of characters, such as words or sentences. They are fundamental for handling text in programs."
         },
         {
             "question": "How do you create a string in Python?",
@@ -356,7 +387,8 @@
                 "By using the `str()` function",
                 "By using square brackets"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "In Python, a string can be created by enclosing text in either single quotes (') or double quotes (\"). For example, 'Hello' and \"World\" are both valid strings."
         },
         {
             "question": "Which of the following string operations is used to combine two or more strings?",
@@ -367,7 +399,8 @@
                 "Concatenation",
                 "Multiplication"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "Concatenation is the operation used to join or combine two or more strings into one. In Python, this is done using the + operator, like \"Hello\" + \"World\" resulting in \"HelloWorld\"."
         },
         {
             "question": "What is the result of `Python * 3`?",
@@ -378,7 +411,8 @@
                 "`Python3`",
                 "`9`"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "In Python, multiplying a string by an integer repeats the string that many times. Therefore, \"Python\" * 3 results in \"PythonPythonPython\"."
         },
         {
             "question": "Which Python method is used to convert a string to uppercase?",
@@ -389,7 +423,8 @@
                 "`length()`",
                 "`find()`"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `upper()` method in Python converts all characters in a string to uppercase. For example, `\"hello\".upper()` results in \"HELLO\"."
         },
         {
             "question": "What does the `find()` method return if the specified character or substring is not found in the string?",
@@ -400,7 +435,8 @@
                 "`-1`",
                 "`0`"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The `find()` method searches for a substring within a string and returns the index of the first occurrence. If the substring is not found, it returns -1."
         },
         {
             "question": "How do you access the first character of a string named `text`?",
@@ -411,7 +447,8 @@
                 "`text[-1]`",
                 "`text(0)`"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "In Python, strings are indexed starting from 0. To access the first character of a string text, you use `text[0]`."
         },
         {
             "question": "What does string slicing allow you to do?",
@@ -422,7 +459,8 @@
                 "Extract a portion of a string",
                 "Convert a string to uppercase"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "String slicing in Python allows you to extract a substring from a string by specifying a start and end index. For example, `text[1:4]` extracts characters from index 1 to 3."
         },
         {
             "question": "What is the length of the string `'Hello, World!'`?",
@@ -433,7 +471,8 @@
                 "13",
                 "14"
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "The string 'Hello, World!' has 14 characters, including the punctuation and space. The `len()` function in Python can be used to determine the length of a string."
         },
         {
             "question": "How do you include a newline character in a string?",
@@ -444,7 +483,8 @@
                 "Using `\\`",
                 "Using `#`"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `\n` escape sequence is used in Python to include a newline character in a string, causing the text to continue on the next line when printed."
         }
     ],
     "Functions": [
@@ -457,7 +497,8 @@
                 "To confuse other programmers",
                 "To slow down program execution"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "Functions help in organizing code by encapsulating repetitive tasks. This makes the code more readable, reusable, and easier to maintain."
         },
         {
             "question": "In Python, how do you define a function?",
@@ -468,7 +509,8 @@
                 "Using the `define` keyword followed by the function name and parentheses",
                 "Using the `func` keyword followed by the function name and a semicolon"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "In Python, a function is defined using the `def` keyword followed by the function name, parentheses (which may contain parameters), and a colon. The function body is indented underneath this line."
         },
         {
             "question": "What is the difference between a function and a procedure in Python?",
@@ -479,7 +521,8 @@
                 "Functions are called with `call()`, and procedures are called with `execute()`",
                 "There is no difference; the terms are interchangeable."
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The primary distinction is that functions return a value after execution, whereas procedures (often just another term for functions that don’t return a value) do not."
         },
         {
             "question": "When defining a function, what are the components included in the function header?",
@@ -490,7 +533,8 @@
                 "Function name, parentheses for arguments, and a semicolon",
                 "Function name, parentheses for return values, and a comma"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The function header in Python includes the function name, parentheses (which may contain parameters), and a colon. This is followed by the indented function body."
         },
         {
             "question": "What is the purpose of function parameters in Python?",
@@ -501,7 +545,8 @@
                 "They determine the indentation level of a function",
                 "They are optional and not required for defining functions"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "Function parameters are variables that allow data to be passed into a function, making the function flexible and able to handle different inputs."
         },
         {
             "question": "Which keyword is used to return a value from a function in Python?",
@@ -512,7 +557,8 @@
                 "`return`",
                 "`response`"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The `return` keyword is used in Python to exit a function and return a value to the caller. This is essential when the function is supposed to provide a result."
         },
         {
             "question": "What does it mean to have a 'default parameter' in a function?",
@@ -523,7 +569,8 @@
                 "It means the parameter has a predefined value",
                 "It means the parameter is hidden from the function"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "A default parameter is one that has a predefined value in the function definition. If no argument is provided for that parameter when the function is called, the default value is used."
         },
         {
             "question": "When calling a function with keyword parameters, what advantage does it offer?",
@@ -534,10 +581,11 @@
                 "It allows you to call the function with a variable number of arguments",
                 "It prevents the function from being called"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "Keyword arguments improve readability by explicitly stating which value corresponds to which parameter, making the function call easier to understand."
         },
         {
-            "question": "What is the purpose of using functions in a program\u2019s structure?",
+            "question": "What is the purpose of using functions in a program's structure?",
             "code": null,
             "options": [
                 "To make the program run faster",
@@ -545,7 +593,8 @@
                 "To organize and modularize the code",
                 "To eliminate the need for variables"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "Functions help in organizing and modularizing code, breaking down complex problems into smaller, manageable sections, and improving code clarity and reusability."
         },
         {
             "question": "In Python, where should the function call be placed if you want it to be the entry point for your program?",
@@ -556,10 +605,11 @@
                 "Inside the function definition",
                 "It doesn't matter where the function call is placed"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "In Python, a function must be defined before it is called. This ensures that the Python interpreter knows what the function is supposed to do when it encounters the function call."
         }
     ],
-    "Built in functions": [
+    "Built-in Functions": [
         {
             "question": "What is the primary purpose of the `print()` function in Python?",
             "code": null,
@@ -569,7 +619,8 @@
                 "To display information on the screen",
                 "To convert data types"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The `print()` function is used to output data to the console or terminal, allowing the user to see information or results generated by the program."
         },
         {
             "question": "Which built-in function returns the length of a string?",
@@ -580,7 +631,8 @@
                 "`count()`",
                 "`len()`"
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "The `len()` function in Python returns the number of characters in a string, or the number of items in a list, tuple, or other collection."
         },
         {
             "question": "What does the input() function do in Python?",
@@ -591,7 +643,8 @@
                 "It calculates the absolute value of a number",
                 "It converts a value to uppercase"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The `input()` function is used to prompt the user for input and returns that input as a string, which can then be processed or used in the program."
         },
         {
             "question": "How can you convert a string containing a number, like 42, to an actual integer in Python?",
@@ -602,7 +655,8 @@
                 "Use the float() function",
                 "Use the `round()` function"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `int()` function converts a string representing a number into an integer, which can then be used in mathematical operations."
         },
         {
             "question": "What does the `max()` function do in Python?",
@@ -613,7 +667,8 @@
                 "Converts all characters to uppercase",
                 "Calculates the sum of all elements in a list"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The `max()` function returns the largest item in an iterable or the largest of two or more arguments provided."
         },
         {
             "question": "Which built-in function is used to find the absolute value of a number?",
@@ -624,7 +679,8 @@
                 "`round()`",
                 "`len()`"
             ],
-            "answer": 1
+            "answer": 1,
+            "explanation": "The `abs()` function returns the absolute value of a number, which is the distance of the number from zero, without regard to whether it is positive or negative."
         },
         {
             "question": "What does the `round()` function do to a floating-point number?",
@@ -635,7 +691,8 @@
                 "Converts it to a string",
                 "Finds its square root"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The `round()` function rounds a floating-point number to the nearest integer, optionally specifying the number of decimal places to round to."
         },
         {
             "question": "Which function is used to change all characters in a string to uppercase?",
@@ -646,7 +703,8 @@
                 "`str.lower()`",
                 "`str.title()`"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The `str.upper()` method returns a new string where all the characters in the original string have been converted to uppercase."
         },
         {
             "question": "What is the purpose of the chr() function in Python?",
@@ -657,7 +715,8 @@
                 "To convert a character to its integer representation",
                 "To perform character encoding"
             ],
-            "answer": 4
+            "answer": 4,
+            "explanation": "The `chr()` function returns the string representing a character whose Unicode code point is the integer passed. This is used to convert numbers back into their corresponding characters."
         },
         {
             "question": "Which function is used to convert an integer to its corresponding character?",
@@ -668,7 +727,8 @@
                 "`char()`",
                 "`int.to_char()`"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "The `chr()` function is used to convert an integer (representing a Unicode code point) into its corresponding character in Python."
         }
     ],
     "Selection": [
@@ -681,260 +741,946 @@
                 "To make decisions and execute different statements based on conditions",
                 "To define functions and classes"
             ],
-            "answer": 3
+            "answer": 3,
+            "explanation": "Conditional statements allow programs to make decisions and execute different code based on whether conditions evaluate to True or False."
         },
         {
-            "question": "What symbol indicates the start of an indented block of code in Python?",
+            "question": "What is the correct syntax for an `if` statement in Python?",
             "code": null,
             "options": [
-                "Semi-colon (`;`)",
-                "Curly braces (`{}`)",
-                "Underscore (`_`)",
-                "Colon (`:`)"
+                "`if (condition) {}`",
+                "`if condition:`",
+                "`if condition then:`",
+                "`if: condition`"
             ],
-            "answer": 4
+            "answer": 2,
+            "explanation": "The correct syntax for an `if` statement in Python is to use `if condition:` followed by an indented block of code."
         },
         {
-            "question": "Which statement provides an alternative block of code for when the conditional expression is false?",
+            "question": "Which relational operator checks if two values are not equal in Python?",
             "code": null,
             "options": [
-                "`if`",
-                "`elif`",
-                "`else`",
-                "`then`"
+                "`==`",
+                "`!=`",
+                "`>`",
+                "`<`"
             ],
-            "answer": 3
+            "answer": 2,
+            "explanation": "The `!=` operator checks if two values are not equal."
         },
         {
-            "question": "When is the `elif` statement executed?",
+            "question": "What will the program output if the temperature is 25?",
+            "code": "temperature = 25\nif temperature < 0:\n    print(\"It's freezing cold!\")\nelif temperature >= 0 and temperature <= 20:\n    print(\"The weather is cool.\")\nelif temperature > 20 and temperature <= 30:\n    print(\"The weather is warm.\")\nelse:\n    print(\"It's hot outside!\")",
+            "options": [
+                "\"It's freezing cold!\"",
+                "\"The weather is cool.\"",
+                "\"The weather is warm.\"",
+                "\"It's hot outside!\""
+            ],
+            "answer": 3,
+            "explanation": "The temperature 25 falls within the range of 20 < temperature <= 30, so the program prints 'The weather is warm.'"
+        },
+        {
+            "question": "What is the role of the `elif` statement in Python?",
             "code": null,
             "options": [
-                "When the preceding `if` condition is true",
-                "When the preceding `if` condition is `false` and its own condition is `true`",
-                "When both the preceding `if` and `elif` conditions are `false`",
-                "When any condition is `true`"
+                "To execute a block of code if an initial `if` condition is false and its own condition is true",
+                "To execute a block of code regardless of any conditions",
+                "To terminate the program",
+                "To loop through a block of code multiple times"
             ],
-            "answer": 2
+            "answer": 1,
+            "explanation": "The `elif` statement is used to check additional conditions if the previous `if` or `elif` conditions were false."
         },
         {
-            "question": "What conditional expression should replace the blank to correctly determine if the variable `num` is negative?",
-            "code": "# Determine if a number is positive, negative, or zero\nnum = 5\n# Write the conditional expression to check if 'num' is negative\nif _____:\n\tprint('Number is negative')\nelse:\n\tprint('Number is either zero or positive')",
-            "options": [
-                "`num < 0`",
-                "`num == 0`",
-                "`num > 0`",
-                "`num != 0`"
-            ],
-            "answer": 1
-        },
-        {
-            "question": "Write an `if-elif` statement that assigns a letter grade 'A', 'B', or 'C' based on a student's test score.",
+            "question": "Which of the following conditions will check if a value is both greater than 10 and less than 20?",
             "code": null,
-            "options": null,
-            "answer": null
-        },
-        {
-            "question": "What will be the output from the following program?",
-            "code": "x = 10\ny = 5\nif x > y:\n\tprint('x is greater than y')\nelif x < y:\n\tprint('x is less than y')\nelse:\n\tprint('x is equal to y')",
             "options": [
-                "x is equal to y",
-                "x is greater than y",
-                "x is less than y",
-                "None of the above"
+                "`value > 10 or value < 20`",
+                "`value > 10 and value < 20`",
+                "`value > 10 and value > 20`",
+                "`value < 10 and value < 20`"
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The condition `value > 10 and value < 20` correctly checks if a value is greater than 10 and less than 20."
         },
         {
-            "question": "What will be the output from the following program?",
-            "code": "num = 15\nif num % 2 == 0:\n\tprint('Even')\nelif num % 3 == 0:\n\tprint('Divisible by 3')\nelif num % 5 == 0:\n\tprint('Divisible by 5')\nelse:\n\tprint('Odd')",
+            "question": "What will the following code output if `score = 85`?",
+            "code": "score = 85\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")\n",
             "options": [
-                "Even",
-                "Divisible by 3",
-                "Divisible by 5",
-                "Odd"
+                "\"A\"",
+                "\"B\"",
+                "\"C\"",
+                "\"None\""
             ],
-            "answer": 2
+            "answer": 2,
+            "explanation": "The score 85 falls within the range of 80 <= score < 90, so the program will print 'B'."
         },
         {
-            "question": "What will be the output from the following program?",
-            "code": "age = 20\nif age < 18:\n\tprint('You are a minor)\nelif age >= 18 and age < 65:\n\tprint('You are an adult')\nelse:\n\tprint('You are a senior citizen')",
-            "options": [
-                "You are a minor",
-                "Your are an adult",
-                "Your are a senior citizen",
-                "None of the above"
-            ],
-            "answer": 2
-        },
-        {
-            "question": "XXWhat additional comment might you make about the program in question 9?",
+            "question": "Which of the following conditions will always evaluate to `True`?",
             "code": null,
-            "options": null,
-            "answer": null
+            "options": [
+                "`5 > 10`",
+                "`10 == 10`",
+                "`20 < 15`",
+                "`8 != 8`"
+            ],
+            "answer": 2,
+            "explanation": "`10 == 10` is always true because the two values are equal."
+        },
+        {
+            "question": "What does the `else` statement do in Python?",
+            "code": null,
+            "options": [
+                "It checks if a condition is true",
+                "It provides an alternative block of code to execute if the preceding `if` and `elif` conditions are false",
+                "It repeats a block of code multiple times",
+                "It defines a new function"
+            ],
+            "answer": 2,
+            "explanation": "The `else` statement in Python provides a fallback block of code that is executed if none of the preceding `if` or `elif` conditions are true."
+        },
+        {
+            "question": "What is the output of the following code if `temperature = -5`?",
+            "code": "if temperature < 0:\n    print(\"It's freezing cold!\")\nelif temperature >= 0 and temperature <= 20:\n    print(\"The weather is cool.\")\nelse:\n    print(\"It's hot outside!\")\n",
+            "options": [
+                "\"It's freezing cold!\"",
+                "\"The weather is cool.\"",
+                "\"It's hot outside!\"",
+                "\"None\""
+            ],
+            "answer": 1,
+            "explanation": "Since the temperature is -5, which is less than 0, the program will print 'It's freezing cold!'."
         }
     ],
     "Iteration": [
         {
-            "question": "What is iteration, and why is it important in programming?",
+            "question": "What is the primary purpose of iteration in programming?",
             "code": null,
-            "options": null,
-            "answer": null
+            "options": [
+                "To execute a block of code once",
+                "To execute a block of code repeatedly",
+                "To skip a block of code",
+                "To define variables"
+            ],
+            "answer": 2,
+            "explanation": "Iteration allows a section of a program to be executed multiple times, enabling repeated actions or calculations."
         },
         {
-            "question": "How does a `for` loop differ from a `while` loop in Python?",
+            "question": "Which of the following is a key difference between a `for` loop and a `while` loop?",
             "code": null,
-            "options": null,
-            "answer": null
+            "options": [
+                "A `for` loop repeats indefinitely, while a `while` loop does not.",
+                "A `while` loop is used for a fixed number of iterations, while a `for` loop depends on a condition.",
+                "A `for` loop runs for a set number of times, while a `while` loop runs as long as a condition is true.",
+                "A `while` loop does not require a condition to run."
+            ],
+            "answer": 3,
+            "explanation": "A `for` loop is typically used when the number of iterations is known, while a `while` loop continues to execute as long as a specified condition remains true."
         },
         {
-            "question": "What is the purpose of the `range()` function in `for` loops?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What will be the output of the following `for` loop?",
+            "code": "for i in range(1, 6):\n    print(i)",
+            "options": [
+                "1 2 3 4 5",
+                "1 2 3 4 5 6",
+                "0 1 2 3 4 5",
+                "0 1 2 3 4"
+            ],
+            "answer": 1,
+            "explanation": "The `for` loop iterates from 1 to 5, printing each number on a new line. The range function stops before the second argument."
         },
         {
-            "question": "How can you exit a `while` loop in Python?",
+            "question": "In Python, what does the `range()` function do when used in a `for` loop?",
             "code": null,
-            "options": null,
-            "answer": null
+            "options": [
+                "It generates a sequence of floating-point numbers.",
+                "It generates a sequence of integers.",
+                "It creates a list of strings.",
+                "It defines the condition for the loop."
+            ],
+            "answer": 2,
+            "explanation": "The `range()` function generates a sequence of integers, which is often used to control the number of iterations in a 'for' loop."
         },
         {
-            "question": "Write a `for` loop that iterates over a list of numbers and prints each number.",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What will the following nested `for` loops output?",
+            "code": "for i in range(2):\n    for j in range(1, 3):\n        print(i, j)",
+            "options": [
+                "0 1, 0 2, 1 1, 1 2",
+                "0 0, 1 1, 2 2",
+                "1 2, 1 3, 2 3",
+                "1 1, 2 2"
+            ],
+            "answer": 1,
+            "explanation": "The outer loop runs twice (i = 0 and i = 1), and for each iteration of the outer loop, the inner loop runs twice (j = 1 and j = 2)."
         },
         {
-            "question": "Write a `while` loop that counts down from 10 to 1 and then prints 'Blast-off!'",
+            "question": "When is a `while` loop preferred over a `for` loop?",
             "code": null,
-            "options": null,
-            "answer": null
+            "options": [
+                "When the number of iterations is known.",
+                "When the loop should execute at least once.",
+                "When the loop's continuation depends on a condition that is not tied to a fixed number of iterations.",
+                "When you want to iterate over a sequence like a list or string."
+            ],
+            "answer": 3,
+            "explanation": "A `while` loop is preferred when the number of iterations is not known in advance and depends on a condition that may change during the loop's execution."
         },
         {
-            "question": "When might you use a `for` loop instead of a `while` loop, and vice versa?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What is the output of the following code?",
+            "code": "count = 1\nwhile count <= 3:\n    print(count)\n    count += 1",
+            "options": [
+                "1 2 3",
+                "1 2 3 4",
+                "2 3 4",
+                "0 1 2 3"
+            ],
+            "answer": 1,
+            "explanation": "The `while` loop increments the `count` variable from 1 to 3, printing each value before exiting the loop when `count` exceeds 3."
         },
         {
-            "question": "What is an infinite loop, and how can you prevent it?",
+            "question": "Which statement about the `for` loop in Python is correct?",
             "code": null,
-            "options": null,
-            "answer": null
+            "options": [
+                "It can only be used with lists.",
+                "It cannot iterate over strings.",
+                "It always requires a `range()` function.",
+                "It can iterate over any sequence, such as lists, tuples, and strings."
+            ],
+            "answer": 4,
+            "explanation": "The `for` loop in Python is versatile and can be used to iterate over any sequence, including lists, tuples, and strings."
         },
         {
-            "question": "Write a `for` loop that calculates the sum of all even numbers from 1 to 20.",
+            "question": "Why is it important to update the control variable in a `while` loop?",
             "code": null,
-            "options": null,
-            "answer": null
+            "options": [
+                "To ensure the loop runs indefinitely.",
+                "To prevent the loop from running indefinitely.",
+                "To increase the speed of the loop.",
+                "To make the loop execute fewer times."
+            ],
+            "answer": 2,
+            "explanation": "Updating the control variable ensures that the condition of the `while` loop will eventually become false, preventing an infinite loop."
         },
         {
-            "question": "Write a `while` loop that asks the user to enter a password until they enter the correct password 'python123.'",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What does the following `for` loop do?",
+            "code": "for ch in 'Python':\n    print(ch)",
+            "options": [
+                "Prints the word 'Python' six times",
+                "Prints each character of the string 'Python' on a new line",
+                "Prints 'ch' six times",
+                "Prints the ASCII values of the characters in 'Python'"
+            ],
+            "answer": 2,
+            "explanation": "The `for` loop iterates over each character in the string `Python`, printing each character on a new line."
         }
     ],
     "Lists": [
         {
-            "question": "What is a list in Python, and why is it useful?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What is a list in Python?",
+            "code": "",
+            "options": [
+                "A collection of unique items",
+                "A collection of items stored in a key-value pair",
+                "An ordered collection of items that can contain elements of different data types",
+                "A collection of immutable items"
+            ],
+            "answer": 3,
+            "explanation": "A list in Python is an ordered collection of items that can contain elements of different data types and can be modified during the program's execution."
         },
         {
-            "question": "How do you create an empty list in Python?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "How can you create an empty list in Python?",
+            "code": "",
+            "options": [
+                "empty_list = []",
+                "empty_list = {}",
+                "empty_list = ()",
+                "empty_list = ''"
+            ],
+            "answer": 1,
+            "explanation": "An empty list in Python is created using square brackets with nothing inside, like this: `empty_list = []`."
         },
         {
-            "question": "What is the first index of a list in Python?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What will the following code output?",
+            "code": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits[1])",
+            "options": [
+                "apple",
+                "banana",
+                "cherry",
+                "IndexError"
+            ],
+            "answer": 2,
+            "explanation": "Python uses 0-based indexing, so `fruits[1]` refers to the second element in the list, which is 'banana'."
         },
         {
-            "question": "How do you add an element to the end of a list?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What does the `append()` method do in Python?",
+            "code": "",
+            "options": [
+                "Removes an element from the list",
+                "Adds an element to the end of the list",
+                "Inserts an element at a specific position in the list",
+                "Clears all elements from the list"
+            ],
+            "answer": 2,
+            "explanation": "The `append()` method is used to add an element to the end of a list in Python."
         },
         {
-            "question": "How do you change the value of a specific element in a list?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "Given the list `my_list = [10, 20, 30, 40]`, what does the expression `my_list[-2]` return?",
+            "code": "",
+            "options": [
+                "10",
+                "20",
+                "30",
+                "40"
+            ],
+            "answer": 3,
+            "explanation": "Negative indexing starts from the end of the list, so `my_list[-2]` returns the second-to-last element, which is 30."
         },
         {
-            "question": "What is the difference between `append()` and `extend()` when working with lists?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "Which of the following methods would you use to check if an item exists in a list?",
+            "code": "",
+            "options": [
+                "exists()",
+                "find()",
+                "contains()",
+                "in"
+            ],
+            "answer": 4,
+            "explanation": "The `in` keyword is used in Python to check if an item exists in a list, e.g., `'apple' in fruits`."
         },
         {
-            "question": "How do you remove an element from a list?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What will the following code output?",
+            "code": "mixed_list = [\"text\", 42, 3.14, True]\nprint(mixed_list.index(42))",
+            "options": [
+                "0",
+                "1",
+                "2",
+                "IndexError"
+            ],
+            "answer": 1,
+            "explanation": "The `index()` method returns the position of the first occurrence of the specified value. Here, 42 is at index 1."
         },
         {
-            "question": "What is the purpose of the `len()` function when working with lists?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What will be the result of the following code?",
+            "code": "fruits = [\"apple\", \"banana\", \"cherry\"]\nfruits.insert(1, \"orange\")\nprint(fruits)",
+            "options": [
+                "[\"apple\", \"banana\", \"cherry\", \"orange\"]",
+                "[\"orange\", \"apple\", \"banana\", \"cherry\"]",
+                "[\"apple\", \"orange\", \"banana\", \"cherry\"]",
+                "[\"apple\", \"banana\", \"orange\", \"cherry\"]"
+            ],
+            "answer": 3,
+            "explanation": "The `insert()` method adds an element at the specified index. In this case, 'orange' is inserted at index 1."
         },
         {
-            "question": "How do you find the maximum value in a list?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What does the `remove()` method do in a Python list?",
+            "code": "numbers = [1, 2, 3, 4]\nnumbers.remove(3)\nprint(numbers)",
+            "options": [
+                "Removes the last element from the list",
+                "Removes the first occurrence of a specified value from the list",
+                "Removes all elements from the list",
+                "Removes the element at a specified index"
+            ],
+            "answer": 2,
+            "explanation": "The `remove()` method removes the first occurrence of the specified value from the list. In this case, the number 3 is removed, resulting in `[1, 2, 4]`."
         },
         {
-            "question": "How can you check if an element exists in a list?",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What is the output of the following code?",
+            "code": "numbers = [1, 2, 3, 4]\nnumbers.extend([5, 6])\nprint(numbers)",
+            "options": [
+                "[1, 2, 3, 4, 5, 6]",
+                "[1, 2, 3, 4, [5, 6]]",
+                "[5, 6, 1, 2, 3, 4]",
+                "[1, 2, 3, 4]"
+            ],
+            "answer": 1,
+            "explanation": "The `extend()` method adds the elements of the specified list to the end of the current list, so the result is `[1, 2, 3, 4, 5, 6]`."
         }
     ],
     "2D Lists": [
         {
-            "question": "",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What is a 2D list in Python?",
+            "code": "",
+            "options": [
+                "A list containing other lists as its elements, representing rows and columns.",
+                "A list containing only numbers and strings.",
+                "A list where all elements must be of the same data type.",
+                "A list that can only hold two elements."
+            ],
+            "answer": 1,
+            "explanation": "A 2D list in Python is a list of lists, where each inner list represents a row, allowing you to store data in a tabular format."
+        },
+        {
+            "question": "Which of the following represents the correct way to access the element in the second row and third column of a 2D list named 'matrix'?",
+            "code": "",
+            "options": [
+                "matrix[2][3]",
+                "matrix[1, 2]",
+                "matrix[1][2]",
+                "matrix(1)(2)"
+            ],
+            "answer": 3,
+            "explanation": "In Python, indexing starts at 0. To access the element in the second row and third column, use 'matrix[1][2]'."
+        },
+        {
+            "question": "Given the following code, what will be the output?",
+            "code": "matrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\nelement = matrix[2][0]\nprint(element)",
+            "options": [
+                "2",
+                "4",
+                "7",
+                "9"
+            ],
+            "answer": 3,
+            "explanation": "The code accesses the first element (index 0) of the third row (index 2), which is 7."
+        },
+        {
+            "question": "What will be the output after running the following code?",
+            "code": "matrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\nmatrix[0][0] = 10\nfor row in matrix:\n    print(row)",
+            "options": [
+                "[10, 2, 3]\n[4, 5, 6]\n[7, 8, 9]",
+                "[1, 2, 3]\n[4, 5, 6]\n[7, 8, 9]",
+                "[10, 2, 3]\n[4, 5, 10]\n[7, 8, 9]",
+                "[1, 2, 10]\n[4, 5, 6]\n[7, 8, 9]"
+            ],
+            "answer": 1,
+            "explanation": "The code modifies the first element of the first row from 1 to 10, resulting in the updated matrix being printed."
+        },
+        {
+            "question": "How would you correctly initialize an empty 2D list in Python?",
+            "code": "",
+            "options": [
+                "matrix = [[]]",
+                "matrix = []",
+                "matrix = [[], []]",
+                "matrix = [(), ()]"
+            ],
+            "answer": 2,
+            "explanation": "An empty 2D list is initialized as an empty list '[]'. However, to prepare for a 2D structure, additional lists can be added later."
+        },
+        {
+            "question": "What is the purpose of using nested loops when working with 2D lists?",
+            "code": "",
+            "options": [
+                "To initialize the list.",
+                "To iterate over each element in the 2D list, row by row.",
+                "To print the list in reverse order.",
+                "To add new rows to the list."
+            ],
+            "answer": 2,
+            "explanation": "Nested loops allow you to iterate through each element of a 2D list by iterating over each row in the outer loop and each column in the inner loop."
+        },
+        {
+            "question": "Which of the following code snippets correctly modifies the element at the third row, first column, in the 2D list 'matrix'?",
+            "code": "",
+            "options": [
+                "matrix[3][1] = 11",
+                "matrix[2][0] = 11",
+                "matrix[1][2] = 11",
+                "matrix[2, 0] = 11"
+            ],
+            "answer": 2,
+            "explanation": "The correct way to modify the element in the third row and first column is to use 'matrix[2][0] = 11', as indexing starts at 0."
+        },
+        {
+            "question": "What is the correct output of the following code snippet?",
+            "code": "address_book = [\n    [\"Alice\", \"09876 444555\", \"alice@example.com\"],\n    [\"Bob\", \"01287 655444\", \"bob@hotmail.co.uk\"],\n    [\"Charlie\", \"09998 666555\", \"charlie_is_great_@gmail.com\"]\n]\naddress_book.append([\"Davina\", \"06667 543213\", \"d_khan@myspace.tv\"])\nfor friend in address_book:\n    print(friend)",
+            "options": [
+                "[\"Alice\", \"09876 444555\", \"alice@example.com\"]\n[\"Bob\", \"01287 655444\", \"bob@hotmail.co.uk\"]",
+                "[\"Davina\", \"06667 543213\", \"d_khan@myspace.tv\"]",
+                "[\"Alice\", \"09876 444555\", \"alice@example.com\"]\n[\"Bob\", \"01287 655444\", \"bob@hotmail.co.uk\"]\n[\"Charlie\", \"09998 666555\", \"charlie_is_great_@gmail.com\"]",
+                "[\"Alice\", \"09876 444555\", \"alice@example.com\"]\n[\"Bob\", \"01287 655444\", \"bob@hotmail.co.uk\"]\n[\"Charlie\", \"09998 666555\", \"charlie_is_great_@gmail.com\"]\n[\"Davina\", \"06667 543213\", \"d_khan@myspace.tv\"]"
+            ],
+            "answer": 4,
+            "explanation": "The code appends Davina's information to the 'address_book', so all four friends' information will be printed."
         }
     ],
     "Dictionaries": [
-        {
-            "question": "",
-            "code": null,
-            "options": null,
-            "answer": null
-        }
+    {    
+        "question": "What is the correct syntax to create an empty dictionary in Python?",
+        "code": "",
+        "options": [
+            "empty_dict = []",
+            "empty_dict = {}",
+            "empty_dict = dict[]",
+            "empty_dict = {dict}"
+        ],
+        "answer": 2,
+        "explanation": "The correct syntax to create an empty dictionary in Python is `empty_dict = {}`. Square brackets `[]` are used for lists, and `dict[]` or `{dict}` are invalid syntax."
+    },
+    {
+        "question": "How do you access the value associated with the key 'name' in a dictionary called 'person'?",
+        "code": "",
+        "options": [
+            "person.name",
+            "person['name']",
+            "person(name)",
+            "person{'name'}"
+        ],
+        "answer": 2,
+        "explanation": "To access the value associated with a key in a dictionary, you use square brackets with the key as a string: `person['name']`."
+    },
+    {
+        "question": "What will be the output of the following code?",
+        "code": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(my_dict['d'])",
+        "options": [
+            "1",
+            "None",
+            "KeyError",
+            "3"
+        ],
+        "answer": 3,
+        "explanation": "The code will raise a `KeyError` because the key 'd' does not exist in the dictionary."
+    },
+    {
+        "question": "Which method would you use to get a list of all the keys in a dictionary?",
+        "code": "",
+        "options": [
+            "keys()",
+            "values()",
+            "items()",
+            "get()"
+        ],
+        "answer": 1,
+        "explanation": "The `keys()` method returns a view object that displays a list of all the keys in the dictionary."
+    },
+    {
+        "question": "How can you safely retrieve a value for a key that might not exist in a dictionary?",
+        "code": "",
+        "options": [
+            "Use the `get()` method",
+            "Use the `set()` method",
+            "Access the key directly with square brackets",
+            "Use a `for` loop"
+        ],
+        "answer": 1,
+        "explanation": "The `get()` method allows you to safely retrieve a value for a key that might not exist, without raising a `KeyError`."
+    },
+    {
+        "question": "What will the following code output?",
+        "code": "fruit = {'apple': 2, 'banana': 3}\nfruit['apple'] = 5\nprint(fruit['apple'])",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "Error"
+        ],
+        "answer": 3,
+        "explanation": "The code modifies the value associated with the key 'apple' to 5, so `fruit['apple']` will output 5."
+    },
+    {
+        "question": "How do you remove an entry from a dictionary?",
+        "code": "",
+        "options": [
+            "del dict['key']",
+            "remove dict['key']",
+            "pop dict['key']",
+            "clear dict['key']"
+        ],
+        "answer": 1,
+        "explanation": "The correct way to remove an entry from a dictionary is by using the `del` statement followed by the dictionary and the key: `del dict['key']`."
+    },
+    {
+        "question": "What does the following code return?",
+        "code": "my_dict = {'x': 10, 'y': 20}\nprint('z' in my_dict)",
+        "options": [
+            "True",
+            "False",
+            "None",
+            "KeyError"
+        ],
+        "answer": 2,
+        "explanation": "The code checks if the key 'z' exists in `my_dict`. Since it doesn't, it returns `False`."
+    },
+    {
+        "question": "Which of the following will convert all keys of a dictionary into a list?",
+        "code": "",
+        "options": [
+            "list(my_dict.keys())",
+            "my_dict.keys().tolist()",
+            "list(my_dict.values())",
+            "keys(my_dict)"
+        ],
+        "answer": 1,
+        "explanation": "The correct way to convert all keys of a dictionary into a list is by using `list(my_dict.keys())`."
+    },
+    {
+        "question": "What will the following code print?",
+        "code": "car = {'brand': 'Toyota', 'year': 2010}\ncar['model'] = 'Camry'\nprint(car)",
+        "options": [
+            "{'brand': 'Toyota', 'year': 2010, 'model': 'Camry'}",
+            "{'brand': 'Toyota', 'year': 2010}",
+            "Error: 'model' key doesn't exist",
+            "None"
+        ],
+        "answer": 1,
+        "explanation": "The code adds a new key-value pair to the dictionary `car`, so the final dictionary includes the new key 'model' with the value 'Camry'."
+    }
     ],
     "Tuples": [
         {
-            "question": "",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What is the key difference between a tuple and a list in Python?",
+            "code": "",
+            "options": [
+                "Tuples are mutable, while lists are immutable.",
+                "Tuples are immutable, while lists are mutable.",
+                "Tuples can only contain numbers, while lists can contain any data type.",
+                "Tuples can be of any length, while lists have a fixed length."
+            ],
+            "answer": 2,
+            "explanation": "The key difference is that tuples are immutable, meaning their contents cannot be changed after creation, while lists are mutable and can be modified."
+        },
+        {
+            "question": "How do you create an empty tuple in Python?",
+            "code": "",
+            "options": [
+                "empty_tuple = []",
+                "empty_tuple = ()",
+                "empty_tuple = {}",
+                "empty_tuple = tuple[]"
+            ],
+            "answer": 2,
+            "explanation": "The correct way to create an empty tuple is with empty parentheses: `empty_tuple = ()`. Square brackets create a list, and curly braces create a dictionary."
+        },
+        {
+            "question": "Given the tuple `coordinates = (10, 20, 30)`, how would you access the second element?",
+            "code": "",
+            "options": [
+                "coordinates[1]",
+                "coordinates[2]",
+                "coordinates['20']",
+                "coordinates(2)"
+            ],
+            "answer": 1,
+            "explanation": "Python uses 0-based indexing, so `coordinates[1]` accesses the second element, which is 20."
+        },
+        {
+            "question": "What will happen if you try to modify an element in a tuple?",
+            "code": "my_tuple = (1, 2, 3)\nmy_tuple[0] = 10",
+            "options": [
+                "The tuple will be modified.",
+                "A TypeError will be raised.",
+                "The first element will be changed to 10.",
+                "The code will run without any changes."
+            ],
+            "answer": 2,
+            "explanation": "Tuples are immutable, so trying to modify an element will raise a `TypeError`."
+        },
+        {
+            "question": "What will be the output of the following code?",
+            "code": "tuple1 = (3, 5, 7)\ntuple2 = (3, 5, 7)\nprint(tuple1 == tuple2)",
+            "options": [
+                "True",
+                "False",
+                "None",
+                "Error"
+            ],
+            "answer": 1,
+            "explanation": "The comparison `tuple1 == tuple2` returns `True` because both tuples contain the same elements in the same order."
+        },
+        {
+            "question": "Which of the following methods can be used to convert a list to a tuple?",
+            "code": "",
+            "options": [
+                "tuple()",
+                "list()",
+                "convert()",
+                "set()"
+            ],
+            "answer": 1,
+            "explanation": "The `tuple()` function can be used to convert a list to a tuple. For example, `tuple([1, 2, 3])` would return `(1, 2, 3)`."
+        },
+        {
+            "question": "What is the result of slicing the tuple `numbers = (0, 1, 2, 3, 4)` with `numbers[1:3]`?",
+            "code": "",
+            "options": [
+                "(1, 2)",
+                "(1, 2, 3)",
+                "(0, 1)",
+                "(2, 3)"
+            ],
+            "answer": 1,
+            "explanation": "Slicing `numbers[1:3]` returns the elements from index 1 up to, but not including, index 3, resulting in `(1, 2)`."
+        },
+        {
+            "question": "In which scenario is it most appropriate to use a tuple instead of a list?",
+            "code": "",
+            "options": [
+                "When you need to store data that will change frequently.",
+                "When you have a collection of related data that should not change.",
+                "When you need to use functions like append() and remove().",
+                "When you need to create a dynamic and mutable collection."
+            ],
+            "answer": 2,
+            "explanation": "Tuples are best used when you have a collection of related data that should remain unchanged, such as coordinates, dates, or other constants."
+        },
+        {
+            "question": "What will the following code output?",
+            "code": "a = ['Hello', 'World']\nb, c = a\nprint(b)\nprint(c)",
+            "options": [
+                "'Hello'\n'World'",
+                "'World'\n'Hello'",
+                "['Hello', 'World']",
+                "('Hello', 'World')"
+            ],
+            "answer": 1,
+            "explanation": "The code demonstrates tuple unpacking, where the list `a` is unpacked into variables `b` and `c`. The output will be `Hello` and `World`."
+        },
+        {
+            "question": "What is the output of the following code?",
+            "code": "def get_name_and_age():\n    name = 'Alice'\n    age = 25\n    return name, age\n\nresult = get_name_and_age()\nprint(result)",
+            "options": [
+                "('Alice', 25)",
+                "['Alice', 25]",
+                "'Alice', 25",
+                "Error"
+            ],
+            "answer": 1,
+            "explanation": "The function `get_name_and_age()` returns a tuple containing two values: the `name` and `age`. The output will be `('Alice', 25)`."
         }
     ],
     "Exceptions": [
         {
-            "question": "",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What is an exception in Python?",
+            "code": "",
+            "options": [
+                "A block of code that executes repeatedly.",
+                "An event that occurs during the execution of a program, disrupting the normal flow.",
+                "A statement that always runs, regardless of whether an error occurs.",
+                "A keyword that is used to declare variables."
+            ],
+            "answer": 2,
+            "explanation": "An exception is an event that occurs during the execution of a program, which disrupts the normal flow."
+        },
+        {
+            "question": "Which of the following exceptions is raised when you try to divide a number by zero?",
+            "code": "",
+            "options": [
+                "ValueError",
+                "IndexError",
+                "TypeError",
+                "ZeroDivisionError"
+            ],
+            "answer": 4,
+            "explanation": "A ZeroDivisionError is raised when a number is divided by zero."
+        },
+        {
+            "question": "What will happen when the following code is executed?\n```python\nprint(int('abc'))\n```",
+            "code": "",
+            "options": [
+                "It will print 'abc'.",
+                "It will raise a TypeError.",
+                "It will raise a ValueError.",
+                "It will convert 'abc' to an integer."
+            ],
+            "answer": 3,
+            "explanation": "The code will raise a ValueError because 'abc' cannot be converted to an integer."
+        },
+        {
+            "question": "Which type of exception is raised when you try to access an element at an invalid index in a list?",
+            "code": "",
+            "options": [
+                "NameError",
+                "IndexError",
+                "KeyError",
+                "TypeError"
+            ],
+            "answer": 2,
+            "explanation": "An IndexError is raised when you try to access an element at an index that does not exist in a list."
+        },
+        {
+            "question": "What is the purpose of the `try` block in Python?",
+            "code": "",
+            "options": [
+                "To declare variables.",
+                "To contain the code that might raise an exception.",
+                "To print the error message.",
+                "To ensure the code runs without errors."
+            ],
+            "answer": 2,
+            "explanation": "The `try` block contains the code that may raise an exception."
+        },
+        {
+            "question": "What does the `finally` block do in Python?",
+            "code": "",
+            "options": [
+                "It runs only if an exception occurs.",
+                "It runs regardless of whether an exception occurs or not.",
+                "It catches all exceptions.",
+                "It is used to define custom exceptions."
+            ],
+            "answer": 2,
+            "explanation": "The `finally` block runs regardless of whether an exception was raised or not."
+        },
+        {
+            "question": "Which of the following exceptions is raised when a function is called with an argument of the wrong type?",
+            "code": "",
+            "options": [
+                "TypeError",
+                "ValueError",
+                "KeyError",
+                "NameError"
+            ],
+            "answer": 1,
+            "explanation": "A TypeError is raised when an operation or function is applied to an object of inappropriate type."
+        },
+        {
+            "question": "What will the following code output?\n```python\nmy_list = [1, 2, 3]\nprint(my_list[5])\n```",
+            "code": "",
+            "options": [
+                "It will print 'None'.",
+                "It will print 5.",
+                "It will raise an IndexError.",
+                "It will print the last element in the list."
+            ],
+            "answer": 3,
+            "explanation": "The code will raise an IndexError because index 5 is out of range for the list."
+        },
+        {
+            "question": "Which of the following is true about a generic `except` block?",
+            "code": "",
+            "options": [
+                "It catches all exceptions, regardless of their type.",
+                "It catches only specific types of exceptions.",
+                "It only executes if no exceptions are raised.",
+                "It must always be followed by a `finally` block."
+            ],
+            "answer": 1,
+            "explanation": "A generic `except` block catches all exceptions, regardless of their type."
+        },
+        {
+            "question": "What will the following code output?",
+            "code": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print('Division by zero is not allowed.')\nfinally:\n    print('Done.')\n",
+            "options": [
+                "An error message will be printed, then 'Done.'",
+                "'Division by zero is not allowed.' will be printed, then 'Done.'",
+                "'Done.' will be printed only.",
+                "Nothing will be printed."
+            ],
+            "answer": 2,
+            "explanation": "The code will print 'Division by zero is not allowed.' followed by 'Done.' because the `finally` block always executes."
         }
     ],
-    "Working with files": [
+    "Working with Files": [
         {
-            "question": "",
-            "code": null,
-            "options": null,
-            "answer": null
+            "question": "What is a text file?",
+            "code": "",
+            "options": [
+                "A file that contains formatted, human-readable text with styles and fonts.",
+                "A file that contains plain, human-readable text with specific character encoding.",
+                "A file that stores data in binary format, optimized for efficient storage.",
+                "A file that is specifically designed to store multimedia content."
+            ],
+            "answer": 2,
+            "explanation": "A text file contains plain, human-readable text with specific character encoding like ASCII or UTF-8."
+        },
+        {
+            "question": "Which of the following correctly describes binary files?",
+            "code": "",
+            "options": [
+                "Files that can be opened and edited using a text editor.",
+                "Files that store data in a non-human-readable format, optimized for processing by computers.",
+                "Files that only contain alphanumeric characters and symbols.",
+                "Files that are only used for storing images and videos."
+            ],
+            "answer": 2,
+            "explanation": "Binary files store data in a non-human-readable format, which is optimized for efficient storage and processing by computers."
+        },
+        {
+            "question": "What does the `open()` function in Python do?",
+            "code": "",
+            "options": [
+                "It reads the contents of a file and prints it to the console.",
+                "It opens a file and returns a file handle, which is used to interact with the file.",
+                "It creates a new file and immediately closes it.",
+                "It deletes a file from the filesystem."
+            ],
+            "answer": 2,
+            "explanation": "The `open()` function opens a file and returns a file handle, which is a reference to the file that allows for further operations like reading or writing."
+        },
+        {
+            "question": "Which file mode should be used to append data to an existing text file without overwriting its contents?",
+            "code": "",
+            "options": [
+                "r",
+                "w",
+                "a",
+                "b"
+            ],
+            "answer": 3,
+            "explanation": "The 'a' mode is used to open a file for writing and append data to the end of the file without overwriting its existing contents."
+        },
+        {
+            "question": "Why is it important to close a file after performing file operations?",
+            "code": "",
+            "options": [
+                "To free up system resources and avoid data corruption.",
+                "To prevent the file from being opened again.",
+                "To automatically delete the file from the filesystem.",
+                "To convert the file into a binary format."
+            ],
+            "answer": 1,
+            "explanation": "Closing a file after operations is crucial to free up system resources and prevent data corruption."
+        },
+        {
+            "question": "What will the following code output?",
+            "code": "file = open('example.txt', 'w')\nfile.write('Hello, World!')\nfile.close()\nfile = open('example.txt', 'a')\nfile.write('\\nThis is a new line.')\nfile.close()\nfile = open('example.txt', 'r')\ncontent = file.read()\nprint(content)\nfile.close()",
+            "options": [
+                "It will print an empty string.",
+                "It will print only 'Hello, World!'.",
+                "It will print 'Hello, World!' followed by 'This is a new line.'.",
+                "It will raise a FileNotFoundError."
+            ],
+            "answer": 3,
+            "explanation": "The code will write 'Hello, World!' to the file, then append 'This is a new line.' and finally read and print both lines."
+        },
+        {
+            "question": "Which file mode should be used to open a file for both reading and writing in binary format?",
+            "code": "",
+            "options": [
+                "r",
+                "w",
+                "a",
+                "b"
+            ],
+            "answer": 4,
+            "explanation": "The 'b' mode is used with 'r', 'w', or 'a' to open a file in binary format, allowing for reading or writing of binary data."
+        },
+        {
+            "question": "What is the purpose of using `with open()` in file handling?",
+            "code": "",
+            "options": [
+                "To open a file without closing it.",
+                "To automatically close the file after its operations are done.",
+                "To handle binary files specifically.",
+                "To open multiple files simultaneously."
+            ],
+            "answer": 2,
+            "explanation": "Using `with open()` ensures that the file is automatically closed after the operations are done, even if an exception occurs."
+        },
+        {
+            "question": "Which method is used to write data to a text file in Python?",
+            "code": "",
+            "options": [
+                "read()",
+                "write()",
+                "close()",
+                "append()"
+            ],
+            "answer": 2,
+            "explanation": "The `write()` method is used to write a string to a text file."
+        },
+        {
+            "question": "What does the `read()` method return when reading a text file?",
+            "code": "",
+            "options": [
+                "A list of strings, where each string is a line from the file.",
+                "An integer representing the number of lines in the file.",
+                "A single string containing the entire content of the file.",
+                "A boolean indicating if the file has been read successfully."
+            ],
+            "answer": 3,
+            "explanation": "The `read()` method returns a single string containing the entire content of the file."
         }
     ]
 }

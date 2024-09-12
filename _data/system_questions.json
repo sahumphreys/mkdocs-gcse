@@ -1,0 +1,737 @@
+{
+    "Software": [
+  {
+    "question": "According to the text, what are the three high-level elements that a computer system conventionally consists of?",
+    "code": null,
+    "options": [
+      "Hardware, software, and users",
+      "Input, process, and output",
+      "CPU, memory, and storage",
+      "Operating system, applications, and utilities"
+    ],
+    "answer": 2,
+    "explanation": "A computer system is conventionally described as consisting of input, process, and output."
+  },
+  {
+    "question": "What is the correct definition of hardware in a computer system?",
+    "code": null,
+    "options": [
+      "Programs and instructions that make the computer function",
+      "The virtual, non-physical part of a computer system",
+      "Physical components that are tangible and interactable",
+      "Software that manages hardware resources"
+    ],
+    "answer": 3,
+    "explanation": "Hardware refers to the physical components of a computer system that are tangible and can be touched."
+  },
+  {
+    "question": "Which of the following is an example of application software?",
+    "code": null,
+    "options": [
+      "Operating systems like Windows or macOS",
+      "Device drivers for hardware components",
+      "Microsoft Word or Google Docs",
+      "Antivirus software"
+    ],
+    "answer": 3,
+    "explanation": "Microsoft Word and Google Docs are examples of application software designed for end-users to perform specific tasks."
+  },
+  {
+    "question": "What is the primary purpose of system software?",
+    "code": null,
+    "options": [
+      "To perform specific user-oriented tasks",
+      "To manage and control computer hardware components",
+      "To create and edit documents and spreadsheets",
+      "To provide entertainment through games and media"
+    ],
+    "answer": 2,
+    "explanation": "System software manages and controls the computer's hardware components and provides a platform for other software to run."
+  },
+  {
+    "question": "Which of the following is NOT a primary function of an operating system?",
+    "code": null,
+    "options": [
+      "Manage resources",
+      "Provide a user interface",
+      "Compile code into executable programs",
+      "Implement security features"
+    ],
+    "answer": 3,
+    "explanation": "Compiling code into executable programs is not a primary function of an operating system."
+  },
+  {
+    "question": "Which of the following best describes utility software?",
+    "code": null,
+    "options": [
+      "Software designed for end-users to perform specific tasks",
+      "Tools that perform system management and maintenance tasks",
+      "Software that directly interacts with hardware devices",
+      "Programs that provide a user interface for the operating system"
+    ],
+    "answer": 2,
+    "explanation": "Utility software includes tools that perform specific tasks related to system management and maintenance."
+  },
+  {
+    "question": "What role does the operating system play in hardware abstraction?",
+    "code": null,
+    "options": [
+      "It directly controls hardware without any abstraction",
+      "It hides complex hardware details, providing a standardized interface",
+      "It replaces the need for hardware in a computer system",
+      "It makes hardware components visible and accessible to users"
+    ],
+    "answer": 2,
+    "explanation": "The OS abstracts complex hardware details, providing a standardized interface for software applications."
+  },
+  {
+    "question": "Which of the following is NOT an example of resource management by an operating system?",
+    "code": null,
+    "options": [
+      "Allocating CPU time to processes",
+      "Managing virtual memory",
+      "Executing user application code directly",
+      "Handling data transfer between CPU and peripherals"
+    ],
+    "answer": 3,
+    "explanation": "Executing user application code is the role of applications, not resource management by the OS."
+  },
+  {
+    "question": "What is the difference between system software and application software?",
+    "code": null,
+    "options": [
+      "System software is tangible, while application software is intangible",
+      "System software manages hardware resources; application software performs specific user tasks",
+      "System software is user-oriented; application software is hardware-oriented",
+      "There is no difference; they are the same"
+    ],
+    "answer": 2,
+    "explanation": "System software manages hardware resources and provides a platform for applications, while application software performs specific user tasks."
+  },
+  {
+    "question": "Which of the following is an example of a command line interface (CLI) provided by an operating system?",
+    "code": null,
+    "options": [
+      "Windows File Explorer",
+      "Microsoft Word",
+      "Terminal or Command Prompt",
+      "Web Browser"
+    ],
+    "answer": 3,
+    "explanation": "Terminal or Command Prompt is a text-based method for interacting with the operating system via a command line interface."
+  }
+],
+
+"Programming Languages": [
+{
+"question": "What is a computer program?",
+"code": null,
+"options": [
+"A set of binary instructions executed by the computer.",
+"A collection of instructions for a CPU to perform specific tasks.",
+"A physical component of the computer used for storage.",
+"A type of hardware used to execute tasks."
+],
+"answer": 1,
+"explanation": "A computer program is a set of instructions compiled together in a file to perform specific tasks by the CPU."
+},
+{
+"question": "Which of the following is true about low-level programming languages?",
+"code": null,
+"options": [
+"They are easier to understand and write compared to high-level languages.",
+"They provide more abstraction and are independent of hardware.",
+"They are close to the hardware and difficult to read for humans.",
+"They require interpreters for execution."
+],
+"answer": 2,
+"explanation": "Low-level languages are close to hardware, hard to read for humans, and usually tied to specific architectures."
+},
+{
+"question": "Which of the following is a low-level language?",
+"code": null,
+"options": [
+"Python",
+"Java",
+"Assembly",
+"JavaScript"
+],
+"answer": 2,
+"explanation": "Assembly language is considered a low-level language, closer to machine code than languages like Python or Java."
+},
+{
+"question": "Which programming language requires the use of an assembler to translate it into machine code?",
+"code": null,
+"options": [
+"C++",
+"Assembly",
+"Python",
+"Java"
+],
+"answer": 1,
+"explanation": "Assembly language requires an assembler to translate it into machine code."
+},
+{
+"question": "What is the primary difference between high-level and low-level programming languages?",
+"code": null,
+"options": [
+"High-level languages are machine-specific while low-level languages are portable.",
+"High-level languages are easier for humans to read and write compared to low-level languages.",
+"Low-level languages are easier to debug compared to high-level languages.",
+"High-level languages execute faster than low-level languages."
+],
+"answer": 1,
+"explanation": "High-level languages are easier for humans to read, write, and understand, while low-level languages are closer to machine code."
+},
+{
+"question": "Which of the following is a characteristic of high-level languages?",
+"code": null,
+"options": [
+"They are processor-dependent.",
+"They require the use of an assembler.",
+"They are easier to read and understand for programmers.",
+"They provide direct control over hardware."
+],
+"answer": 2,
+"explanation": "High-level languages are easier for humans to read and understand, making them more programmer-friendly."
+},
+{
+"question": "Which tool is used to convert high-level code into machine code without producing a separate executable file?",
+"code": null,
+"options": [
+"Compiler",
+"Interpreter",
+"Assembler",
+"Debugger"
+],
+"answer": 1,
+"explanation": "An interpreter converts high-level code into machine code in real-time without creating an executable file."
+},
+{
+"question": "What is the role of a compiler in programming?",
+"code": null,
+"options": [
+"To execute code line by line in real-time.",
+"To translate high-level language into assembly language.",
+"To compile high-level code into machine code, producing a standalone executable.",
+"To convert assembly language into machine code."
+],
+"answer": 2,
+"explanation": "A compiler translates high-level code into machine code, creating a standalone executable."
+},
+{
+"question": "Which of the following is true about machine code?",
+"code": null,
+"options": [
+"It is the human-readable version of assembly language.",
+"It is the most abstract form of code, easy for humans to understand.",
+"It is the binary code that the CPU directly executes.",
+"It is a language that is platform-independent and can run on any processor."
+],
+"answer": 2,
+"explanation": "Machine code is the binary code that the CPU directly executes."
+},
+{
+"question": "What is bytecode in modern programming languages?",
+"code": null,
+"options": [
+"A set of binary instructions for a specific CPU.",
+"An intermediate code that is platform-independent and executed by a virtual machine.",
+"A high-level code that requires a compiler to execute.",
+"A debugging tool used for interpreting assembly language."
+],
+"answer": 1,
+"explanation": "Bytecode is an intermediate code used by languages like Python and Java to ensure platform independence."
+}
+],
+"Inside the Machine": 
+[
+{
+"question": "Which of the following components acts as the central hub of a computer, providing electrical connections and pathways for data transfer between the CPU, memory, storage devices, and peripherals?",
+"code": null,
+"options": [
+"Processor (CPU)",
+"Motherboard",
+"Graphics card",
+"Power supply unit"
+],
+"answer": 2,
+"explanation": "The motherboard is a large, flat circuit board that connects various hardware components, allowing them to communicate and work together in a computer system."
+},
+{
+"question": "What is the primary purpose of RAM in a computer system?",
+"code": null,
+"options": [
+"To store data permanently",
+"To render graphics",
+"To provide fast access to data for the CPU during program execution",
+"To cool the CPU"
+],
+"answer": 3,
+"explanation": "RAM (Random Access Memory) is a volatile form of memory used for temporarily storing data that is actively being processed by the CPU."
+},
+{
+"question": "Which component in a computer system is responsible for performing arithmetic and logic operations such as addition, subtraction, AND, and OR?",
+"code": null,
+"options": [
+"Control Unit",
+"Graphics card",
+"Arithmetic Logic Unit (ALU)",
+"RAM"
+],
+"answer": 3,
+"explanation": "The Arithmetic Logic Unit (ALU) is part of the CPU responsible for performing arithmetic and logic operations, which are essential for data processing."
+},
+{
+"question": "Which type of storage is non-volatile and retains data even when the computer is powered off?",
+"code": null,
+"options": [
+"RAM",
+"CPU Cache",
+"Secondary Storage",
+"Heat sink"
+],
+"answer": 3,
+"explanation": "Secondary storage devices, such as hard drives and SSDs, are non-volatile, meaning they retain data even when the computer is turned off."
+},
+{
+"question": "What is the primary role of a graphics card in a computer system?",
+"code": null,
+"options": [
+"To manage audio data",
+"To provide network connectivity",
+"To render and display images and videos",
+"To supply power to the system"
+],
+"answer": 3,
+"explanation": "A graphics card is responsible for rendering and displaying visual information on the monitor, handling graphics-intensive tasks such as gaming and 3D modeling."
+},
+{
+"question": "Which of the following components is responsible for maintaining the system clock and storing system settings when the computer is powered off?",
+"code": null,
+"options": [
+"CMOS Battery",
+"Power Supply Unit",
+"RAM",
+"Graphics Card"
+],
+"answer": 1,
+"explanation": "The CMOS battery powers the CMOS memory, which stores system settings and the system clock even when the computer is powered off."
+},
+{
+"question": "Which form factor determines the physical size and layout of the motherboard, influencing compatibility with computer cases and expansion slots?",
+"code": null,
+"options": [
+"PCIe",
+"SATA",
+"Form Factor",
+"BIOS/UEFI"
+],
+"answer": 3,
+"explanation": "The form factor determines the size and layout of the motherboard, impacting its compatibility with different computer cases and the number of expansion slots available."
+},
+{
+"question": "Which component provides communication between a computer and other devices on a network, enabling data transmission and reception?",
+"code": null,
+"options": [
+"Sound card",
+"Graphics card",
+"Network card",
+"RAM"
+],
+"answer": 3,
+"explanation": "The network card enables a computer to connect to a network and allows for the transmission and reception of data over the network."
+},
+{
+"question": "What is the primary function of the power supply unit (PSU) in a computer?",
+"code": null,
+"options": [
+"To store data",
+"To regulate the voltage and current supplied to different components",
+"To process graphics",
+"To enhance sound quality"
+],
+"answer": 2,
+"explanation": "The power supply unit (PSU) provides power to the computer and regulates the voltage and current to ensure proper operation of all components."
+},
+{
+"question": "What is the role of the heat sink and fan in a computer system?",
+"code": null,
+"options": [
+"To store data for quick access by the CPU",
+"To provide network connectivity",
+"To prevent overheating by dissipating heat from the CPU",
+"To process sound and video data"
+],
+"answer": 3,
+"explanation": "The heat sink and fan work together to dissipate heat from the CPU, preventing it from overheating and maintaining optimal performance."
+}
+],
+"Memory": [
+{
+"question": "What is the primary purpose of main memory in a computer system?",
+"options": [
+    "To store files and documents permanently",
+    "To store program instructions and data currently in use",
+    "To act as a backup in case of power failure",
+    "To manage network traffic"
+],
+"answer": 2,
+"code": null,
+"explanation": "Main memory is used to store program instructions and data that are actively being used by the processor. It allows for quick access to this information during operation."
+},
+{
+"question": "Which of the following best describes volatile memory?",
+"options": [
+    "It retains data even when the power is off",
+    "It stores data permanently",
+    "It loses data when the power is off",
+    "It cannot be upgraded"
+],
+"answer": 3,
+"code": null,
+"explanation": "Volatile memory loses its data when the computer is powered off, unlike non-volatile memory, which retains data without power."
+},
+{
+"question": "Which type of memory is used to store firmware like the BIOS in a computer?",
+"options": [
+    "RAM",
+    "ROM",
+    "Cache memory",
+    "Virtual memory"
+],
+"answer": 2,
+"code": null,
+"explanation": "ROM is used to store firmware, such as the BIOS, which provides essential instructions for the computer's operation and is not easily modified."
+},
+{
+"question": "What happens when RAM is fully utilized in a computer?",
+"options": [
+    "The computer stops running programs",
+    "Additional RAM is created automatically",
+    "The computer starts using virtual memory",
+    "The computer will automatically shut down"
+],
+"answer": 3,
+"code": null,
+"explanation": "When RAM is fully utilized, the operating system uses virtual memory, which extends available memory by using a portion of storage devices."
+},
+{
+"question": "Which type of memory is non-volatile?",
+"options": [
+    "RAM",
+    "Cache memory",
+    "ROM",
+    "Virtual memory"
+],
+"answer": 3,
+"code": null,
+"explanation": "ROM is non-volatile, meaning it retains data even when power is turned off, unlike RAM, which is volatile."
+},
+{
+"question": "What is the main difference between RAM and ROM?",
+"options": [
+    "RAM is volatile, while ROM is non-volatile",
+    "RAM stores firmware, while ROM stores user files",
+    "RAM is slower than ROM",
+    "ROM is used for temporary storage, while RAM is for permanent storage"
+],
+"answer": 1,
+"code": null,
+"explanation": "The main difference is that RAM is volatile and loses data when powered off, while ROM is non-volatile and retains data."
+},
+{
+"question": "What is the purpose of cache memory?",
+"options": [
+    "To store data permanently",
+    "To provide additional storage space",
+    "To speed up data access by storing frequently used data",
+    "To manage network communications"
+],
+"answer": 3,
+"code": null,
+"explanation": "Cache memory speeds up data access by storing frequently accessed data closer to the CPU, reducing the time needed to retrieve it from slower memory."
+},
+{
+"question": "Which level of cache is the smallest and fastest?",
+"options": [
+    "L1",
+    "L2",
+    "L3",
+    "Virtual cache"
+],
+"answer": 1,
+"code": null,
+"explanation": "L1 cache is the smallest and fastest level of cache memory, providing the quickest access to data directly on the CPU."
+},
+{
+"question": "What is virtual memory primarily used for?",
+"options": [
+    "To store data permanently",
+    "To increase the amount of RAM available",
+    "To cache frequently accessed data",
+    "To manage system heat"
+],
+"answer": 2,
+"code": null,
+"explanation": "Virtual memory extends the apparent amount of RAM available by using a portion of storage devices, allowing for more programs to run simultaneously."
+},
+{
+"question": "How does a larger cache affect performance?",
+"options": [
+    "It decreases the likelihood of cache misses",
+    "It increases the time required to access data",
+    "It makes the computer slower",
+    "It decreases the amount of RAM needed"
+],
+"answer": 1,
+"code": null,
+"explanation": "A larger cache can store more data, reducing the likelihood of cache misses and improving overall performance by decreasing the need to access slower memory."
+}
+],
+"Secondary Storage": [
+    {
+    "question": "What is the primary function of secondary storage in a computer system?",
+    "options": [
+        "To temporarily hold data for quick access by the CPU",
+        "To store data permanently even when the computer is powered off",
+        "To manage the computer's network connections",
+        "To execute instructions from software programs"
+    ],
+    "answer": 2,
+    "code": null,
+    "explanation": "Secondary storage is used to store data permanently, ensuring that files and applications persist even when the computer is turned off."
+    },
+    {
+    "question": "Which type of storage is characterized by having no moving parts and using electronic memory cells?",
+    "options": [
+        "Optical storage",
+        "Magnetic storage",
+        "Solid-state storage",
+        "Cloud storage"
+    ],
+    "answer": 3,
+    "code": null,
+    "explanation": "Solid-state storage uses electronic memory cells to store data and has no moving parts, unlike magnetic and optical storage."
+    },
+    {
+    "question": "What is one major advantage of optical storage over magnetic storage?",
+    "options": [
+        "Higher speed of data access",
+        "Lower cost per gigabyte",
+        "Greater durability and portability",
+        "Higher data capacity"
+    ],
+    "answer": 3,
+    "code": null,
+    "explanation": "Optical storage offers high durability and portability, making it advantageous over magnetic storage, which is more susceptible to mechanical failures."
+    },
+    {
+    "question": "How does magnetic storage encode binary data?",
+    "options": [
+        "Using electrical charges on memory cells",
+        "Through variations in surface pits and lands",
+        "By magnetic fields on rotating platters",
+        "Via light reflection changes on optical discs"
+    ],
+    "answer": 3,
+    "code": null,
+    "explanation": "Magnetic storage encodes binary data using magnetic fields on the surfaces of rotating platters, with read/write heads interacting with these fields."
+    },
+    {
+    "question": "Which storage type is typically the fastest in terms of data access times?",
+    "options": [
+        "Optical storage",
+        "Magnetic storage",
+        "Solid-state storage",
+        "Cloud storage"
+    ],
+    "answer": 3,
+    "code": null,
+    "explanation": "Solid-state storage is the fastest in terms of data access times due to its use of electronic memory cells and absence of moving parts."
+    },
+    {
+    "question": "What is a primary disadvantage of optical storage?",
+    "options": [
+        "High cost per gigabyte",
+        "Slower access times compared to other types",
+        "Lack of portability",
+        "Lower data capacity"
+    ],
+    "answer": 2,
+    "code": null,
+    "explanation": "Optical storage has slower access times compared to magnetic and solid-state storage, which can affect performance."
+    },
+    {
+    "question": "Which type of storage is recommended for carrying important documents while traveling?",
+    "options": [
+        "Optical storage",
+        "Magnetic storage",
+        "Solid-state storage",
+        "Cloud storage"
+    ],
+    "answer": 3,
+    "code": null,
+    "explanation": "Solid-state storage, such as USB flash drives, is recommended for carrying important documents due to its portability and reliability."
+    },
+    {
+    "question": "How does cloud storage primarily differ from local storage?",
+    "options": [
+        "Cloud storage requires an internet connection for access",
+        "Local storage provides automatic backup features",
+        "Cloud storage offers faster data access times",
+        "Local storage is more scalable"
+    ],
+    "answer": 1,
+    "code": null,
+    "explanation": "Cloud storage requires an internet connection for access, whereas local storage provides direct access to data without dependency on network connectivity."
+    },
+    {
+    "question": "Which storage method is characterized by high capacity and cost-effectiveness but is prone to mechanical failure?",
+    "options": [
+        "Optical storage",
+        "Magnetic storage",
+        "Solid-state storage",
+        "Cloud storage"
+    ],
+    "answer": 2,
+    "code": null,
+    "explanation": "Magnetic storage offers high capacity and is cost-effective but is prone to mechanical failures due to its moving parts."
+    },
+    {
+    "question": "What is one disadvantage of solid-state storage compared to magnetic storage?",
+    "options": [
+        "Higher cost per gigabyte",
+        "Lower durability",
+        "Slower data access times",
+        "Less portability"
+    ],
+    "answer": 1,
+    "code": null,
+    "explanation": "Solid-state storage is generally more expensive per gigabyte compared to magnetic storage, despite its faster access times and higher durability."
+    }
+],
+"Systems Architecture": [
+    {
+        "question": "What is the primary function of the CPU in a computer system?",
+        "options": [
+            "To store data permanently",
+            "To execute instructions and perform calculations",
+            "To manage network connections",
+            "To display graphics"
+        ],
+        "answer": "To execute instructions and perform calculations",
+        "code": null,
+        "explanation": "The CPU is the core component of a computer system responsible for executing instructions and performing calculations, which makes it central to the operation of the system."
+    },
+    {
+        "question": "Which component of the CPU is responsible for performing arithmetic and logic operations?",
+        "options": [
+            "Control Unit (CU)",
+            "Arithmetic Logic Unit (ALU)",
+            "Cache Memory",
+            "Registers"
+        ],
+        "answer": "Arithmetic Logic Unit (ALU)",
+        "code": null,
+        "explanation": "The ALU performs arithmetic and logic operations, such as addition and logical comparisons, based on the instructions it receives."
+    },
+    {
+        "question": "How does clock speed affect CPU performance?",
+        "options": [
+            "Higher clock speed allows the CPU to execute more instructions per second",
+            "Higher clock speed decreases the CPU's efficiency",
+            "Clock speed does not affect CPU performance",
+            "Higher clock speed increases the CPU's cache size"
+        ],
+        "answer": "Higher clock speed allows the CPU to execute more instructions per second",
+        "code": null,
+        "explanation": "Clock speed, measured in Hertz (Hz) or Gigahertz (GHz), represents the number of cycles per second the CPU can perform, thus affecting the rate at which instructions are executed."
+    },
+    {
+        "question": "What is the purpose of the Program Counter (PC) in the Fetch-Decode-Execute Cycle?",
+        "options": [
+            "To store the data currently being processed",
+            "To hold the address of the next instruction to be fetched",
+            "To decode the fetched instruction",
+            "To perform arithmetic operations"
+        ],
+        "answer": "To hold the address of the next instruction to be fetched",
+        "code": null,
+        "explanation": "The Program Counter (PC) keeps track of the memory address of the next instruction to be fetched, ensuring the CPU processes instructions in the correct sequence."
+    },
+    {
+        "question": "Which CPU component temporarily holds the instruction currently being processed?",
+        "options": [
+            "Memory Address Register (MAR)",
+            "Memory Data Register (MDR)",
+            "Current Instruction Register (CIR)",
+            "Accumulator (Acc)"
+        ],
+        "answer": "Current Instruction Register (CIR)",
+        "code": null,
+        "explanation": "The Current Instruction Register (CIR) temporarily holds the instruction that is currently being processed, allowing the CPU to decode and execute it."
+    },
+    {
+        "question": "What is the role of the Arithmetic Logic Unit (ALU) in the CPU?",
+        "options": [
+            "To fetch instructions from memory",
+            "To execute arithmetic and logic operations",
+            "To store data in cache memory",
+            "To increment the Program Counter"
+        ],
+        "answer": "To execute arithmetic and logic operations",
+        "code": null,
+        "explanation": "The ALU is responsible for performing arithmetic operations like addition and subtraction, as well as logic operations such as AND and OR."
+    },
+    {
+        "question": "Which of the following is NOT a special-purpose register in the CPU?",
+        "options": [
+            "Program Counter (PC)",
+            "Memory Address Register (MAR)",
+            "Status Register (SR)",
+            "Cache Memory"
+        ],
+        "answer": "Cache Memory",
+        "code": null,
+        "explanation": "Cache Memory is a type of high-speed memory used to store frequently accessed data and instructions, not a special-purpose register within the CPU."
+    },
+    {
+        "question": "What does cache memory do to improve CPU performance?",
+        "options": [
+            "It increases the clock speed of the CPU",
+            "It provides high-speed access to frequently used data and instructions",
+            "It increases the number of processor cores",
+            "It stores instructions for long-term use"
+        ],
+        "answer": "It provides high-speed access to frequently used data and instructions",
+        "code": null,
+        "explanation": "Cache memory reduces the time needed to access frequently used data by storing it closer to the CPU, which helps improve overall performance."
+    },
+    {
+        "question": "What is the Fetch-Decode-Execute Cycle primarily used for in the CPU?",
+        "options": [
+            "To manage system memory",
+            "To execute and process instructions sequentially",
+            "To handle input and output operations",
+            "To increase network speed"
+        ],
+        "answer": "To execute and process instructions sequentially",
+        "code": null,
+        "explanation": "The Fetch-Decode-Execute Cycle is a fundamental process where the CPU fetches instructions from memory, decodes them, and executes them in sequence."
+    },
+    {
+        "question": "Which of the following is an example of a special-purpose register used to hold data during memory operations?",
+        "options": [
+            "Program Counter (PC)",
+            "Memory Data Register (MDR)",
+            "Arithmetic Logic Unit (ALU)",
+            "Control Unit (CU)"
+        ],
+        "answer": "Memory Data Register (MDR)",
+        "code": null,
+        "explanation": "The Memory Data Register (MDR) temporarily holds data being transferred between the CPU and memory, acting as a buffer for data operations."
+    }
+]
+
+}

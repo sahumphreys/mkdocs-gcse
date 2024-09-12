@@ -1,0 +1,616 @@
+{
+    "Networking": [
+    {
+        "question": "What is the primary motivation for connecting computers in a network?",
+        "code": null,
+        "options": [
+            "To share resources such as files, printers, and databases",
+            "To increase computer speed",
+            "To reduce electricity usage",
+            "To eliminate the need for servers"
+        ],
+        "answer": 1,
+        "explanation": "The main reason for networking computers is to share resources like files, printers, and databases."
+    },
+    {
+        "question": "In a network, what is the role of a server?",
+        "code": null,
+        "options": [
+            "To connect to the Internet",
+            "To act as a powerful central hub for various services",
+            "To manage only security settings",
+            "To replace all other computers in the network"
+        ],
+        "answer": 2,
+        "explanation": "A server is a powerful computer that provides various services such as email, file, and web hosting to client computers in a network."
+    },
+    {
+        "question": "What is a 'standalone computer' in the context of networking?",
+        "code": null,
+        "options": [
+            "A computer that is not connected to any network",
+            "A computer that acts as a server",
+            "A computer that is part of a Local Area Network (LAN)",
+            "A computer that only connects to Bluetooth devices"
+        ],
+        "answer": 1,
+        "explanation": "A standalone computer operates independently without being connected to a network."
+    },
+    {
+        "question": "Which of the following is an example of resource sharing in a network?",
+        "code": null,
+        "options": [
+            "Connecting only one computer to the Internet",
+            "Printing documents from multiple devices to a shared printer",
+            "Using each computer's separate database for different tasks",
+            "Isolating all computers for security reasons"
+        ],
+        "answer": 2,
+        "explanation": "Resource sharing allows multiple devices to use a shared resource like a printer or file."
+    },
+    {
+        "question": "What is the main difference between a Local Area Network (LAN) and a Wide Area Network (WAN)?",
+        "code": null,
+        "options": [
+            "A LAN connects personal devices within a room, while a WAN connects devices within a building",
+            "A LAN spans a limited geographic area like a building, while a WAN covers large areas such as multiple cities or countries",
+            "A WAN only supports wireless connections, while a LAN supports wired connections",
+            "A LAN is used exclusively at home, while a WAN is used in offices"
+        ],
+        "answer": 2,
+        "explanation": "A LAN covers a small area like a building, while a WAN spans a large geographic region, such as cities or countries."
+    },
+    {
+        "question": "Which of the following is a security concern in a network?",
+        "code": null,
+        "options": [
+            "Enhanced data recovery",
+            "Man-in-the-middle attacks",
+            "Increased hardware costs",
+            "Improved email communication"
+        ],
+        "answer": 2,
+        "explanation": "Man-in-the-middle attacks are a type of security threat where an attacker intercepts communication between two users on a network."
+    },
+    {
+        "question": "What is meant by 'dependency' in the context of networking?",
+        "code": null,
+        "options": [
+            "The reliance on a network server or Internet connection for services",
+            "The use of separate databases for different tasks",
+            "The redundancy of hardware in a network",
+            "The elimination of downtime in the network"
+        ],
+        "answer": 1,
+        "explanation": "Dependency refers to the reliance on network components, such as servers or Internet, which can affect users if they fail."
+    },
+    {
+        "question": "Which of the following is a cost-related disadvantage of setting up a network?",
+        "code": null,
+        "options": [
+            "Increased employee productivity",
+            "Initial setup costs and ongoing maintenance",
+            "Unlimited scalability at no additional cost",
+            "Access to external databases"
+        ],
+        "answer": 2,
+        "explanation": "Networks require initial investment in hardware, software, and maintenance, as well as ongoing costs for security and training."
+    },
+    {
+        "question": "What is the main distinction between the Internet and the World Wide Web (WWW)?",
+        "code": null,
+        "options": [
+            "The WWW is a physical network, while the Internet is only a collection of web pages",
+            "The Internet is the infrastructure, while the WWW is a service that uses it to access web pages",
+            "The Internet is only accessible via a browser, while the WWW requires email",
+            "The Internet is centralized, while the WWW is decentralized"
+        ],
+        "answer": 2,
+        "explanation": "The Internet is the global infrastructure, and the WWW is a service that allows users to access websites using this infrastructure."
+    },
+    {
+        "question": "What does it mean when we say 'The Internet is decentralized'?",
+        "code": null,
+        "options": [
+            "No single entity controls the entire Internet",
+            "The Internet is controlled by a global government body",
+            "Users can only access the Internet through one provider",
+            "It has limited scalability due to central control"
+        ],
+        "answer": 1,
+        "explanation": "Decentralization means the Internet is not controlled by a single entity, allowing for diverse management by ISPs and network administrators."
+    }
+],
+"Wired and Wireless Networks":
+    [
+        {
+            "question": "Which of the following technologies is typically used for connecting devices in a wired local area network (LAN)?",
+            "code": null,
+            "options": [
+                "Bluetooth",
+                "Ethernet",
+                "Wi-Fi",
+                "Zigbee"
+            ],
+            "answer": 2,
+            "explanation": "Ethernet is the most common technology for connecting devices in a wired LAN."
+        },
+        {
+            "question": "What is the primary advantage of wired networking over wireless networking?",
+            "code": null,
+            "options": [
+                "Lower cost",
+                "Higher mobility",
+                "More secure and reliable",
+                "Faster installation"
+            ],
+            "answer": 3,
+            "explanation": "Wired networks are more secure and reliable compared to wireless due to physical connections and less interference."
+        },
+        {
+            "question": "What is the purpose of twisting the copper wires in an Ethernet cable?",
+            "code": null,
+            "options": [
+                "To increase the data transfer speed",
+                "To protect the cable from physical damage",
+                "To reduce electromagnetic interference",
+                "To improve cable flexibility"
+            ],
+            "answer": 3,
+            "explanation": "Twisting the copper wires helps to reduce electromagnetic interference, ensuring clearer data transmission."
+        },
+        {
+            "question": "In which situation would shielded Ethernet cables be preferred over unshielded cables?",
+            "code": null,
+            "options": [
+                "When connecting devices in a small home network",
+                "When running cables in environments with high electromagnetic interference",
+                "When using Bluetooth devices",
+                "When setting up a wireless network"
+            ],
+            "answer": 2,
+            "explanation": "Shielded Ethernet cables provide extra protection in environments with high electromagnetic interference."
+        },
+        {
+            "question": "What is the function of RJ45 connectors on Ethernet cables?",
+            "code": null,
+            "options": [
+                "To secure the cable to a device",
+                "To convert signals between analog and digital formats",
+                "To connect the cable to devices by using eight pins for data transmission",
+                "To increase the bandwidth of the connection"
+            ],
+            "answer": 3,
+            "explanation": "RJ45 connectors have eight pins corresponding to the eight wires in the cable, enabling data transmission between devices."
+        },
+        {
+            "question": "What distinguishes Cat6 Ethernet cables from Cat5 cables?",
+            "code": null,
+            "options": [
+                "Cat6 cables have more twisted pairs",
+                "Cat6 cables support higher data transfer speeds",
+                "Cat5 cables are shielded, while Cat6 cables are not",
+                "Cat5 cables are used for wireless connections"
+            ],
+            "answer": 2,
+            "explanation": "Cat6 cables are designed to support higher data transfer speeds compared to Cat5 cables."
+        },
+        {
+            "question": "What is Ethernet's primary protocol for managing data transmission within a network?",
+            "code": null,
+            "options": [
+                "CSMA/CD (Carrier Sense Multiple Access with Collision Detection)",
+                "TCP/IP (Transmission Control Protocol/Internet Protocol)",
+                "WPA3 (Wi-Fi Protected Access 3)",
+                "Bluetooth Low Energy (BLE)"
+            ],
+            "answer": 1,
+            "explanation": "Ethernet uses CSMA/CD to manage data transmission, ensuring that devices avoid collisions when sending data."
+        },
+        {
+            "question": "In wireless networking, what is the function of a Wireless Access Point (WAP)?",
+            "code": null,
+            "options": [
+                "To connect two Bluetooth-enabled devices",
+                "To transmit data between wired Ethernet devices",
+                "To convert data from the network into radio waves for wireless devices",
+                "To provide a backup Internet connection"
+            ],
+            "answer": 3,
+            "explanation": "A WAP converts data into radio waves for wireless devices to receive, enabling wireless communication in a network."
+        },
+        {
+            "question": "Which of the following is true about Bluetooth compared to Wi-Fi?",
+            "code": null,
+            "options": [
+                "Bluetooth is faster than Wi-Fi",
+                "Bluetooth has a longer range than Wi-Fi",
+                "Bluetooth is intended for short-range, low-power communication between devices",
+                "Bluetooth requires an access point like Wi-Fi"
+            ],
+            "answer": 3,
+            "explanation": "Bluetooth is designed for short-range communication between devices, typically within a few meters."
+        },
+        {
+            "question": "What is the main reason that hybrid networks, combining both wired and wireless connections, are common in modern LANs?",
+            "code": null,
+            "options": [
+                "Wireless devices are faster than wired devices",
+                "Desktops can be wired for reliability, while mobile devices use wireless for flexibility",
+                "It reduces the cost of setting up a network",
+                "Wired networks are not secure enough for sensitive data"
+            ],
+            "answer": 2,
+            "explanation": "Hybrid networks allow desktops to benefit from wired reliability, while mobile devices use wireless for flexibility and mobility."
+        }
+],
+"Topologies":
+[
+    {
+        "question": "Explain what a network topology is and provide three examples of common network topologies. Compare and contrast the characteristics of bus and star topologies.",
+        "code": null,
+        "options": [
+          "Network topology refers to how the network's physical layout looks and functions. Examples include mesh, grid, and wireless topologies.",
+          "Network topology is the arrangement of computers, and examples include tree, cellular, and point-to-point.",
+          "Network topology refers to the arrangement or layout of elements (nodes, links) in a computer network. Examples include bus, star, and ring topologies.",
+          "Network topology is a type of routing protocol in a network, such as RIP, OSPF, or EIGRP."
+        ],
+        "answer": 3,
+        "explanation": "A network topology defines how devices are interconnected in a network. Bus topologies use a single cable shared by all devices, which can lead to collisions, while star topologies provide a dedicated connection between devices and the central hub, improving performance."
+      },
+      {
+        "question": "Define a logical bus network and explain how it differs from the physical arrangement of devices in a network. Provide an example of when a logical bus might be preferred over a physical bus.",
+        "code": null,
+        "options": [
+          "A logical bus network refers to how data flows in the network, not the physical connections.",
+          "A logical bus network is physically connected in a ring topology but behaves like a star topology.",
+          "A logical bus is another name for a star network with switches.",
+          "A logical bus network must have redundant cabling to prevent collisions."
+        ],
+        "answer": 1,
+        "explanation": "A logical bus network can occur in a star topology when a hub broadcasts data to all devices. This differs from a physical bus, where all devices share the same physical connection."
+      },
+      {
+        "question": "Describe the characteristics of a star topology. Discuss the advantages and disadvantages of using a hub versus a switch in a star topology. How does a star topology differ from a logical bus?",
+        "code": null,
+        "options": [
+          "A star topology uses coaxial cables for central communication, similar to a bus network.",
+          "In a star topology, all devices are connected to a central hub or switch, making it easier to add or remove devices.",
+          "Star topologies only differ from logical bus networks in the way data is prioritized.",
+          "In star topologies, each device is directly connected to two others in a circular manner, enhancing redundancy."
+        ],
+        "answer": 2,
+        "explanation": "A star topology offers centralized communication, but using a switch rather than a hub reduces network congestion. The logical bus describes data flow, not physical connections."
+      },
+      {
+        "question": "Explain the concept of a mesh topology and its advantages. Differentiate between full mesh and partial mesh topologies. Provide examples of scenarios where a mesh topology would be beneficial.",
+        "code": null,
+        "options": [
+          "A mesh topology creates dedicated point-to-point links between only some of the devices.",
+          "Full mesh connects every device to every other device, while partial mesh connects only some devices.",
+          "Mesh topologies provide limited redundancy and are prone to failure.",
+          "Mesh topologies are only used for small networks and are rarely scalable."
+        ],
+        "answer": 2,
+        "explanation": "Mesh topologies provide multiple communication paths, increasing reliability. Full mesh is costly but offers the highest redundancy, while partial mesh is more cost-effective for medium-scale networks."
+      },
+      {
+        "question": "Describe the key features of Wi-Fi mesh networks. How does self-healing contribute to the reliability of a Wi-Fi mesh network? Provide real-world applications where Wi-Fi mesh networks are commonly used.",
+        "code": null,
+        "options": [
+          "Wi-Fi mesh networks only provide basic coverage and cannot scale to large areas.",
+          "Self-healing allows the network to reroute data if a node fails, maintaining connectivity.",
+          "Wi-Fi mesh networks are less reliable in large homes or office buildings.",
+          "Self-healing features make Wi-Fi mesh networks slower compared to traditional networks."
+        ],
+        "answer": 2,
+        "explanation": "Self-healing ensures that if one node in a Wi-Fi mesh network fails, data can still travel through other nodes. This feature is crucial for maintaining reliable wireless coverage in large areas."
+      },
+      {
+        "question": "Discuss the types of hardware used to establish connections in a mesh topology. Compare and contrast wired and wireless connections in a mesh network. Explain the role of routers and switches in a mesh topology.",
+        "code": null,
+        "options": [
+          "Routers and switches are used to manage data traffic and maintain multiple paths between devices.",
+          "Wired mesh networks are cheaper than wireless mesh networks but offer more flexibility.",
+          "Wireless mesh networks only work with hubs and cannot use switches.",
+          "Mesh networks don't need routers or switches as data always flows directly between devices."
+        ],
+        "answer": 1,
+        "explanation": "Mesh networks rely on routers and switches for directing data. While wired mesh offers higher performance, wireless mesh is more flexible. Routers ensure data is forwarded through optimal paths for reliability."
+      },
+      {
+        "question": "Explain how fault tolerance is achieved in mesh networks. Describe a situation where a mesh network's self-healing capability would be particularly advantageous.",
+        "code": null,
+        "options": [
+          "Mesh networks rely on a central hub to prevent data loss during a failure.",
+          "Self-healing allows mesh networks to automatically reroute data if a node fails, ensuring reliable communication.",
+          "Mesh networks don’t provide fault tolerance unless combined with bus topology.",
+          "Self-healing is only relevant to wired mesh networks, not wireless ones."
+        ],
+        "answer": 2,
+        "explanation": "Fault tolerance in mesh networks is achieved through redundancy, allowing communication to continue even if links fail. Self-healing is particularly useful in disaster recovery or emergency situations, where continuous connectivity is vital."
+      },
+      {
+        "question": "Define the CSMA/CD protocol and explain its relevance in network communication. In which network topology is CSMA/CD commonly used, and why is it less relevant in other topologies?",
+        "code": null,
+        "options": [
+          "CSMA/CD is used in wireless networks to prevent interference between devices.",
+          "CSMA/CD is commonly used in bus topologies, where devices share the same communication channel.",
+          "CSMA/CD is primarily used in mesh networks to ensure data doesn't collide during transmission.",
+          "CSMA/CD is only used in modern Ethernet networks and isn't applicable to older systems."
+        ],
+        "answer": 2,
+        "explanation": "CSMA/CD is used in Ethernet-based bus topologies to prevent data collisions when multiple devices transmit simultaneously. In topologies like star or mesh, collisions are minimized due to dedicated links."
+      },
+      {
+        "question": "Discuss the scalability of a star topology. What challenges might arise as the number of devices in a star topology increases, and how can they be addressed?",
+        "code": null,
+        "options": [
+          "Star topologies can't handle more than a few devices due to the complexity of the hub.",
+          "As the number of devices increases, network congestion and the load on the central hub may increase.",
+          "Star topologies scale well but are prone to frequent data collisions.",
+          "Star topologies are typically used for small networks and don’t support additional devices."
+        ],
+        "answer": 2,
+        "explanation": "Star topologies are easily scalable, but as the number of devices grows, congestion may occur. Using switches instead of hubs or adding more switches can help manage increased network traffic."
+      },
+      {
+        "question": "Identify specific applications or industries where mesh networks, particularly Wi-Fi mesh networks, are well-suited. Explain why these environments benefit from the characteristics of mesh topologies.",
+        "code": null,
+        "options": [
+          "Wi-Fi mesh networks are ideal for large office buildings, campuses, or public spaces like stadiums.",
+          "Wi-Fi mesh networks work best in small homes and rarely support more than 10 devices.",
+          "Mesh networks are only used for specialized industries and aren’t common in public spaces.",
+          "Mesh networks offer limited reliability and are prone to network outages."
+        ],
+        "answer": 1,
+        "explanation": "Mesh networks provide reliable and extensive coverage, making them suitable for large spaces like offices, campuses, and public venues. Their scalability and fault tolerance ensure uninterrupted connectivity."
+      }
+    ],
+    "The Internet":
+    [
+        {
+          "question": "What is the main function of the Internet?",
+          "code": null,
+          "options": [
+            "To connect two Bluetooth devices",
+            "To enable the global system of interconnected computer networks",
+            "To provide a backup storage system for files",
+            "To transmit data only within private networks"
+          ],
+          "answer": 2,
+          "explanation": "The Internet is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices."
+        },
+        {
+          "question": "Which of the following describes Tier 1 ISPs?",
+          "code": null,
+          "options": [
+            "They provide the 'last mile' connection to home users",
+            "They are regionally based companies connecting Tier 2 with Tier 3",
+            "They form the backbone of the Internet and exchange data between continents",
+            "They are responsible for maintaining domain name registries"
+          ],
+          "answer": 3,
+          "explanation": "Tier 1 ISPs form the backbone of the Internet, providing traffic and exchanging data between continents."
+        },
+        {
+          "question": "What is packet switching?",
+          "code": null,
+          "options": [
+            "A method that establishes a fixed connection between two devices",
+            "A connectionless method where messages are broken into smaller packets that are routed individually",
+            "A process of reserving a dedicated path for each communication",
+            "A method of sending packets directly to their destination without routing"
+          ],
+          "answer": 2,
+          "explanation": "Packet switching is a connectionless method where messages are split into smaller packets, each routed individually through the network."
+        },
+        {
+          "question": "What is the role of a router in packet switching?",
+          "code": null,
+          "options": [
+            "It creates a fixed physical path for data to travel",
+            "It prevents packets from reaching their destination",
+            "It determines the next step in the route for each packet based on address information",
+            "It converts data into radio waves for wireless transmission"
+          ],
+          "answer": 3,
+          "explanation": "A router determines the next step in the route for each packet based on the address information and passes it to the next router in the network."
+        },
+        {
+          "question": "Which command can be used to trace the route of packets to a destination in Windows?",
+          "code": null,
+          "options": [
+            "ipconfig",
+            "ping",
+            "tracert",
+            "route"
+          ],
+          "answer": 3,
+          "explanation": "The 'tracert' command is used to trace the route packets take to a destination, showing the hops along the way."
+        },
+        {
+          "question": "What is the main purpose of the control information in a network packet?",
+          "code": null,
+          "options": [
+            "To carry the payload or data being sent",
+            "To route the packet through the network and ensure error correction",
+            "To store the message for future transmission",
+            "To encrypt the data for security"
+          ],
+          "answer": 2,
+          "explanation": "The control information in a packet, stored in the header or trailer, is responsible for routing, error detection, sequencing, and other tasks."
+        },
+        {
+          "question": "Which of the following is true about private IP addresses?",
+          "code": null,
+          "options": [
+            "They are routable on the Internet",
+            "They are reserved for use within local networks",
+            "They can be used by any device on the Internet",
+            "They are used only by Tier 1 ISPs"
+          ],
+          "answer": 2,
+          "explanation": "Private IP addresses are reserved for use within local networks and are not routable on the Internet."
+        },
+        {
+          "question": "What does the Domain Name System (DNS) do?",
+          "code": null,
+          "options": [
+            "It manages domain name registrations and ownership",
+            "It converts domain names into IP addresses to facilitate network communication",
+            "It monitors Internet traffic for malicious activity",
+            "It controls the routing of packets across networks"
+          ],
+          "answer": 2,
+          "explanation": "The Domain Name System (DNS) translates domain names into IP addresses, making it easier for users to access websites and resources on the Internet."
+        },
+        {
+          "question": "What is an example of a Fully Qualified Domain Name (FQDN)?",
+          "code": null,
+          "options": [
+            "192.168.1.1",
+            "mail.google.com",
+            "localhost",
+            "HTTP"
+          ],
+          "answer": 2,
+          "explanation": "A Fully Qualified Domain Name (FQDN) identifies a specific host within a domain, like 'mail.google.com'."
+        },
+        {
+          "question": "Who is responsible for coordinating the global assignment of domain names and IP addresses?",
+          "code": null,
+          "options": [
+            "Tier 1 ISPs",
+            "ICANN and IANA",
+            "Regional Internet Registries (RIR)",
+            "Domain Name System (DNS)"
+          ],
+          "answer": 2,
+          "explanation": "ICANN and IANA are responsible for coordinating the global assignment of domain names and IP addresses."
+        }
+      ],
+ "Protocols":      
+ [
+      {
+        "question": "Define the term 'network protocol' and provide an example.",
+        "options": [
+          "A network protocol is a set of rules that define how data is exchanged over a network; for example, HTTP.",
+          "A network protocol is a piece of hardware that connects devices; for example, Ethernet cables.",
+          "A network protocol is software that blocks unauthorized network access; for example, firewalls.",
+          "A network protocol is a program for managing files on a computer network; for example, FTP."
+        ],
+        "answer": 1,
+        "code": null,
+        "explanation": "A network protocol defines the rules for data exchange between devices. HTTP, for example, is a protocol used for transferring hypertext on the web."
+      },
+      {
+        "question": "What is the main difference between TCP (Transmission Control Protocol) and UDP (User Datagram Protocol)?",
+        "options": [
+          "TCP is faster but less reliable than UDP.",
+          "TCP is connectionless, while UDP requires a connection.",
+          "TCP ensures data is received in the correct order, while UDP does not guarantee order or reliability.",
+          "UDP is more commonly used for web browsing, while TCP is used for video streaming."
+        ],
+        "answer": 3,
+        "code": null,
+        "explanation": "TCP guarantees the correct ordering and reliable delivery of data, while UDP is faster but does not provide guarantees for order or reliability."
+      },
+      {
+        "question": "Which of the following best describes the 4-layer TCP/IP model?",
+        "options": [
+          "Application, Network, Transport, Link",
+          "Application, Transport, Internet, Link",
+          "Physical, Data Link, Network, Application",
+          "Session, Presentation, Transport, Network"
+        ],
+        "answer": 2,
+        "code": null,
+        "explanation": "The TCP/IP model consists of four layers: Application, Transport, Internet, and Link, each with its specific functions in data transmission."
+      },
+      {
+        "question": "Which of the following are application layer protocols in the TCP/IP model?",
+        "options": [
+          "TCP, UDP, IP",
+          "HTTP, FTP, SMTP",
+          "Ethernet, Wi-Fi, TCP",
+          "IP, ICMP, ARP"
+        ],
+        "answer": 2,
+        "code": null,
+        "explanation": "HTTP, FTP, and SMTP are all application layer protocols that manage specific tasks like web browsing, file transfers, and email communication."
+      },
+      {
+        "question": "Which of the following is NOT a responsibility of the transport layer?",
+        "options": [
+          "Sequencing and reassembling data packets",
+          "Addressing physical hardware devices",
+          "Ensuring reliable data transmission",
+          "Managing the flow of data between devices"
+        ],
+        "answer": 2,
+        "code": null,
+        "explanation": "The transport layer handles reliable data transmission and packet sequencing, but addressing physical hardware devices is handled by the link layer."
+      },
+      {
+        "question": "Which protocols operate at the Internet layer of the TCP/IP model?",
+        "options": [
+          "HTTP, FTP, SMTP",
+          "TCP, UDP",
+          "IP, ICMP, ARP",
+          "Ethernet, Wi-Fi"
+        ],
+        "answer": 3,
+        "code": null,
+        "explanation": "IP, ICMP, and ARP are protocols that operate at the Internet layer, which is responsible for routing and transferring data between devices."
+      },
+      {
+        "question": "What is the role of the Link Layer in networking?",
+        "options": [
+          "It routes data between networks.",
+          "It converts data into signals and handles MAC addressing.",
+          "It ensures data is transferred in the correct order.",
+          "It manages web requests and email transfers."
+        ],
+        "answer": 2,
+        "code": null,
+        "explanation": "The Link Layer handles MAC addressing, converts data into signals for physical transmission, and ensures proper delivery across the network medium."
+      },
+      {
+        "question": "What is the purpose of using ports in the transport layer?",
+        "options": [
+          "To identify different processes and manage multiple connections simultaneously.",
+          "To convert data into physical signals for transmission.",
+          "To encrypt data and ensure secure communication.",
+          "To identify different types of hardware on the network."
+        ],
+        "answer": 1,
+        "code": null,
+        "explanation": "Ports allow the transport layer to manage multiple processes simultaneously, ensuring the correct delivery of data to the intended application."
+      },
+      {
+        "question": "How does the FTP (File Transfer Protocol) function in a client-server model?",
+        "options": [
+          "The server sends a request to download files from the client using port 110.",
+          "The client connects to the server over port 21 to upload or download files.",
+          "The client and server communicate over port 80 to request and display files.",
+          "FTP encrypts all communications between the client and server for secure transfer."
+        ],
+        "answer": 2,
+        "code": null,
+        "explanation": "FTP uses port 21 to establish a connection between a client and server, allowing file uploads or downloads over the network."
+      },
+      {
+        "question": "Which statement best describes the client-server model in networking?",
+        "options": [
+          "In the client-server model, the server requests data from multiple clients.",
+          "Clients send requests to the server, which processes them and returns data or resources.",
+          "Servers actively manage data transfers between clients in peer-to-peer networks.",
+          "Clients and servers exchange data without any established protocol."
+        ],
+        "answer": 2,
+        "code": null,
+        "explanation": "In the client-server model, the client sends requests to the server, which processes and responds with the requested data or service."
+      }
+    ]
+  }

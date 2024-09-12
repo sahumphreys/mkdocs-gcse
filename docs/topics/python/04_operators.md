@@ -1,6 +1,7 @@
 ---
 title: Operators
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -18,6 +19,57 @@ image: python.png
     - Build expressions combining logical and comparison operators
     - Apply parentheses to modify the evaluation order of logical expressions.
 
+
+In this section we will look at the different **operators** we can use when programming with Python.  An operator is a character, or characters that will carry out a function on its operands.
+
+The concept will be familiar from using basic arithmetic operators such as `+` or `-` to add two numbers together or subtract two numbers.  The `+` is known as an operator, and the numbers being added are the operands.
+
+Programming languages have a number of types of operators:
+
+- **Mathematical operators**
+- **comparison operators**
+- **logical operators**
+
+One other is the **assignment operator** (`=`) that we used in the previous section.
+
+## Example 2
+
+Review the following program:
+
+```python hl_lines="4 7 10 13 16"
+a = 10
+b = 5
+result = a + b * 2
+print("Result 1:", result)
+
+result = (a + b) * 2
+print("Result 2:", result)
+
+result = a // b
+print("Result 3:", result)
+
+is_greater = a > b
+print("Is a greater than b?", is_greater)
+
+logical_test = (a > b) and (a < 20)
+print("Logical test:", logical_test)
+```
+
+Here there are a number of these operators being used.  Read the code and predict what will be printed to the screen when the highlighted lines are executed.
+
+??? hint "Answers"
+   
+    - Result 1: 20 
+    - Result 2: 30 
+    - Result 3: 2 
+    - Is a greater than b? True 
+    - Logical test: True
+
+Copy the code and paste into a code editor and run the code to compare your predictions with the actual results.
+
+Compare lines 4 and lines 7.  Why is the result different?
+
+The following sections summarise the behaviour of each type of operator that we use when programming.
 
 ## Assignment Operator
 
@@ -46,60 +98,65 @@ The mathematical operators are the same we have in maths, noting the use of `/` 
 - Division: `/`
 - Multiplication: `*`
 
-We can get familiar with these using the interactive environment:
+| Operator | Description | Example | Result |
+|:---------:|-------------|:-------:|:------:|
+| + | Addition | `7 + 3`  | 10 |
+| - | Subtraction | `7 - 3` | 4 |
+| - | Multiplication | `7 * 3` | 21 |
+| / | Division | `7 / 3` | 2.33333.. |
 
-```py
->>> 3 + 4
-7
->>> 3 * 4
-12
->>> 3 * 4 - 2
-10
->>> 3 / 4
-0.75
-```
+!!! note 
 
-Note the order of precedence in the third example (line 5), multiplication is carried out before subtraction, as we might expect.  Also note the answer to the fourth example (line 7), we provided two integers but the result was given as a real number.
+    When two integers are divided, the result is a real (floating point number)
 
-There is an alternative division operator for when we want to carry out integer division:
+There is also a pair of integer division operators: 
 
-```py
->>> 7 // 2 
-3
-```
-Here the answer is given as an integer, not a real number as we used the integer division operator `//`.  `2` divides into `7` `3` times leaving `1` as the remainder.  If we needed to grab that remainder, we'd use the modulo operator, `%`:
+| Operator | Description | Example | Result |
+|:---------:|-------------|:-------:|:------:|
+| // | Floor division | `7 // 3`  | 2 |
+| % | Modulo (Remainder) | `7 % 3` | 1 |
 
-```py
->>> 7 % 2
-1
-```
+Try both of these in the interactive environment to confirm results.
 
 If we think of an example of wanting to know how many hours and minutes for a movie that lasts 138 minutes.  We can get the hours by using the integer division operator: `hours = minutes // 60`.  This automatically rounds down.  We can get the remainder too: `remainder = minutes - (hours * 60)`.  But this is the same as using the modulo operator: `remainder = minutes % 60`.
 
-It is also really useful when checking if one divides equally into another.  For example: `if x % 2 == 0`, then we know if the number (`x`) is odd or even.
+The modulo operator is also really useful when checking if one divides equally into another.  For example: `if x % 2 == 0`, then we know if the number (`x`) is odd or even.
 
-There is also the exponent operator, `**`:
+Finally, exponent operator, `**`:
 
-```py
->>> 2**4
-16
-```
-
-This is $2^4$ giving the result $16$ as we would expect.
+| Operator | Description | Example | Result |
+|:---------:|-------------|:-------:|:------:|
+| ** | Exponent | `7 ** 3`  | 343 |
 
 ### Augmented assignment operators
 
-A nice shortcut, or syntactic sugar are:
+The following expression is often used where the value of a variable is being incremented by a given amount:
 
 ```py
->>> x = 6
->>> x += 1          # the same as x = x + 3
->>> x
-7
->>> x *= 2          # the same as x = x * 2
-14
+x = x + 1
 ```
 
+Here we can use a shorthand form (sometimes called syntactic sugar):
+
+```py
+x += 1              # the same as x = x + 1
+```
+
+Any of the mathematical operators can be used in this way.
+
+```python
+# Initial assignment
+x = 10
+print(x)            # output: 10
+ 
+# Augmented assignment operator: subtraction
+x -= 2
+print(x)            # output: 8
+ 
+# Augmented assignment operator: multiplication
+x *= 3
+print(x)            # output: 24
+```
 It does not matter which you prefer to use but the shorter form takes a little less typing.
 
 ### Operator precedence
@@ -112,33 +169,43 @@ There should be no surprises here, at least initially:
 
 As in maths any brackets take priority, so these can be used to alter the order of precedence
 
+## Comparison operators
+
+Comparison operators in Python are used to compare two values or expressions and produce Boolean results (`True` or `False`). These operators allow you to check conditions and make decisions based on the results of these comparisons. They are usually used as part of selection and iteration structures which we'll meet later.
+
+Python provides several comparison operators:
+
+
+| Operator | Description | Example | Result |
+|:---------:|-------------|:-------:|:------:|
+| `==` | Equal to | `7 == 7` | True |
+| `!=` | Not Equal to | `7 != 6` | True |
+| `>` | Greater than | `7 > 6` | True |
+| `<` | Less than | `7 < 6` | False |
+| `>=` | Greater than or equal to | `7 >= 7` | True |
+| `<=` | Less than or equal to | `7 <= 7` | True |
+
+!!! warning
+
+    Pay attention to the "is equal to" operator ( == ), it's two equal signs. It’s easy to mistake it for the assignment operator ( = ).  It helps to read the assignment operator as e.g. "age is assigned the value 18" for `age = 18`; and "is age equal to 18" for `age == 18`.
+
 ## Logical operators
 
-Logical operators in Python allow us to perform logical operations on one or more **Boolean** values (`True` or `False`). These operators are used to make decisions and control the flow of a program based on those conditions. They are often referred to as Boolean operators.
+Logical operators in Python allow us to combine logical operations on one or more **Boolean** values (`True` or `False`). These operators are used to make decisions and control the flow of a program based on those conditions. They are often referred to as Boolean operators.
 
 Python provides three main logical operators:
 
-1. **AND (`and`):** The `and` operator combines two operands or expressions and returns `True` if both operands/expressions are true; otherwise, it returns `False`.
-
-2. **OR (`or`):** The `or` operator combines two operands or expressions and returns `True` if at least one of the operands is true; it returns `False` only if both operands are false.
-
-3. **NOT (`not`):** The `not` operator returns the opposite Boolean value of the operand or expression. If the operand is `True`, `not` makes it `False`, and vice versa.
-
-For example:
-
-
-| Example         | T/F   | Reason                                                                           |
-| --------------- | ----- | -------------------------------------------------------------------------------- |
-| $3>6$ and $4<5$ | False | The expression 3 > 6 is false so the whole expression will return `False`        |
-| $3>6$ or $4<5$  | True  | One of the conditions is true, 4 < 5, so the whole expression will return `True` |
-| not $3>6$       | True  | 3<6 returns `False`, so the `not` will flip this result and so return `True`     |
-
+| Operator | Description | Example | Result |
+|:---------:|-------------|:-------:|:------:|
+| `and` | Returns `True` only if **all** the boolean values are true | (7 > 6) and (4 < 8)| True|
+| `or` | Returns `True` if **at least one** of the boolean values are true | (10 < 20) or (10 < 5)| True |
+| `not` | Returns `True` if the value is false; returns `False if the value is true| not(7 > 6) | False|
 
 ### Logical Operator Examples
 
 Let's explore these logical operators with some examples, you can try these in the interactive environment:
 
-#### 1. AND Operator (`and`)
+**1. AND Operator (`and`)**
 
 The `and` operator returns True only if both conditions are True.
 
@@ -149,7 +216,7 @@ The `and` operator returns True only if both conditions are True.
 False
 ```
 
-#### 2. OR Operator (`or`)
+**2. OR Operator (`or`)**
 
 The `or` operator returns True if at least one condition is True.
 
@@ -160,7 +227,7 @@ The `or` operator returns True if at least one condition is True.
 True
 ```
 
-#### 3. NOT Operator (`not`)
+**3. NOT Operator (`not`)**
 
 The `not` operator negates the Boolean value.
 
@@ -174,7 +241,7 @@ False
 
 You can combine logical operators to create more complex conditions:
 
-```python
+```python exec="on" source="material-block"
 age = 25
 is_student = False
 
@@ -199,129 +266,23 @@ result = (True or False) and (not True)
 Logical operators are commonly used in programming for various purposes, such as:
 
 - **Conditional Statements:** To make decisions and control the flow of a program using `if`, `elif`, and `else` statements.
-
 - **Loop Control:** To control the execution of loops, such as `while` and `for` loops.
-
 - **Filtering Data:** To filter data based on specific conditions.
-
-- **Boolean Algebra:** In mathematical and engineering applications involving Boolean algebra.
-
-We will consider each of these use cases in later sections.
-
-## Comparison operators
-
-Comparison operators in Python are used to compare two values or expressions and produce Boolean results (`True` or `False`). These operators allow you to check conditions and make decisions based on the results of these comparisons. Python provides several comparison operators:
-
-1. **Equal to (`==`):** Checks if two values are equal.
-
-2. **Not equal to (`!=`):** Checks if two values are not equal.
-
-3. **Greater than (`>`):** Checks if one value is greater than another.
-
-4. **Less than (`<`):** Checks if one value is less than another.
-
-5. **Greater than or equal to (`>=`):** Checks if one value is greater than or equal to another.
-
-6. **Less than or equal to (`<=`):** Checks if one value is less than or equal to another.
-
-### Comparison Operator Examples
-
-Let's explore these comparison operators with some examples, again use the interactive environment to check the results:
-
-#### 1. Equal to (`==`)
-
-The `==` operator checks if two values are equal.
-
-```py
->>> x = 5
->>> y = 5
->>> x == y
-True
-```
-
-#### 2. Not equal to (`!=`)
-
-The `!=` operator checks if two values are not equal.
-
-```py
->>> a = 10
->>> b = 20
->>> a != b
-True
-```
-
-#### 3. Greater than (`>`)
-
-The `>` operator checks if one value is greater than another.
-
-```py
->>> m = 30
->>> n = 15
->>> m > n
-True
-```
-
-#### 4. Less than (`<`)
-
-The `<` operator checks if one value is less than another.
-
-```terminal
->>> p = 25
->>> q = 50
->>> p < q
-True
-```
-
-#### 5. Greater than or equal to (`>=`)
-
-The `>=` operator checks if one value is greater than or equal to another.
-
-```py
->>> alpha = 100
->>> beta = 100
->>> alpha >= beta  
-True
-```
-
-#### 6. Less than or equal to (`<=`)
-
-The `<=` operator checks if one value is less than or equal to another.
-
-```py
->>> gamma = 75
->>> delta = 100
->>>  gamma <= delta
-True
-```
-
-### Combining Comparison Operators
-
-You can combine comparison operators to create complex conditions:
-
-```python
-age = 25
-
-if age >= 18 and age <= 65:
-    print("You are eligible to vote and of working age.")
-```
-
-In this example, the `and` operator is used to check if the age is both greater than or equal to 18 and less than or equal to 65.
-
-### Common Use Cases
-
-Comparison operators are commonly used in programming for various purposes, such as:
-
-- **Conditional Statements:** To make decisions and control program flow using `if`, `elif`, and `else` statements.
-
-- **Loop Control:** To control the execution of loops, such as `while` and `for` loops.
-
-- **Sorting and Filtering:** To sort data and filter it based on specific conditions.
-
 - **Searching and Validation:** To search for specific values in data and validate user input.
+
+
+## Climate Quest Project
+
+![](../../assets/images/climate-quest.png){align=left width="200"}
+
+Throughout this topic we'll be working on a large scale project: **Climate Quest**.  In this project a player embarks on a journey to combat the effects of climate change by making decisions that impact the environment. Each choice affects the outcome of the game, emphasizing the importance of individual actions in addressing climate change.
+
+[Go to task 2 - Using Operators](./climate_quest/task_2.md){:class=md-button}
 
 ## Questions
 
-{{ get_questions(page.title)}}
+{{ show_questions(page.title, page.meta.filename) }}
+
 
 ## Programming Tasks
 

@@ -1,6 +1,7 @@
 ---
 title: Strings
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -16,11 +17,55 @@ image: python.png
     - Gain practical experience through programming tasks related to strings.
 
 
+Earlier we saw how Python works with **variables** and the data stored in the variable will be of a particular type of data i.e. integers (whole numbers), reals (numbers with a fractional part), characters (e.g. 'a', '5') and boolean (either true or false).  In this section we look at **strings**.
+
+A string is a list of characters, a character being anything that you type on the keyboard in one keystroke e.g. a letter, a number or a symbol, including ++space++.
+
+## Example 3:
+
+Read the following program, and predict what the program will do.  
+
+```python hl_lines="4 7 10 13 16 19"
+greeting = "Hello, "
+name = "Alice"
+full_greeting = greeting + name
+print("Full Greeting:", full_greeting)
+
+shout = full_greeting.upper()
+print("Shout:", shout)
+
+whisper = full_greeting.lower()
+print("Whisper:", whisper)
+
+length = len(full_greeting)
+print("Length of Full Greeting:", length)
+
+first_letter = name[0]
+print("First Letter of Name:", first_letter)
+
+sliced_name = name[1:4]
+print("Sliced Name:", sliced_name)
+```
+
+Pay particular attention to the highlighted lines.  What will be displayed on the screen when these lines are executed?
+
+??? hint "Answers"
+
+  - Full Greeting: Hello  Alice 
+  - Shout: HELLO, ALICE 
+  - Whisper: hello, alice 
+  - Length of Full Greeting: 12 
+  - First Letter of Name: 
+  - A Sliced Name: lic
+
+Copy the code and paste into a code editor and run the code to compare your predictions with the actual results.
+
 ## What are Strings?
 
 - In Python, a **string** is a data type used to represent text.
 - Text can be anything from a single character to a whole paragraph.
 - Strings are a fundamental data type in programming and are used extensively in real-world applications.
+- A string is a **list of characters**
 
 ## Creating Strings
 
@@ -40,6 +85,8 @@ message = "I don't like Mondays!"
 
 ## String Operations
 
+Two of the operators we saw being used as mathematical operators are repurposed when applied to string operands:
+
 ### Concatenation
 
 - You can combine two or more strings using the **concatenation operator** (`+`).
@@ -52,6 +99,7 @@ message = "I don't like Mondays!"
 - You can repeat a string multiple times using the **repetition operator** (`*`).
 - Example:
   - `'Python' * 3` results in `'PythonPythonPython'`.
+
 
 ## String Methods
 
@@ -86,7 +134,7 @@ course.find('Beg')                  # returns -1, it is case sensitive
 - It is done by specifying a **range** of indices inside square brackets.
 - For example:
 
-```py
+```py exec="on" source="console"
 course = "Python"
 print(course[0])            # 'P'
 print(course[-1])           # 'n'
@@ -120,24 +168,21 @@ string in Python.
 '''
 ```
 
-## String Formatting
+## Printing strings
 
-- You can format strings using **f-strings**.
-- An f-string is created by prefixing a string with `f` or `F` and using curly braces `{}` to enclose expressions.
-- Example:
-  - `name = 'Alice'`
-  - `f'Hello, {name}!'` results in `'Hello, Alice!'`.
-- This is a preferred method for representing strings as it results in less typing and less chance of introducing a syntax error by forgetting to include a quote or a comma etc..
-- For example:
+Python provides three different ways to print the contents of the string to the screen:
+
+Compare the following:
 
 ```python
-first = 'Simon'
-last = 'Humphreys'
-message = first + ' [' + last + '] ' + 'is a teacher'
-print(message)
-msg = f'{first} [{last}] is a teacher'          # using 'f' for a formatted string
-print(msg)
+first = "Imran"
+second = "Khalisa"
+print(first + second)       # concatenation operator
+print(first, second)        # comma operator, inserts a space between items
+print(f"{first} {second}")  # f-string
 ```
+
+It makes little different which you choose to use but notice the concatenation operator does not insert a space between items being printed.
 
 ## String Immutability
 
@@ -147,9 +192,28 @@ print(msg)
   - `text = "Hello"`
   - `new_text = text + ", World!"`
 
+**Activity** 
+
+Modify the given example by:
+
+- Changing the variable values and observe the output.
+- Adding more string manipulations using different methods.
+- Experimenting with slicing to extract different parts of the string.
+
+## Climate Quest Project
+
+![](../../assets/images/climate-quest.png){align=left width="200"}
+
+Throughout this topic we'll be working on a large scale project: **Climate Quest**.  In this project a player embarks on a journey to combat the effects of climate change by making decisions that impact the environment. Each choice affects the outcome of the game, emphasizing the importance of individual actions in addressing climate change.
+
+[Go to task 3 - String Handling](./climate_quest/task_3.md){:class=md-button}
+
+
+
+
 ## Questions
 
-{{ get_questions(page.title)}}
+{{ show_questions(page.title, page.meta.filename) }}
 
 ## Programming Tasks
 

@@ -1,6 +1,7 @@
 ---
-title: Built-in functions
+title: Built in functions
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -17,107 +18,104 @@ As well as creating our own functions Python comes with a wide range of built-in
 
 There are a whole host of other functions available to us that can be either `import`ed to our program e.g. the `random` library, or installed e.g. the `pandas` library.  We'll consider this approach in a later section
 
+## Example 5
+
+```python hl_lines="2 6 10 13 16 20"
+print("Welcome to the Built-in Functions Lesson!")
+user_name = input("Enter your name: ")
+print("Hello,", user_name)
+
+sample_string = "Climate"
+string_length = len(sample_string)
+print("The length of the string is:", string_length)
+
+value = input("Enter a whole number: ")
+print(type(value))
+
+value_int = int(value)
+print(type(value))
+
+number = -7.25
+abs_number = abs(number)
+print("The absolute value is:", abs_number)
+
+decimal_number = 3.14159
+rounded_number = round(decimal_number, 2)
+print("The rounded value is:", rounded_number)
+```
+
+Before running this code, read it and predict what you think will be displayed for the following:
+
+- line 2: What will `input("Enter your name: ")` do?
+- line 6: What does the `len` function return for the string 'Climate'?
+- line 10 and 13: what will be output from the `type()` function in both cases?
+- line 16: What will be the result of `abs(-7.25)`?
+- line 20: What will `round(3.14159, 2)` return?
+  
+
+Run the program in a Python environment and compare the actual output with your predictions.
+
 ## Commonly Used Built-In Functions 
 
-### 1. `print()`
+| Function | Description | Example | Output |
+|----------|-------------|---------|--------|
+| `print()` |We have seen this used in previous sections. The `print()` function is used to display information on the screen. It can print text, variables, and the result of expressions. |`print("Welcome")`| "Welcome"|
+| `len()` | The `len()` function returns the length of a string. It counts the number of characters in the string. |`len("Hello")`| 5 |
+|`input()` | The `input()` function allows user input. It waits for the user to enter data and returns it as a string. || |
+|`int()` | used for data type conversion. `int()` converts a value to an integer | ||
+| `float()` | used for data type conversion. `float()` converts a value to an real number |||
+|`str()` | The `str()` function converts other data types to strings |||
+|`max()`| used to find the maximum value among a set of values|||
+| `min()`|used to find the minimum value among a set of values. |||
+|`abs()` |The `abs()` function returns the absolute value of a number. |||
+|`round()`|The `round()` function rounds a floating-point number to the nearest integer |||
+| `str.upper()`| Converts characters in `str` variable to upper case |||
+|`str.lower()`| Converts characters in `str` variable to lower case |||
+| `chr()` | `chr()` converts an ASCII code (integer) to a character |||
+| `ord()` |`ord()` converts a character to its ASCII integer code |||
 
-The `print()` function is used to display information on the screen. It can print text, variables, and the result of expressions. 
+## Activity
 
-Example:
-
-```python
-print("Hello, World!")
-```
-
-### 2. `len()`
-
-The `len()` function returns the length of a string. It counts the number of characters in the string. Example:
-
-```python
-text = "Python"
-length = len(text)  # length will be 6
-```
-
-### 3. `input()`
-
-The `input()` function allows user input. It waits for the user to enter data and returns it as a string. Example:
+Copy and paste the following code into a code editor, before running the code read it and predict what you think the output will be.  Then make changes to the code as indicated below.
 
 ```python
-name = input("Enter your name: ")
+print("Welcome to the Modified Built-in Functions Lesson!")
+age = int(input("Enter your age: "))
+print("You are", age, "years old.")
+
+another_string = "Environmental Science"
+string_upper = another_string.upper()
+string_lower = another_string.lower()
+print("Uppercase:", string_upper)
+print("Lowercase:", string_lower)
+
+float_number = float(input("Enter a decimal number: "))
+rounded_float = round(float_number)
+print("Rounded number:", rounded_float)
+
+negative_number = int(input("Enter a negative integer: "))
+absolute_value = abs(negative_number)
+print("Absolute value:", absolute_value)
 ```
+Make the following changes:
 
-### 4. `int()`, `float()`
+  - Change the string and observe the output of the `upper()` and `lower()` methods.
+  - Input a decimal number and see the rounded result.
+  - Input a negative integer and see the absolute value.
 
-These functions are used for data type conversion. `int()` converts a value to an integer, and `float()` converts it to a floating-point number. Example:
+## Climate Quest Project
 
-```python
-num_str = "42"
-num_int = int(num_str)    # num_int will be 42
-num_float = float(num_str)  # num_float will be 42.0
-```
+![](../../assets/images/climate-quest.png){align=left width="200"}
 
-### 5. `str()`
+Throughout this topic we'll be working on a large scale project: **Climate Quest**.  In this project a player embarks on a journey to combat the effects of climate change by making decisions that impact the environment. Each choice affects the outcome of the game, emphasizing the importance of individual actions in addressing climate change.
 
-The `str()` function converts other data types to strings. Example:
-
-```python
-num = 42
-num_str = str(num)  # num_str will be "42"
-```
-
-### 6. `max()` and `min()`
-
-These functions are used to find the maximum and minimum values among a set of values. Example:
-
-```python
-a = 5
-b = 10
-maximum = max(a, b)  # maximum will be 10
-minimum = min(a, b)  # minimum will be 5
-```
-
-### 7. `abs()`
-
-The `abs()` function returns the absolute value of a number. Example:
-
-```python
-num = -5
-abs_num = abs(num)  # abs_num will be 5
-```
-
-### 8. `round()`
-
-The `round()` function rounds a floating-point number to the nearest integer. Example:
-
-```python
-value = 3.7
-rounded_value = round(value)  # rounded_value will be 4
-```
-
-### 9. `str.upper()` and `str.lower()`
-
-These methods are used to change the case of characters in a string. `str.upper()` converts all characters to uppercase, and `str.lower()` converts them to lowercase. Example:
-
-```python
-text = "Python is FUN"
-upper_text = text.upper()  # upper_text will be "PYTHON IS FUN"
-lower_text = text.lower()  # lower_text will be "python is fun"
-```
-
-### 10. `chr()` and `ord()`
-
-These functions deal with character encoding. `chr()` converts an integer to a character, and `ord()` converts a character to its integer representation. Example:
-
-```python
-character = 'A'
-ascii_value = ord(character)    # ascii_value will be 65
-char_from_ascii = chr(65)       # char_from_ascii will be 'A'
-```
+[Go to task 5 - Built-in Functions](./climate_quest/task_5.md){:class=md-button}
 
 ## Questions
 
-{{ get_questions(page.title)}}
+{{ show_questions(page.title, page.meta.filename) }}
 
 ## Programming Tasks
 
 {{ get_programming_tasks(page.title)}}
+

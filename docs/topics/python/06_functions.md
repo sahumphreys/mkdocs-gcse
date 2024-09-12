@@ -1,6 +1,7 @@
 ---
 title: Functions
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -28,67 +29,48 @@ Most problems we encounter can be broken down in to a series of steps.  Earlier 
 
 Here's we've **decomposed** the larger problem into a series of smaller problems each can be tackled on their own but when put together will result in a sandwich being made (hopefully).
 
-Thinking of something we might want to compute, lets' take the simple example of calculating the area of a rectangle.  There might be three steps, or sub-problems, to solve before we have a working program:
+## Example 4
 
-- Get the length and the height values from the user
-- Multiply those two values together to get the area
-- Print the result to the screen
+Read the following code and predict what the output will be using the questions below as a prompt.
 
-You could even break the first step into two steps, one for the length and one for the height.
+```python
+def convert_celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
 
-Thus our main program might read as:
+def calculate_average(temperatures):
+    return sum(temperatures) / len(temperatures)
 
-```py
-def get_value():
-    # function to get a value from the user
+def greet(name):
+    return f"Hello, {name}! Welcome to Climate Quest."
 
-def calculate_area(length, height):
-    # function to calculate the area of a rectangle
+weekly_celsius_temps = [22, 24, 20, 26, 23, 25, 21]
+average_temp = calculate_average(weekly_celsius_temps)
+print("Average Weekly Temperature (Celsius):", average_temp)
 
-def print_result(result):
-    # function to display the result to the screen
+name = "Student"
+greeting = greet(name)
+print(greeting)
 
-length = get_value()
-height = get_value()
-area = calculate_area(length, height)
-print_result(area)
+temp_in_fahrenheit = convert_celsius_to_fahrenheit(average_temp)
+print("Average Weekly Temperature (Fahrenheit):", temp_in_fahrenheit)
 ```
 
-The term **main program** was used here.  Some languages specify the entry point for their programs to be in a function called `main()`.  We can replicate that behaviour here:
+- "What will `convert_celsius_to_fahrenheit(25)` return?"
+- "What does the `calculate_average` function do with the list of temperatures?"
+- "What will be stored in `greeting`?"
+- "What will be printed for the average temperature in Fahrenheit?"
 
-```py
-def get_value():
-    # function to get a value from the user
 
-def calculate_area(length, height):
-    # function to calculate the area of a rectangle
+??? note "Answers"
 
-def print_result(result):
-    # function to display the result to the screen
+      1. **What will `convert_celsius_to_fahrenheit(25)` return?** 77
+      2. **What does the `calculate_average` function do with the list of temperatures?** Calculates the average, which is 23.0 for the provided list.
+      3. **What will be stored in `greeting`?** `"Hello, Student! Welcome to Climate Quest."`
+      4. **What will be printed for the average temperature in Fahrenheit?** `Average Weekly Temperature (Fahrenheit): 73.4`
 
-def main():
-    length = get_value()
-    height = get_value()
-    area = calculate_area(length, height)
-    print_result(area)
+Copy and paste the example code into your code editor.  Run the code to check your predictions.
 
-main()
-```
-
-We've decomposed our problem into a series of smaller, reusable, blocks of code that is responsible for a specific task. Our code follows a logical pattern and each section is more manageable and better organised.
-
-The key steps of our algorithm are now in a `main()` function which is called as the entry point for our program.
-
-Having determined this overall structure for our program we can then focus on each part in turn.  It's much easier to work on a small section of code like this rather than trying to tackle the whole thing in one go!  It also helps when/if we have errors.  It should be more obvious where the error is occurring, i.e. in which function, when following this approach rather than having to look through many lines of code.
-
-So, using functions is a good thing, they provide many key benefits:
-
-- **Modularity:** Divide your code into smaller, self-contained modules (functions) for easier development and debugging.
-- **Reusability:** Write code once and use it multiple times, reducing duplication.
-- **Readability:** Functions make code more understandable and concise.
-- **Maintenance:** Changes are easier to implement and test within a function.
-
-## Defining Functions
+## Syntax of a functions
 
 To create a function in Python, we use the `def` keyword, followed by the function name, pair of parentheses, `()`, followed by a colon, `:`. 
 
@@ -104,7 +86,9 @@ def my_function():
 
     The keyword `pass` is a statement that does not do anything.  It is useful when scaffolding code as in the previous example.  We know we want a function that calculates the area of a rectangle but are either unsure of how to complete this function or want to return to it later so we enter `pass`.  Our main program will still call that function but nothing will happen.
 
-Similar to the naming of variables and constants, the name we give to our function should be self-documenting.  `calculate_area()` seems ok here, though we might want to be even more explicit as name it is `calculate_rectangle_area()` to distinguish it from another similar function such as `calculate_triangle_area()` or `calculate-circle_area()`.  It might take some more typing but will result in your code being easier to read and maintain.
+## Naming the function
+
+Similar to the naming of variables and constants, the name we give to our function should be self-documenting.  In our example program one of the functions is named `convert_celcius_to_fahrenheit()`.  This name describes exactly what this function will do!  It might be more to type than say `conv_cel to fahr()` of `c_to_f()` but being more precise will result in your code being easier to read and maintain.
 
 The syntax required can be summarised as:
 
@@ -114,9 +98,46 @@ The syntax required can be summarised as:
 - **Indentation**: All code inside the function must be indented.
 - **Statement(s)**: The body of the function, statements that get executed every time the function is called.
 
+Using functions are **highly recommended**.  They provide: 
+
+- **Modularity:** Divide your code into smaller, self-contained modules (functions) for easier development and debugging.
+- **Reusability:** Write code once and use it multiple times, reducing duplication.
+- **Readability:** Functions make code more understandable and concise.
+- **Maintenance:** Changes are easier to implement and test within a function.
+
+## Indenting the function body
+
+When defining a function the body of the code in that function must be indented to show the code belongs to that function.
+
+```python
+def convert_celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+celsius = 24
+print(convert_celsius_to_fahrenheit(celsius)
+```
+
+The function body here only has one line (line 2), but it has been indented (by four spaces).  Your code editor will probably indent this line automatically.
+
+Lines 4 and 5 are not part of the function, they are lined up with the left-hand margin.
+
+## Functions return a value
+
+```python hl_lines="2 5"
+def convert_celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+celsius = 24
+fahrenheit = convert_celsius_to_fahrenheit(celsius)
+```
+
+!!! note
+
+    All functions, by definition, will return a value.  Here the fahrenheit equivalent of the given celsius value is returned from our function (line 2) and assigned to the variable 'fahrenheit' (line 5)
+
 ## Procedures vs Functions
 
-Look at how our functions are called in the main program:
+Look at the following code, it assumes the functions `get_value()`, `calculate_area()` but these are not shown, also `print_result()`:
 
 ```py
 def main():
@@ -126,16 +147,24 @@ def main():
     print_result(area)
 ```
 
-The statements in the first three lines are assignment statements.  An item of data is being returned from that block of code.  The fourth line is different, `print_result(area)` is a **procedure**.  `get_value()` and `calculate_area()` are **functions**.
+The statements in the first three lines are assignment statements.  An item of data is being returned from that block of code and immediately assigned to a variable.
 
-What's the difference?  **Functions return a value, procedures do not**.
+Line 5 is different, `print_result(area)`.  Any value being returned here is not assigned to a variable.  This is known as a **procedure**.  
+
+We might expect `print_result()` to be:
+
+```python
+def print_result(area):
+    print(area)
+```
+
+Notice there is no return statement here.  This is what makes it a **procedure** and not a function.
 
 !!! warning
 
-    This is not strictly true in Python, as a procedure will always return `None` when it is called, but we generally ignore this and it is not used.
+    This is not strictly true _in Python_, as a procedure will always return `None` when it is called, but we generally ignore this and it is not used.
 
-
-To return a value from a function we use the `return` statement.  Here's how it might be used for our `get_value()` function:
+To return a value from a function we have to use the `return` statement.  Here's how it might be used for the `get_value()` function:
 
 ~~~~~py
 def get_value():
@@ -144,7 +173,7 @@ def get_value():
     return value                # return the input back to the main program
 ~~~~~
 
-Similarly to calculate the area of the rectangle, the result is being returned:
+Similarly to calculate the area the result is being returned:
 
 ~~~~~py
 def calculate_area(length, height):
@@ -153,28 +182,34 @@ def calculate_area(length, height):
 
 That return value needs to be stored somewhere, yes, in a variable: `area = calculate_area(length, height)`.
 
-## Function Parameters and Arguments
+## Parameters and Arguments
 
-In our `calculate_rectangle()` function we put the names of two variables inside the brackets:
+```python hl_lines="1 5"
+def convert_celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
 
-~~~~~py
-def calculate_area(length, height):
-    pass
-~~~~~
+celsius = 24
+fahrenheit = convert_celsius_to_fahrenheit(celsius)
+```
 
-These variables are known as the **parameters** to the function.  In order to do this calculation we need to know the length and height of the rectangle. When this function is called Python will create two new variables called `length` and `height` and use them during the course of the function.  Once the function ends, these variables are destroyed.
+Line 1 declares the function using the `def` keyword, followed by the name of the function and then a pair of brackets.  To calculate the fahrenheit value we need to know the celsius value.  This is **passed in** as a **parameter** to the function.
 
-In our `main()` program we called this function as `area = calculate_area(length, height)`.  Here we are passing two **arguments** to our function, the length and the height.  In this instance the identifiers used happen to be the same but we could have used different terms as the parameters and the program would still work:
+Think of this **parameter** as a placeholder.  We do no know the value yet, it could be any value as defined by the user or our program.
 
-~~~~~python
-def calculate_area(rec_length, rec_height):
-    return rec_length * rec_height)
+Line 5 **calls** our function, using the function name followed by the **argument** to pass to the function.  In this instance it is the value $24$.
 
-length = 10
-height = 5
-area = calculate_area(length, height)
-print(area)
-~~~~~
+When the function is executed Python will create a new **local variable** and copy the value of the argument to that new variable.  When the function finishes that local variable will no longer be available.
+
+In this instance we happen to use the same name for our argument and our parameter - this can aid readability but they could have been different e.g.
+
+```python hl_lines="4 5"
+def convert_celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+celsius_input = 24
+fahrenheit = convert_celsius_to_fahrenheit(celsius_input)
+```
+
 
 ![](../../assets/images/python/parameters.png)
 
@@ -185,7 +220,7 @@ Remember:
 
 ## Calling a function
 
-To **call** a function we enter the name for the function and any arguments that need to be passed to the function from another part of our program.  The function call must come after the function definition in Python.
+To **call** a function we enter the name for the function and any arguments that need to be passed to the function from another part of our program.  The function call **must** come after the function definition in Python.
 
 ~~~~~python
 def calculate_area(rec_length, rec_height):     # function definition
@@ -243,9 +278,48 @@ The names of the parameters are explicitly mentioned with their values.  It make
 
 Functions are fundamental to programming in Python. They promote code organization, reusability, and readability. As you continue your programming journey, you'll find that functions become an essential tool for solving complex problems efficiently.
 
+[Cheat Sheet for functions](../../files/beginners_python_cheat_sheet_pcc_functions.pdf){:class=md-button}[^source]
+
+[^source]: [https://ehmatthes.github.io/pcc_3e/cheat_sheets/(https://ehmatthes.github.io/pcc_3e/cheat_sheets/)]
+
+## Activity
+
+Using the following code:
+
+```python
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+
+num1 = 10
+num2 = 5
+
+sum_result = add(num1, num2)
+print("Sum:", sum_result)
+
+product_result = multiply(num1, num2)
+print("Product:", product_result)
+```
+
+Modify this code:
+
+- Change the variable values and observe the output.
+- Add more functions that perform different basic tasks.
+- Experiment with returning different types of values (e.g., strings, booleans).
+
+## Climate Quest Project
+
+![](../../assets/images/climate-quest.png){align=left width="200"}
+
+Throughout this topic we'll be working on a large scale project: **Climate Quest**.  In this project a player embarks on a journey to combat the effects of climate change by making decisions that impact the environment. Each choice affects the outcome of the game, emphasizing the importance of individual actions in addressing climate change.
+
+[Go to task 4 - Functions](./climate_quest/task_4.md){:class=md-button}
+
 ## Questions
 
-{{ get_questions(page.title)}}
+{{ show_questions(page.title, page.meta.filename) }}
 
 ## Programming Tasks
 

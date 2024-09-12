@@ -1,6 +1,7 @@
 ---
 title: Working with files
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -38,6 +39,61 @@ Text files are:
 In contrast to text files, binary files store data in a non-human-readable format, often in a way that is optimized for efficient storage and processing by a computer. Binary files can contain a wide range of data, including images, audio, video, executable programs, and more. Text files are primarily used for storing textual information and are easier for humans to work with and understand.
 
 We'll mainly focus on how to handle text files.
+
+## Example 14
+
+```python hl_lines="1 5 9 12"
+file = open("example.txt", "w")
+file.write("Hello, World!")
+file.close()
+
+file = open("example.txt", "a")
+file.write("\nThis is a new line.")
+file.close()
+
+file = open("example.txt", "r")
+content = file.read()
+print(content)
+file.close()
+```
+
+Review the example and predict what will happen when:
+
+- What do you think the `open()` function does in this code, line 1?
+- Why are there different characters inside the quotes, such as `"w"`, `"a"`, and `"r"`, lines 1, 5, 9?
+- What might happen when we write to a file and then append more text to it?
+- Why is it important to close the file, line 12?
+
+Copy and paste the code into a Python environment, run the code and check the results against your predictions.
+
+
+## Further tasks
+
+- Modify the file name in the code and see what happens when you try to read from a file that doesn’t exist.
+- Experiment with different file modes, such as `"b"` for binary files, and discuss how this would change the data handling.
+- Test what happens if you forget to close the file. Discuss how this can affect file integrity and resource management.
+
+## Key Concepts and Explanations
+
+1. **Text Files vs. Binary Files:**
+   - **Text Files:** Contain plain, human-readable text with specific character encoding (e.g., UTF-8).
+   - **Binary Files:** Consist of data in binary format, typically not human-readable, such as images or executables.
+
+2. **File Modes in Python:**
+   - `"r"`: Read mode (default). Opens the file for reading.
+   - `"w"`: Write mode. Creates a new file or truncates an existing one.
+   - `"a"`: Append mode. Opens the file for writing and appends data to the end.
+   - `"b"`: Binary mode. Used with `"r"`, `"w"`, or `"a"` to handle binary files.
+
+3. **File Handles and Resource Management:**
+   - Opening a file returns a file handle, a reference to the file.
+   - It's crucial to close files after operations to release system resources and avoid data corruption.
+
+4. **Writing to a File:**
+   - The `write()` method allows writing strings to a file. When in `"w"` mode, it overwrites existing content; in `"a"` mode, it appends new content.
+
+5. **Appending Data:**
+   - Using `"a"` mode, you can add new content to the end of the file without erasing the existing content.
 
 ## Files are line-based
 
@@ -275,20 +331,23 @@ In Python 3, there are several methods and techniques for reading and writing da
          file.write("Appending data to the file.")
      ```
 
+## Climate Quest Project
+
+![](../../assets/images/climate-quest.png){align=left width="200"}
+
+Throughout this topic we'll be working on a large scale project: **Climate Quest**.  In this project a player embarks on a journey to combat the effects of climate change by making decisions that impact the environment. Each choice affects the outcome of the game, emphasizing the importance of individual actions in addressing climate change.
+
+[Go to task 11 - File Handling](./climate_quest/task_11.md){:class=md-button}
+
+## Summary
+
+[Cheat sheet for exceptions (and files)](../../files/beginners_python_cheat_sheet_pcc_files_exceptions.pdf){:class=md-button}[^source]
+
+[^source]: [https://ehmatthes.github.io/pcc_3e/cheat_sheets/(https://ehmatthes.github.io/pcc_3e/cheat_sheets/)]
+
 ## Questions
 
-{{ get_questions(page.title)}}
-
-1. What is the default mode when you open a file using the `open()` function in Python?
-2. What mode should you use to open a file for writing in Python, creating it if it doesn't exist?
-3. How do you read the entire content of a text file in Python?
-4. Which mode should you use when dealing with binary files in Python?
-5. What method is commonly used to write data to a text file in Python?
-6. How do you open a file in Python so that it is automatically closed when you're done with it?
-7. Explain the difference between 'w' and 'a' modes when opening a text file for writing.
-8. What is the purpose of the `readinto()` method when working with binary files?
-9. Why is it important to close files after you have finished reading or writing them in Python?
-10. How can you check if a file exists before trying to open it in Python?
+{{ show_questions(page.title, page.meta.filename) }}
 
 ## Programming Tasks
 

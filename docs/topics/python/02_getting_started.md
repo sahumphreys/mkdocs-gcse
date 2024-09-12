@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Python
 image: python.png
+filename: '_data/python_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -20,6 +21,12 @@ The first steps to get started with programming using the Python language are:
 
 - download and install Python to your computer
 - download, install and if needed configure an IDE (Integrated Development Environment) to write your Python programs.
+
+```python exec="on" source="tabbed-left"
+print("Hello Markdown!")
+for i in range(5):
+    print(i)
+```
 
 ## Installing a Python environment
 
@@ -162,7 +169,8 @@ Python 3.10.5
  ~~~~~
 
 !!! info
-    To exit from the interactive environment, enter the command ```exit()``` or ```quit()``` or use the shortcut keys `Ctrl-D` (Windows)
+    To exit from the interactive environment, enter the command ```exit()``` or ```quit()``` or use the shortcut keys ++ctrl+d++  (Windows)
+
 
 
 ## Install a Code Editor or IDE
@@ -194,7 +202,7 @@ The convention when learning any new programming language is to write a program 
 
 With Python this is very easy:
 
-```py
+```python exec="on", source="tabbed-left"
 print("Hello, World!")
 ```
 
@@ -211,76 +219,6 @@ That's it!  We use the built-in Python function, `print()`, and provide this fun
 
 ## Questions
 
-{{ get_questions(page.title)}}
+{{ show_questions(page.title, page.meta.filename) }}
 
----
 
-1. What are the general steps to install Python on your home computer?
-
-    a) Download the installer and click "Next" repeatedly  
-    b) Visit a random website and download Python  
-    c) Download Python from the official Python website and follow the installation instructions  
-    d) Python cannot be installed on home computers  
-
-2. Which version of Python should you choose for most users?
-
-    a) Python 2.x  
-    b) Python 3.x  
-    c) Python 4.x  
-    d) Python 1.x  
-
-3. What does the "Add Python x.x to PATH" option during installation do?
-   
-    a) It adds Python to the Windows Registry  
-    b) It creates a shortcut on the desktop  
-    c) It adds Python to the system's PATH environment variable  
-    d) It installs additional Python libraries
-
-4. How can you check if Python is installed correctly on your computer?
-
-    a) By opening Microsoft Word  
-    b) By typing `python --version` in the command prompt or terminal  
-    c) By creating a new Python file  
-    d) By checking your email  
-
-5. What command can you use to start the Python interactive environment in your terminal or command prompt?
-
-    a) `start python`  
-    b) `run python`  
-    c) `python`  
-    d) `start`  
-
-6. What is the result of the expression `10 / 3` in Python?
-
-    a) 3.3333  
-    b) 3.0  
-    c) 4  
-    d) 10  
-
-7. What does the `len()` function do in Python?
-   
-   a) Returns the length of a string or list  
-   b) Converts a string to uppercase  
-   c) Performs basic arithmetic operations  
-   d) Creates a new list  
-
-8. How do you access elements in a list in Python?
-
-    a) Using square brackets and the element's value  
-    b) Using the `get()` function  
-    c) Using parentheses and an index  
-    d) Lists cannot be accessed in Python  
-
-9. Which Python function is used to join two or more strings together?
-
-    a) `add()`  
-    b) `concatenate()`  
-    c) `merge()`  
-    d) `+` operator  
-
-10. What is the purpose of an Integrated Development Environment (IDE) when working with Python?
-
-    a) To download Python packages  
-    b) To create Python programs  
-    c) To run Python scripts in a web browser  
-    d) To play Python games  
