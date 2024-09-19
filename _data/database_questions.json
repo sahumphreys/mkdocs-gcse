@@ -1,0 +1,370 @@
+{
+    "Relational Databases": [
+    {
+    "question": "What is a database?",
+    "code": null,
+    "options": [
+        "A collection of interconnected computer programs.",
+        "A digital system for organizing and storing data that allows easy access, management, and updates.",
+        "A file that stores all the data of an organization.",
+        "A set of tables with no defined relationships."
+    ],
+    "answer": 2,
+    "explanation": "A database is a digital system that organizes and stores data for easy access, management, and updating."
+    },
+    {
+    "question": "What is a relational database?",
+    "code": null,
+    "options": [
+        "A database where data is stored in a single file.",
+        "A database where data is stored in tables that are linked or related through common fields.",
+        "A system that stores files in separate folders.",
+        "A collection of unrelated data tables."
+    ],
+    "answer": 2,
+    "explanation": "A relational database stores data in tables that are linked through common fields, allowing relationships between the data."
+    },
+    {
+    "question": "In a relational database, what is a table?",
+    "code": null,
+    "options": [
+        "A collection of data organized in rows and columns.",
+        "A list of fields with no associated data.",
+        "A system to sort files alphabetically.",
+        "A single column that contains all data."
+    ],
+    "answer": 1,
+    "explanation": "A table is a collection of data organized into rows (records) and columns (fields) within a relational database."
+    },
+    {
+    "question": "What is a record (row) in a table?",
+    "code": null,
+    "options": [
+        "A single piece of data in a table.",
+        "A complete set of information represented by one row in a table.",
+        "A column header that describes a field.",
+        "A blank row used to separate data."
+    ],
+    "answer": 2,
+    "explanation": "A record is a complete set of information in a table, represented by one row."
+    },
+    {
+    "question": "What is a field (column) in a table?",
+    "code": null,
+    "options": [
+        "A collection of rows that form a table.",
+        "A single piece of data represented by a column that describes a specific attribute of the data.",
+        "A key that links different tables.",
+        "A section of the database used for storing files."
+    ],
+    "answer": 2,
+    "explanation": "A field is a single piece of data in a table, represented by a column, describing a specific attribute of the data."
+    },
+    {
+    "question": "What is the purpose of a primary key in a table?",
+    "code": null,
+    "options": [
+        "To store multiple values in a single field.",
+        "To uniquely identify each record in a table.",
+        "To link multiple tables in a database.",
+        "To define the data type for each field."
+    ],
+    "answer": 2,
+    "explanation": "A primary key uniquely identifies each record in a table, ensuring no two records are the same."
+    },
+    {
+    "question": "What is a foreign key?",
+    "code": null,
+    "options": [
+        "A field that uniquely identifies a record within a table.",
+        "A field in one table that links to the primary key in another table.",
+        "A type of data used for storing dates and times.",
+        "A field that contains numeric values only."
+    ],
+    "answer": 2,
+    "explanation": "A foreign key is a field in one table that links to the primary key in another table, creating a relationship between the two tables."
+    },
+    {
+    "question": "What is data redundancy?",
+    "code": null,
+    "options": [
+        "Storing the same data in multiple places, leading to wasted storage.",
+        "Linking two tables together using foreign keys.",
+        "A unique identifier for each record in a table.",
+        "Storing data in multiple formats within a single field."
+    ],
+    "answer": 1,
+    "explanation": "Data redundancy occurs when the same data is stored in multiple places, leading to inefficient use of storage."
+    },
+    {
+    "question": "What is data inconsistency?",
+    "code": null,
+    "options": [
+        "When data cannot be stored in a table.",
+        "When different copies of the same data do not match.",
+        "When a primary key is not assigned to a table.",
+        "When a table contains too many records."
+    ],
+    "answer": 2,
+    "explanation": "Data inconsistency arises when different copies of the same data do not match, often caused by data redundancy."
+    },
+    {
+    "question": "How do relational databases help eliminate data redundancy and inconsistency?",
+    "code": null,
+    "options": [
+        "By allowing each piece of data to be stored in multiple tables.",
+        "By storing data in related tables, ensuring that each piece of information is stored only once.",
+        "By copying data into multiple formats for easier access.",
+        "By preventing the use of foreign keys."
+    ],
+    "answer": 2,
+    "explanation": "Relational databases store data in related tables, ensuring that each piece of information is stored only once, reducing redundancy and inconsistency."
+    }
+],
+"Worked Example":
+    [
+        {
+          "question": "What is a flat-file system?",
+          "code": null,
+          "options": [
+            "A system that stores data in multiple tables with relationships between them.",
+            "A system that stores data in a single table without relationships between the data.",
+            "A system that allows only flat, non-structured data to be stored.",
+            "A database where all data must be text or string-based."
+          ],
+          "answer": 2,
+          "explanation": "A flat-file system stores data in a single table, such as a spreadsheet, with no relationships between the data."
+        },
+        {
+          "question": "What is a key issue with flat-file systems?",
+          "code": null,
+          "options": [
+            "They are too complex for small datasets.",
+            "They enforce data relationships too rigidly.",
+            "They can cause data redundancy and inconsistency.",
+            "They are difficult to search and sort."
+          ],
+          "answer": 3,
+          "explanation": "Flat-file systems can lead to data redundancy and inconsistency due to duplicated data across entries."
+        },
+        {
+          "question": "In a relational database, what term is used for the unique identifier in a table?",
+          "code": null,
+          "options": [
+            "Primary Key",
+            "Foreign Key",
+            "Field",
+            "Data Type"
+          ],
+          "answer": 1,
+          "explanation": "A Primary Key uniquely identifies each record in a table."
+        },
+        {
+          "question": "What is the purpose of a Foreign Key in a relational database?",
+          "code": null,
+          "options": [
+            "It is a backup copy of the Primary Key.",
+            "It allows a relationship to be created between two tables.",
+            "It stores redundant data for security purposes.",
+            "It marks a row that should not be duplicated."
+          ],
+          "answer": 2,
+          "explanation": "A Foreign Key is used to link one table to another by referencing the Primary Key of another table."
+        },
+        {
+          "question": "What problem is solved by splitting data into related tables in a relational database?",
+          "code": null,
+          "options": [
+            "It simplifies the structure of the database.",
+            "It eliminates the need for data validation.",
+            "It reduces redundancy and inconsistency.",
+            "It allows data to be duplicated for easier access."
+          ],
+          "answer": 3,
+          "explanation": "By splitting data into related tables, redundancy is reduced and consistency is maintained by having data only in one place."
+        },
+        {
+          "question": "In a Many-to-Many relationship, which additional table is needed to link two tables together?",
+          "code": null,
+          "options": [
+            "Student table",
+            "Primary Key table",
+            "Linking table (or Junction table)",
+            "Teacher table"
+          ],
+          "answer": 3,
+          "explanation": "A Linking or Junction table is needed to represent a Many-to-Many relationship between two tables."
+        },
+        {
+          "question": "How does a relational database help prevent data inconsistency?",
+          "code": null,
+          "options": [
+            "It requires redundant data to be updated manually.",
+            "It allows for the same data to be stored in multiple places for convenience.",
+            "It stores each piece of data only once, so updates are reflected consistently across the system.",
+            "It uses flat-file systems to prevent inconsistency."
+          ],
+          "answer": 3,
+          "explanation": "Data is stored only once in a relational database, and relationships ensure updates are consistent."
+        },
+        {
+          "question": "Which of the following is an example of a One-to-Many relationship?",
+          "code": null,
+          "options": [
+            "One teacher teaches many students.",
+            "One student takes one class.",
+            "One teacher teaches one class.",
+            "One student takes many subjects."
+          ],
+          "answer": 1,
+          "explanation": "A One-to-Many relationship means one entity is related to multiple instances of another, like one teacher teaching many students."
+        },
+        {
+          "question": "In a relational database, what does the term 'scalability' refer to?",
+          "code": null,
+          "options": [
+            "The ability to increase the size and complexity of the database without affecting performance.",
+            "The speed at which the database can be backed up.",
+            "The ease of retrieving data from a flat-file system.",
+            "The duplication of data for easier access."
+          ],
+          "answer": 1,
+          "explanation": "Scalability refers to the ability to grow the database in size and complexity while maintaining performance and manageability."
+        },
+        {
+          "question": "What type of data type would most likely be used for the 'Age' field in the Student table?",
+          "code": null,
+          "options": [
+            "String",
+            "Date/Time",
+            "Integer",
+            "Float"
+          ],
+          "answer": 3,
+          "explanation": "The 'Age' field would use an Integer data type as it holds whole numbers."
+        }
+      ],
+    "SQL": [
+        {
+          "question": "What is the purpose of the SQL `SELECT` statement?",
+          "code": null,
+          "options": [
+            "To insert new data into a table.",
+            "To retrieve data from a table.",
+            "To delete data from a table.",
+            "To update data in a table."
+          ],
+          "answer": 2,
+          "explanation": "The `SELECT` statement is used to retrieve data from a table in a relational database."
+        },
+        {
+          "question": "Which SQL clause is used to filter records based on a condition?",
+          "code": null,
+          "options": [
+            "ORDER BY",
+            "FROM",
+            "WHERE",
+            "SELECT"
+          ],
+          "answer": 3,
+          "explanation": "The `WHERE` clause is used to filter data based on a specified condition."
+        },
+        {
+          "question": "How would you sort results in descending order by a column called 'Age'?",
+          "code": null,
+          "options": [
+            "ORDER BY Age ASC;",
+            "ORDER BY Age;",
+            "ORDER BY Age DESC;",
+            "ORDER BY Age LIMIT 1;"
+          ],
+          "answer": 3,
+          "explanation": "The `ORDER BY Age DESC` sorts the results in descending order by the 'Age' column."
+        },
+        {
+          "question": "In the SQL statement `SELECT StudentName, Age FROM Students;`, what does the `FROM` clause do?",
+          "code": null,
+          "options": [
+            "It retrieves data from the database.",
+            "It specifies the table from which to retrieve data.",
+            "It filters the data.",
+            "It updates the table with new data."
+          ],
+          "answer": 2,
+          "explanation": "The `FROM` clause specifies the table, in this case 'Students', from which to retrieve data."
+        },
+        {
+          "question": "Which SQL command is used to insert new data into a table?",
+          "code": null,
+          "options": [
+            "SELECT",
+            "INSERT INTO",
+            "UPDATE",
+            "DELETE"
+          ],
+          "answer": 2,
+          "explanation": "The `INSERT INTO` statement is used to add new records to a table."
+        },
+        {
+          "question": "Which of the following statements will delete a record from the 'Students' table with StudentID = 4?",
+          "code": null,
+          "options": [
+            "DELETE FROM Students WHERE StudentID = 4;",
+            "DROP Students WHERE StudentID = 4;",
+            "REMOVE FROM Students WHERE StudentID = 4;",
+            "TRUNCATE Students WHERE StudentID = 4;"
+          ],
+          "answer": 1,
+          "explanation": "The `DELETE FROM` statement is used to remove records, and the condition filters the deletion to StudentID 4."
+        },
+        {
+          "question": "What is the purpose of the `UPDATE` SQL statement?",
+          "code": null,
+          "options": [
+            "To retrieve data from the database.",
+            "To delete records from a table.",
+            "To update existing data in a table.",
+            "To insert new data into a table."
+          ],
+          "answer": 3,
+          "explanation": "The `UPDATE` statement modifies existing records in a table based on a condition."
+        },
+        {
+          "question": "Which SQL statement retrieves the names of students older than 15?",
+          "code": null,
+          "options": [
+            "SELECT StudentName FROM Students WHERE Age = 15;",
+            "SELECT StudentName FROM Students WHERE Age > 15;",
+            "SELECT StudentName FROM Students WHERE Age < 15;",
+            "SELECT StudentName FROM Students ORDER BY Age DESC;"
+          ],
+          "answer": 2,
+          "explanation": "The `WHERE` clause with `Age > 15` filters the data to return only students older than 15."
+        },
+        {
+          "question": "What is the purpose of a `JOIN` in SQL?",
+          "code": null,
+          "options": [
+            "To combine records from two or more tables.",
+            "To insert data into multiple tables at once.",
+            "To delete data from multiple tables.",
+            "To update records across tables."
+          ],
+          "answer": 1,
+          "explanation": "A `JOIN` is used to combine rows from two or more tables based on a related column."
+        },
+        {
+          "question": "Which SQL statement adds a new student with ID 4, name 'Emily Green', and age 17?",
+          "code": null,
+          "options": [
+            "INSERT INTO Students (StudentID, StudentName, Age) VALUES (4, 'Emily Green', 17);",
+            "INSERT Student INTO Students (4, 'Emily Green', 17);",
+            "ADD TO Students VALUES (4, 'Emily Green', 17);",
+            "INSERT (4, 'Emily Green', 17) INTO Students;"
+          ],
+          "answer": 1,
+          "explanation": "The correct syntax for inserting a new record uses `INSERT INTO` followed by the column names and `VALUES` for the data."
+        }
+    ]    
+}
+  

@@ -52,7 +52,6 @@ nav:
   - Topics:
     - Python:
       - 'Overview': topics/python/index.md
-      - 'Slides': 'topics/python/slides/python-slides.pdf'
       - 'Getting Started': 'topics/python/02_getting_started.md'
       - 'Variables': 'topics/python/03_variables.md'
       - 'Operators': 'topics/python/04_operators.md'
@@ -84,7 +83,6 @@ nav:
         - 'Task 11': 'topics/python/climate_quest/task_11.md'
     - 'Data Representation':
       - Overview: 'topics/data/index.md'
-      - Slides: 'topics/data/slides/data-slides.pdf'
       - 'Number Systems': 'topics/data/01_number_systems.md'
       - Units: 'topics/data/02_units.md'
       - 'Binary Arithmetic': 'topics/data/03_binary_arithmetic.md'
@@ -96,7 +94,6 @@ nav:
       - Compression: 'topics/data/09_compression.md'
     - 'System Architecture':
       - Overview: 'topics/system/index.md'
-      - Slides: 'topics/system/slides/system-slides.pdf'
       - Software: 'topics/system/01_software.md'
       - 'Programming Languages': 'topics/system/02_programming_languages.md'
       - 'Inside the Machine': 'topics/system/03_inside_the_machine.md'
@@ -105,7 +102,6 @@ nav:
       - 'Systems Architecture': 'topics/system/06_systems_architecture.md'
     - 'Computer Networks':
       - Overview: 'topics/networking/index.md'
-      - Slides: 'topics/networking/slides/networking-slides.pdf'
       - Networking: 'topics/networking/01_networking.md'
       - 'Wired and Wireless Networks': 'topics/networking/02_wired_wireless.md'
       - Topologies: 'topics/networking/03_topologies.md'
@@ -113,17 +109,14 @@ nav:
       - Protocols: 'topics/networking/05_protocols.md'
     - Algorithms:
       - 'Overview': 'topics/algorithms/index.md'
-      - 'Slides': 'topics/algorithms/slides/algorithms_slides.pdf'
       - 'Computational Thinking': 'topics/algorithms/01_computational_thinking.md'
       - 'Describing an Algorithm': 'topics/algorithms/02_describing_an_algorithm.md'
       - 'Searching Algorithms': 'topics/algorithms/03_searching.md'
       - 'Sorting Algorithms': 'topics/algorithms/04_sorting.md'
       - 'Tracing': 'topics/algorithms/05_tracing.md'
       - 'Structure Diagrams': 'topics/algorithms/06_structure_diagrams.md'
-      - 'Just testing': 'topics/algorithms/testing.md'
     - Security:
       - 'Overview': 'topics/security/index.md'
-      - 'Slides': 'topics/security/slides/security-slides.pdf'
       - 'Network Threats': 'topics/security/01_threats.md'
       - 'Social Engineering': 'topics/security/02_social_engineering.md'
       - 'Malware': 'topics/security/03_malware.md'
@@ -136,15 +129,21 @@ nav:
       - 'Python and SQL': 'topics/databases/04_python_sql.md'
     - 'Programming':
       - Overview: 'topics/programming/index.md'
-      - Variables: 'topics/programming/01_variables_types_and_strings.md'
+      - "Variables, Types and Strings": 'topics/programming/01_variables_types_and_strings.md'
       - Selection: 'topics/programming/02_selection_boolean_and_random.md'
       - Iteration: 'topics/programming/03_iteration.md'
       - Arrays: 'topics/programming/04_arrays.md'
       - 'Functions and Procedures': 'topics/programming/05_functions_and_procedures.md'
       - 'File Handling': 'topics/programming/06_file_handling.md'
+    - Logic:
+      - Overview: 'topics/logic/index.md'
+      - 'Introduction to Logic Gates': 'topics/logic/01_introduction_to_logic_gates.md'
+      - 'Combining Logic Gates': 'topics/logic/02_combining_logic_gates.md'
+      - 'Example': 'topics/logic/03_example_1.md'
+      - 'Past Paper Question': 'topics/logic/04_example_2.md'
+      - Extension: 'topics/logic/05_extension.md'
     - 'Impact of Technology':
       - Overview: 'topics/impact/index.md'
-      - Slides: 'topics/impact/slides/impact-slides.pdf'
       - Legislation: 'topics/impact/01_legislation.md'
       - 'Ethical Issues': 'topics/impact/02_ethical_issues.md'
       - 'Environment': 'topics/impact/03_environmental_issues.md'
@@ -155,8 +154,10 @@ nav:
     - Summary: 'boards/index.md'
     - AQA: 
       - Specification: 'boards/aqa/specification.md'
+      - Past Papers: 'boards/aqa/aqa_papers.md'
     - OCR:
       - Specification: 'boards/ocr/specification.md'
+      - Past Papers: 'boards/ocr/ocr_papers.md'
     - Pearson:
       - Specification: 'boards/pearson/specification.md'
   - Blog: 
@@ -255,3 +256,7 @@ markdown_extensions:
 copyright: |
   &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
 
+katex:
+  macros:
+    - \documentclass{standalone}
+    - \usepackage{circuittikz}

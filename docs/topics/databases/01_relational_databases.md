@@ -1,6 +1,7 @@
 ---
 title: Relational Databases
 image: 'databases.png'
+filename: '_data/networking_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -14,7 +15,6 @@ image: 'databases.png'
     - Understand key database concepts: tables, records, fields, data types, primary keys, and foreign keys.
     - Understand how relational databases help eliminate data inconsistency and data redundancy.
 
----
 
 ## What is a Database?
    
@@ -102,8 +102,6 @@ f) **Foreign Key**
 - **Example:**  
   In the `Classes` table, the `StudentID` could be a foreign key, linking it to the `Students` table so that we know which students are enrolled in each class.
 
----
-
 ## Eliminating Data Inconsistency and Data Redundancy in Relational Databases
 
 a) **Data Redundancy**
@@ -130,8 +128,6 @@ c) **How Relational Databases Eliminate Redundancy and Inconsistency**
 - **This makes updates easier and helps prevent inconsistencies.**  
   If the student’s address changes, you only need to update it in one place (the `Students` table), and the change is reflected wherever that student’s data is used.
 
----
-
 ## Summary
 
 - **Databases** store data in an organized way to make it easy to manage.
@@ -139,3 +135,6 @@ c) **How Relational Databases Eliminate Redundancy and Inconsistency**
 - Important concepts like **tables, records, fields, primary keys**, and **foreign keys** form the building blocks of relational databases.
 - Relational databases **eliminate redundancy** (duplicate data) and **prevent inconsistency** (conflicting data).
 
+## Questions
+
+{{ show_questions(page.title, page.meta.filename) }}

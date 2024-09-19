@@ -5,6 +5,7 @@
 import json
 import re
 from markdown import markdown
+from collections import defaultdict
 
 def define_env(env):
 
@@ -197,6 +198,78 @@ def define_env(env):
         html += "<h1>" + board + "</h1>"
         html += "<embed src='" + spec + "' width='500' height='600' type='application/pdf' />"
         html += "<p><a class='md-button' href='" + spec + "' target='_blank'>Download PDF</a></p>" 
-        html += "<p>Have we arrived here ..?</p>"
 
+        return html
+
+
+    @env.macro
+    def filter_by_exam_board(docs, board):
+        return [doc for doc in docs if doc['exam_board'] == board]
+
+    @env.macro
+    def sort_documents(docs):
+        return sorted(docs, key=lambda x: (x['document_type'], x['year']))
+
+    @env.macro
+    def render_documents(docs):
+        html = "<h2>Past Papers</h2>"
+        html += "<ul>"
+        for doc in docs:
+            html += f"<li><a href={doc['filename']}>{doc['display_name']}</a> - {doc['document_type']}: {doc['year']} ({doc['month']})</li>"
+        html += "</ul>"
+        return html
+
+
+    @env.macro
+    def render_html_table(data, exam_board):
+        html = '<table border="1" style="width:100%">\n'
+        # print(exam_board)
+        # input()
+        # Ensure the exam board exists in the data
+        if exam_board not in data:
+            return f"<p>No data available for {exam_board}</p>"
+        
+        board_data = data[exam_board]
+
+        # Iterate over the years
+        for year, papers in sorted(board_data.items(), reverse=True):
+            html += f'<tr><th colspan="5" style="text-align:left;"><h2>{year}</h2></th></tr>\n'
+            html += '<tr>\n    <th>Paper</th><th>Past Paper</th><th>Mark Scheme</th><th>Examiner\'s Report</th>\n  </tr>\n'
+
+            # Iterate over Paper 1 and Paper 2
+            for paper, documents in papers.items():
+                html += f'<tr>\n    <td>{paper}</td>\n'
+
+                # Render links for each document type
+                for doc_type in ["past_paper", "mark_scheme", "examiner_report"]:
+                    if doc_type in documents:
+                        file_data = documents[doc_type]
+                        html += f'    <td><a href="{file_data["filename"]}" target="_blank">{file_data["display_name"]}</a></td>\n'
+                    else:
+                        html += '    <td></td>\n'
+                
+                html += '</tr>\n'
+
+        html += '</table>'
+        return html
+
+    
+    
+    @env.macro
+    def get_board_documents(board):
+        filename = "_data/documents.json"        
+        
+        try:
+            with open(filename, 'r') as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            return f"{filename} not found"
+        except json.JSONDecodeError:
+            return f"Error decoding the JSON file {filename}"
+        
+        # filtered_docs = filter_by_exam_board(data, board)
+        
+        #sorted_docs = sort_documents(filtered_docs)        
+        #html = render_documents(sorted_docs)
+        html = render_html_table(data, board)
         return html

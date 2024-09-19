@@ -1,7 +1,7 @@
 ---
 title: Variables, Types and Strings
 image: programming.jpg
-filename: '_data/data_questions.json'
+filename: '_data/programming_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -262,4 +262,8 @@ Adopts the Python comment: `#`
 **OCR Pseudocode**
 
 Uses `//` as in languages such as Javascript etc..
+
+## Questions
+
+{{ show_questions(page.title, page.meta.filename) }}
 

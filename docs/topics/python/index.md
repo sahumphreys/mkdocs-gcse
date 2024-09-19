@@ -8,8 +8,6 @@ image: python.png
 
 # {{ title}}
 
-## Slide Deck
-
 [Slidedeck](./slides/python-slides.pdf){:class=md-button}
 
 ## Overview

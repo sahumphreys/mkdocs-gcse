@@ -102,10 +102,3 @@ Flowcharts are a valuable tool for many situations.  It is required for the GCSE
 
 {{ show_questions(page.title, page.meta.filename) }}
 
-## Questions
-
-1.  What is the key difference between Structured English and Pseudocode?
-2.  Write an algorithm using pseudocode to multiply two numbers entered by the user and displays the result.
-3.  Write an algorithm using pseudocode that reads in from the keyboard 5 numbers, calculates the average of those numbers and displays the result to screen
-4. Create an algorithm using pseudocode that checks if a given number is a prime number. Include appropriate conditions and loops to handle the checking process.
-5.  Draw a flowchart to login to a Facebook account (or other online web/social media account)

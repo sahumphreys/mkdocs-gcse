@@ -8,6 +8,10 @@ filename: '_data/data_questions.json'
 
 # {{ title}}
 
+[Slide deck](./slides/programming_slides.pdf){:target="\_blank" .md-button}
+
+## Overview
+
 In this section we'll be looking at the principles and concepts of programming *in general*.  There is a very full section on [Programming with Python](../python/index.md) which focuses on the syntax of the Python programming language and how that language can be used to solve problems programmatically.  The material covered here will/should be applicable to all other procedural programming languages.
 
 All examples and code snippets will be expressed using **pseudocode** rather than Python and most of these fundamental concepts will be covered here by was of revision except where Python may do things a little differently, but there will, inevitably be some repetition.  Studying this material in association with that of the Python topic is advised.

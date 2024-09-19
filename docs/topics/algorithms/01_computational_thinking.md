@@ -189,26 +189,3 @@ This algorithmic approach breaks down the task into a series of simple steps, pr
 ## Questions
 
 {{ show_questions(page.title, page.meta.filename) }}
-
-## Questions
-
-1. What is computational thinking, and why is it considered a fundamental skill in computer science?
-
-2. Explain the concept of decomposition and provide an example from the material. How does decomposition contribute to problem-solving in computer science?
-
-3. How does pattern recognition play a role in computational thinking? Provide an example of pattern recognition discussed in the material.
-
-4. Describe the importance of abstraction in computational thinking. Provide an example from the material and explain how abstraction simplifies complex systems.
-
-5. What are the four key components of computational thinking? Briefly explain each component.
-
-6. Give an example of algorithmic thinking from the material. How does algorithmic thinking differ from programming, according to the content?
-
-7. How can the process of making a cheese sandwich be used as an analogy for decomposition? Identify the key steps and explain their relevance to the concept of breaking down complex problems.
-
-8. Discuss the role of efficiency in algorithmic thinking. Why is it important to consider efficiency when designing algorithms?
-
-9. Explain how pattern recognition can lead to the creation of generalizations. Provide an example from the material to illustrate this concept.
-
-10. In the context of computational thinking, what is the purpose of pseudocode and flowcharts? How do these tools help communicate algorithms?
-

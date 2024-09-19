@@ -154,10 +154,14 @@ x -= 2
 print(x)            # output: 8
  
 # Augmented assignment operator: multiplication
-x *= 3
+x *= 3  
 print(x)            # output: 24
 ```
-It does not matter which you prefer to use but the shorter form takes a little less typing.
+It does not matter which you prefer to use but the shorter form takes a little less typing. 
+
+!!! note
+
+    This is sometimes known as an **in-place** operator
 
 ### Operator precedence
 

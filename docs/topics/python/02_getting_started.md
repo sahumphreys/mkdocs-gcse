@@ -23,7 +23,7 @@ The first steps to get started with programming using the Python language are:
 - download, install and if needed configure an IDE (Integrated Development Environment) to write your Python programs.
 
 ```python exec="on" source="tabbed-left"
-print("Hello Markdown!")
+print("Hello, World!")
 for i in range(5):
     print(i)
 ```
@@ -220,5 +220,3 @@ That's it!  We use the built-in Python function, `print()`, and provide this fun
 ## Questions
 
 {{ show_questions(page.title, page.meta.filename) }}
-
-

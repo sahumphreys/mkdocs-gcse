@@ -1,6 +1,7 @@
 ---
 title: Worked Example
 image: 'databases.png'
+filename: '_data/database_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -229,3 +230,7 @@ A summary table of some of these key terms:
 3. **Efficient Data Management and Scalability:**  
    Relational databases are easy to scale. Adding, removing, or updating data does not create excessive duplication or management issues.
 
+
+## Questions
+
+{{ show_questions(page.title, page.meta.filename) }}

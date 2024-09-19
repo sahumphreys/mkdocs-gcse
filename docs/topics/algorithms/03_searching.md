@@ -193,15 +193,3 @@ This is $O(log_2 n)$
 
 {{ show_questions(page.title, page.meta.filename) }}
 
-## Questions
-
-1. Why is a linear search also known as a "sequential search," how does it operate on a list?
-2. Write the pseudocode for a linear search algorithm
-3. Convert the pseudocode into Python code
-4. Define and explain the worst-case behavior of a linear search.
-5. Describe the main principles of a binary search.
-6. Why does a binary search require the list to be sorted?
-7. Write pseudocode for a binary search algorithm.
-8. Implement the binary search in Python for a given sorted list.
-9. Compare the efficiency of linear and binary search algorithms. In what scenarios would you prefer to use a binary search over a linear search?
-10. Provide a real-world scenario where a linear search would be suitable.

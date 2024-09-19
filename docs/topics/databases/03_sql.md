@@ -1,6 +1,7 @@
 ---
 title: SQL
 image: 'databases.png'
+filename: '_data/database_questions.json'
 ---
 
 ![](../../assets/images/topics/{{image}}){width="100"; align=right}
@@ -173,3 +174,9 @@ This deletes the student with `StudentID` of `4` from the `Students` table.
 | `DELETE`    | Deletes data from a table. | `DELETE FROM Students WHERE StudentID = 1;` |
 
 These commands allow you to manage and interact with a relational database effectively, handling everything from simple data retrieval to complex data manipulation.
+
+[SQL Crib Sheet](../../files/SQL-cribsheet.pdf){:target="\_blank" .md-button}
+
+## Questions
+
+{{ show_questions(page.title, page.meta.filename) }}

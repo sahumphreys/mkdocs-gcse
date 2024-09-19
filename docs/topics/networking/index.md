@@ -10,6 +10,8 @@ filename: '_data/data_questions.json'
 
 [Slidedeck](./slides/networking-slides.pdf){:class=md-button}
 
+## Overview
+
 It's hard to imagine our world without networked devices today, so much of our business, social and leisure activity takes place on the network via the Internet.  We access websites for information, social media applications to keep up with friends and other news and even control devices such as the heating and lighting in our own homes.  The past 30-40 years has been the network revolution.  In this section we take the lid off networking and examine how it works.
 
 Topics will include:

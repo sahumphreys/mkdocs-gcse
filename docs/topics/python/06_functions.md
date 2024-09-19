@@ -107,7 +107,7 @@ Using functions are **highly recommended**.  They provide:
 
 ## Indenting the function body
 
-When defining a function the body of the code in that function must be indented to show the code belongs to that function.
+When defining a function the body of the code in that function must be **indented** to show the code belongs to that function.
 
 ```python
 def convert_celsius_to_fahrenheit(celsius):
@@ -120,6 +120,12 @@ print(convert_celsius_to_fahrenheit(celsius)
 The function body here only has one line (line 2), but it has been indented (by four spaces).  Your code editor will probably indent this line automatically.
 
 Lines 4 and 5 are not part of the function, they are lined up with the left-hand margin.
+
+!!! note
+
+    The indentation feature of Python is really important to understand:  
+    
+    Code statements can be grouped into **blocks**.  The function is an example of a block of code, indicated by the colon at the end of the function header.  As we will see late, we can also create a block of code to take a decision (an `if` statement), or to repeat a block of code (a `for` loop, or a `while` loop).  These also end with a colon and statements belonging to these blocks must also be indented.
 
 ## Functions return a value
 

@@ -1,0 +1,125 @@
+{
+    "Variables, Types and Strings": [
+    {
+      "question": "What does a variable in programming do?",
+      "code": null,
+      "options": [
+        "Stores data",
+        "Changes the data type",
+        "Deletes data",
+        "Executes code"
+      ],
+      "answer": 1,
+      "explanation": "A variable is used to store data in a program."
+    },
+    {
+      "question": "Which symbol is used for assignment in AQA pseudocode?",
+      "code": null,
+      "options": [
+        "=",
+        "<-",
+        ":=",
+        "->"
+      ],
+      "answer": 2,
+      "explanation": "In AQA pseudocode, the assignment operator is '<-'."
+    },
+    {
+      "question": "What is the typical memory size allocated for an integer data type?",
+      "code": null,
+      "options": [
+        "1 byte",
+        "2 bytes",
+        "4 bytes",
+        "8 bytes"
+      ],
+      "answer": 3,
+      "explanation": "An integer typically occupies 4 bytes of memory."
+    },
+    {
+      "question": "How is a string represented differently from an integer in binary?",
+      "code": null,
+      "options": [
+        "Strings use less memory",
+        "Integers are represented with fewer bits",
+        "Strings use more bits",
+        "Integers and strings are represented the same"
+      ],
+      "answer": 3,
+      "explanation": "Strings are represented with more bits compared to integers because they store multiple characters."
+    },
+    {
+      "question": "What does the `STRING_TO_INT` function do in AQA pseudocode?",
+      "code": null,
+      "options": [
+        "Converts an integer to a string",
+        "Converts a string to an integer",
+        "Converts a string to a float",
+        "Converts a float to a string"
+      ],
+      "answer": 2,
+      "explanation": "`STRING_TO_INT` converts a string to an integer in AQA pseudocode."
+    },
+    {
+      "question": "Which operator is used for floor division in pseudocode?",
+      "code": null,
+      "options": [
+        "+",
+        "/",
+        "DIV",
+        "%"
+      ],
+      "answer": 3,
+      "explanation": "The `DIV` operator is used for floor division, which gives the quotient without the remainder."
+    },
+    {
+      "question": "What is the result of `7 / 3` in most programming languages?",
+      "code": null,
+      "options": [
+        "2",
+        "2.33",
+        "21",
+        "1"
+      ],
+      "answer": 2,
+      "explanation": "The division operator `/` typically results in a floating-point number when dividing two integers."
+    },
+    {
+      "question": "Which function in OCR pseudocode converts a string to a float?",
+      "code": null,
+      "options": [
+        "float(str)",
+        "str(float)",
+        "int(str)",
+        "real(str)"
+      ],
+      "answer": 1,
+      "explanation": "In OCR pseudocode, `float(str)` converts a string to a float."
+    },
+    {
+      "question": "How does Python handle constants compared to other languages?",
+      "code": null,
+      "options": [
+        "Python does not enforce constants.",
+        "Python uses the `const` keyword.",
+        "Python allows changing constants without restriction.",
+        "Python does not support constants."
+      ],
+      "answer": 1,
+      "explanation": "Python does not enforce constants in the same way as other languages; constants can be changed."
+    },
+    {
+      "question": "What does the `str.upper()` function do?",
+      "code": null,
+      "options": [
+        "Converts a string to lowercase",
+        "Converts a string to uppercase",
+        "Returns the length of a string",
+        "Extracts a substring from a string"
+      ],
+      "answer": 2,
+      "explanation": "`str.upper()` converts all characters in the string to uppercase."
+    }
+  ]
+}
+  

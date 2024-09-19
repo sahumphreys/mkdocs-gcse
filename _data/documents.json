@@ -1,0 +1,126 @@
+{
+    "AQA": {
+        "2023": {
+            "Paper 1": {
+                "past_paper": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-85251B-QP-JUN23.PDF",
+                    "display_name": "AQA Paper 1 - 2023"
+                },
+                "mark_scheme": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-85251-MS-JUN23.PDF",
+                    "display_name": "AQA Mark Scheme - Paper 1"
+                },
+                "examiner_report": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-85251-WRE-JUN23.PDF",
+                    "display_name": "AQA Examiner's Report - Paper 1"
+                }
+            },
+            "Paper 2": {
+                "past_paper": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-85252-QP-JUN23.PDF",
+                    "display_name": "AQA Paper 2 - 2023"
+                },
+                "mark_scheme": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-85252-MS-JUN23.PDF",
+                    "display_name": "AQA Mark Scheme - Paper 2"
+                },
+                "examiner_report": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2023/june/AQA-85252-WRE-JUN23.PDF",
+                    "display_name": "AQA Examiner's Report - Paper 2"
+                }
+            }
+        },
+        "2022": {
+            "Paper 1": {
+                "past_paper": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-85251-MS-JUN22.PDF",
+                    "display_name": "AQA Paper 1 - 2022"
+                },
+                "mark_scheme": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-85251B-QP-MQP18A4-JUN22.PDF",
+                    "display_name": "AQA Mark Scheme - Paper 1"
+                },
+                "examiner_report": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-85251-WRE-JUN22.PDF",
+                    "display_name": "AQA Examiner's Report - Paper 1"
+                }
+            },
+            "Paper 2": {
+                "past_paper": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-85252-QP-JUN22.PDF",
+                    "display_name": "AQA Paper 2 - 2022"
+                },
+                "mark_scheme": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-85252-MS-JUN22.PDF",
+                    "display_name": "AQA Mark Scheme - Paper 2"
+                },
+                "examiner_report": {
+                    "filename": "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-85252-WRE-JUN22.PDF",
+                    "display_name": "AQA Examiner's Report - Paper 2"
+                }
+            }
+        }
+    },
+    "OCR": {
+        "2023": {
+            "Paper 1": {
+                "past_paper": {
+                    "filename": "https://www.ocr.org.uk/Images/704760-question-paper-computer-systems.pdf",
+                    "display_name": "OCR Paper 1 - 2023"
+                },
+                "mark_scheme": {
+                    "filename": "https://www.ocr.org.uk/Images/704882-mark-scheme-computer-systems.pdf",
+                    "display_name": "OCR Mark Scheme - Paper 1"
+                },
+                "examiner_report": {
+                    "filename": "https://www.ocr.org.uk/Images/704717-examiners-report-computer-systems.pdf",
+                    "display_name": "OCR Examiner's Report - Paper 1"
+                }
+            },
+            "Paper 2": {
+                "past_paper": {
+                    "filename": "https://www.ocr.org.uk/Images/704761-question-paper-computational-thinking-algorithms-and-programming.pdf",
+                    "display_name": "OCR Paper 2 - 2023"
+                },
+                "mark_scheme": {
+                    "filename": "https://www.ocr.org.uk/Images/704883-mark-scheme-computational-thinking-algorithms-and-programming.pdf",
+                    "display_name": "OCR Mark Scheme - Paper 2"
+                },
+                "examiner_report": {
+                    "filename": "https://www.ocr.org.uk/Images/704716-examiners-report-computational-thinking-algorithms-and-programming.pdf",
+                    "display_name": "OCR Examiner's Report - Paper 2"
+                }
+            }
+        },
+        "2022": {
+            "Paper 1": {
+                "past_paper": {
+                    "filename": "https://www.ocr.org.uk/Images/677830-question-paper-computer-systems.pdf",
+                    "display_name": "OCR Paper 1 - 2022"
+                },
+                "mark_scheme": {
+                    "filename": "https://www.ocr.org.uk/Images/677961-mark-scheme-computer-systems.pdf",
+                    "display_name": "OCR Mark Scheme - Paper 1"
+                },
+                "examiner_report": {
+                    "filename": "https://www.ocr.org.uk/Images/688265-examiners-report-computer-systems.pdf",
+                    "display_name": "OCR Examiner's Report - Paper 1"
+                }
+            },
+            "Paper 2": {
+                "past_paper": {
+                    "filename": "https://www.ocr.org.uk/Images/677831-question-paper-computational-thinking-algorithms-and-programming.pdf",
+                    "display_name": "OCR Paper 2 - 2022"
+                },
+                "mark_scheme": {
+                    "filename": "https://www.ocr.org.uk/Images/677962-mark-scheme-computational-thinking-algorithms-and-programming.pdf",
+                    "display_name": "OCR Mark Scheme - Paper 2"
+                },
+                "examiner_report": {
+                    "filename": "https://www.ocr.org.uk/Images/688264-examiners-report-computational-thinking-algorithms-and-programming.pdf",
+                    "display_name": "OCR Examiner's Report - Paper 2"
+                }
+            }
+        }
+    }
+}
