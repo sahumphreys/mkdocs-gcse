@@ -152,13 +152,16 @@ nav:
   # - Documents: documents.md
   - "Exam Boards":
     - Summary: 'boards/index.md'
-    - AQA: 
+    - AQA:
+      - Overview: 'boards/aqa/index.md' 
       - Specification: 'boards/aqa/specification.md'
       - Past Papers: 'boards/aqa/aqa_papers.md'
     - OCR:
+      - Overview: 'boards/ocr/index.md'
       - Specification: 'boards/ocr/specification.md'
       - Past Papers: 'boards/ocr/ocr_papers.md'
     - Pearson:
+      - Overview: 'boards/pearson/index.md'
       - Specification: 'boards/pearson/specification.md'
   - Blog: 
     - blog/index.md
