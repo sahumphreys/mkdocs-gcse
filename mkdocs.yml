@@ -256,7 +256,7 @@ markdown_extensions:
 copyright: |
   &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
 
-katex:
-  macros:
-    - \documentclass{standalone}
-    - \usepackage{circuittikz}
+# katex:
+#   macros:
+#     - \documentclass{standalone}
+#     - \usepackage{circuittikz}
