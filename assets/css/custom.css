@@ -1,0 +1,319 @@
+/* Hide the page title on the home page */
+
+.logo-hero {
+    border: 1px solid transparent;
+}
+
+.md-header {
+    background-color: #3366cc;
+}
+
+.md-tabs {
+    background-color: black;
+}
+
+.tabbed-block  {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.result {
+    background-color: #333;
+    color: #efefef;
+    font-family: "Lucida Console"
+}
+
+.task {
+    color: #336699;
+    font-weight: 600;
+}
+
+.task {
+    font-size: 18pt;
+}
+
+.card-container {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #336699;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden; /* Ensure no overflow issues */
+
+    a {
+        color: #fff !important;
+    }
+    a:hover {
+        color: #fff !important;
+    }
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0 0 5px 0;
+    background-color: rgb(204,153,51);
+    color: rgb(255,240,240);
+    text-align: center;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.card-topic-title {
+    font-size: 1.5em;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Cover instead of contain for better visual consistency */
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-bottom: auto;
+}
+
+.card-outline {
+    flex-grow: 1;
+    margin: 0;
+    padding: 10px;
+    font-size: 90%;
+}
+
+.card-button {
+    background-color: #3366cc;
+    border: 1px solid none;
+    border-radius: 4px;
+    color: white !important;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 1rem;
+    font-size: 90%;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .card-title {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+        padding: 8px;
+    }
+
+    .card-image {
+        height: 150px; /* Adjust height for smaller screens */
+    }
+
+    .card-outline {
+        padding: 8px;
+        font-size: 85%;
+    }
+
+    .card-button {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px; /* Further adjust gap for very small screens */
+    }
+
+    .card-title {
+        font-size: 1em; /* Further adjust font size */
+        padding: 6px;
+    }
+
+    .card-image {
+        height: 120px; /* Further adjust height */
+    }
+
+    .card-outline {
+        padding: 6px;
+        font-size: 80%;
+    }
+
+    .card-button {
+        padding: 6px 12px; /* Further adjust button padding */
+        font-size: 80%;
+    }
+}
+
+/* QUIZ */
+.question {
+    border: 1px solid #ccc;
+    /* padding: 1rem; */
+    margin: 1rem 0;
+}
+
+/* Set margin-top of first quiz child */
+.question > *:first-child {
+    margin-top: 0;
+}
+
+.question h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+form button {
+    background-color: var(--md-primary-fg-color);
+    border: none;
+    color: var(--md-primary-bg-color);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.wrong label {
+    color: red;
+}
+
+.correct label {
+    color: green;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset input {
+    margin: 0 10px;
+}
+
+fieldset label {
+    margin: 0 10px;
+}
+
+label.correct {
+    color: green;
+}
+
+label.wrong {
+    color: red;
+}
+
+input[type='radio'].correct {
+    accent-color: green;
+}
+
+input[type='radio'].wrong {
+    accent-color: red;
+}
+
+.explanation {
+    margin: 1rem;
+    color: #336699;
+    font-size: 90%;
+    font-style: italic;
+}
+
+
+
+
+/* Linear Search */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px solid #000000;
+    background: #f7f7f7;
+    /* padding: 1rem; */
+}
+.binary-item {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}
+
+.linear-item {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.highlight {
+    background-color: yellow;
+}
+.found {
+    background-color: green;
+    color: white;
+}
+.not-found {
+    background-color: red;
+    color: white;
+}
+.linear-search-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.binary-item {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background-color: lightblue;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Highlight the currently checked element */
+.binary-item.highlight {
+    background-color: yellow;
+}
+
+/* Mark the found element */
+.binary-item.found {
+    background-color: green;
+    color: white;
+}
+
+/* Grey out elements that are no longer in the search range */
+.binary-item.grey-out {
+    background-color: lightgray;
+    color: gray;
+}

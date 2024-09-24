@@ -1,0 +1,1806 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="02_wired_wireless.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Introduction to Networking - GCSE Computer Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Segoe UI";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-networking" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-header__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCSE Computer Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Networking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python/index.html" class="md-tabs__link">
+          
+  
+  Topics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../boards/index.html" class="md-tabs__link">
+          
+  
+  Exam Boards
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/index.html" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact.html" class="md-tabs__link">
+        
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-nav__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    GCSE Computer Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Topics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../python/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../data/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Data Representation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../system/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    System Architecture
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01_networking.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disadvantages-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disadvantages of networks:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Network
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personal-area-network-pan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Area Network (PAN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-area-network-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Area Network (LAN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wide-area-network-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wide Area Network (WAN)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Internet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_wired_wireless.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired and Wireless Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_topologies.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Topologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_internet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Internet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_protocols.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Protocols
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../algorithms/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../security/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../databases/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../programming/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../logic/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../impact/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Impact of Technology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../boards/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Exam Boards
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../blog/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disadvantages-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disadvantages of networks:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Network
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personal-area-network-pan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Area Network (PAN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-area-network-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Area Network (LAN)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wide-area-network-wan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wide Area Network (WAN)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Internet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
+
+
+<!-- Actions -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<!--  -->
+
+<!-- Page content -->
+<div><p><img _=";" align="right" alt="" src="../../assets/images/topics/networks.webp" width="100"></p>
+<h1 id="introduction-to-networking">Introduction to Networking</h1>
+<div class="admonition note">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>Define a computer network</li>
+<li>Discuss the advantages and disadvantages of computer networks.</li>
+<li>Describe the main types of computer network including:</li>
+<li>Personal Area Network (PAN)</li>
+<li>Local Area Network (LAN)</li>
+<li>Wide Area Network (WAN)</li>
+<li>Define the Internet</li>
+<li>Describe the difference between the Internet and the World Wide Web</li>
+</ul>
+</div>
+<p>The primary motivation to connecting computers together in a network is to communicate <strong>share resources</strong>.  The resources can include applications, files and hardware such as printers.  The devices on the network need to be connected using either cables or wireless technology thus enabling data to be passed from one device to another.</p>
+<p>Some computer networks will incorporate a <strong>server</strong>.  The server is a powerful computer that acts as a central hub for a variety of services in a network e.g. there may be an email server, a web server, a file server etc..  These may be separate devices or housed in one device depending on the network needs.  In such a set up each computer connected to a server is known as a <strong>client</strong>.</p>
+<p>A computer that is not connected to a network is called a <strong>standalone computer</strong>.</p>
+<p>Networks come in different shapes and sizes.  On a personal level we may connect bluetooth speakers or ear buds to our laptop along with our mobile phone; or we'll have a local network in our home to stream films to different devices, there'll be similar local networks operating in schools and businesses.  Finally, there is the network that covers a wide geographical area.  The largest of these we call the <strong>Internet</strong> and probably access most days but larger global organisations may run their own wide area network to enable employees in the Europe share data with other employees based, say, in the USA.</p>
+<p>Networking computers together comes with many advantages, but also some disadvantages.</p>
+<h2 id="advantages-of-networks">Advantages of networks</h2>
+<p><strong>Resource Sharing:</strong> </p>
+<p>It's the primary motivation behind networking devices together.  The types of resources we may want to share might include:</p>
+<ul>
+<li><strong>Files</strong>: For example an employee, Alice, creates a document containing important project information and another employee, Bob, needs access to this document to review and make edits.  Alice saves this document in a shared folder on the Local Area Network (LAN) so that Bob can access it and make any changes.  Both Alice and bob can collaborate on the same document without physically transferring the file and changes made by one are immediately visible to the other.  </li>
+<li><strong>Printers</strong>: high quality printers are an expensive item for companies/individuals to purchase.  The office has a high-quality colour printer that is shared among all employees as it can be connected to the LAN, making it accessible to all computers, any employee can send a print job the shared printer.  This is cost-effective and a good use of resources as one printer serves the entire office.</li>
+<li><strong>Shared Database</strong>:  A company has a centralized database to store customer information.  The database is hosted on a server connected to the LAN.  All employees, authorized with proper permissions, can access and update customer data.  This minimises data duplication and ensures data consistency across the organization.</li>
+<li><strong>Collaborative Software Tools</strong>: A company uses collaborative software for project management.  The project management tool is web-based and accessible through the LAN. Team members can simultaneously view and update project tasks, timelines, and documents thus enabling real-time collaboration and streamlining the  project management process.</li>
+<li><strong>Shared Internet Connection</strong>: Often overlooked as a resource!  A home or an organisation will have a single Internet connection that needs to be distributed among multiple devices.  A router connected to the LAN distributes the Internet connection to all computers in the workplace/home.</li>
+</ul>
+<p><strong>Communication:</strong> </p>
+<p>Facilitates efficient communication through email, chat, and video conferencing. Consider the scenario of an office with multiple departments, each having its own set of computers connected to a Local Area Network (LAN). Efficient communication within and between departments is crucial for the smooth operation of the organization.  Networking will enable the following functions between the various departments:</p>
+<ul>
+<li><strong>Email Communication</strong>: Employees need to communicate with each other for project updates, announcements, and general correspondence.  the LAN is equipped with an email server enabling employees to send and receive emails their computers/smartphones connected to the LAN.</li>
+<li><strong>Instant Messaging (Chat)</strong>: Teams within the office need to have quick and real-time discussions.  The LAN needs to support an instant messaging application.</li>
+<li><strong>Video Conferencing</strong>: Project teams, despite being in different parts of the office, need to have face-to-face meetings.  The LAN can support video conferencing tools enabling teams to meet using using webcams and microphones.</li>
+<li>Internal Intranet Portal: The organization needs a centralized platform for sharing important announcements, policies, and resources and the LAN can host an internal website to host these documents and other information.</li>
+</ul>
+<p><strong>Centralized Data Management:</strong> </p>
+<p>Centralized control and management of data.  Consider an office where multiple teams collaborate on projects that involve sharing and managing various types of data. A centralized approach to data management ensures that information is organized, secure, and easily accessible.</p>
+<ul>
+<li><strong>File Server for Document Storage:</strong> Various teams in the office need to store and access project documents. A dedicated file server is set up on the LAN and all project-related documents are stored in specific folders on this central file server.  This reduces unnecessary duplication and ensures uniform access to project files.  Also simplifies data backup and recovery procedures.</li>
+<li><strong>Database Server for Information Storage:</strong> The organization maintains a customer database that multiple departments need to access.  As noted before, minimising data redundancy and enabling data backup and recovery procedures.</li>
+<li><strong>Network-Attached Storage (NAS) for Shared Resources:</strong> Teams collaborate on projects that involve large multimedia files.  Large files, such as graphics, videos, and design files, are stored and accessed through the NAS.</li>
+<li><strong>Access Control and Permissions:</strong> Different teams have varying levels of access to sensitive data.  The LAN employs access control and permissions settings so users are granted specific permissions based on their roles, ensuring data security and preventing unauthorized access to confidential information.</li>
+</ul>
+<h2 id="disadvantages-of-networks">Disadvantages of networks:</h2>
+<p><strong>Security Concerns:</strong> </p>
+<p>Risks of unauthorized access and data breaches.  Each of these will be covered in more detail in the section on Network Security</p>
+<ul>
+<li><strong>Unauthorized Access to Shared Files:</strong> Unauthorized individuals can view, modify, or delete confidential files and compromise data integrity and confidentiality for an organisation.</li>
+<li><strong>Malware Spread Through Network:</strong>  A virus can spread from computer to computer when connected together leading to data loss or system disruption.</li>
+<li><strong>Man-in-the-Middle Attacks:</strong>  This is where an attacker intercepts communication between two users on the LAN, eavesdropping on sensitive information, compromising data privacy and potential identity theft.</li>
+<li><strong>Password Sniffing:</strong>  This is where an attacker uses a network sniffer tool to capture plaintext passwords transmitted over the LAN and can then gain access to the network using that user's login information.</li>
+<li><strong>Denial-of-Service (DoS) Attacks:</strong> An attacker floods the LAN with excessive traffic, overwhelming the network's capacity and causing downtime.</li>
+</ul>
+<p><strong>Dependency:</strong> </p>
+<p>System failures or network issues can affect multiple users.</p>
+<ul>
+<li><strong>Single Point of Failure:</strong>  Where a LAN relies on a single central server for critical services, should it fail all connected devices lose access to essential services with a significant interruption of business operations.</li>
+<li><strong>Dependency on Internet Connectivity:</strong> The LAN relies heavily on a stable Internet connection for various tasks and can only function with a working Internet connection.</li>
+</ul>
+<p><strong>Cost:</strong> </p>
+<p>Initial setup and maintenance can be expensive e.g.</p>
+<ul>
+<li><strong>Initial Setup Costs:</strong> Implementing a LAN in an organization involves purchasing hardware, software, and hiring professionals for installation.</li>
+<li><strong>Maintenance and Upkeep Expenses:</strong> Regular maintenance, updates, and troubleshooting are required to keep the LAN operational.</li>
+<li><strong>Training Costs for Personnel:</strong> Employees need training to use and manage the LAN effectively.</li>
+<li><strong>Cost of Security Measures:</strong> Implementing robust security measures, such as firewalls and intrusion detection systems, to protect the LAN bringing an additional financial burden to ensure the network's security.</li>
+<li><strong>Scalability Costs:</strong> The organization experiences growth, and the LAN needs expansion to accommodate more users and devices.</li>
+<li><strong>Unexpected Emergency Costs:</strong> Unforeseen events, such as natural disasters or cyber-attacks, result in the need for emergency responses.</li>
+</ul>
+<h2 id="types-of-network">Types of Network</h2>
+<h3 id="personal-area-network-pan">Personal Area Network (PAN)</h3>
+<p><img alt="Personal Area Network" src="../../assets/images/networking/pan.png"></p>
+<p>A Personal Area Network (PAN) is a small network for personal use connecting devices within an individual's workspace such as a smartphone, laptop, and tablet via Bluetooth.</p>
+<p>It is limited in both size and range and usually only used for personal devices.  A Bluetooth PAN uses radio waves  to communicate with devices and has a range of only a few metres.</p>
+<h3 id="local-area-network-lan">Local Area Network (LAN)</h3>
+<p><img alt="Local Area Network" src="../../assets/images/networking/lan.png"></p>
+<p>A Local Area Network (LAN) connects computers and devices within a limited geographic area, like a single building, campus and domestic home.  The LAn is typically managed by a single organisation.</p>
+<h3 id="wide-area-network-wan">Wide Area Network (WAN)</h3>
+<p><img alt="Wide Area Network" src="../../assets/images/networking/wan.png"></p>
+<p>A Wide Area Network (WAN) spans a large geographic area and connects multiple LANs together, for examples, branch offices of a company.  The Internet is the ultimate Wide Area Network - a network of interconnected networks.</p>
+<h2 id="the-internet">The Internet</h2>
+<p>The Internet is a global network of interconnected computers that communicate with each other using standardized <strong>protocols</strong>.  It enables the exchange of information, communication, and access to resources worldwide.</p>
+<p>The Internet is decentralized, meaning there is no single point of control that is no single entity or authority has absolute control over the entire network. Instead, the Internet consists of a vast interconnected web of networks and servers, each independently operated and managed. This decentralization contributes to the Internet's robustness. If one part of the network fails or is disrupted, data can find alternative paths to reach its destination.  Control over the Internet is distributed among various entities, including Internet service providers (ISPs), network administrators, content providers, and users. Each entity manages its own part of the network.</p>
+<p>Some countries seek to exert control and regulate the flow of information within their borders. This is often driven by political, cultural, or security considerations.  They may implement censorship and content filtering to control what citizens can access online. This may involve blocking specific websites, social media platforms, or content that is deemed inappropriate or politically sensitive.</p>
+<p>Governments can regulate ISPs to control the flow of information. This may involve requiring ISPs to comply with government directives, block specific content, or monitor user activities.  Some countries implement laws requiring Internet companies to store user data within the country's borders. This allows governments to exert more control over the data and access it when necessary. In extreme cases, governments may resort to shutting down or disrupting Internet services within their borders. This could be during times of political unrest, protests, or to control the spread of information during sensitive events.</p>
+<p><strong>The difference between the world wide web and the Internet</strong></p>
+<p>The Internet is the infrastructure or the physical network of computers connected globally that uses a standard protocols to facilitate communication and data transfer (TCP/IP).</p>
+<p>The World Wide Web (WWW) is a collection of interconnected documents and resources, accessed <em>through</em> the Internet, using web browsers.  Accessing these documents relies on protocols such as HTTP making it just one of many services running on the foundational network of the the Internet.</p>
+<h2 id="questions">Questions</h2>
+<div class="quiz_container">
+<div class="question" data-correct-answer="1"><fieldset><h3>1. What is the primary motivation for connecting computers in a network?</h3><form><div><input type="radio" id="quiz-0-option-0" name="quiz-0" value="1"><label for="quiz-0-option-0">To share resources such as files, printers, and databases</label></div><div><input type="radio" id="quiz-0-option-1" name="quiz-0" value="2"><label for="quiz-0-option-1">To increase computer speed</label></div><div><input type="radio" id="quiz-0-option-2" name="quiz-0" value="3"><label for="quiz-0-option-2">To reduce electricity usage</label></div><div><input type="radio" id="quiz-0-option-3" name="quiz-0" value="4"><label for="quiz-0-option-3">To eliminate the need for servers</label></div><div class="explanation" style="display:none;">The main reason for networking computers is to share resources like files, printers, and databases.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>2. In a network, what is the role of a server?</h3><form><div><input type="radio" id="quiz-1-option-0" name="quiz-1" value="1"><label for="quiz-1-option-0">To connect to the Internet</label></div><div><input type="radio" id="quiz-1-option-1" name="quiz-1" value="2"><label for="quiz-1-option-1">To act as a powerful central hub for various services</label></div><div><input type="radio" id="quiz-1-option-2" name="quiz-1" value="3"><label for="quiz-1-option-2">To manage only security settings</label></div><div><input type="radio" id="quiz-1-option-3" name="quiz-1" value="4"><label for="quiz-1-option-3">To replace all other computers in the network</label></div><div class="explanation" style="display:none;">A server is a powerful computer that provides various services such as email, file, and web hosting to client computers in a network.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>3. What is a 'standalone computer' in the context of networking?</h3><form><div><input type="radio" id="quiz-2-option-0" name="quiz-2" value="1"><label for="quiz-2-option-0">A computer that is not connected to any network</label></div><div><input type="radio" id="quiz-2-option-1" name="quiz-2" value="2"><label for="quiz-2-option-1">A computer that acts as a server</label></div><div><input type="radio" id="quiz-2-option-2" name="quiz-2" value="3"><label for="quiz-2-option-2">A computer that is part of a Local Area Network (LAN)</label></div><div><input type="radio" id="quiz-2-option-3" name="quiz-2" value="4"><label for="quiz-2-option-3">A computer that only connects to Bluetooth devices</label></div><div class="explanation" style="display:none;">A standalone computer operates independently without being connected to a network.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>4. Which of the following is an example of resource sharing in a network?</h3><form><div><input type="radio" id="quiz-3-option-0" name="quiz-3" value="1"><label for="quiz-3-option-0">Connecting only one computer to the Internet</label></div><div><input type="radio" id="quiz-3-option-1" name="quiz-3" value="2"><label for="quiz-3-option-1">Printing documents from multiple devices to a shared printer</label></div><div><input type="radio" id="quiz-3-option-2" name="quiz-3" value="3"><label for="quiz-3-option-2">Using each computer's separate database for different tasks</label></div><div><input type="radio" id="quiz-3-option-3" name="quiz-3" value="4"><label for="quiz-3-option-3">Isolating all computers for security reasons</label></div><div class="explanation" style="display:none;">Resource sharing allows multiple devices to use a shared resource like a printer or file.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>5. What is the main difference between a Local Area Network (LAN) and a Wide Area Network (WAN)?</h3><form><div><input type="radio" id="quiz-4-option-0" name="quiz-4" value="1"><label for="quiz-4-option-0">A LAN connects personal devices within a room, while a WAN connects devices within a building</label></div><div><input type="radio" id="quiz-4-option-1" name="quiz-4" value="2"><label for="quiz-4-option-1">A LAN spans a limited geographic area like a building, while a WAN covers large areas such as multiple cities or countries</label></div><div><input type="radio" id="quiz-4-option-2" name="quiz-4" value="3"><label for="quiz-4-option-2">A WAN only supports wireless connections, while a LAN supports wired connections</label></div><div><input type="radio" id="quiz-4-option-3" name="quiz-4" value="4"><label for="quiz-4-option-3">A LAN is used exclusively at home, while a WAN is used in offices</label></div><div class="explanation" style="display:none;">A LAN covers a small area like a building, while a WAN spans a large geographic region, such as cities or countries.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>6. Which of the following is a security concern in a network?</h3><form><div><input type="radio" id="quiz-5-option-0" name="quiz-5" value="1"><label for="quiz-5-option-0">Enhanced data recovery</label></div><div><input type="radio" id="quiz-5-option-1" name="quiz-5" value="2"><label for="quiz-5-option-1">Man-in-the-middle attacks</label></div><div><input type="radio" id="quiz-5-option-2" name="quiz-5" value="3"><label for="quiz-5-option-2">Increased hardware costs</label></div><div><input type="radio" id="quiz-5-option-3" name="quiz-5" value="4"><label for="quiz-5-option-3">Improved email communication</label></div><div class="explanation" style="display:none;">Man-in-the-middle attacks are a type of security threat where an attacker intercepts communication between two users on a network.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>7. What is meant by 'dependency' in the context of networking?</h3><form><div><input type="radio" id="quiz-6-option-0" name="quiz-6" value="1"><label for="quiz-6-option-0">The reliance on a network server or Internet connection for services</label></div><div><input type="radio" id="quiz-6-option-1" name="quiz-6" value="2"><label for="quiz-6-option-1">The use of separate databases for different tasks</label></div><div><input type="radio" id="quiz-6-option-2" name="quiz-6" value="3"><label for="quiz-6-option-2">The redundancy of hardware in a network</label></div><div><input type="radio" id="quiz-6-option-3" name="quiz-6" value="4"><label for="quiz-6-option-3">The elimination of downtime in the network</label></div><div class="explanation" style="display:none;">Dependency refers to the reliance on network components, such as servers or Internet, which can affect users if they fail.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>8. Which of the following is a cost-related disadvantage of setting up a network?</h3><form><div><input type="radio" id="quiz-7-option-0" name="quiz-7" value="1"><label for="quiz-7-option-0">Increased employee productivity</label></div><div><input type="radio" id="quiz-7-option-1" name="quiz-7" value="2"><label for="quiz-7-option-1">Initial setup costs and ongoing maintenance</label></div><div><input type="radio" id="quiz-7-option-2" name="quiz-7" value="3"><label for="quiz-7-option-2">Unlimited scalability at no additional cost</label></div><div><input type="radio" id="quiz-7-option-3" name="quiz-7" value="4"><label for="quiz-7-option-3">Access to external databases</label></div><div class="explanation" style="display:none;">Networks require initial investment in hardware, software, and maintenance, as well as ongoing costs for security and training.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>9. What is the main distinction between the Internet and the World Wide Web (WWW)?</h3><form><div><input type="radio" id="quiz-8-option-0" name="quiz-8" value="1"><label for="quiz-8-option-0">The WWW is a physical network, while the Internet is only a collection of web pages</label></div><div><input type="radio" id="quiz-8-option-1" name="quiz-8" value="2"><label for="quiz-8-option-1">The Internet is the infrastructure, while the WWW is a service that uses it to access web pages</label></div><div><input type="radio" id="quiz-8-option-2" name="quiz-8" value="3"><label for="quiz-8-option-2">The Internet is only accessible via a browser, while the WWW requires email</label></div><div><input type="radio" id="quiz-8-option-3" name="quiz-8" value="4"><label for="quiz-8-option-3">The Internet is centralized, while the WWW is decentralized</label></div><div class="explanation" style="display:none;">The Internet is the global infrastructure, and the WWW is a service that allows users to access websites using this infrastructure.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>10. What does it mean when we say 'The Internet is decentralized'?</h3><form><div><input type="radio" id="quiz-9-option-0" name="quiz-9" value="1"><label for="quiz-9-option-0">No single entity controls the entire Internet</label></div><div><input type="radio" id="quiz-9-option-1" name="quiz-9" value="2"><label for="quiz-9-option-1">The Internet is controlled by a global government body</label></div><div><input type="radio" id="quiz-9-option-2" name="quiz-9" value="3"><label for="quiz-9-option-2">Users can only access the Internet through one provider</label></div><div><input type="radio" id="quiz-9-option-3" name="quiz-9" value="4"><label for="quiz-9-option-3">It has limited scalability due to central control</label></div><div class="explanation" style="display:none;">Decentralization means the Internet is not controlled by a single entity, allowing for diverse management by ISPs and network administrators.</div><button type="submit">Submit</button></form></fieldset></div>
+</div></div><style type="text/css">.quiz {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+/* Set margin-top of first quiz child */
+.quiz > *:first-child {
+  margin-top: 0;
+}
+.hidden {
+  display: none;
+}
+
+form button {
+  background-color: var(--md-primary-fg-color);
+  border: none;
+  color: var(--md-primary-bg-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.wrong label {
+  color: red;
+}
+.correct label {
+  color: green;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+fieldset input {
+  margin: 0 10px;
+}
+fieldset label {
+  margin: 0 10px;
+}
+
+label.correct {
+  color: green;
+}
+label.wrong {
+  color: red;
+}
+input[type='radio'].correct {
+  accent-color: green;
+}
+input[type='radio'].wrong {
+  accent-color: red;
+}
+.content {
+  margin: 10px;
+}
+</style><script type="text/javascript" defer>document.querySelectorAll('.quiz').forEach((quiz) => {
+  let form = quiz.querySelector('form');
+  let fieldset = form.querySelector('fieldset');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
+    let correctAnswers = fieldset.querySelectorAll(
+      'input[name="answer"][correct]'
+    );
+    // Check if all correct answers are selected
+    let is_correct = selectedAnswers.length === correctAnswers.length;
+    for (let i = 0; i < selectedAnswers.length; i++) {
+      if (!selectedAnswers[i].hasAttribute('correct')) {
+        is_correct = false;
+        break;
+      }
+    }
+    let section = quiz.querySelector('section');
+    if (is_correct) {
+      section.classList.remove('hidden');
+      resetFieldset(fieldset);
+      // Mark all fields with colors
+      const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
+      for (let i = 0; i < allAnswers.length; i++) {
+        if (allAnswers[i].hasAttribute('correct')) {
+          allAnswers[i].parentElement.classList.add('correct');
+        } else {
+          allAnswers[i].parentElement.classList.add('wrong');
+        }
+      }
+    } else {
+      section.classList.add('hidden');
+      resetFieldset(fieldset);
+      // Mark wrong fields with colors
+      for (let i = 0; i < selectedAnswers.length; i++) {
+        if (!selectedAnswers[i].hasAttribute('correct')) {
+          selectedAnswers[i].parentElement.classList.add('wrong');
+        } else {
+          selectedAnswers[i].parentElement.classList.add('correct');
+        }
+      }
+    }
+  });
+});
+
+function resetFieldset(fieldset) {
+  const fieldsetChildren = fieldset.children;
+  for (let i = 0; i < fieldsetChildren.length; i++) {
+    fieldsetChildren[i].classList.remove('wrong');
+    fieldsetChildren[i].classList.remove('correct');
+  }
+}
+</script>
+
+<!-- Source file information -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+<!-- Was this page helpful? -->
+
+
+
+
+<!-- Comment system -->
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="02_wired_wireless.html" class="md-footer__link md-footer__link--next" aria-label="Next: Wired and Wireless Networks">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Wired and Wireless Networks
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/james-willett" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheJamesWillett" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/willettjames/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.prune", "navigation.instant", "navigation.footer", "toc.follow", "navigation.top", "header.autohide", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../assets/js/katex.js"></script>
+      
+        <script src="../../assets/js/custom.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../assets/js/quiz.js"></script>
+      
+        <script src="../../assets/js/algorithms.js"></script>
+      
+    
+  </body>
+</html>

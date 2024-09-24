@@ -1,0 +1,1905 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="02_programming_languages.html">
+      
+      
+        <link rel="next" href="04_memory.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Inside the Machine - GCSE Computer Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Segoe UI";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inside-the-machine" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-header__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCSE Computer Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inside the Machine
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python/index.html" class="md-tabs__link">
+          
+  
+  Topics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../boards/index.html" class="md-tabs__link">
+          
+  
+  Exam Boards
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/index.html" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact.html" class="md-tabs__link">
+        
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-nav__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    GCSE Computer Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Topics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../python/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../data/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Data Representation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    System Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            System Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_software.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_programming_languages.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Programming Languages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Inside the Machine
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="03_inside_the_machine.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Inside the Machine
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motherboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motherboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-memory-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Memory (RAM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-processor-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Processor (CPU)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphics-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secondary-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secondary Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-supply-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Supply Unit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-sink-and-fan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heat Sink and Fan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_memory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_secondary_storage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secondary Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_systems_architecture.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../networking/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../algorithms/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../security/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../databases/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../programming/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../logic/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../impact/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Impact of Technology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../boards/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Exam Boards
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../blog/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motherboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motherboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-memory-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Main Memory (RAM)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-processor-cpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Processor (CPU)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphics-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphics Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secondary-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secondary Storage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-supply-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Supply Unit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-sink-and-fan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heat Sink and Fan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
+
+
+<!-- Actions -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<!--  -->
+
+<!-- Page content -->
+<div><p><img _=";" align="right" alt="" src="../../assets/images/topics/binary.jpg" width="100"></p>
+<h1 id="inside-the-machine">Inside the Machine</h1>
+<div class="admonition note">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>To recognize and name key hardware components found inside a computer system, including the motherboard, CPU, graphics card, sound card, network card, secondary storage devices, and power supply unit.</li>
+</ul>
+</div>
+<p>Inside all computers are a number of components that need to work together.  The way these are organised is known as the system architecture.  In this section we'll review the main components and then dig in a little deeper in subsequent sections in this topic.  </p>
+<p>Take the lid of your computer and you will find the following:</p>
+<ul>
+<li>Motherboard</li>
+<li>Memory (RAM)</li>
+<li>Processor (CPU)</li>
+<li>Graphics card</li>
+<li>Sound card</li>
+<li>Network card</li>
+<li>Secondary storage (Hard drive, solid state drive, CD/DVD)</li>
+<li>Other components including cables, fan, heatsink, power supply</li>
+</ul>
+<p>It's tempting to think we do not need to know about these and how they interact.  It's a bit like saying we don't need to know how an engine works to drive a car.  There is some truth in that but knowing how the hardware of the computer works, how the various components interact with each other will make what we do with software easier to understand.  Also, when something goes wrong it's good to be able to pin down what might be causing the problem.</p>
+<p>It's a good idea to read the following with the back off the computer so you can have a good look inside.  This is more difficult with a laptop, and even harder with a smartphone.  These devices will have all of the above components but they are usually hard-wired into the motherboard and thus harder to see (assuming you can even get the back off your laptop or smartphone).</p>
+<h2 id="motherboard">Motherboard</h2>
+<p>A motherboard, also known as the mainboard or system board, is a central and essential component of a computer system. It is a large, flat circuit board that serves as the primary platform for connecting various hardware components, allowing them to communicate and work together. The motherboard acts as the central hub, providing electrical connections and pathways for data transfer between the CPU (Central Processing Unit), memory, storage devices, expansion cards, and other peripherals.</p>
+<p><img alt="The Motherboard" src="../../assets/images/system/motherboard.jpg"></p>
+<p>Key components and features found on a typical motherboard include:</p>
+<ul>
+<li><strong>CPU Socket:</strong> This is where the CPU is installed. The CPU socket allows for a secure connection between the processor and the motherboard, enabling data and power transfer.</li>
+<li><strong>Memory Slots (DIMM Slots):</strong> These slots hold the system's RAM (Random Access Memory) modules. The RAM provides temporary storage for actively used data and instructions, allowing for quick access by the CPU.</li>
+<li><strong>Expansion Slots (PCIe, PCI, etc.):</strong> These slots allow for the installation of expansion cards such as graphics cards, sound cards, network cards, and other peripherals. PCIe (Peripheral Component Interconnect Express) is the most common type of expansion slot for modern motherboards.</li>
+<li><strong>Chipset:</strong> The chipset is a set of integrated circuits that control the flow of data between the CPU, memory, storage devices, and peripherals. It includes the Northbridge and Southbridge components, each responsible for specific tasks.</li>
+<li><strong>Storage Connectors (SATA, M.2, etc.):</strong> These connectors allow for the connection of storage devices such as hard drives (HDDs), solid-state drives (SSDs), and optical drives.</li>
+<li><strong>Power Connectors:</strong> The motherboard has various power connectors, including the primary ATX power connector and supplementary connectors for CPU power. These connectors deliver power to the motherboard and its components.</li>
+<li><strong>I/O Ports and Headers:</strong> The motherboard features ports and headers for connecting external devices such as USB, HDMI, Ethernet, audio, and more. I/O headers are used for connecting internal components like USB headers and front panel connectors.</li>
+<li><strong>BIOS/UEFI Chip:</strong> The Basic Input/Output System (BIOS) or Unified Extensible Firmware Interface (UEFI) chip contains firmware that initializes the hardware during the boot process and provides basic system configuration.</li>
+<li><strong>CMOS Battery:</strong> The CMOS (Complementary Metal-Oxide-Semiconductor) battery powers the CMOS memory, which stores system settings and the system clock even when the computer is powered off.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Can you find each of these on your motherboard (or on the above diagram)?</p>
+</div>
+<p>You may also hear the term <strong>form factor</strong> which determines the physical size and layout of the board.  Typically this will include ATX, microATX, and mini-ITX. The form factor influences the compatibility with computer cases and the number of available expansion slots.</p>
+<h2 id="main-memory-ram">Main Memory (RAM)</h2>
+<p>Main memory is a crucial component of a computer system that stores data and instructions that are actively being used by the CPU. It is a volatile form of memory, meaning it loses its content when the power is turned off. The primary purpose of main memory is to provide fast access to data for the CPU during program execution.</p>
+<p><img alt="RAM" src="../../assets/images/system/ram.png"></p>
+<p>Main memory is commonly referred to as RAM (Random Access Memory), and it is used to temporarily store data that is actively being processed by the CPU. It allows for quick read and write operations, enabling efficient data manipulation.  It is the interface between the larger, but slower, storage devices (hard drives) and the CPU.</p>
+<p>The RAM comes in the form of a bank of memory chips slotted into the available slots on the motherboard.  They come in various sizes e.g. 4Gb, 8Gb or larger.  Thus, 2 banks of 8Gb RAM chips will provide 16Gb of memory in total for your system.</p>
+<h2 id="the-processor-cpu">The Processor (CPU)</h2>
+<p>The processor (or, Central Procesing Unit) is the "brain" of any computer system.  It is the crucial component responsible for executing instructions and performing calculations necessary for the computer to function. It plays a central role in processing data and managing the overall operation of the computer system.</p>
+<p><img alt="CPU" src="../../assets/images/system/cpu.png"></p>
+<p>As we'll see in a later section the processor has a number of sub-components:</p>
+<ul>
+<li><strong>Arithmetic Logic Unit (ALU):</strong> The ALU is responsible for performing arithmetic and logic operations. It carries out tasks such as addition, subtraction, AND, OR, and comparison operations. The results of these operations are then used in further processing.</li>
+<li><strong>Control Unit:</strong> The control unit manages the operations of the CPU. It fetches instructions from memory, decodes them, and directs the execution of the corresponding operations. It ensures that the instructions are executed in the correct sequence.</li>
+<li><strong>Clock:</strong> The clock is a timing device that synchronizes the operations of the CPU. It generates a series of pulses at a specific frequency, known as the clock speed. The clock ensures that each operation within the CPU occurs at the right time.</li>
+<li><strong>Registers:</strong> Registers are small, fast storage locations within the CPU. They store data that is immediately needed for processing. The CPU uses various types of registers, such as data registers and address registers, to efficiently manage information.</li>
+</ul>
+<p>The speed of the processor, often expressed in terms of clock speed measured in Hertz (Hz) or Gigahertz (GHz), refers to how quickly the CPU can execute instructions. A higher clock speed indicates a faster processor. For example, a processor with a clock speed of 2.4 GHz performs 2.4 billion clock cycles per second.</p>
+<p>Some CPUs have multiple processing cores, allowing them to handle multiple tasks simultaneously. More cores can lead to improved multitasking and overall performance, especially in applications designed to take advantage of parallel processing.</p>
+<p>The CPU often includes a small, high-speed memory called a cache. A larger cache size can help store frequently used data and instructions closer to the CPU, reducing the need to access slower main memory and improving overall speed.  The cache can be used to prefetch data and instructions from memory while waiting for the ALU to finish processing the previous operation.</p>
+<h2 id="graphics-card">Graphics Card</h2>
+<p>A graphics card, also known as a GPU (Graphics Processing Unit) or video card, serves the primary purpose of rendering and displaying visual information on a computer monitor. Its role is crucial in handling graphics-intensive tasks and offloading the graphical processing from the computer's main CPU (Central Processing Unit). </p>
+<p><img alt="Graphics Card" src="../../assets/images/system/graphics_card.png"></p>
+<p>Here are the key purposes of a graphics card:</p>
+<ul>
+<li><strong>Graphics Rendering:</strong> The primary function of a graphics card is to render and display images, videos, and graphical user interfaces (GUIs) on a computer monitor. </li>
+<li><strong>3D Graphics Processing:</strong> Graphics cards are particularly important for rendering complex 3D graphics in applications such as video games, 3D modeling software, and computer-aided design (CAD) programs. The specialized architecture of GPUs allows them to handle the mathematical calculations involved in rendering 3D environments efficiently.</li>
+<li><strong>Video Playback and Decoding:</strong> Graphics cards include hardware components designed to accelerate video decoding. This feature is beneficial for playing high-definition videos and streaming content, as it offloads the video processing tasks from the CPU, freeing up resources for other computations.</li>
+<li><strong>Parallel Processing:</strong> Modern graphics cards are equipped with a large number of parallel processing cores. This parallel architecture is well-suited for handling multiple tasks simultaneously, making GPUs highly efficient in performing parallel computations. This capability is utilized in applications like scientific simulations, machine learning, and parallel computing tasks.</li>
+</ul>
+<p>In gaming, graphics cards play a critical role in determining the visual quality and performance of games. A powerful graphics card can handle advanced rendering techniques, higher resolutions, and smoother frame rates, enhancing the overall gaming experience.  This may not be needed for a standard desktop computer that does nto require such intensive graphics processing and most major motherboards will come equipped with its own integrated graphics cards. But, if you're into gaming you may need to upgrade!</p>
+<p>Graphics cards may also support multiple monitors.</p>
+<h2 id="sound-card">Sound card</h2>
+<p>A sound card, also known as an audio card or audio interface, is a hardware component designed to process and manage audio data in a computer system. Its primary purpose is to provide audio input and output capabilities, allowing users to hear sound and record audio through their computer.  As with the graphics card offloading the rendering of audio can provide an additional boost to a computer system and provides enhanced sound quality.</p>
+<p>Some audio interfaces are provided as an external component for a computer system and is generally preferred by studio musicians.</p>
+<p><img alt="Sound Cards" src="../../assets/images/system/sound-card.png"></p>
+<p>The key purposes of a sound card are:</p>
+<ul>
+<li><strong>Audio Playback:</strong> The fundamental function of a sound card is to enable audio playback. It processes digital audio signals and converts them into analog signals that can be sent to speakers or headphones. </li>
+<li><strong>Sound Quality Enhancement:</strong> Sound cards can enhance the overall audio quality by providing higher-quality digital-to-analog converters (DACs) and audio processing capabilities. This can result in clearer and more detailed audio reproduction compared to basic onboard audio solutions.</li>
+<li><strong>Support for Surround Sound:</strong> Many sound cards support surround sound technologies, such as 5.1 or 7.1 channel audio. This is particularly important for gaming, home theatre setups, and multimedia content.</li>
+<li><strong>Audio Recording:</strong> Sound cards facilitate audio input, allowing users to record sounds through microphones or other audio input devices. </li>
+<li><strong>MIDI (Musical Instrument Digital Interface) Support:</strong> Some sound cards include MIDI support, allowing users to connect musical instruments or MIDI controllers to the computer for music creation and recording. Musicians and audio producers often rely on sound cards with MIDI capabilities for music composition and production.</li>
+<li><strong>Reduced CPU Load:</strong> Dedicated sound cards offload audio processing tasks from the computer's main CPU, which can result in improved overall system performance. </li>
+<li><strong>Gaming Audio Enhancement:</strong> High-quality sound cards are valued by gamers for their ability to provide immersive and accurate audio in games. This includes features such as positional audio, which helps gamers identify the direction and distance of in-game sounds for a more immersive gaming experience.</li>
+<li><strong>Connectivity Options:</strong> Sound cards often come with a variety of audio ports, including headphone jacks, microphone inputs, line-in and line-out ports, and digital audio outputs. </li>
+</ul>
+<p>While many modern motherboards come with integrated audio solutions, dedicated sound cards are used in scenarios where higher audio quality, specialized features, or advanced connectivity options are desired. Audiophiles, gamers, and audio professionals may opt for standalone sound cards to meet their specific audio requirements.</p>
+<h2 id="network-card">Network Card</h2>
+<p>A network card, also known as a network interface card (NIC), Ethernet adapter, or LAN (Local Area Network) adapter, is a hardware component that enables a computer to connect to a network. Its primary purpose is to provide communication between the computer and other devices on the network, allowing for the transmission and reception of data.  The network card may also provide wireless connectivity.</p>
+<p><img alt="Network Card" src="../../assets/images/system/network-card.jpg"></p>
+<p>Key features and functions of a network card include:</p>
+<ul>
+<li><strong>Network Connectivity:</strong> The primary role of a network card is to provide the necessary hardware interface for a computer to connect to a network. This can be a local wired network (Ethernet) or a wireless network (Wi-Fi).</li>
+<li><strong>Ethernet Ports:</strong> In the case of wired connections, network cards often have Ethernet ports (RJ45 connectors) that allow the computer to be connected to a network using an Ethernet cable. This is a common setup in home and business environments.</li>
+<li><strong>Wireless Connectivity (Wi-Fi):</strong> Some network cards support wireless connectivity, allowing the computer to connect to Wi-Fi networks. These wireless network cards have built-in antennas and support various Wi-Fi standards, providing flexibility for connecting to wireless routers and access points</li>
+<li><strong>Data Link Layer Functionality:</strong> The network card operates at the Data Link layer (Layer 2) of the OSI model. It is responsible for framing data into packets, adding necessary addressing information, and handling error detection and correction.</li>
+<li><strong>MAC Address:</strong> Each network card has a unique identifier known as a MAC (Media Access Control) address. This address is a hardware address assigned to the network card, and it is used for communication on the local network.</li>
+<li><strong>Network Protocols:</strong> Network cards support various network protocols, such as TCP/IP (Transmission Control Protocol/Internet Protocol), which is the foundation of communication on the Internet. The network card processes these protocols to enable communication with other devices on the network.</li>
+<li><strong>Data Transmission and Reception:</strong> The network card handles the transmission of data from the computer to the network and the reception of data from the network to the computer. It ensures that data is sent and received accurately and efficiently.</li>
+<li><strong>Driver Software:</strong> To operate effectively, a network card requires driver software. This software serves as an interface between the operating system and the hardware, allowing the OS to communicate with and control the network card.</li>
+<li><strong>Speed and Duplex Settings:</strong> Network cards support different speeds and duplex settings, which determine the rate of data transfer and whether the card can send and receive data simultaneously (full duplex) or one at a time (half duplex).</li>
+</ul>
+<p>The Network card is usually integrated with the motherboard - this is the norm.  There may be reason to upgrade if improved performance or advanced security is required or if the onboard card malfunctions.</p>
+<h2 id="secondary-storage">Secondary Storage</h2>
+<p>Secondary storage refers to <strong>non-volatile</strong>, persistent storage devices that hold data and files for the long term, even when the power is turned off. Unlike primary storage (RAM or main memory), which is volatile and temporary, secondary storage retains data for an extended period, making it suitable for long-term storage and retrieval. Secondary storage devices are essential for storing the operating system, applications, user files, and other data on a computer or electronic device.</p>
+<p>Secondary stage comes in different forms, including:</p>
+<ul>
+<li><strong>Hard Disk Drives (HDDs):</strong> HDDs use magnetic storage to store data on spinning disks with typical capacity of 1Tb and more.</li>
+<li><strong>Solid-State Drives (SSDs):</strong> SSDs use NAND-based flash memory to store data. They are faster than HDDs, have no moving parts, and are becoming increasingly popular for their speed and reliability.  More expensive than HDDs.</li>
+<li><strong>Optical Drives:</strong> Devices such as CD (Compact Disc), DVD (Digital Versatile Disc), and Blu-ray drives use optical storage to read and write data on optical discs. While becoming less common, they are still used for specific applications.</li>
+</ul>
+<p>Though not internal to a computer you will also find secondary storage devices such as:</p>
+<ul>
+<li><strong>USB Flash Drives:</strong> Portable and compact, USB flash drives use flash memory to store data. They are widely used for transporting and transferring files between computers.</li>
+<li><strong>Memory Cards:</strong> Commonly used in smartphones, and other portable devices, memory cards use flash memory to provide removable storage.</li>
+</ul>
+<p>Finally, for completeness, secondary storage can be centrally shared in a local and wide are network.  <strong>Network Attached Storage (NAS)</strong>provides shared storage accessible by multiple users and devices and <strong>Cloud Storage:</strong> services allow users to store and access data over the internet. Examples include services like Google Drive, Dropbox, and Microsoft OneDrive.</p>
+<p><img alt="Storage devices" src="../../assets/images/system/storage-devices.png"></p>
+<p>They each share the following characteristics, distinguishing them from primary storage (RAM):</p>
+<ul>
+<li><strong>Non-Volatility:</strong> Secondary storage retains data even when the power is turned off. This characteristic allows for the long-term storage of information, making it suitable for data that needs to persist across sessions.</li>
+<li><strong>Large Capacity:</strong> Secondary storage devices typically offer larger storage capacities compared to primary storage (RAM). This allows for the storage of operating systems, software applications, documents, multimedia files, and more.</li>
+<li><strong>Slower Access Speeds:</strong> Accessing data from secondary storage is generally slower than accessing data from primary storage. This is due to factors such as mechanical movement (in the case of hard disk drives) or the nature of the storage medium.</li>
+</ul>
+<h2 id="power-supply-unit">Power Supply Unit</h2>
+<p>Clearly the primary function of the <strong>Power Supply Unit (PSU)</strong> is to provide power to the computer but it also plays several important roles in ensuring the stability, efficiency, and overall functionality of the entire computer system. </p>
+<p><img alt="Power Supply" src="../../assets/images/system/power-supply.png"></p>
+<p>Here are some key aspects of the importance of the power supply e.g.</p>
+<ul>
+<li><strong>Stability of Power Delivery:</strong> Fluctuations or irregularities in power can lead to system instability, crashes, or damage to sensitive components. A reliable power supply helps maintain system stability.</li>
+<li><strong>Protection Against Power Surges and Spikes:</strong> To safeguard the computer system from sudden increases in voltage and prevent damage to internal components, such as the motherboard, CPU, and storage devices.</li>
+<li><strong>Efficient Power Conversion:</strong> Modern power supplies are designed to efficiently convert electrical power from the source (such as a wall outlet) into the required voltages for the various components in the computer. Higher efficiency means less wasted energy, reduced heat generation, and lower electricity bills.</li>
+<li><strong>Regulation of Voltage and Current:</strong> The power supply regulates the voltage and current supplied to different components, ensuring that they receive the appropriate levels of power. This regulation is essential for preventing damage to sensitive electronic components and ensuring proper operation.</li>
+<li><strong>Compatibility with Components:</strong> Power supplies come in various form factors and wattages. Selecting a power supply that is compatible with the components in the computer is crucial. Different components may have different power requirements, and the power supply must meet or exceed those requirements for optimal performance.</li>
+<li><strong>Cooling and Fan Control:</strong> The power supply unit often includes a cooling fan to dissipate heat generated during operation. Some power supplies offer fan speed control based on temperature, helping to maintain a balance between cooling efficiency and noise levels.</li>
+</ul>
+<h2 id="heat-sink-and-fan">Heat Sink and Fan</h2>
+<p>The computer will generate a lot of heat and the system needs to prevent overheating which can damage other components and degrade performance of the system.</p>
+<p><img alt="Heat Sink" src="../../assets/images/system/heat-sink.jpg"></p>
+<p>The <strong>heat sink</strong> absorbs and dissipates heat away from the CPU. It is typically made of a thermally conductive material such as aluminum or copper, which helps transfer heat away from the CPU to a larger surface area. The increased surface area allows for more efficient heat dissipation into the surrounding air.</p>
+<p>It is mounted directly on top of the CPU, making direct contact with the CPU's heat-producing surface. The design of the heat sink, including its fins or ridges, maximizes the surface area available for heat exchange.</p>
+<p>Some heat sinks are equipped with heat pipes—hollow tubes filled with a heat-conductive fluid. These pipes efficiently transport heat away from the CPU to the fins of the heat sink, enhancing the overall cooling performance.</p>
+<p>The <strong>fan</strong> works in conjunction with the heat sink. Its primary purpose is to enhance the heat dissipation process by increasing the airflow around the heat sink. It is usually mounted on top of or adjacent to the heat sink. As it spins, it draws air through the heat sink's fins, carrying away the heat and helping to maintain a lower temperature around the CPU.</p>
+<p>The fan speed is often controlled dynamically based on the CPU temperature. When the CPU is under heavy load and generates more heat, the fan speeds up to increase airflow and cooling. Conversely, when the CPU is under lighter loads, the fan may operate at a lower speed to reduce noise.</p>
+<h2 id="questions">Questions</h2>
+<div class="quiz_container">
+<div class="question" data-correct-answer="2"><fieldset><h3>1. Which of the following components acts as the central hub of a computer, providing electrical connections and pathways for data transfer between the CPU, memory, storage devices, and peripherals?</h3><form><div><input type="radio" id="quiz-0-option-0" name="quiz-0" value="1"><label for="quiz-0-option-0">Processor (CPU)</label></div><div><input type="radio" id="quiz-0-option-1" name="quiz-0" value="2"><label for="quiz-0-option-1">Motherboard</label></div><div><input type="radio" id="quiz-0-option-2" name="quiz-0" value="3"><label for="quiz-0-option-2">Graphics card</label></div><div><input type="radio" id="quiz-0-option-3" name="quiz-0" value="4"><label for="quiz-0-option-3">Power supply unit</label></div><div class="explanation" style="display:none;">The motherboard is a large, flat circuit board that connects various hardware components, allowing them to communicate and work together in a computer system.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>2. What is the primary purpose of RAM in a computer system?</h3><form><div><input type="radio" id="quiz-1-option-0" name="quiz-1" value="1"><label for="quiz-1-option-0">To store data permanently</label></div><div><input type="radio" id="quiz-1-option-1" name="quiz-1" value="2"><label for="quiz-1-option-1">To render graphics</label></div><div><input type="radio" id="quiz-1-option-2" name="quiz-1" value="3"><label for="quiz-1-option-2">To provide fast access to data for the CPU during program execution</label></div><div><input type="radio" id="quiz-1-option-3" name="quiz-1" value="4"><label for="quiz-1-option-3">To cool the CPU</label></div><div class="explanation" style="display:none;">RAM (Random Access Memory) is a volatile form of memory used for temporarily storing data that is actively being processed by the CPU.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>3. Which component in a computer system is responsible for performing arithmetic and logic operations such as addition, subtraction, AND, and OR?</h3><form><div><input type="radio" id="quiz-2-option-0" name="quiz-2" value="1"><label for="quiz-2-option-0">Control Unit</label></div><div><input type="radio" id="quiz-2-option-1" name="quiz-2" value="2"><label for="quiz-2-option-1">Graphics card</label></div><div><input type="radio" id="quiz-2-option-2" name="quiz-2" value="3"><label for="quiz-2-option-2">Arithmetic Logic Unit (ALU)</label></div><div><input type="radio" id="quiz-2-option-3" name="quiz-2" value="4"><label for="quiz-2-option-3">RAM</label></div><div class="explanation" style="display:none;">The Arithmetic Logic Unit (ALU) is part of the CPU responsible for performing arithmetic and logic operations, which are essential for data processing.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>4. Which type of storage is non-volatile and retains data even when the computer is powered off?</h3><form><div><input type="radio" id="quiz-3-option-0" name="quiz-3" value="1"><label for="quiz-3-option-0">RAM</label></div><div><input type="radio" id="quiz-3-option-1" name="quiz-3" value="2"><label for="quiz-3-option-1">CPU Cache</label></div><div><input type="radio" id="quiz-3-option-2" name="quiz-3" value="3"><label for="quiz-3-option-2">Secondary Storage</label></div><div><input type="radio" id="quiz-3-option-3" name="quiz-3" value="4"><label for="quiz-3-option-3">Heat sink</label></div><div class="explanation" style="display:none;">Secondary storage devices, such as hard drives and SSDs, are non-volatile, meaning they retain data even when the computer is turned off.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>5. What is the primary role of a graphics card in a computer system?</h3><form><div><input type="radio" id="quiz-4-option-0" name="quiz-4" value="1"><label for="quiz-4-option-0">To manage audio data</label></div><div><input type="radio" id="quiz-4-option-1" name="quiz-4" value="2"><label for="quiz-4-option-1">To provide network connectivity</label></div><div><input type="radio" id="quiz-4-option-2" name="quiz-4" value="3"><label for="quiz-4-option-2">To render and display images and videos</label></div><div><input type="radio" id="quiz-4-option-3" name="quiz-4" value="4"><label for="quiz-4-option-3">To supply power to the system</label></div><div class="explanation" style="display:none;">A graphics card is responsible for rendering and displaying visual information on the monitor, handling graphics-intensive tasks such as gaming and 3D modeling.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>6. Which of the following components is responsible for maintaining the system clock and storing system settings when the computer is powered off?</h3><form><div><input type="radio" id="quiz-5-option-0" name="quiz-5" value="1"><label for="quiz-5-option-0">CMOS Battery</label></div><div><input type="radio" id="quiz-5-option-1" name="quiz-5" value="2"><label for="quiz-5-option-1">Power Supply Unit</label></div><div><input type="radio" id="quiz-5-option-2" name="quiz-5" value="3"><label for="quiz-5-option-2">RAM</label></div><div><input type="radio" id="quiz-5-option-3" name="quiz-5" value="4"><label for="quiz-5-option-3">Graphics Card</label></div><div class="explanation" style="display:none;">The CMOS battery powers the CMOS memory, which stores system settings and the system clock even when the computer is powered off.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>7. Which form factor determines the physical size and layout of the motherboard, influencing compatibility with computer cases and expansion slots?</h3><form><div><input type="radio" id="quiz-6-option-0" name="quiz-6" value="1"><label for="quiz-6-option-0">PCIe</label></div><div><input type="radio" id="quiz-6-option-1" name="quiz-6" value="2"><label for="quiz-6-option-1">SATA</label></div><div><input type="radio" id="quiz-6-option-2" name="quiz-6" value="3"><label for="quiz-6-option-2">Form Factor</label></div><div><input type="radio" id="quiz-6-option-3" name="quiz-6" value="4"><label for="quiz-6-option-3">BIOS/UEFI</label></div><div class="explanation" style="display:none;">The form factor determines the size and layout of the motherboard, impacting its compatibility with different computer cases and the number of expansion slots available.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>8. Which component provides communication between a computer and other devices on a network, enabling data transmission and reception?</h3><form><div><input type="radio" id="quiz-7-option-0" name="quiz-7" value="1"><label for="quiz-7-option-0">Sound card</label></div><div><input type="radio" id="quiz-7-option-1" name="quiz-7" value="2"><label for="quiz-7-option-1">Graphics card</label></div><div><input type="radio" id="quiz-7-option-2" name="quiz-7" value="3"><label for="quiz-7-option-2">Network card</label></div><div><input type="radio" id="quiz-7-option-3" name="quiz-7" value="4"><label for="quiz-7-option-3">RAM</label></div><div class="explanation" style="display:none;">The network card enables a computer to connect to a network and allows for the transmission and reception of data over the network.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>9. What is the primary function of the power supply unit (PSU) in a computer?</h3><form><div><input type="radio" id="quiz-8-option-0" name="quiz-8" value="1"><label for="quiz-8-option-0">To store data</label></div><div><input type="radio" id="quiz-8-option-1" name="quiz-8" value="2"><label for="quiz-8-option-1">To regulate the voltage and current supplied to different components</label></div><div><input type="radio" id="quiz-8-option-2" name="quiz-8" value="3"><label for="quiz-8-option-2">To process graphics</label></div><div><input type="radio" id="quiz-8-option-3" name="quiz-8" value="4"><label for="quiz-8-option-3">To enhance sound quality</label></div><div class="explanation" style="display:none;">The power supply unit (PSU) provides power to the computer and regulates the voltage and current to ensure proper operation of all components.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>10. What is the role of the heat sink and fan in a computer system?</h3><form><div><input type="radio" id="quiz-9-option-0" name="quiz-9" value="1"><label for="quiz-9-option-0">To store data for quick access by the CPU</label></div><div><input type="radio" id="quiz-9-option-1" name="quiz-9" value="2"><label for="quiz-9-option-1">To provide network connectivity</label></div><div><input type="radio" id="quiz-9-option-2" name="quiz-9" value="3"><label for="quiz-9-option-2">To prevent overheating by dissipating heat from the CPU</label></div><div><input type="radio" id="quiz-9-option-3" name="quiz-9" value="4"><label for="quiz-9-option-3">To process sound and video data</label></div><div class="explanation" style="display:none;">The heat sink and fan work together to dissipate heat from the CPU, preventing it from overheating and maintaining optimal performance.</div><button type="submit">Submit</button></form></fieldset></div>
+</div></div><style type="text/css">.quiz {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+/* Set margin-top of first quiz child */
+.quiz > *:first-child {
+  margin-top: 0;
+}
+.hidden {
+  display: none;
+}
+
+form button {
+  background-color: var(--md-primary-fg-color);
+  border: none;
+  color: var(--md-primary-bg-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.wrong label {
+  color: red;
+}
+.correct label {
+  color: green;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+fieldset input {
+  margin: 0 10px;
+}
+fieldset label {
+  margin: 0 10px;
+}
+
+label.correct {
+  color: green;
+}
+label.wrong {
+  color: red;
+}
+input[type='radio'].correct {
+  accent-color: green;
+}
+input[type='radio'].wrong {
+  accent-color: red;
+}
+.content {
+  margin: 10px;
+}
+</style><script type="text/javascript" defer>document.querySelectorAll('.quiz').forEach((quiz) => {
+  let form = quiz.querySelector('form');
+  let fieldset = form.querySelector('fieldset');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
+    let correctAnswers = fieldset.querySelectorAll(
+      'input[name="answer"][correct]'
+    );
+    // Check if all correct answers are selected
+    let is_correct = selectedAnswers.length === correctAnswers.length;
+    for (let i = 0; i < selectedAnswers.length; i++) {
+      if (!selectedAnswers[i].hasAttribute('correct')) {
+        is_correct = false;
+        break;
+      }
+    }
+    let section = quiz.querySelector('section');
+    if (is_correct) {
+      section.classList.remove('hidden');
+      resetFieldset(fieldset);
+      // Mark all fields with colors
+      const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
+      for (let i = 0; i < allAnswers.length; i++) {
+        if (allAnswers[i].hasAttribute('correct')) {
+          allAnswers[i].parentElement.classList.add('correct');
+        } else {
+          allAnswers[i].parentElement.classList.add('wrong');
+        }
+      }
+    } else {
+      section.classList.add('hidden');
+      resetFieldset(fieldset);
+      // Mark wrong fields with colors
+      for (let i = 0; i < selectedAnswers.length; i++) {
+        if (!selectedAnswers[i].hasAttribute('correct')) {
+          selectedAnswers[i].parentElement.classList.add('wrong');
+        } else {
+          selectedAnswers[i].parentElement.classList.add('correct');
+        }
+      }
+    }
+  });
+});
+
+function resetFieldset(fieldset) {
+  const fieldsetChildren = fieldset.children;
+  for (let i = 0; i < fieldsetChildren.length; i++) {
+    fieldsetChildren[i].classList.remove('wrong');
+    fieldsetChildren[i].classList.remove('correct');
+  }
+}
+</script>
+
+<!-- Source file information -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+<!-- Was this page helpful? -->
+
+
+
+
+<!-- Comment system -->
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="02_programming_languages.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programming Languages">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Programming Languages
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="04_memory.html" class="md-footer__link md-footer__link--next" aria-label="Next: Memory">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Memory
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/james-willett" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheJamesWillett" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/willettjames/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.prune", "navigation.instant", "navigation.footer", "toc.follow", "navigation.top", "header.autohide", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../assets/js/katex.js"></script>
+      
+        <script src="../../assets/js/custom.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../assets/js/quiz.js"></script>
+      
+        <script src="../../assets/js/algorithms.js"></script>
+      
+    
+  </body>
+</html>

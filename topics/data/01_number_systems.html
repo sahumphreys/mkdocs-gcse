@@ -1,0 +1,2029 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="02_units.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Number Systems - GCSE Computer Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Segoe UI";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#number-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-header__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCSE Computer Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Number Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python/index.html" class="md-tabs__link">
+          
+  
+  Topics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../boards/index.html" class="md-tabs__link">
+          
+  
+  Exam Boards
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/index.html" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact.html" class="md-tabs__link">
+        
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-nav__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    GCSE Computer Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Topics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../python/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Representation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Representation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Number Systems
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01_number_systems.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Number Systems
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#binary-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Number System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decimal-to-binary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decimal to Binary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-to-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary to Decimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-numbers-and-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Numbers and Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_units.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Units
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_binary_arithmetic.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary Arithmetic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_hexadecimal.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hexadecimal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_negative_numbers.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Negative Numbers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_character_encoding.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Encoding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07_images.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08_sound.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sound
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09_compression.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../system/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    System Architecture
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../networking/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../algorithms/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../security/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../databases/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../programming/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../logic/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../impact/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Impact of Technology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../boards/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Exam Boards
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../blog/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#binary-number-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Number System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decimal-to-binary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decimal to Binary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-to-decimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary to Decimal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-numbers-and-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Numbers and Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
+
+
+<!-- Actions -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<!--  -->
+
+<!-- Page content -->
+<div><p><img _=";" align="right" alt="" src="../../assets/images/topics/binary.jpg" width="100"></p>
+<h1 id="number-systems">Number Systems</h1>
+<div class="admonition note">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>Be able to describe the binary number system, Base-2  </li>
+<li>Be able to convert between decimal (denary) and binary number bases, Base-10 and Base-2</li>
+</ul>
+</div>
+<p>From an electronic perspective a computer is built of lots (lots and lots) of transistors - a type of semiconductor.  They are the building blocks of modern electronic circuits.  They act like a switch either allowing a voltage to pass through or not.  They can be in two <strong>states</strong> which can be represented by the digits <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span> (or <code>True</code> and <code>False</code>).  This aligns neatly with a number system, the number base we call <strong>binary</strong> or base 2.</p>
+<h2 id="binary-number-system">Binary Number System</h2>
+<p>Imagine if we had to count up to say <span class="arithmatex">\(5\)</span> but only had the digits <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span> to work with:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Decimal</th>
+<th style="text-align: center;">Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">101</td>
+</tr>
+</tbody>
+</table>
+<p>What is happening here?  How have we arrived at those binary numbers?  </p>
+<p>Pause for a moment and consider how we work with decimal, or denary, numbers which is our norm.  Take the number <span class="arithmatex">\(245\)</span>.  We know this is <span class="arithmatex">\(2\)</span> lots of <span class="arithmatex">\(100\)</span> plus <span class="arithmatex">\(4\)</span> lots of <span class="arithmatex">\(10\)</span> plus <span class="arithmatex">\(5\)</span>.</p>
+<p>Our decimal system is also know as <strong>Base-10</strong>.  It has <strong>10</strong> digits (0..9).  If we think of our number, <span class="arithmatex">\(245\)</span>, as having three columns, each column will have, reading from right to left, place values that are powers of <span class="arithmatex">\(10\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Hundreds</th>
+<th style="text-align: center;">Tens</th>
+<th style="text-align: center;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(10^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(10^1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(10^0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Thousands would be <span class="arithmatex">\(10^3\)</span> and so on.</p>
+<p>So, the binary (or Base-2) number system has the following pattern, where each column represents an increasing power of <span class="arithmatex">\(2\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2^4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>We can see that <span class="arithmatex">\(101_2\)</span> is 1 lot of 4 plus 1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To distinguish the number 101 in decimal and 101 in binary we need to add a <strong>subscript</strong> to the number.  This <span class="arithmatex">\(101_{10}\)</span> is <span class="arithmatex">\(101\)</span> ("one hundred and one"), a decimal number; but <span class="arithmatex">\(101_2\)</span> is a binary number, Base-2, which converts to <span class="arithmatex">\(5_{10}\)</span>.</p>
+</div>
+<h2 id="decimal-to-binary">Decimal to Binary</h2>
+<p>There are two methods we can use to convert a decimal number to a binary number.  Let's use <span class="arithmatex">\(245_{10}\)</span> and convert it to a binary number:</p>
+<p><strong>Method 1: "By inspection"</strong></p>
+<ul>
+<li>Find the nearest power of <span class="arithmatex">\(2\)</span> to the given value, in this case it's <span class="arithmatex">\(128\)</span> (<span class="arithmatex">\(2^{7}\)</span>), put a <span class="arithmatex">\(1\)</span> in that column and then take <span class="arithmatex">\(128\)</span> away from the original value leaving <span class="arithmatex">\(117\)</span>.  </li>
+<li>Repeat the process, this time with <span class="arithmatex">\(117\)</span> the remainder, putting a <span class="arithmatex">\(1\)</span> in the nearest column, <span class="arithmatex">\(64\)</span> (<span class="arithmatex">\(2^{6}\)</span>) and take that away from <span class="arithmatex">\(117\)</span> leaving <span class="arithmatex">\(53\)</span>.  </li>
+<li>Repeat, this time putting a <span class="arithmatex">\(1\)</span> in the closest column, <span class="arithmatex">\(32\)</span> (<span class="arithmatex">\(2^{5}\)</span>), and take that away from <span class="arithmatex">\(53\)</span> leaving <span class="arithmatex">\(21\)</span>.  </li>
+<li>Repeat, putting a <span class="arithmatex">\(1\)</span> in the next column, <span class="arithmatex">\(16\)</span> (<span class="arithmatex">\(2^{4}\)</span>), and that away from <span class="arithmatex">\(21\)</span> leaving <span class="arithmatex">\(5\)</span>  which can quickly be added in the remaining columns for <span class="arithmatex">\(2^{2}\)</span> and <span class="arithmatex">\(2^{0}\)</span>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">128</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(2^7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^6\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2^0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>0</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>If you had up the column headings where there is a <span class="arithmatex">\(1\)</span>, (<span class="arithmatex">\(128 + 64 + 32 + 16 + 4 + 1\)</span>) you will get the sum: <span class="arithmatex">\(245\)</span>.</p>
+<p><strong>Method 2: Repeated division by 2</strong></p>
+<p>Take the decimal number and repeatedly divide by <span class="arithmatex">\(2\)</span> writing down the remainder and stop when zero is reached:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Quotient</th>
+<th style="text-align: center;">New Number</th>
+<th style="text-align: center;">Remainder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">245/2</td>
+<td style="text-align: center;">122</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">122/2</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;"><strong>0</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">61/2</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">30/2</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;"><strong>0</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">15/2</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">7/2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3/2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">1/2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Then read up from the bottom!</p>
+<p>This can be described in pseudocode as:</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>    <span class="n">number</span> <span class="o">=</span> <span class="n">positive</span> <span class="n">integer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">while</span> <span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="n">bit</span> <span class="o">=</span> <span class="n">number</span> <span class="n">mod</span> <span class="mi">2</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="n">div</span> <span class="mi">2</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="n">put</span> <span class="n">bit</span> <span class="n">to</span> <span class="n">left</span> <span class="n">of</span> <span class="nb">any</span> <span class="n">previous</span> <span class="n">bits</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The "magic number" <span class="arithmatex">\(2\)</span> represents the target base and can be replaced by another value to convert the binary number into any other base.</p>
+</div>
+<h2 id="binary-to-decimal">Binary to Decimal</h2>
+<p>Again, two methods can be applied:</p>
+<p><strong>Method 1:</strong></p>
+<p>Start from the left of the binary number, take your current total, multiply it by two and add the current digit and continue until there are no more digits left.  So, taking the binary number <span class="arithmatex">\(11110101\)</span>:</p>
+<p><span class="arithmatex">\(2 \times 0 + 1 = 1\)</span><br>
+<span class="arithmatex">\(2 \times 1 + 1 = 3\)</span><br>
+<span class="arithmatex">\(2 \times 3 + 1 = 7\)</span><br>
+<span class="arithmatex">\(2 \times 7 + 1 = 15\)</span><br>
+<span class="arithmatex">\(2 \times 15 + 0 = 30\)</span><br>
+<span class="arithmatex">\(2 \times 30 + 1 = 61\)</span><br>
+<span class="arithmatex">\(2 \times 61 + 0 = 122\)</span><br>
+<span class="arithmatex">\(2 \times 122 + 1 = 245\)</span>  </p>
+<p>Personally, this seems a little counter intuitive and method 2 is a preferred option.</p>
+<p><strong>Method 2:</strong></p>
+<p>The second method uses the positional notation and multiplies each digit by their corresponding power of two and sums these products:</p>
+<p><span class="arithmatex">\((1 \times 128) + (1 \times 64) + (1 \times 32) + (1 \times 16) + (1 \times 4) + (1 \times 1) = 245\)</span>  </p>
+<p>This can be described in pseudocode as:</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>    <span class="n">power</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">decimal</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">loop</span> <span class="n">through</span> <span class="nb">all</span> <span class="n">bits</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">binary</span> <span class="n">string</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">decimal</span> <span class="o">=</span> <span class="n">decimal</span> <span class="o">+</span> <span class="n">power</span> <span class="o">*</span> <span class="n">bit</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="n">power</span> <span class="o">=</span> <span class="n">power</span> <span class="o">*</span> <span class="mi">2</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="binary-numbers-and-python">Binary Numbers and Python</h2>
+<p>To convert character data to an integer we use the function <code>int()</code> as in:</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">value</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a number: "</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">value_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember: all data entered by the user at the keyboard is received by the computer as character data.  That is, you type the digit 4, but the computer receives it as '4'.</p>
+</div>
+<p>The related functions <code>float()</code> and <code>str()</code> can also be used to convert one data type to another, the first converting a string to a floating point number, the second converting numeric data to a string.</p>
+<p>We can also use the function <code>bin()</code>.  This function takes an integer argument and returns its binary representation.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a number: "</span><span class="p">))</span>      <span class="c1"># e.g. 5</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">value_bin</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>              <span class="c1"># convert to binary</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">value_bin</span><span class="p">)</span>                <span class="c1"># =&gt; '101'</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Running this in the Python interactive environment:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>int<span class="o">(</span>input<span class="o">(</span><span class="s2">"Enter a number: "</span><span class="o">))</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>Enter<span class="w"> </span>a<span class="w"> </span>number:<span class="w"> </span><span class="m">5</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">value_bin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>bin<span class="o">(</span>value<span class="o">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>&gt;&gt;&gt;<span class="w"> </span>print<span class="o">(</span>value_bin<span class="o">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>0b101
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The output is prefixed with <code>0b</code> to indicate that the number is binary.</p>
+</div>
+<p>A binary string can be converted to its integer form by adding an additional argument to the <code>int()</code> function:</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">binary_num</span> <span class="o">=</span> <span class="s1">'0101'</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">decimal_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">binary_num</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">decimal_num</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>And the output is:</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>&gt;&gt;&gt;<span class="w"> </span><span class="nv">value_dec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>int<span class="o">(</span>value_bin,<span class="w"> </span><span class="m">2</span><span class="o">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>&gt;&gt;&gt;<span class="w"> </span>print<span class="o">(</span>value_dec<span class="o">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="m">5</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Converting to other number bases is also possible just by changing that second argument to show the base of the number of be converted e.g. <code>int('FF', 16)</code> will return <span class="arithmatex">\(255\)</span>.</p>
+<h2 id="questions">Questions</h2>
+<div class="quiz_container">
+<div class="question" data-correct-answer="2"><fieldset><h3>1. Convert the binary number $1101_2$ to decimal.</h3><form><div><input type="radio" id="quiz-0-option-0" name="quiz-0" value="1"><label for="quiz-0-option-0">11</label></div><div><input type="radio" id="quiz-0-option-1" name="quiz-0" value="2"><label for="quiz-0-option-1">13</label></div><div><input type="radio" id="quiz-0-option-2" name="quiz-0" value="3"><label for="quiz-0-option-2">14</label></div><div><input type="radio" id="quiz-0-option-3" name="quiz-0" value="4"><label for="quiz-0-option-3">15</label></div><div class="explanation" style="display:none;">The binary number $1101_2$ equals $1*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $8 + 4 + 0 + 1 = 13$ in decimal.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>2. Convert the decimal number $25_{10}$ to binary.</h3><form><div><input type="radio" id="quiz-1-option-0" name="quiz-1" value="1"><label for="quiz-1-option-0">11000</label></div><div><input type="radio" id="quiz-1-option-1" name="quiz-1" value="2"><label for="quiz-1-option-1">11001</label></div><div><input type="radio" id="quiz-1-option-2" name="quiz-1" value="3"><label for="quiz-1-option-2">11010</label></div><div><input type="radio" id="quiz-1-option-3" name="quiz-1" value="4"><label for="quiz-1-option-3">11011</label></div><div class="explanation" style="display:none;">The decimal number $25_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number $11001_2$.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>3. Convert the binary number $10101_2$ to decimal.</h3><form><div><input type="radio" id="quiz-2-option-0" name="quiz-2" value="1"><label for="quiz-2-option-0">19</label></div><div><input type="radio" id="quiz-2-option-1" name="quiz-2" value="2"><label for="quiz-2-option-1">21</label></div><div><input type="radio" id="quiz-2-option-2" name="quiz-2" value="3"><label for="quiz-2-option-2">22</label></div><div><input type="radio" id="quiz-2-option-3" name="quiz-2" value="4"><label for="quiz-2-option-3">23</label></div><div class="explanation" style="display:none;">The binary number $10101_2$ equals $1*2^4 + 0*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $16 + 0 + 4 + 0 + 1 = 21$ in decimal.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>4. Convert the decimal number $42_{10}$ to binary.</h3><form><div><input type="radio" id="quiz-3-option-0" name="quiz-3" value="1"><label for="quiz-3-option-0">101010</label></div><div><input type="radio" id="quiz-3-option-1" name="quiz-3" value="2"><label for="quiz-3-option-1">101011</label></div><div><input type="radio" id="quiz-3-option-2" name="quiz-3" value="3"><label for="quiz-3-option-2">110101</label></div><div><input type="radio" id="quiz-3-option-3" name="quiz-3" value="4"><label for="quiz-3-option-3">100110</label></div><div class="explanation" style="display:none;">The decimal number $42_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number 101010_2.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>5. Convert the binary number $1111101_2$ to decimal.</h3><form><div><input type="radio" id="quiz-4-option-0" name="quiz-4" value="1"><label for="quiz-4-option-0">123</label></div><div><input type="radio" id="quiz-4-option-1" name="quiz-4" value="2"><label for="quiz-4-option-1">125</label></div><div><input type="radio" id="quiz-4-option-2" name="quiz-4" value="3"><label for="quiz-4-option-2">127</label></div><div><input type="radio" id="quiz-4-option-3" name="quiz-4" value="4"><label for="quiz-4-option-3">129</label></div><div class="explanation" style="display:none;">The binary number $1111101_2$ equals $1*2^6 + 1*2^5 + 1*2^4 + 1*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $64 + 32 + 16 + 8 + 4 + 0 + 1 = 125$ in decimal.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>6. Convert the decimal number $18_{10}$ to binary.</h3><form><div><input type="radio" id="quiz-5-option-0" name="quiz-5" value="1"><label for="quiz-5-option-0">10010</label></div><div><input type="radio" id="quiz-5-option-1" name="quiz-5" value="2"><label for="quiz-5-option-1">10100</label></div><div><input type="radio" id="quiz-5-option-2" name="quiz-5" value="3"><label for="quiz-5-option-2">10110</label></div><div><input type="radio" id="quiz-5-option-3" name="quiz-5" value="4"><label for="quiz-5-option-3">10011</label></div><div class="explanation" style="display:none;">The decimal number $18_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number 10010_2.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>7. Convert the binary number $1001101_2$ to decimal.</h3><form><div><input type="radio" id="quiz-6-option-0" name="quiz-6" value="1"><label for="quiz-6-option-0">75</label></div><div><input type="radio" id="quiz-6-option-1" name="quiz-6" value="2"><label for="quiz-6-option-1">77</label></div><div><input type="radio" id="quiz-6-option-2" name="quiz-6" value="3"><label for="quiz-6-option-2">79</label></div><div><input type="radio" id="quiz-6-option-3" name="quiz-6" value="4"><label for="quiz-6-option-3">81</label></div><div class="explanation" style="display:none;">The binary number $1001101_2$ equals $1*2^6 + 0*2^5 + 0*2^4 + 1*2^3 + 1*2^2 + 0*2^1 + 1*2^0$, which is $64 + 0 + 0 + 8 + 4 + 0 + 1 = 77$ in decimal.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>8. Convert the decimal number $63_{10}$ to binary.</h3><form><div><input type="radio" id="quiz-7-option-0" name="quiz-7" value="1"><label for="quiz-7-option-0">111111</label></div><div><input type="radio" id="quiz-7-option-1" name="quiz-7" value="2"><label for="quiz-7-option-1">111110</label></div><div><input type="radio" id="quiz-7-option-2" name="quiz-7" value="3"><label for="quiz-7-option-2">111101</label></div><div><input type="radio" id="quiz-7-option-3" name="quiz-7" value="4"><label for="quiz-7-option-3">111100</label></div><div class="explanation" style="display:none;">The decimal number $63_{10}$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number 111111_2.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>9. Convert the binary number $110110_2$ to decimal.</h3><form><div><input type="radio" id="quiz-8-option-0" name="quiz-8" value="1"><label for="quiz-8-option-0">52</label></div><div><input type="radio" id="quiz-8-option-1" name="quiz-8" value="2"><label for="quiz-8-option-1">54</label></div><div><input type="radio" id="quiz-8-option-2" name="quiz-8" value="3"><label for="quiz-8-option-2">56</label></div><div><input type="radio" id="quiz-8-option-3" name="quiz-8" value="4"><label for="quiz-8-option-3">58</label></div><div class="explanation" style="display:none;">The binary number $110110_2$ equals $1*2^5 + 1*2^4 + 0*2^3 + 1*2^2 + 1*2^1 + 0*2^0$, which is $32 + 16 + 0 + 4 + 2 + 0 = 54$ in decimal.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>10. Convert the decimal number $55_{10}$ to binary.</h3><form><div><input type="radio" id="quiz-9-option-0" name="quiz-9" value="1"><label for="quiz-9-option-0">110111</label></div><div><input type="radio" id="quiz-9-option-1" name="quiz-9" value="2"><label for="quiz-9-option-1">110110</label></div><div><input type="radio" id="quiz-9-option-2" name="quiz-9" value="3"><label for="quiz-9-option-2">111011</label></div><div><input type="radio" id="quiz-9-option-3" name="quiz-9" value="4"><label for="quiz-9-option-3">111000</label></div><div class="explanation" style="display:none;">The decimal number $55_10$ can be converted to binary by dividing by 2 repeatedly, yielding the binary number $110111_2$.</div><button type="submit">Submit</button></form></fieldset></div>
+</div></div><style type="text/css">.quiz {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+/* Set margin-top of first quiz child */
+.quiz > *:first-child {
+  margin-top: 0;
+}
+.hidden {
+  display: none;
+}
+
+form button {
+  background-color: var(--md-primary-fg-color);
+  border: none;
+  color: var(--md-primary-bg-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.wrong label {
+  color: red;
+}
+.correct label {
+  color: green;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+fieldset input {
+  margin: 0 10px;
+}
+fieldset label {
+  margin: 0 10px;
+}
+
+label.correct {
+  color: green;
+}
+label.wrong {
+  color: red;
+}
+input[type='radio'].correct {
+  accent-color: green;
+}
+input[type='radio'].wrong {
+  accent-color: red;
+}
+.content {
+  margin: 10px;
+}
+</style><script type="text/javascript" defer>document.querySelectorAll('.quiz').forEach((quiz) => {
+  let form = quiz.querySelector('form');
+  let fieldset = form.querySelector('fieldset');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
+    let correctAnswers = fieldset.querySelectorAll(
+      'input[name="answer"][correct]'
+    );
+    // Check if all correct answers are selected
+    let is_correct = selectedAnswers.length === correctAnswers.length;
+    for (let i = 0; i < selectedAnswers.length; i++) {
+      if (!selectedAnswers[i].hasAttribute('correct')) {
+        is_correct = false;
+        break;
+      }
+    }
+    let section = quiz.querySelector('section');
+    if (is_correct) {
+      section.classList.remove('hidden');
+      resetFieldset(fieldset);
+      // Mark all fields with colors
+      const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
+      for (let i = 0; i < allAnswers.length; i++) {
+        if (allAnswers[i].hasAttribute('correct')) {
+          allAnswers[i].parentElement.classList.add('correct');
+        } else {
+          allAnswers[i].parentElement.classList.add('wrong');
+        }
+      }
+    } else {
+      section.classList.add('hidden');
+      resetFieldset(fieldset);
+      // Mark wrong fields with colors
+      for (let i = 0; i < selectedAnswers.length; i++) {
+        if (!selectedAnswers[i].hasAttribute('correct')) {
+          selectedAnswers[i].parentElement.classList.add('wrong');
+        } else {
+          selectedAnswers[i].parentElement.classList.add('correct');
+        }
+      }
+    }
+  });
+});
+
+function resetFieldset(fieldset) {
+  const fieldsetChildren = fieldset.children;
+  for (let i = 0; i < fieldsetChildren.length; i++) {
+    fieldsetChildren[i].classList.remove('wrong');
+    fieldsetChildren[i].classList.remove('correct');
+  }
+}
+</script>
+
+<!-- Source file information -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+<!-- Was this page helpful? -->
+
+
+
+
+<!-- Comment system -->
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="02_units.html" class="md-footer__link md-footer__link--next" aria-label="Next: Units">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Units
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/james-willett" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheJamesWillett" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/willettjames/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.prune", "navigation.instant", "navigation.footer", "toc.follow", "navigation.top", "header.autohide", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../assets/js/katex.js"></script>
+      
+        <script src="../../assets/js/custom.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../assets/js/quiz.js"></script>
+      
+        <script src="../../assets/js/algorithms.js"></script>
+      
+    
+  </body>
+</html>

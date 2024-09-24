@@ -1,0 +1,2167 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="02_selection_boolean_and_random.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Variables, Types and Strings - GCSE Computer Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Segoe UI";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#variables-types-and-strings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-header__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCSE Computer Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Variables, Types and Strings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python/index.html" class="md-tabs__link">
+          
+  
+  Topics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../boards/index.html" class="md-tabs__link">
+          
+  
+  Exam Boards
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/index.html" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact.html" class="md-tabs__link">
+        
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-nav__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    GCSE Computer Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Topics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../python/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../data/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Data Representation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../system/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    System Architecture
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../networking/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../algorithms/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../security/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../databases/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            Programming
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Variables, Types and Strings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01_variables_types_and_strings.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Variables, Types and Strings
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input/Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    <span class="md-ellipsis">
+      String concatenation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      String functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_selection_boolean_and_random.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Selection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_iteration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iteration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_arrays.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_functions_and_procedures.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions and Procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_file_handling.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Handling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../logic/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../impact/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Impact of Technology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../boards/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Exam Boards
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../blog/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constants
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input/Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operators
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-concatenation" class="md-nav__link">
+    <span class="md-ellipsis">
+      String concatenation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      String functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
+
+
+<!-- Actions -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<!--  -->
+
+<!-- Page content -->
+<div><p><img _=";" align="right" alt="" src="../../assets/images/topics/programming.jpg" width="100"></p>
+<h1 id="variables-types-and-strings">Variables, Types and Strings</h1>
+<p>We will already be familiar with the concept of a <strong>variable</strong> (see: <a href="../python/03_variables.html">Variables in Python</a>).  It is <strong>It is a container, or a label, used to store data in our programs.</strong></p>
+<p>Examples of variables might include:</p>
+<ul>
+<li>age = 42</li>
+<li>answer = 'Y'</li>
+<li>full_name = 'Harry Jones'</li>
+<li>is_over_age = True</li>
+<li>area_of_circle = 3.142 * radius^2</li>
+</ul>
+<p>A variable consists of an <strong>identifier</strong>, it's name and can be <strong>assigned</strong> a value.  This value might change during the course of the program.</p>
+<p><strong>AQA Pseudocode</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>a &lt;- 3
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>b &lt;- 'Hello'
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For assignment AQA uses the backward pointing arrow - it's a sensible choice</p>
+</div>
+<p><strong>OCR Pseudocode</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>a = '3'
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>b = 'Hello'
+</span></code></pre></div></td></tr></table></div>
+<h2 id="data-types">Data Types</h2>
+<p>All programming languages need to handle data, and that data can take different forms.  Consider the examples above.  What <strong>type</strong> of data is being assigned to each of these variables?  Is it numeric?  Is it text?  If it's a number, is it a whole number of a number with a fractional part?</p>
+<p>Every item of data needs to be stored in the computer's memory.  How much memory is going to allocated to each of these variables?  How does the operating system determine this and set aside the right amount of memory?</p>
+<p>The answers here may depend on whether we are programming using a <strong>statically-typed language</strong> or <strong>dynamically-typed language</strong>.  The different between these:</p>
+<ul>
+<li>Statically-typed: The amount of memory will be known when the code is compiled into an executable</li>
+<li>Dynamically-typed: The amount of memory will be allocated while the program is running</li>
+</ul>
+<p>For statically typed languages the amount of memory is effectively built-in and we, the programmer, cannot change it.  A typical summary is shown in the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Expected Type of Data</th>
+<th>Typical amount of memory</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>Whole number, positive or negative</td>
+<td>4 bytes</td>
+<td>42, -89, 0</td>
+</tr>
+<tr>
+<td>float/real</td>
+<td>Number with a fractional part</td>
+<td>8 bytes</td>
+<td>3.142, -89.7</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Individual character</td>
+<td>1 byte</td>
+<td>'a', '9', 'Z', ';'</td>
+</tr>
+<tr>
+<td>string</td>
+<td>Zero or more characters</td>
+<td>1 byte per character in the string</td>
+<td>'John', '1234'</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>True or False</td>
+<td>1 byte</td>
+<td>True, False</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Different languages might be set up to use different amounts of memory</p>
+</div>
+<p>For dynamically typed languages the amount of memory allocated to a variable is determined at run-time.  So, if the program encounters the assignment: <code>age = 42</code> a 4-byte block of memory will be allocated and labelled as <code>age</code>.  If later in the program the user decides (and I'm not sure why they might do this) to change the value assigned to <code>age</code> to be <code>age</code> = "forty two" then the operating system would need to allocate 10 bytes of memory.</p>
+<p>Whichever type of language we are dealing with the type of data being handled by a variable is an important consideration.  It can lead to some issues:</p>
+<ul>
+<li>An integer occupies 4 bytes, 32 bits</li>
+<li>These 32 bits provide an allowable range of -2,147,483,648 through to 2,147,483,647</li>
+<li>What if you want to store a value higher or lower than this?</li>
+</ul>
+<p>You can't! Well, if you know in advance this might be possible than you will have to use another integer data type provided by the language (not listed in the table above).</p>
+<ul>
+<li>Also, if we're only dealing with values between, say, 1 and 100, we're wasting three bytes of memory for each of these values!</li>
+</ul>
+<p>A valid consideration.  Again use an alternative data type.  For example C# provides both <code>Int16</code> and <code>Int32</code>, the first uses 16 bits, the second 32 bits.</p>
+<p>The point is, data is important, the data type of that data is also important to us programmers.  Select the correct data type wisely.</p>
+<h2 id="constants">Constants</h2>
+<p>As well as variables we can declare and assign <strong>constants</strong>.  As the name suggests, the value assigned to a constant <strong>can not be changed</strong>.</p>
+<p>In this regard Python misbehaves.  It does not endorse constants in the same way other languages do.  it is perfectly possible in Python to declare a value for <code>PI = 31,42</code>, and then later in the program change that value to something completely different.  This is not good practice.</p>
+<p>Other languages may expect, when you declare a constant, to preface it with the keyword <code>const</code>:</p>
+<ul>
+<li><code>const PI = 3.142</code></li>
+<li><code>const VAT_RATE = 0.2</code></li>
+</ul>
+<p>Any attempt then to change these values will lead to a syntax error.  This is good practice.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is good practice to use upper case letters for the names of constants, whether in Python or not.  It serves as a reminder that the value we're dealing can not (should not) be changed.</p>
+</div>
+<p>The benefits of a constant are:</p>
+<ul>
+<li>The value cannot be changed accidentally during the course of a program</li>
+<li>Defining the constant once, usually at the start of a program, means any subsequent updates e.g. the chancellor changes the rate of VAT, are only done in one place</li>
+</ul>
+<p><strong>AQA Pseudocode</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>CONSTANT PI &lt;- 3.142 
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>CONSTANT CLASS_SIZE &lt;- 30
+</span></code></pre></div></td></tr></table></div>
+<p><strong>OCR Pseudocode</strong></p>
+<p>OCR make no distinction in their pseudocode between variables and constants</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For OCR always upper case the identifier to make it clear it is a constant</p>
+</div>
+<h2 id="inputoutput">Input/Output</h2>
+<p>All languages need some way of communication with their user, either by getting the user to enter data at the keyboard or to display results to the screen or to a file or to a printer etc..</p>
+<p>Each will have their own way of doing this, classically:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>name = input("What is your name")
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>print(name)
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>The function <code>input</code> waits for the user to type something, then assigns that to the variable <code>name</code>.</li>
+<li>The function <code>print()</code> sends whatever is included in the brackets to the screen</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the brackets are empty, as in <code>print()</code>, a new line character is sent and the cursor will move down by one line on the screen</p>
+</div>
+<p><strong>AQA Pseudocode</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>a &lt;- USERINPUT  // get a value from the user and assign it to `a`
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>OUTPUT a        // output value of `a` to the screen
+</span></code></pre></div></td></tr></table></div>
+<p>Somewhat unusual perhaps ...</p>
+<p><strong>OCR Pseudocode</strong></p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>name = input("Enter your name: ")       // get value from user, assign it to `name`
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>print(name)                             // display `name` to the screen
+</span></code></pre></div></td></tr></table></div>
+<p>Nothing to surprise us here.</p>
+<h2 id="operators">Operators</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th>Description</th>
+<th style="text-align: center;">Example</th>
+<th style="text-align: center;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">+</td>
+<td>Addition</td>
+<td style="text-align: center;"><code>7 + 3</code></td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td>Subtraction</td>
+<td style="text-align: center;"><code>7 - 3</code></td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td>Multiplication</td>
+<td style="text-align: center;"><code>7 * 3</code></td>
+<td style="text-align: center;">21</td>
+</tr>
+<tr>
+<td style="text-align: center;">/</td>
+<td>Division</td>
+<td style="text-align: center;"><code>7 / 3</code></td>
+<td style="text-align: center;">2.33333..</td>
+</tr>
+<tr>
+<td style="text-align: center;">^</td>
+<td>Exponentiation</td>
+<td style="text-align: center;"><code>7 ^ 3</code></td>
+<td style="text-align: center;">343</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When two integers are divided, the result is a real (floating point number)</p>
+</div>
+<p>There is also a pair of integer division operators: </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th>Description</th>
+<th style="text-align: center;">Example</th>
+<th style="text-align: center;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">DIV</td>
+<td>Floor division</td>
+<td style="text-align: center;"><code>7 // 3</code></td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">MOD</td>
+<td>Modulo (Remainder)</td>
+<td style="text-align: center;"><code>7 % 3</code></td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both AQA and OCR pseudocode uses the mnemonic <code>MOD</code> and <code>DIV</code> for integer division operations, equivalent to <code>//</code> and <code>%</code> in Python</p>
+</div>
+<h2 id="strings">Strings</h2>
+<p>A string is different to an integer.  Perhaps obvious, but consider: </p>
+<ul>
+<li>the <strong>string</strong> '42' is represented in binary as <span class="arithmatex">\(0111010101110011_2\)</span>, </li>
+<li>the <strong>integer</strong> 42 is represented in binary as <span class="arithmatex">\(00101010_2\)</span>.</li>
+</ul>
+<p>Everything the user enters at the keyboard will be received by the computer as a character, or string if more than one character is entered.</p>
+<p>To convert string data into numeric data, and vice versa, we use one of several built-in functions:</p>
+<p><strong>AQA Pseudocode</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STRING_TO_INT(str)</td>
+<td>converts the string, <code>str</code> to an integer</td>
+</tr>
+<tr>
+<td>STRING_TO_REAL(str)</td>
+<td>converts the string, <code>str</code> to a float/real</td>
+</tr>
+<tr>
+<td>INT_TO_STRING(num)</td>
+<td>converts the numeric value, 'num' to a string</td>
+</tr>
+<tr>
+<td>REAL_TO_STRING(num)</td>
+<td>converts the numeric value, 'num' to a string</td>
+</tr>
+<tr>
+<td>CHAR_TO_CODE(ch)</td>
+<td>converts the character, <code>ch</code> to its ASCII value</td>
+</tr>
+<tr>
+<td>CODE_TO_CHAR(num)</td>
+<td>converts the integer, <code>num</code>, to its associated ASCII character</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OCR Pseudocode</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int(str)</td>
+<td>converts the string, <code>str</code> to an integer</td>
+</tr>
+<tr>
+<td>float(str)</td>
+<td>converts the string, <code>str</code> to a float/real</td>
+</tr>
+<tr>
+<td>str(num)</td>
+<td>converts the numeric value, 'num' to a string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-concatenation">String concatenation</h3>
+<p>Two strings can be joined together using the concatenation operator, <code>+</code>:</p>
+<ul>
+<li><code>full_name = first_name + ' ' + last_name</code></li>
+<li><code>age = '4' + '2'</code></li>
+</ul>
+<h3 id="string-functions">String functions</h3>
+<p>There are a number of standard functions  for working with strings.  These functions will be made available in most programming languages.  If you know you want to find the length of a string using, say, C# or Java then a quick search on the Internet will yield the answer (yes, we all do that!)</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th style="text-align: center;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str.length</code></td>
+<td>returns the length of the string, <code>str</code></td>
+<td><code>n = 'john'.length</code></td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td><code>str.substring(start, end)</code></td>
+<td>returns a slice of the string, <code>str</code>,</td>
+<td><code>print('john',substring(0,2))</code></td>
+<td style="text-align: center;">'jo'</td>
+</tr>
+<tr>
+<td><code>str.left(3)</code></td>
+<td>returns the first 3 characters of the string, <code>str</code></td>
+<td><code>print('john'.left(1))</code></td>
+<td style="text-align: center;">'j'</td>
+</tr>
+<tr>
+<td><code>str.right(3)</code></td>
+<td>returns the last 3 characters of the string, <code>str</code></td>
+<td><code>print('john'.left(1))</code></td>
+<td style="text-align: center;">'ohn'</td>
+</tr>
+<tr>
+<td><code>str.upper()</code></td>
+<td>Convert the string, <code>str</code> to upper case</td>
+<td><code>print('john'.upper())</code></td>
+<td style="text-align: center;">'JOHN'</td>
+</tr>
+<tr>
+<td><code>str.lower()</code></td>
+<td>Convert the string, <code>str</code> to lower cacse</td>
+<td><code>print('John.lower())</code></td>
+<td style="text-align: center;">'john'</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AQA Pseudocode</strong></p>
+<p>AQA alters the syntax of some of these string handling functions:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th style="text-align: center;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LEN(str)</code></td>
+<td>returns the length of the string, <code>str</code></td>
+<td><code>n = LEN('john')</code></td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td><code>SUBSTRING(start, stop, str)</code></td>
+<td>returns a slice of the string, <code>str</code>,</td>
+<td><code>print(SUBSTRING(0,2,'john'))</code></td>
+<td style="text-align: center;">'jo'</td>
+</tr>
+</tbody>
+</table>
+<p>You should not expect to see any of the others in the AQA pseudocode.</p>
+<p><strong>OCR Pseudocode</strong></p>
+<p>Both <code>length</code> and <code>substring</code> are used in OCR and the syntax is:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th style="text-align: center;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str.length</code></td>
+<td>returns the length of the string, <code>str</code></td>
+<td><code>n = 'john'.length</code></td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td><code>str.substring(start, num)</code></td>
+<td>returns a slice of the string, <code>str</code>, <code>num</code> indicates how many characters</td>
+<td><code>print('john',substring(0,2))</code></td>
+<td style="text-align: center;">'jo'</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comments">Comments</h2>
+<p>Any lines in your code that begin with the <strong>comment</strong> indicator are ignored when the program is compiled and/or executed.</p>
+<p>Get into the habit of including comments in your code, they are really useful.  All programs should contains comments:</p>
+<ul>
+<li>to describe the purpose of the program</li>
+<li>include your name and date of the author and when the program was written</li>
+<li>include a revision history, what changes were made and when</li>
+</ul>
+<p><strong>AQA Pseudocode</strong></p>
+<p>Adopts the Python comment: <code>#</code></p>
+<p><strong>OCR Pseudocode</strong></p>
+<p>Uses <code>//</code> as in languages such as Javascript etc..</p>
+<h2 id="questions">Questions</h2>
+<div class="quiz_container">
+<div class="question" data-correct-answer="1"><fieldset><h3>1. What does a variable in programming do?</h3><form><div><input type="radio" id="quiz-0-option-0" name="quiz-0" value="1"><label for="quiz-0-option-0">Stores data</label></div><div><input type="radio" id="quiz-0-option-1" name="quiz-0" value="2"><label for="quiz-0-option-1">Changes the data type</label></div><div><input type="radio" id="quiz-0-option-2" name="quiz-0" value="3"><label for="quiz-0-option-2">Deletes data</label></div><div><input type="radio" id="quiz-0-option-3" name="quiz-0" value="4"><label for="quiz-0-option-3">Executes code</label></div><div class="explanation" style="display:none;">A variable is used to store data in a program.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>2. Which symbol is used for assignment in AQA pseudocode?</h3><form><div><input type="radio" id="quiz-1-option-0" name="quiz-1" value="1"><label for="quiz-1-option-0">=</label></div><div><input type="radio" id="quiz-1-option-1" name="quiz-1" value="2"><label for="quiz-1-option-1">&lt;-</label></div><div><input type="radio" id="quiz-1-option-2" name="quiz-1" value="3"><label for="quiz-1-option-2">:=</label></div><div><input type="radio" id="quiz-1-option-3" name="quiz-1" value="4"><label for="quiz-1-option-3">-&gt;</label></div><div class="explanation" style="display:none;">In AQA pseudocode, the assignment operator is '&lt;-'.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>3. What is the typical memory size allocated for an integer data type?</h3><form><div><input type="radio" id="quiz-2-option-0" name="quiz-2" value="1"><label for="quiz-2-option-0">1 byte</label></div><div><input type="radio" id="quiz-2-option-1" name="quiz-2" value="2"><label for="quiz-2-option-1">2 bytes</label></div><div><input type="radio" id="quiz-2-option-2" name="quiz-2" value="3"><label for="quiz-2-option-2">4 bytes</label></div><div><input type="radio" id="quiz-2-option-3" name="quiz-2" value="4"><label for="quiz-2-option-3">8 bytes</label></div><div class="explanation" style="display:none;">An integer typically occupies 4 bytes of memory.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>4. How is a string represented differently from an integer in binary?</h3><form><div><input type="radio" id="quiz-3-option-0" name="quiz-3" value="1"><label for="quiz-3-option-0">Strings use less memory</label></div><div><input type="radio" id="quiz-3-option-1" name="quiz-3" value="2"><label for="quiz-3-option-1">Integers are represented with fewer bits</label></div><div><input type="radio" id="quiz-3-option-2" name="quiz-3" value="3"><label for="quiz-3-option-2">Strings use more bits</label></div><div><input type="radio" id="quiz-3-option-3" name="quiz-3" value="4"><label for="quiz-3-option-3">Integers and strings are represented the same</label></div><div class="explanation" style="display:none;">Strings are represented with more bits compared to integers because they store multiple characters.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>5. What does the <code>STRING_TO_INT</code> function do in AQA pseudocode?</h3><form><div><input type="radio" id="quiz-4-option-0" name="quiz-4" value="1"><label for="quiz-4-option-0">Converts an integer to a string</label></div><div><input type="radio" id="quiz-4-option-1" name="quiz-4" value="2"><label for="quiz-4-option-1">Converts a string to an integer</label></div><div><input type="radio" id="quiz-4-option-2" name="quiz-4" value="3"><label for="quiz-4-option-2">Converts a string to a float</label></div><div><input type="radio" id="quiz-4-option-3" name="quiz-4" value="4"><label for="quiz-4-option-3">Converts a float to a string</label></div><div class="explanation" style="display:none;"><code>STRING_TO_INT</code> converts a string to an integer in AQA pseudocode.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>6. Which operator is used for floor division in pseudocode?</h3><form><div><input type="radio" id="quiz-5-option-0" name="quiz-5" value="1"><label for="quiz-5-option-0">+</label></div><div><input type="radio" id="quiz-5-option-1" name="quiz-5" value="2"><label for="quiz-5-option-1">/</label></div><div><input type="radio" id="quiz-5-option-2" name="quiz-5" value="3"><label for="quiz-5-option-2">DIV</label></div><div><input type="radio" id="quiz-5-option-3" name="quiz-5" value="4"><label for="quiz-5-option-3">%</label></div><div class="explanation" style="display:none;">The <code>DIV</code> operator is used for floor division, which gives the quotient without the remainder.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>7. What is the result of <code>7 / 3</code> in most programming languages?</h3><form><div><input type="radio" id="quiz-6-option-0" name="quiz-6" value="1"><label for="quiz-6-option-0">2</label></div><div><input type="radio" id="quiz-6-option-1" name="quiz-6" value="2"><label for="quiz-6-option-1">2.33</label></div><div><input type="radio" id="quiz-6-option-2" name="quiz-6" value="3"><label for="quiz-6-option-2">21</label></div><div><input type="radio" id="quiz-6-option-3" name="quiz-6" value="4"><label for="quiz-6-option-3">1</label></div><div class="explanation" style="display:none;">The division operator <code>/</code> typically results in a floating-point number when dividing two integers.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>8. Which function in OCR pseudocode converts a string to a float?</h3><form><div><input type="radio" id="quiz-7-option-0" name="quiz-7" value="1"><label for="quiz-7-option-0">float(str)</label></div><div><input type="radio" id="quiz-7-option-1" name="quiz-7" value="2"><label for="quiz-7-option-1">str(float)</label></div><div><input type="radio" id="quiz-7-option-2" name="quiz-7" value="3"><label for="quiz-7-option-2">int(str)</label></div><div><input type="radio" id="quiz-7-option-3" name="quiz-7" value="4"><label for="quiz-7-option-3">real(str)</label></div><div class="explanation" style="display:none;">In OCR pseudocode, <code>float(str)</code> converts a string to a float.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>9. How does Python handle constants compared to other languages?</h3><form><div><input type="radio" id="quiz-8-option-0" name="quiz-8" value="1"><label for="quiz-8-option-0">Python does not enforce constants.</label></div><div><input type="radio" id="quiz-8-option-1" name="quiz-8" value="2"><label for="quiz-8-option-1">Python uses the <code>const</code> keyword.</label></div><div><input type="radio" id="quiz-8-option-2" name="quiz-8" value="3"><label for="quiz-8-option-2">Python allows changing constants without restriction.</label></div><div><input type="radio" id="quiz-8-option-3" name="quiz-8" value="4"><label for="quiz-8-option-3">Python does not support constants.</label></div><div class="explanation" style="display:none;">Python does not enforce constants in the same way as other languages; constants can be changed.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>10. What does the <code>str.upper()</code> function do?</h3><form><div><input type="radio" id="quiz-9-option-0" name="quiz-9" value="1"><label for="quiz-9-option-0">Converts a string to lowercase</label></div><div><input type="radio" id="quiz-9-option-1" name="quiz-9" value="2"><label for="quiz-9-option-1">Converts a string to uppercase</label></div><div><input type="radio" id="quiz-9-option-2" name="quiz-9" value="3"><label for="quiz-9-option-2">Returns the length of a string</label></div><div><input type="radio" id="quiz-9-option-3" name="quiz-9" value="4"><label for="quiz-9-option-3">Extracts a substring from a string</label></div><div class="explanation" style="display:none;"><code>str.upper()</code> converts all characters in the string to uppercase.</div><button type="submit">Submit</button></form></fieldset></div>
+</div></div><style type="text/css">.quiz {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+/* Set margin-top of first quiz child */
+.quiz > *:first-child {
+  margin-top: 0;
+}
+.hidden {
+  display: none;
+}
+
+form button {
+  background-color: var(--md-primary-fg-color);
+  border: none;
+  color: var(--md-primary-bg-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.wrong label {
+  color: red;
+}
+.correct label {
+  color: green;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+fieldset input {
+  margin: 0 10px;
+}
+fieldset label {
+  margin: 0 10px;
+}
+
+label.correct {
+  color: green;
+}
+label.wrong {
+  color: red;
+}
+input[type='radio'].correct {
+  accent-color: green;
+}
+input[type='radio'].wrong {
+  accent-color: red;
+}
+.content {
+  margin: 10px;
+}
+</style><script type="text/javascript" defer>document.querySelectorAll('.quiz').forEach((quiz) => {
+  let form = quiz.querySelector('form');
+  let fieldset = form.querySelector('fieldset');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
+    let correctAnswers = fieldset.querySelectorAll(
+      'input[name="answer"][correct]'
+    );
+    // Check if all correct answers are selected
+    let is_correct = selectedAnswers.length === correctAnswers.length;
+    for (let i = 0; i < selectedAnswers.length; i++) {
+      if (!selectedAnswers[i].hasAttribute('correct')) {
+        is_correct = false;
+        break;
+      }
+    }
+    let section = quiz.querySelector('section');
+    if (is_correct) {
+      section.classList.remove('hidden');
+      resetFieldset(fieldset);
+      // Mark all fields with colors
+      const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
+      for (let i = 0; i < allAnswers.length; i++) {
+        if (allAnswers[i].hasAttribute('correct')) {
+          allAnswers[i].parentElement.classList.add('correct');
+        } else {
+          allAnswers[i].parentElement.classList.add('wrong');
+        }
+      }
+    } else {
+      section.classList.add('hidden');
+      resetFieldset(fieldset);
+      // Mark wrong fields with colors
+      for (let i = 0; i < selectedAnswers.length; i++) {
+        if (!selectedAnswers[i].hasAttribute('correct')) {
+          selectedAnswers[i].parentElement.classList.add('wrong');
+        } else {
+          selectedAnswers[i].parentElement.classList.add('correct');
+        }
+      }
+    }
+  });
+});
+
+function resetFieldset(fieldset) {
+  const fieldsetChildren = fieldset.children;
+  for (let i = 0; i < fieldsetChildren.length; i++) {
+    fieldsetChildren[i].classList.remove('wrong');
+    fieldsetChildren[i].classList.remove('correct');
+  }
+}
+</script>
+
+<!-- Source file information -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+<!-- Was this page helpful? -->
+
+
+
+
+<!-- Comment system -->
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="02_selection_boolean_and_random.html" class="md-footer__link md-footer__link--next" aria-label="Next: Selection">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Selection
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/james-willett" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheJamesWillett" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/willettjames/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.prune", "navigation.instant", "navigation.footer", "toc.follow", "navigation.top", "header.autohide", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../assets/js/katex.js"></script>
+      
+        <script src="../../assets/js/custom.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../assets/js/quiz.js"></script>
+      
+        <script src="../../assets/js/algorithms.js"></script>
+      
+    
+  </body>
+</html>

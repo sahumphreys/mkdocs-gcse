@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Quest</title>
+    <style>
+        body { font-family: "Segoe UI", sans-serif; }
+
+        .game-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .left-column {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 20px;
+        }
+
+        .logo {
+            margin: 0 auto;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .logo-img {
+            width: 250px;
+        }
+
+        .progress {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: flex-start; */
+        }
+
+        .choices-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #question {
+            color: #3366cc;
+            text-align: center;
+        }
+
+        #description {
+            font-size: 1.2rem;
+            width: 65%;
+            text-align: center;
+        }
+
+        #inventory {
+            font-size: 80%;
+        }
+
+        .score {
+            font-size: 3rem;
+            color: darkgreen;
+            text-align: center;
+        }
+
+        #choices { margin-top: 10px; }
+        
+        #choices button {
+            display: block;
+            margin-bottom: 10px; /* Adds some space between buttons */
+            width: 400px; 
+            font-size: 1rem;
+            padding: 1rem;
+        }
+        #game img {
+            width: 260px;
+        }
+        #next {
+            width: 400px;
+            font-size: 1rem;
+            padding: 1rem;
+        }
+
+        .card {
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden; /* Ensures content stays within the card */
+            padding: 0;
+        }
+
+        .card-title {
+            background-color: #f5f5f5; /* Background color around the title */
+            background-color: darkgreen;
+            color: #f5f5f5;               /* Text color */
+            padding: 10px;             /* Space around the title text */
+            font-weight: bold;         /* Make the title bold */
+            position: relative;        /* Position the title at the top */
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: center;        /* Center the title text */
+            margin-top: 0;
+        }
+
+        .card-content {
+            padding: 6px;             /* Padding for the content inside the card */
+            background-color: #fff;    /* Background color of the content area */
+            margin-top: 0;
+        }
+</style>
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="left-column">
+            <div class="logo">
+                <a href="./climate.html"><img class="logo-img" src="../../../assets/images/climate-quest.png" /></a>
+            </div>
+            <div class="progress">
+                <div id="score-container" class="card">
+                    <h3 class="card-title">Score</h3>
+                    <p id="score" class="score card-content">42</p>
+                </div>
+                <div id="inventoryContainer" class="card">
+                    <h3 class="card-title">Inventory</h3>
+                    <div id="inventory" class="card-content"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div id="choices-container" class="choices-container">
+                <h2 id="challengeTitle"></h2>
+                <h3 id="question"></h3>
+                <div id="choices" class="choices"></div>
+                <button id="next" style="display: none;">Return to Main Menu</button>
+            </div>
+        </div>
+    </div>
+          
+    
+    </div>
+    <script>
+// const descriptionEl = document.getElementById('description');
+const titleEl = document.getElementById('challengeTitle');
+const questionEl = document.getElementById('question');
+const choicesEl = document.getElementById('choices');
+const nextButton = document.getElementById('next');
+const scoreEl = document.getElementById('score');
+const inventoryEl = document.getElementById('inventory');
+
+let inventory = [];
+let score = 0;
+let visitedLocations = [];
+const totalLocations = 5;
+let currentLocation = '';
+
+function updateInventory(inventory) {
+    inventoryEl.innerHTML = '';  // Clear existing items
+    inventory.forEach((obj) => {
+        const item = document.createElement('p');
+        item.textContent = obj; 
+        inventoryEl.appendChild(item);
+    });
+}
+
+function updateGame(title, description, choices) {
+    titleEl.textContent = title;
+    // descriptionEl.textContent = description;
+    questionEl.textContent = description;
+    choicesEl.innerHTML = '';
+    scoreEl.textContent = score;
+    updateInventory(inventory);
+    if (choices != undefined) {
+        choices.forEach((choice, index) => {
+            const button = document.createElement('button');
+            button.textContent = choice.text;
+            button.onclick = choice.action;
+            choicesEl.appendChild(button);
+        });
+    };
+
+    nextButton.style.display = 'none'; // Hide the Next button initially
+}
+
+
+function handleChoice(choice) {
+    const result = processChoice(choice);
+    updateGame(result.title, result.description, result.choices);
+
+    // Check if this was the final challenge and no more choices are left
+    if (result.choices.length === 0) {
+        if (currentLocation === 'finalChallenge') {
+            nextButton.style.display = 'block';
+            nextButton.onclick = endGame; // End the game after the final challenge
+        } else if (visitedLocations.length === totalLocations) {
+            nextButton.style.display = 'block';
+            nextButton.onclick = presentFinalChallenge; // Move to final challenge
+        } else {
+            nextButton.style.display = 'block';
+            nextButton.onclick = startGame; // Move back to the main menu
+        }
+    }
+}
+
+function endGame() {
+    let finalMessage = '';
+
+    if (score >= 9) {
+        finalMessage = "Outstanding! You've made an incredible impact on the environment, leading to a significant reduction in climate change effects.";
+    } else if (score >= 6) {
+        finalMessage = "Great job! You've made a positive impact on the environment, though some challenges remain.";
+    } else if (score >= 3) {
+        finalMessage = "Good effort! You've helped in the fight against climate change, but more work is needed.";
+    } else {
+        finalMessage = "You faced many challenges, but climate change continues to pose a significant threat. Consider revisiting the challenges to find better solutions.";
+    }
+
+    updateGame(
+        finalMessage + " Thank you for playing Climate Quest",
+        []
+    );
+    nextButton.style.display = 'none'; // Hide the Next button at the end of the game
+
+    // Optionally, reset the game after a delay or with a button
+    // setTimeout(startGame, 5000); // Restart the game after 5 seconds
+}
+
+
+function processChoice(choice) {
+    let result = { title: '', description: '', choices: [] };
+    
+    switch (currentLocation) {
+        case 'forest':
+            if (choice === 1) {
+                collectItem('Recycling Bin');
+                score += 2;
+                result = { title: "Result", description: "The loggers refuse to stop, but your protest raises awareness, leading to stricter logging regulations in the future.", choices: [] };
+            } else if (choice === 2) {
+                score += 1
+                result = { title: "Result", description: "Your tree-planting initiative is a success, restoring parts of the forest.", choices: [] };
+            } else if (choice === 3) {
+                score += -1;
+                result = { title: "Result", description: "The deforestation continues, resulting in habitat loss and increased carbon emissions.", choices: [] };
+            }
+            break;
+        case 'ocean':
+            if (choice === 1) {
+                collectItem('Reusable Water Bottle');
+                score += 2;
+                result = { title: "Result", description: "The clean-up helps restore water quality, allowing some corals to recover.", choices: [] };
+            } else if (choice === 2) {
+                score += 1;
+                result = { title: "Result", description: "Your advocacy leads to international agreements to reduce carbon emissions.", choices: [] };
+            } else if (choice === 3) {
+                score += -1;
+                result = { title: "Result", description: "The coral is harvested, leading to the complete destruction of the reef.", choices: [] };
+            }
+            break;
+        case 'city':
+            if (choice === 1) {
+                collectItem("Electric Vehicle");
+                score += 2;
+                result = { title: "Result", description: "The recycling program reduces waste and pollution, making the city cleaner.", choices: [] };
+            } else if (choice == 2) {
+                score += 1;
+                result = { title: "Result", description: "Encouraging public transportation and electric vehicles reduces the city's carbon footprint.", choices: [] };
+            } else if (choice == 3) {
+                score += -1;
+                result = { title: "Result", description: "Pollution worsens, leading to health problems for the city's residents.", choices: [] };
+            }
+            break;
+        case 'arctic':
+            if (choice === 1) {
+                collectItem("Solar Panels");
+                score += 2;
+                result = { title: "Result", description: "Renewable energy projects help slow down global warming, reducing the rate of glacier melting.", choices: [] };
+            } else if (choice == 2) {
+                score += 1;
+                result = { title: "Result", description: "Supporting indigenous communities leads to sustainable land management.", choices: [] };
+            } else if (choice == 3) {
+                score += -1;
+                result = { title: "Result", description: "The glaciers continue to melt, leading to severe sea level rise.", choices: [] };
+            }
+            break;
+        case 'desert':
+            if (choice === 1) {
+                collectItem("Water Purifier");
+                score += 2;
+                result = { title: "Result", description: "Water conservation efforts help sustain the community.", choices: [] };
+            } else if (choice == 2) {
+                score += 1;
+                result = { title: "Result", description: "Drought-resistant crops thrive, providing food and income for the local population.", choices: [] };
+            } else if (choice == 3) {
+                score += -1;
+                result = { title: "Result", description: "The region is abandoned, and the desertification spreads.", choices: [] };
+            }
+            break;
+        case 'finalChallenge':
+            if (choice === 1 && inventory.includes('Solar Panels')) {
+                score += 3;
+                result = { title: "Result", description: "The solar panels help power emergency shelters, saving countless lives.", choices: [] };
+            } else if (choice === 1) {
+                score += 2;
+                result = { description: "The evacuation saves thousands of lives, but similar disasters continue.", choices: [] };
+            } else if (choice === 2) {
+                score += 1;
+                result = { description: "Your push for global climate policies leads to a united effort to combat climate change.", choices: [] };
+            } else if (choice === 3) {
+                score += -1;
+                result = { description: "The hurricane devastates the city, and without any action, similar crises become more frequent.", choices: [] };
+            }
+            break;
+        default:
+            result = { description: "Game over. Your decisions have led to this outcome.", choices: [] };
+            break;
+    }
+
+    return result;
+}
+
+
+function collectItem(item) {
+    if (!inventory.includes(item)) {
+        inventory.push(item);
+    }
+    updateInventory(inventory);
+}
+
+
+function startGame() {
+    question.textContent = "Select your region: "
+    
+    updateGame(
+        "",
+        "Welcome to Climate Quest! The Earth is in peril as climate change accelerates. Your mission is to make crucial decisions to combat the effects of climate change.",
+        [
+            { text: 'Forest Challenge', action: () => startLocation('forest') },
+            { text: 'Ocean Challenge', action: () => startLocation('ocean') },
+            { text: 'City Challenge', action: () => startLocation('city') },
+            { text: 'Arctic Challenge', action: () => startLocation('arctic') },
+            { text: 'Desert Challenge', action: () => startLocation('desert') }
+        ]
+    );
+}
+
+function presentFinalChallenge() {
+    currentLocation = 'finalChallenge';
+    updateGame(
+        "Final Challenge".toUpperCase(),
+        "A massive hurricane is approaching a heavily populated coastal city.",
+        [
+            { text: 'Use the solar panels to power emergency shelters.', action: () => handleChoice(1) },
+            { text: 'Coordinate a massive evacuation and disaster response effort.', action: () => handleChoice(2) },
+            { text: 'Focus on long-term solutions by pushing for global climate policies and renewable energy initiatives.', action: () => handleChoice(3) },
+            { text: 'Accept the situation as inevitable and do nothing.', action: () => handleChoice(4) }
+        ]
+    );
+}
+
+function startLocation(location) {
+    currentLocation = location;
+    if (location) {
+        challengeTitle.style.display = "block";
+    }
+
+    if (visitedLocations.includes(location)) {
+        alert(`You have already visited the ${location}!  Please choose again.`);
+        return;
+    }
+    
+    visitedLocations.push(location);
+    
+
+    question.textContent = "Make your choice: ";
+    switch (location) {
+        case 'forest':
+            updateGame(
+                `${location} Challenge`.toUpperCase(),
+                "You witness large-scale logging operations threatening to clear vast areas of trees. Do you ...",
+                [
+                    { text: 'Confront the loggers and demand they stop.', action: () => handleChoice(1) },
+                    { text: 'Start a tree-planting initiative with the local community.', action: () => handleChoice(2) },
+                    { text: 'Ignore the situation and move on.', action: () => handleChoice(3) }
+                ]
+            );
+            break;
+        case 'ocean':
+            updateGame(
+                `${location} Challenge`.toUpperCase(),
+                "You arrive at a coral reef, now turning pale due to rising ocean temperatures and pollution.",
+                [
+                    { text: "Launch a clean-up campaign to remove pollutants from the water.", action: () => handleChoice(1)},
+                    { text: "Advocate for stricter regulations on carbon emissions.", action: () => handleChoice(2) },
+                    { text: "Harvest the remaining coral for commercial purposes.", action: () => handleChoice(3)}
+                ]
+            );
+            break;
+        case 'city':
+            updateGame(
+                `${location} Challenge`.toUpperCase(),
+                "In a bustling city, smog fills the air, and trash litters the streets.",
+                [
+                    { text: "Implement a city-wide recycling program.",action: () => handleChoice(1) },
+                    { text: "Promote the use of public transportation and electric vehicles.", action: () => handleChoice(2) },
+                    { text: "Do nothing and let the city continue on its current path.", action: () => handleChoice(3) }
+                ]
+            );
+            break;
+        case 'arctic':
+            updateGame(
+                `${location} Challenge`.toUpperCase(),
+                "You travel to the Arctic, where glaciers are melting at an alarming rate.",
+                [
+                    { text: "Invest in renewable energy projects to reduce global warming.", action: () => handleChoice(1) },
+                    { text: "Support indigenous communities in their efforts to protect the land.", action: () => handleChoice(2) },
+                    { text: "Ignore the melting glaciers and continue with business as usual.", action: () => handleChoice(3) }
+                ]
+            );
+            break;
+        case 'desert':
+        updateGame(
+                `${location} Challenge`.toUpperCase(),
+                "In a once fertile desert region, prolonged drought has dried up rivers and made farming nearly impossible.",
+                [
+                    { text: "Implement water conservation techniques and build reservoirs.", action: () => handleChoice(1) },
+                    { text: "Introduce drought-resistant crops to the area.", action: () => handleChoice(2) },
+                    { text: "Abandon the region and relocate the population.", action: () => handleChoice(3) }
+                ]
+            );
+            break;
+        case 'finalChallenge':
+            updateGame(
+                "Final Challenge".toUpperCase(),
+                "A massive hurricane is approaching a heavily populated coastal city.",
+                [
+                    { text: 'Use the solar panels to power emergency shelters.', action: () => handleChoice(1) },
+                    { text: 'Coordinate a massive evacuation and disaster response effort.', action: () => handleChoice(2) },
+                    { text: 'Focus on long-term solutions by pushing for global climate policies and renewable energy initiatives.', action: () => handleChoice(3) },
+                    { text: 'Accept the situation as inevitable and do nothing.', action: () => handleChoice(4) }
+                ]
+            );
+            break;
+        default:
+            break;
+    }
+}
+
+nextButton.addEventListener('click', () => {
+    startGame(); // Return to the home screen or proceed to the next challenge
+});
+
+startGame();
+
+           
+    </script>
+</body>
+</html>

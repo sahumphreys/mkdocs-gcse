@@ -1,0 +1,1871 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="02_describing_an_algorithm.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Computational Thinking - GCSE Computer Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Segoe+UI:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Segoe UI";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#computational-thinking" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-header__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GCSE Computer Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Computational Thinking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../python/index.html" class="md-tabs__link">
+          
+  
+  Topics
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../boards/index.html" class="md-tabs__link">
+          
+  
+  Exam Boards
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/index.html" class="md-tabs__link">
+          
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact.html" class="md-tabs__link">
+        
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="GCSE Computer Science" class="md-nav__button md-logo" aria-label="GCSE Computer Science" data-md-component="logo">
+      
+  <img src="../../assets/images/logo2.svg" alt="logo">
+
+    </a>
+    GCSE Computer Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Topics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Topics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../python/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../data/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Data Representation
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../system/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    System Architecture
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../networking/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Computer Networks
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Computational Thinking
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01_computational_thinking.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Computational Thinking
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an algorithm?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-rightarrow-process-rightarrow-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input \(\rightarrow\) Process \(\rightarrow\) Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computational-thinking_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern Recognition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstraction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithmic-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_describing_an_algorithm.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Describing an Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_searching.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Searching Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_sorting.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sorting Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_tracing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tracing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_structure_diagrams.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structure Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../security/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../databases/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../programming/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Programming
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../logic/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Logic
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../impact/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Impact of Technology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../boards/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Exam Boards
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../blog/index.html" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an algorithm?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-rightarrow-process-rightarrow-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input \(\rightarrow\) Process \(\rightarrow\) Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computational-thinking_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decomposition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern Recognition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstraction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithmic-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithmic Thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
+
+
+<!-- Actions -->
+
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<!--  -->
+
+<!-- Page content -->
+<div><p><img _=";" align="right" alt="" src="../../assets/images/topics/algorithms.jpg" width="100"></p>
+<h1 id="computational-thinking">Computational Thinking</h1>
+<div class="admonition note">
+<p class="admonition-title">Objectives</p>
+<ul>
+<li>Understand and explain the term algorithm</li>
+<li>Define computational thinking and its significance in computer science and various disciplines.</li>
+<li>Identify the four key components of computational thinking and explain each component.</li>
+<li>Provide examples of how decomposition is applied in problem-solving, using analogies such as the sandwich-making process.</li>
+<li>Know how pattern recognition leads to the creation of generalizations.</li>
+<li>Understand how abstraction simplifies complex systems and allows for the creation of models.</li>
+<li>Identify the core principles of algorithmic thinking, including sequential steps, clear instructions, input and output, reusability, and efficiency.</li>
+</ul>
+</div>
+<p>Before we can write the instructions for the computer solve a given problem we need to work out what the steps are that we need to take to solve the problem.  We need to know the <strong>how</strong>.  This is not always straightforward and we need to train our brain to think like a computer when designing these steps.  The steps are known as th <strong>algorithm</strong>.</p>
+<h2 id="what-is-an-algorithm">What is an algorithm?</h2>
+<p>By definition, an algorithm is a step-by-step set of instructions or rules designed to solve a specific problem or carry out a task.  They are an essential component of computer science, they define the logic that drives software and systems.</p>
+<p>Take the problem of finding the largest value in a list of numbers e.g. </p>
+<ul>
+<li><code>[23, 8, -76, 49, 65, -2]</code>  </li>
+</ul>
+<p>We can simply scan through this list of values and see that <span class="arithmatex">\(65\)</span> is the largest value.  But how do we set out the set of instructions for a computer to execute to solve this problem.  We need to "think like a computer", or in other words we need to apply "computational thinking".</p>
+<h2 id="input-rightarrow-process-rightarrow-output">Input <span class="arithmatex">\(\rightarrow\)</span> Process <span class="arithmatex">\(\rightarrow\)</span> Output</h2>
+<p>For all problems there will be some data we need to work with, our <strong>input</strong> and a result we're looking to obtain, our <strong>output</strong>.  </p>
+<p><img alt="Input-Process-Output" src="../../assets/images/algorithms/input-process-output.png"></p>
+<p><strong>Inputs</strong>: Inputs are the data or values that the algorithm takes as input.  For our problem of finding the largest value in a list of values it will be the list itself: <code>[23, 8, -76, 49, 65, -2]</code>.  It's the raw material we will work with.  It may be the same set of values if we were wanting to sort the values into ascending order, or to find the minimum value, or sum all the values etc..</p>
+<p><strong>Outputs</strong>: The output is the result produced by the algorithm after processing the input data.  It may be a single value as in the case of finding the largest value.  Here, we're expecting the output to be <span class="arithmatex">\(65\)</span>.  For a sorting algorithm it will be list of values sorted into ascending order, the minimum value output would be <span class="arithmatex">\(-76\)</span>, the sum of the values would be <span class="arithmatex">\(67\)</span> etc..</p>
+<p><strong>Process</strong>: The process is the series of steps or operations the algorithm performs on the input to transform it into the desired output.  For our finding the maximum value algorithm we might come up with the following set of instructions:</p>
+<ol>
+<li>Start with the first number in the list and consider it as the current maximum.</li>
+<li>Iterate through the remaining numbers in the list.</li>
+<li>For each number, compare it with the current maximum.</li>
+<li>If the current number is greater than the current maximum, update the current maximum to be that number.</li>
+<li>Continue this process until all numbers in the list have been considered.</li>
+<li>The final value of the current maximum is the maximum number in the list.</li>
+</ol>
+<p>Remember, this is exactly what you would have done when visually scanning the list for the largest value.  Before returning to this algorithm we;ll unpack some of the principles of thinking like a computer, or computational thinking.</p>
+<p>What steps would you need to take to:</p>
+<ul>
+<li>find the smallest value, the minimum?</li>
+<li>sum all the values together and output the result?</li>
+</ul>
+<h2 id="computational-thinking_1">Computational thinking</h2>
+<p>Underpinning the whole of the GCSE in computer science is the development and understanding of <strong>computational thinking</strong>, basically "thinking like a computer".  Computational thinking provides a set of skills and analytical abilities that are deemed as being increasingly important in the 21st century.  It has application not just for computer science but also across other disciplines including physics, biology, chemistry, economics, sociology, and engineering itself. </p>
+<p>Most of the definitions of computational thinking have at their heart <strong>algorithmic thinking</strong> that is, the ability to describe problems that take some input and transform it in to a desired output.  It is to think like a computer.   The development of computational thinking is one of the fundamental reasons why we learn how to program at this level though by doing this we also collect other skills and understanding about the computer and digital systems work.</p>
+<p>Computational thinking is a problem-solving approach that involves breaking down complex problems into smaller, more manageable parts and systematically analyzing and solving them. It is a fundamental skill in computer science, though as already noted, impacts many other disciplines, and is essential for understanding how to design and implement algorithms, write code, and solve problems in a logical and efficient manner.</p>
+<p>In other topics, not just the programming topic here, computational thinking will have been used.</p>
+<p>There are four key components of computational thinking:</p>
+<ol>
+<li><strong>Decomposition:</strong> Breaking down a complex problem into smaller, more manageable parts or sub-problems.</li>
+<li><strong>Pattern Recognition:</strong> Identifying patterns, trends, and similarities within and between problems.</li>
+<li><strong>Abstraction:</strong> Focusing on the essential details while ignoring unnecessary information, helping to create generalisations and models.</li>
+<li><strong>Algorithmic Thinking:</strong> Developing a step-by-step solution or set of rules to solve a problem.</li>
+</ol>
+<h2 id="decomposition">Decomposition</h2>
+<p>It's akin to the old joke "How do you eat an elephant?", answer: "One piece at a time".  Decomposition takes a problem and breaks it down into smaller, more manageable chunks.  Solve each of these smaller chunks and then combine them to provide the whole solution.</p>
+<p><img alt="Decomposition" src="../../assets/images/algorithms/decomposition.png"></p>
+<p>By analogy it's like a recipe, for example, making a cheese sandwich.  It's not something we stop to think about but when we do we see it can be broken down into a number of key steps, each step being a sub-problem of the overall task e.g.</p>
+<ul>
+<li><strong>Gather ingredients</strong>: sliced bread, butter, cheese (other ingredients can be added)</li>
+<li><strong>Gather tools</strong>: knife, cheese slicer</li>
+<li><strong>Prepare the work surface</strong>: place a clean chopping board or plate on the worktop</li>
+<li><strong>Get the bread ready</strong>: remove two slices of bread from the packet</li>
+<li><strong>Spread butter</strong>: using a knife spread butter thinly on to the bread</li>
+<li><strong>Slice the cheese</strong>: using a cheese slicer get 4 slices of cheese </li>
+<li><strong>Add cheese to the bread</strong>: place two slices of cheese on each piece of bread</li>
+<li><strong>Combine the bread slices</strong>: place the two slices of bread together, with cheese in the middle</li>
+<li><strong>Cut and serve</strong>: cut completed sandwich into two halves</li>
+</ul>
+<p><img alt="Sandwich" src="../../assets/images/algorithms/sandwich.jpg"></p>
+<p>There is a precise order to these instructions.  Some tasks <em>must</em> be done before others, some in this example could be swapped around e.g. you might slice the cheese before spreading the butter etc.. But, the key point is the problem has been broken down into a number of discrete steps.  Complete each in turn and you will be able to make a cheese sandwich over and over again!</p>
+<p>It's a simple example, but the concept of decomposition scales to more complex problems in computer science, where breaking down tasks into smaller steps is a key strategy for solving problems efficiently.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Our algorithm for making a cheese sandwich does not require a programming language.  The algorithm and the code we use to implement that algorithm are two quite separate concepts.</p>
+</div>
+<p>In "Finding the Max" we decomposed the high level problem into a set of lower level instructions:</p>
+<ol>
+<li>Start with the first number in the list and consider it as the current maximum.</li>
+<li>Iterate through the remaining numbers in the list.</li>
+<li>For each number, compare it with the current maximum.</li>
+<li>If the current number is greater than the current maximum, update the current maximum to be that number.</li>
+<li>Continue this process until all numbers in the list have been considered.</li>
+<li>The final value of the current maximum is the maximum number in the list.</li>
+</ol>
+<p>Embedded in these instruction will be constructs you recognise from programming:</p>
+<ul>
+<li>Initialisation: setting the first value to the current maximum</li>
+<li>Iteration: looping through each of the values in turn</li>
+<li>Selection: If the current number is greater than the current maximum then set current maximum to that value</li>
+</ul>
+<h2 id="pattern-recognition">Pattern Recognition</h2>
+<p>Pattern recognition involves identifying patterns, trends, and similarities within and between problems.  For example, all sorting algorithm (and there are many different ways to sort a list of items as well see later) share common steps, such as comparing elements and swapping them.  Thus we can create an algorithm that swaps elements in the list which can then be used in all the different sorting algorithms that require this function.</p>
+<p>We could take the previous example and realise that making a cheese sandwich and making a tuna sandwich share a number of common characteristics and steps, similarly making a cheese sandwich and making a toasted cheese sandwich etc..</p>
+<p>Thus, the process of "making a sandwich" can be generalised.  The specific detail of the type of sandwich (i.e. cheese or tuna) can be passed in to this process, to the person making the sandwich , and called upon when that relevant step is encountered in the sandwich making process.  We do not to re-examine the algorithm for making a sandwich, that's been done and described the only difference will be the filling to use.</p>
+<p>Sandwiches are a trivial example but we see pattern recognition be used and applied in a whole host of more complex situations.  Think of the "Find the Max" algorithm, finding the largest value in a list of values. If we then have, in a different problem, the task of finding the longest word in a set of given words we can reapply the same solution but this time using strings and their associated lengths.  The pattern tells us that this is really the same problem, but the data we use, our <strong>inputs</strong>, will be different but the process will be very similar.</p>
+<p>In pattern recognition we are looking for:</p>
+<ul>
+<li><strong>Similarities</strong>:  Computational thinkers look for similarities between different problems or scenarios. For example, recognizing that searching for a specific item in a list and finding a particular word in a document both involve a search process.</li>
+<li><strong>Trends and Regularities</strong>:  Patterns often involve recurring elements or trends. In data analysis, pattern recognition may involve identifying trends in datasets, such as sales increasing during certain seasons.</li>
+<li><strong>Applying Known Solutions to New Problems</strong>: When a pattern is recognized, individuals can apply solutions that worked in similar situations to the current problem. For instance, if a programmer has successfully used a sorting algorithm in one program, recognizing the need for sorting in a new program may prompt the reuse of the same or a similar algorithm.</li>
+<li><strong>Abstraction through Pattern Recognition</strong>: Abstraction, another principle of computational thinking, often involves recognizing common elements among different problems. Pattern recognition supports abstraction by allowing individuals to focus on essential similarities while ignoring irrelevant details.</li>
+<li><strong>Efficiency Improvements</strong>:  Recognizing patterns helps in creating more efficient solutions. If a problem can be mapped onto a known pattern, it is possible to reuse or adapt existing solutions, saving time and effort.</li>
+</ul>
+<h2 id="abstraction">Abstraction</h2>
+<p>Abstraction is a crucial concept in computational thinking, involving the process of simplifying complex systems by focusing on the essential aspects while ignoring unnecessary details. It enables individuals to create models that capture the fundamental features of a problem, making it more manageable and understandable.</p>
+<p>The Tube Map of London is s classic example of abstraction.  It shows the different tube lines and the stops on those lines.  It does not show the distance between the stations, nor how far underground they are.  It does nto show the precise geographical location of the stations.</p>
+<p><img alt="Tube map, an example of abstraction" src="../../assets/images/algorithms/tube_map.png"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Take a look at the map here for the geographical view of the London underground: <a href="https://jonathancrowe.net/images/2015/london-connections.jpg">https://jonathancrowe.net/images/2015/london-connections.jpg</a></li>
+</ul>
+</div>
+<p>Examples abound in the field of computer science and beyond, e.g. when designing a traffic management system, abstraction involves focusing on the essential components like traffic lights, intersections, and vehicles while ignoring specific details about individual cars.</p>
+<p>Abstraction allows us to simplify complex systems, making them more manageable and understandable. It facilitates the creation of models that capture the essential features without getting bogged down by unnecessary details.</p>
+<p>Abstraction brings many benefits to the problem solving process:</p>
+<ul>
+<li><strong>Identify Essential Details:</strong>  Abstraction involves identifying and isolating the essential details or components of a problem. This step requires distinguishing between what is crucial to solving the problem and what can be safely ignored.</li>
+<li><strong>Ignoring Unnecessary Details:</strong> Once the essential details are identified, unnecessary or extraneous information is ignored. This simplifies the problem, making it more approachable and easier to comprehend.</li>
+<li><strong>Creating Generalizations:</strong> Abstraction often leads to the creation of generalizations or models. These models capture the essential features of a problem without getting bogged down by specific, context-dependent details. For example, a sorting algorithm can be abstracted as a set of steps applicable to various datasets.</li>
+<li><strong>Hierarchy of Abstraction:</strong> Abstraction can occur at multiple levels. In complex systems, there may be hierarchies of abstraction, where higher levels focus on broader, more general aspects, and lower levels delve into finer details. For instance, a software application can be abstracted at the user interface level, algorithmic level, and data storage level.</li>
+<li><strong>Ease of Understanding and Communication:</strong> Abstraction enhances the understandability of a problem or system. By removing unnecessary complexities, individuals can grasp the core concepts more easily. It also facilitates communication among team members, allowing them to discuss high-level concepts without getting mired in details.</li>
+</ul>
+<p>In essence, abstraction is about creating simplified, yet effective, representations of complex systems. It allows computational thinkers to manage the complexity of problems, design scalable solutions, and build a foundation for problem-solving in computer science. Abstraction is closely intertwined with other computational thinking principles like decomposition and pattern recognition, forming a comprehensive approach to tackling complex challenges.</p>
+<p>In "Finding the Max", we do not know what these values actually represent.  It may be significant but it may be unnecessary detail.  In any event, if we're finding the largest of these values it does not matter if those values represent temperatures, gross domestic product of a country, stock market movements for a company or weekly results from a fantasy football league!  We can abstract that detail away and just focus on what is essential to find the largest value.</p>
+<h2 id="algorithmic-thinking">Algorithmic Thinking</h2>
+<p>Algorithmic thinking involves developing a step-by-step solution or set of rules to solve a problem. Creating a recipe for baking a cake, or making a sandwich is an example of algorithmic thinking. It specifies the exact steps to be followed, such as mixing ingredients, baking at a certain temperature, and cooling.</p>
+<p>There are some core principles to consider when thinking algorithmically, these include:</p>
+<ul>
+<li><strong>Sequential Steps</strong>: Algorithmic thinking requires breaking down a problem into a sequence of individual steps. Each step represents a specific action or operation that contributes to solving the overall problem.</li>
+<li><strong>Clear and Precise Instructions</strong>:  Algorithms provide clear and precise instructions for solving a problem. These instructions must be unambiguous and can be followed by anyone with a basic understanding of the problem domain, or, of course, followed by a computer.</li>
+<li><strong>Input and Output</strong>:  Algorithms take <strong>input</strong>, <strong>process</strong> it through a series of steps, and produce an <strong>output.</strong> Understanding the relationship between input and output is crucial for designing effective algorithms.</li>
+<li><strong>Reusability</strong>:  Well-designed algorithms are often reusable. Once an algorithm is developed for a specific task, it can be applied to similar problems, saving time and effort in the problem-solving process.  This is generalisation as discussed earlier.</li>
+<li><strong>Efficiency and Optimization</strong>:  Algorithmic thinking involves considering the efficiency of a solution. This includes minimizing the number of steps, optimizing resource usage (such as time and space), and ensuring the algorithm performs well in various scenarios.</li>
+<li><strong>Pseudocode and Flowcharts</strong>:  Communicating algorithms often involves using <strong>pseudocode</strong> or <strong>flowcharts.</strong> Pseudocode is a high-level description of the algorithm using a mix of natural language and simple code-like structures. Flowcharts use visual symbols to represent the flow of control in an algorithm.</li>
+</ul>
+<p>In "Finding The Max" we set out the following steps:</p>
+<ol>
+<li>Start with the first number in the list and consider it as the current maximum.</li>
+<li>Iterate through the remaining numbers in the list.</li>
+<li>For each number, compare it with the current maximum.</li>
+<li>If the current number is greater than the current maximum, update the current maximum to be that number.</li>
+<li>Continue this process until all numbers in the list have been considered.</li>
+<li>The final value of the current maximum is the maximum number in the list.</li>
+</ol>
+<p>This algorithmic approach breaks down the task into a series of simple steps, providing a systematic way to find the maximum number in a list regardless of its size.  These steps will still work with 10, 100 or 1,000,000 items.</p>
+<h2 id="questions">Questions</h2>
+<div class="quiz_container">
+<div class="question" data-correct-answer="2"><fieldset><h3>1. What is an algorithm?</h3><form><div><input type="radio" id="quiz-0-option-0" name="quiz-0" value="1"><label for="quiz-0-option-0">A sequence of numbers arranged in a specific order</label></div><div><input type="radio" id="quiz-0-option-1" name="quiz-0" value="2"><label for="quiz-0-option-1">A step-by-step set of instructions or rules to solve a problem</label></div><div><input type="radio" id="quiz-0-option-2" name="quiz-0" value="3"><label for="quiz-0-option-2">A process for recognizing patterns in large datasets</label></div><div><input type="radio" id="quiz-0-option-3" name="quiz-0" value="4"><label for="quiz-0-option-3">A complex mathematical equation for solving problems</label></div><div class="explanation" style="display:none;">An algorithm is defined as a step-by-step set of instructions designed to solve a specific problem or carry out a task.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>2. What are the key components of computational thinking?</h3><form><div><input type="radio" id="quiz-1-option-0" name="quiz-1" value="1"><label for="quiz-1-option-0">Decomposition, Pattern Recognition, Abstraction, Algorithmic Thinking</label></div><div><input type="radio" id="quiz-1-option-1" name="quiz-1" value="2"><label for="quiz-1-option-1">Decomposition, Sorting, Searching, Pattern Matching</label></div><div><input type="radio" id="quiz-1-option-2" name="quiz-1" value="3"><label for="quiz-1-option-2">Decomposition, Input-Output, Data Analysis, Debugging</label></div><div><input type="radio" id="quiz-1-option-3" name="quiz-1" value="4"><label for="quiz-1-option-3">Problem Solving, Programming, Pseudocode, Flowcharts</label></div><div class="explanation" style="display:none;">The four components of computational thinking are Decomposition, Pattern Recognition, Abstraction, and Algorithmic Thinking.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="1"><fieldset><h3>3. Which of the following best illustrates decomposition?</h3><form><div><input type="radio" id="quiz-2-option-0" name="quiz-2" value="1"><label for="quiz-2-option-0">Breaking a large problem into smaller, manageable parts</label></div><div><input type="radio" id="quiz-2-option-1" name="quiz-2" value="2"><label for="quiz-2-option-1">Identifying trends in a dataset over time</label></div><div><input type="radio" id="quiz-2-option-2" name="quiz-2" value="3"><label for="quiz-2-option-2">Creating a general solution for multiple problems</label></div><div><input type="radio" id="quiz-2-option-3" name="quiz-2" value="4"><label for="quiz-2-option-3">Writing code to solve a complex issue</label></div><div class="explanation" style="display:none;">Decomposition involves breaking down complex problems into smaller sub-problems to solve each part individually.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>4. In the 'Find the Max' example, what is the input?</h3><form><div><input type="radio" id="quiz-3-option-0" name="quiz-3" value="1"><label for="quiz-3-option-0">The largest number</label></div><div><input type="radio" id="quiz-3-option-1" name="quiz-3" value="2"><label for="quiz-3-option-1">The process to find the maximum number</label></div><div><input type="radio" id="quiz-3-option-2" name="quiz-3" value="3"><label for="quiz-3-option-2">The list of numbers</label></div><div><input type="radio" id="quiz-3-option-3" name="quiz-3" value="4"><label for="quiz-3-option-3">The output of the algorithm</label></div><div class="explanation" style="display:none;">In the 'Find the Max' example, the input is the list of numbers on which the algorithm operates to find the maximum value.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="3"><fieldset><h3>5. Which step in the algorithm for 'Finding the Max' involves selection?</h3><form><div><input type="radio" id="quiz-4-option-0" name="quiz-4" value="1"><label for="quiz-4-option-0">Initializing the current maximum to the first number in the list</label></div><div><input type="radio" id="quiz-4-option-1" name="quiz-4" value="2"><label for="quiz-4-option-1">Iterating through each number in the list</label></div><div><input type="radio" id="quiz-4-option-2" name="quiz-4" value="3"><label for="quiz-4-option-2">Comparing the current number to the current maximum and updating if necessary</label></div><div><input type="radio" id="quiz-4-option-3" name="quiz-4" value="4"><label for="quiz-4-option-3">Returning the final maximum value</label></div><div class="explanation" style="display:none;">Selection occurs when the algorithm checks whether the current number is greater than the current maximum and updates accordingly.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>6. What is the main benefit of using abstraction in computational thinking?</h3><form><div><input type="radio" id="quiz-5-option-0" name="quiz-5" value="1"><label for="quiz-5-option-0">To create complex models with detailed information</label></div><div><input type="radio" id="quiz-5-option-1" name="quiz-5" value="2"><label for="quiz-5-option-1">To simplify complex systems by focusing on essential details</label></div><div><input type="radio" id="quiz-5-option-2" name="quiz-5" value="3"><label for="quiz-5-option-2">To break down problems into smaller components</label></div><div><input type="radio" id="quiz-5-option-3" name="quiz-5" value="4"><label for="quiz-5-option-3">To recognize similarities in multiple problems</label></div><div class="explanation" style="display:none;">Abstraction simplifies complex systems by ignoring unnecessary details and focusing only on the essential features.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>7. What is an example of pattern recognition from the material?</h3><form><div><input type="radio" id="quiz-6-option-0" name="quiz-6" value="1"><label for="quiz-6-option-0">Breaking a problem into sub-problems to solve it</label></div><div><input type="radio" id="quiz-6-option-1" name="quiz-6" value="2"><label for="quiz-6-option-1">Recognizing that finding the longest word is similar to finding the largest number</label></div><div><input type="radio" id="quiz-6-option-2" name="quiz-6" value="3"><label for="quiz-6-option-2">Using pseudocode to communicate an algorithm</label></div><div><input type="radio" id="quiz-6-option-3" name="quiz-6" value="4"><label for="quiz-6-option-3">Sorting a list of numbers in ascending order</label></div><div class="explanation" style="display:none;">Pattern recognition involves identifying similar patterns, such as recognizing that finding the longest word and finding the largest number follow similar processes.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>8. How does algorithmic thinking differ from programming?</h3><form><div><input type="radio" id="quiz-7-option-0" name="quiz-7" value="1"><label for="quiz-7-option-0">Algorithmic thinking focuses on writing the actual code, while programming does not</label></div><div><input type="radio" id="quiz-7-option-1" name="quiz-7" value="2"><label for="quiz-7-option-1">Algorithmic thinking involves creating step-by-step instructions, while programming implements those instructions in code</label></div><div><input type="radio" id="quiz-7-option-2" name="quiz-7" value="3"><label for="quiz-7-option-2">Algorithmic thinking deals with hardware, and programming deals with software</label></div><div><input type="radio" id="quiz-7-option-3" name="quiz-7" value="4"><label for="quiz-7-option-3">Algorithmic thinking is used only in mathematics, while programming is used in computer science</label></div><div class="explanation" style="display:none;">Algorithmic thinking involves developing a logical set of steps to solve a problem, while programming is the process of writing code to implement that logic.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>9. Why is efficiency important in algorithmic thinking?</h3><form><div><input type="radio" id="quiz-8-option-0" name="quiz-8" value="1"><label for="quiz-8-option-0">It ensures that the algorithm produces the correct result</label></div><div><input type="radio" id="quiz-8-option-1" name="quiz-8" value="2"><label for="quiz-8-option-1">It helps minimize the number of steps and resource usage</label></div><div><input type="radio" id="quiz-8-option-2" name="quiz-8" value="3"><label for="quiz-8-option-2">It makes the code easier to write</label></div><div><input type="radio" id="quiz-8-option-3" name="quiz-8" value="4"><label for="quiz-8-option-3">It ensures the problem is decomposed properly</label></div><div class="explanation" style="display:none;">Efficiency in algorithmic thinking is important because it minimizes the number of steps and optimizes the use of resources like time and memory.</div><button type="submit">Submit</button></form></fieldset></div>
+<div class="question" data-correct-answer="2"><fieldset><h3>10. How do pseudocode and flowcharts help in computational thinking?</h3><form><div><input type="radio" id="quiz-9-option-0" name="quiz-9" value="1"><label for="quiz-9-option-0">They help decompose problems into smaller parts</label></div><div><input type="radio" id="quiz-9-option-1" name="quiz-9" value="2"><label for="quiz-9-option-1">They provide a clear visual or textual representation of algorithms</label></div><div><input type="radio" id="quiz-9-option-2" name="quiz-9" value="3"><label for="quiz-9-option-2">They ensure the algorithm is efficient</label></div><div><input type="radio" id="quiz-9-option-3" name="quiz-9" value="4"><label for="quiz-9-option-3">They focus on the input and output of the algorithm</label></div><div class="explanation" style="display:none;">Pseudocode and flowcharts help communicate algorithms clearly by providing a high-level representation of the steps involved.</div><button type="submit">Submit</button></form></fieldset></div>
+</div></div><style type="text/css">.quiz {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+/* Set margin-top of first quiz child */
+.quiz > *:first-child {
+  margin-top: 0;
+}
+.hidden {
+  display: none;
+}
+
+form button {
+  background-color: var(--md-primary-fg-color);
+  border: none;
+  color: var(--md-primary-bg-color);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.wrong label {
+  color: red;
+}
+.correct label {
+  color: green;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+fieldset input {
+  margin: 0 10px;
+}
+fieldset label {
+  margin: 0 10px;
+}
+
+label.correct {
+  color: green;
+}
+label.wrong {
+  color: red;
+}
+input[type='radio'].correct {
+  accent-color: green;
+}
+input[type='radio'].wrong {
+  accent-color: red;
+}
+.content {
+  margin: 10px;
+}
+</style><script type="text/javascript" defer>document.querySelectorAll('.quiz').forEach((quiz) => {
+  let form = quiz.querySelector('form');
+  let fieldset = form.querySelector('fieldset');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
+    let correctAnswers = fieldset.querySelectorAll(
+      'input[name="answer"][correct]'
+    );
+    // Check if all correct answers are selected
+    let is_correct = selectedAnswers.length === correctAnswers.length;
+    for (let i = 0; i < selectedAnswers.length; i++) {
+      if (!selectedAnswers[i].hasAttribute('correct')) {
+        is_correct = false;
+        break;
+      }
+    }
+    let section = quiz.querySelector('section');
+    if (is_correct) {
+      section.classList.remove('hidden');
+      resetFieldset(fieldset);
+      // Mark all fields with colors
+      const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
+      for (let i = 0; i < allAnswers.length; i++) {
+        if (allAnswers[i].hasAttribute('correct')) {
+          allAnswers[i].parentElement.classList.add('correct');
+        } else {
+          allAnswers[i].parentElement.classList.add('wrong');
+        }
+      }
+    } else {
+      section.classList.add('hidden');
+      resetFieldset(fieldset);
+      // Mark wrong fields with colors
+      for (let i = 0; i < selectedAnswers.length; i++) {
+        if (!selectedAnswers[i].hasAttribute('correct')) {
+          selectedAnswers[i].parentElement.classList.add('wrong');
+        } else {
+          selectedAnswers[i].parentElement.classList.add('correct');
+        }
+      }
+    }
+  });
+});
+
+function resetFieldset(fieldset) {
+  const fieldsetChildren = fieldset.children;
+  for (let i = 0; i < fieldsetChildren.length; i++) {
+    fieldsetChildren[i].classList.remove('wrong');
+    fieldsetChildren[i].classList.remove('correct');
+  }
+}
+</script>
+
+<!-- Source file information -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+<!-- Was this page helpful? -->
+
+
+
+
+<!-- Comment system -->
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Overview
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="02_describing_an_algorithm.html" class="md-footer__link md-footer__link--next" aria-label="Next: Describing an Algorithm">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Describing an Algorithm
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/sahumphreys"  target="_blank" rel="noopener">Simon Humphreys</a> | <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/james-willett" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/TheJamesWillett" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/willettjames/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.prune", "navigation.instant", "navigation.footer", "toc.follow", "navigation.top", "header.autohide", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../assets/js/katex.js"></script>
+      
+        <script src="../../assets/js/custom.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../assets/js/quiz.js"></script>
+      
+        <script src="../../assets/js/algorithms.js"></script>
+      
+    
+  </body>
+</html>
